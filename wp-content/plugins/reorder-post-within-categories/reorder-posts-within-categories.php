@@ -72,18 +72,25 @@ if( !class_exists('ReOrderPostWithinCategory') ) {
 	    
 	    $queriedObj = $wp_query->get_queried_object();
 	    
-	    $category_id = $queriedObj->slug;
-	    $theID = $queriedObj->term_id;
-	    
-	    
-	    if(!$category_id) {
-		$category_id = $this->custom_cat;
-	    }
-	    
-	    $userOrderOptionSetting = $this->getOrderedCategoriesOptions();
-	    if($userOrderOptionSetting[$theID] == "true" && $this->stop_join == false){
-		$args .= " INNER JOIN $table_name ON ".$wpdb->posts.".ID = ".$table_name.".post_id and incl = 1  ";
-		//echo $args;
+	    if ( $queriedObj ) { // added guard - NIC
+	    	    /**
+	    	     * @todo Nic added this fix to handle pages that don't have a global query.
+	    	     */ 
+
+		    $category_id = $queriedObj->slug;
+		    $theID = $queriedObj->term_id;
+		    
+		    
+		    if(!$category_id) {
+			$category_id = $this->custom_cat;
+		    }
+		    
+		    $userOrderOptionSetting = $this->getOrderedCategoriesOptions();
+		    if($userOrderOptionSetting[$theID] == "true" && $this->stop_join == false){
+			$args .= " INNER JOIN $table_name ON ".$wpdb->posts.".ID = ".$table_name.".post_id and incl = 1  ";
+			//echo $args;
+		    }
+
 	    }
 	    
 	    return $args;
@@ -94,20 +101,26 @@ if( !class_exists('ReOrderPostWithinCategory') ) {
 	    $table_name = $wpdb->prefix . $this->deefuse_ReOrder_tableName;
 	    
 	    $queriedObj = $wp_query->get_queried_object();
-	    
-	    $category_id = $queriedObj->slug;
-	    $theID = $queriedObj->term_id;
-	    
-	    
-	    if(!$category_id) {
-		$category_id = $this->custom_cat;
-	    }
-	    
-	    $userOrderOptionSetting = $this->getOrderedCategoriesOptions();
-	    if($userOrderOptionSetting[$theID] == "true" && $this->stop_join == false){
-		//$args .= " INNER JOIN $table_name ON ".$wpdb->posts.".ID = ".$table_name.".post_id and incl = 1  ";
-		$args .= " AND $table_name".".category_id = '".$theID."'";
-		//echo $args;
+
+	    if ( $queriedObj ) { 
+	    	    /**
+	    	     * @todo Nic added this fix to handle pages that don't have a global query.
+	    	     */ 
+		    
+		    $category_id = $queriedObj->slug;
+		    $theID = $queriedObj->term_id;
+		    
+		    if(!$category_id) {
+			$category_id = $this->custom_cat;
+		    }
+		    
+		    $userOrderOptionSetting = $this->getOrderedCategoriesOptions();
+		    if($userOrderOptionSetting[$theID] == "true" && $this->stop_join == false){
+			//$args .= " INNER JOIN $table_name ON ".$wpdb->posts.".ID = ".$table_name.".post_id and incl = 1  ";
+			$args .= " AND $table_name".".category_id = '".$theID."'";
+			//echo $args;
+		    }
+
 	    }
 	    
 	    return $args;
@@ -119,19 +132,26 @@ if( !class_exists('ReOrderPostWithinCategory') ) {
 	    
 	    $queriedObj = $wp_query->get_queried_object();
 	    
-	    $category_id = $queriedObj->slug;
-	    $theID = $queriedObj->term_id;
-	    
-	    
-	    if(!$category_id) {
-		$category_id = $this->custom_cat;
-	    }
-	    
-	    $userOrderOptionSetting = $this->getOrderedCategoriesOptions();
-	    if($userOrderOptionSetting[$theID] == "true" && $this->stop_join == false){
-		$args = $table_name.".id ASC";
-		
-	    }
+	    if ( $queriedObj ) {
+	    	    /**
+	    	     * @todo Nic added this fix to handle pages that don't have a global query.
+	    	     */ 
+
+		    $category_id = $queriedObj->slug;
+		    $theID = $queriedObj->term_id;
+		    
+		    
+		    if(!$category_id) {
+			$category_id = $this->custom_cat;
+		    }
+		    
+		    $userOrderOptionSetting = $this->getOrderedCategoriesOptions();
+		    if($userOrderOptionSetting[$theID] == "true" && $this->stop_join == false){
+			$args = $table_name.".id ASC";
+			
+		    }
+
+	    }	
 	    
 	    return $args;
 	}
