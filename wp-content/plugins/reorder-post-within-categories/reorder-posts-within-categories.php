@@ -86,7 +86,7 @@ if( !class_exists('ReOrderPostWithinCategory') ) {
 		    }
 		    
 		    $userOrderOptionSetting = $this->getOrderedCategoriesOptions();
-		    if($userOrderOptionSetting[$theID] == "true" && $this->stop_join == false){
+		    if(isset($userOrderOptionSetting[$theID]) && $userOrderOptionSetting[$theID] == "true" && $this->stop_join == false){
 			$args .= " INNER JOIN $table_name ON ".$wpdb->posts.".ID = ".$table_name.".post_id and incl = 1  ";
 			//echo $args;
 		    }
@@ -115,7 +115,7 @@ if( !class_exists('ReOrderPostWithinCategory') ) {
 		    }
 		    
 		    $userOrderOptionSetting = $this->getOrderedCategoriesOptions();
-		    if($userOrderOptionSetting[$theID] == "true" && $this->stop_join == false){
+		    if(isset($userOrderOptionSetting[$theID]) && $userOrderOptionSetting[$theID] == "true" && $this->stop_join == false){
 			//$args .= " INNER JOIN $table_name ON ".$wpdb->posts.".ID = ".$table_name.".post_id and incl = 1  ";
 			$args .= " AND $table_name".".category_id = '".$theID."'";
 			//echo $args;
@@ -146,7 +146,7 @@ if( !class_exists('ReOrderPostWithinCategory') ) {
 		    }
 		    
 		    $userOrderOptionSetting = $this->getOrderedCategoriesOptions();
-		    if($userOrderOptionSetting[$theID] == "true" && $this->stop_join == false){
+		    if(isset($userOrderOptionSetting[$theID]) && $userOrderOptionSetting[$theID] == "true" && $this->stop_join == false){
 			$args = $table_name.".id ASC";
 			
 		    }
