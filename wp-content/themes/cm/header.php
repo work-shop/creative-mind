@@ -50,7 +50,7 @@
 	<body <?php body_class('before');?>>
 
 		<?php get_template_part('partials/ie'); ?>
-		<?php get_template_part('landing'); ?>
+		<?php get_template_part('partials/landing'); ?>
 
 		<div id="wrapper" class="loading">
 	

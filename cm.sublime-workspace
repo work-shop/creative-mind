@@ -1,0 +1,375 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"jchoi",
+				"jchoice2"
+			],
+			[
+				"chosen",
+				"chosen1"
+			],
+			[
+				"text-",
+				"text-transform"
+			],
+			[
+				"font",
+				"font-size"
+			],
+			[
+				"mysql",
+				"mysql_error"
+			],
+			[
+				"mysqlc",
+				"mysql_connect"
+			],
+			[
+				"php",
+				"php"
+			],
+			[
+				"G",
+				"_GET"
+			],
+			[
+				"th",
+				"theNumber"
+			],
+			[
+				"var",
+				"var2"
+			],
+			[
+				"arr",
+				"array1"
+			],
+			[
+				"ar",
+				"array	$… = array (…)"
+			],
+			[
+				"arra",
+				"array3"
+			],
+			[
+				"pading",
+				"padding-bottom"
+			]
+		]
+	},
+	"buffers":
+	[
+	],
+	"build_system": "",
+	"command_palette":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"console":
+	{
+		"height": 125.0,
+		"history":
+		[
+			"import urllib.request,os,hashlib; h = 'eb2297e1a458f27d836c04bb0cbaf282' + 'd0e7a3098092775ccb37ca9d6b2e4b7d'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'http://packagecontrol.io/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by)"
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"expanded_folders":
+	[
+		"/Applications/MAMP/htdocs/cm/wp-content/themes/cm",
+		"/Applications/MAMP/htdocs/cm/wp-content/themes/cm/assets",
+		"/Applications/MAMP/htdocs/cm/wp-content/themes/cm/assets/img",
+		"/Applications/MAMP/htdocs/cm/wp-content/themes/cm/library",
+		"/Applications/MAMP/htdocs/cm/wp-content/themes/cm/library/abstracts",
+		"/Applications/MAMP/htdocs/cm/wp-content/themes/cm/library/classes"
+	],
+	"file_history":
+	[
+		"/Applications/MAMP/htdocs/cm/wp-content/themes/cm/header.php",
+		"/Applications/MAMP/htdocs/cm/wp-content/themes/cm/library/classes/class_init_actions.php",
+		"/Applications/MAMP/htdocs/cm/wp-content/themes/cm/assets/css/style.less",
+		"/Applications/MAMP/htdocs/cm/wp-content/themes/cm/partials/landing.php",
+		"/Applications/MAMP/htdocs/cm/wp-content/themes/cm/assets/fonts/pictograms.css",
+		"/Applications/MAMP/htdocs/cm/wp-content/themes/cm/footer.php",
+		"/Applications/MAMP/htdocs/cm/wp-content/themes/cm/partials/search_modal.php",
+		"/Applications/MAMP/htdocs/cm/wp-content/themes/cm/library/setup.php",
+		"/Users/Greg/Library/Application Support/Sublime Text 3/Packages/User/Preferences.sublime-settings",
+		"/Applications/MAMP/htdocs/cm/wp-content/themes/cm/partials/ie.php",
+		"/Applications/MAMP/htdocs/cm/wp-content/themes/cm/assets/css/animations.less",
+		"/Applications/MAMP/htdocs/cm/wp-content/themes/cm/functions.php",
+		"/Applications/MAMP/htdocs/cm/wp-content/themes/cm/single-collections.php",
+		"/Applications/MAMP/htdocs/cm/wp-content/themes/cm/category.php",
+		"/Applications/MAMP/htdocs/cm/wp-content/themes/cm/partials/category_header.php",
+		"/Applications/MAMP/htdocs/cm/wp-content/themes/cm/partials/search.php",
+		"/Applications/MAMP/htdocs/cm/wp-content/themes/cm/index.php",
+		"/Applications/MAMP/htdocs/cm/wp-content/themes/cm/partials/break.php",
+		"/Applications/MAMP/htdocs/cm/wp-content/themes/cm/search.php",
+		"/Applications/MAMP/htdocs/cm/wp-content/themes/cm/partials/collection.php",
+		"/Applications/MAMP/htdocs/cm/wp-content/themes/cm/partials/collections.php",
+		"/Applications/MAMP/htdocs/cm/wp-content/themes/cm/single.php",
+		"/Applications/MAMP/htdocs/cm/wp-content/themes/cm/single-stories.php",
+		"/Applications/MAMP/htdocs/cm/wp-content/themes/cm/partials/site_description.php",
+		"/Applications/MAMP/htdocs/cm/wp-content/themes/cm/partials/story.php",
+		"/Applications/MAMP/htdocs/cm/wp-content/themes/cm/partials/content_single_stories.php",
+		"/Applications/MAMP/htdocs/cm/wp-content/themes/cm/partials/content-single-stories.php",
+		"/Applications/MAMP/htdocs/cm/wp-content/themes/cm/page.php",
+		"/Users/Greg/Library/Application Support/Sublime Text 3/Packages/User/Package Control.sublime-settings",
+		"/private/etc/hosts",
+		"/Applications/MAMP/htdocs/xml3d/README.md",
+		"/Applications/MAMP/htdocs/three/download/README.md",
+		"/Users/Greg/Downloads/JP-seat-40-professional-greg-nemes-1349-1.lic",
+		"/Users/Greg/Downloads/cssgrid-version2/README.md",
+		"/private/var/folders/ht/_3qxwfd154z3598_zl4xk0yc0000gn/T/77d360fb-2486-4a97-9f43-28d11fb47e87/home/sqrus/public_html/wps/wp-content/themes/cmiv2/page-project.php",
+		"/private/var/folders/ht/_3qxwfd154z3598_zl4xk0yc0000gn/T/77d360fb-2486-4a97-9f43-28d11fb47e87/home/sqrus/public_html/wps/wp-content/themes/cmiv2/page-courselist.php",
+		"/Users/Greg/Downloads/desandro-isotope-75ead41/README.mdown",
+		"/Users/Greg/Library/Caches/Coda 2/5DAC1319-DB90-49A2-A669-C1C12C1BC039/fittings.css",
+		"/Users/Greg/Downloads/bootstrap/css/bootstrap.css",
+		"/private/var/folders/ht/_3qxwfd154z3598_zl4xk0yc0000gn/T/77d360fb-2486-4a97-9f43-28d11fb47e87/home/sqrus/public_html/wps/wp-content/themes/cmiv2/single-courses.php",
+		"/private/var/folders/ht/_3qxwfd154z3598_zl4xk0yc0000gn/T/77d360fb-2486-4a97-9f43-28d11fb47e87/home/sqrus/public_html/wps/wp-content/themes/cmiv2/html-header.php",
+		"/private/var/folders/ht/_3qxwfd154z3598_zl4xk0yc0000gn/T/77d360fb-2486-4a97-9f43-28d11fb47e87/home/sqrus/public_html/wps/wp-content/themes/cmiv2/scripts.php",
+		"/private/var/folders/ht/_3qxwfd154z3598_zl4xk0yc0000gn/T/77d360fb-2486-4a97-9f43-28d11fb47e87/home/sqrus/public_html/wps/wp-content/themes/cmiv2/js/site.js",
+		"/private/var/folders/ht/_3qxwfd154z3598_zl4xk0yc0000gn/T/77d360fb-2486-4a97-9f43-28d11fb47e87/home/sqrus/public_html/wps/wp-content/themes/cmiv2/index.php",
+		"/private/var/folders/ht/_3qxwfd154z3598_zl4xk0yc0000gn/T/77d360fb-2486-4a97-9f43-28d11fb47e87/home/sqrus/public_html/wps/wp-content/themes/cmiv2/css/structure.css",
+		"/private/var/folders/ht/_3qxwfd154z3598_zl4xk0yc0000gn/T/77d360fb-2486-4a97-9f43-28d11fb47e87/home/sqrus/public_html/wps/wp-content/themes/cmiv2/css/fittings.css",
+		"/private/var/folders/ht/_3qxwfd154z3598_zl4xk0yc0000gn/T/77d360fb-2486-4a97-9f43-28d11fb47e87/home/sqrus/public_html/wps/wp-content/themes/cmiv2/sidebar-courses.php",
+		"/private/var/folders/ht/_3qxwfd154z3598_zl4xk0yc0000gn/T/77d360fb-2486-4a97-9f43-28d11fb47e87/home/sqrus/public_html/wps/wp-content/themes/cmiv2/social.php",
+		"/private/var/folders/ht/_3qxwfd154z3598_zl4xk0yc0000gn/T/77d360fb-2486-4a97-9f43-28d11fb47e87/home/sqrus/public_html/wps/wp-content/themes/cmiv2/single-projects.php",
+		"/private/var/folders/ht/_3qxwfd154z3598_zl4xk0yc0000gn/T/77d360fb-2486-4a97-9f43-28d11fb47e87/home/sqrus/public_html/wps/wp-content/themes/cmiv2/header.php",
+		"/private/var/folders/ht/_3qxwfd154z3598_zl4xk0yc0000gn/T/77d360fb-2486-4a97-9f43-28d11fb47e87/home/sqrus/public_html/wps/wp-content/themes/cmiv2/functions.php",
+		"/private/var/folders/ht/_3qxwfd154z3598_zl4xk0yc0000gn/T/77d360fb-2486-4a97-9f43-28d11fb47e87/home/sqrus/public_html/wps/wp-content/themes/cmiv2/css/reset.css",
+		"/private/var/folders/ht/_3qxwfd154z3598_zl4xk0yc0000gn/T/77d360fb-2486-4a97-9f43-28d11fb47e87/home/sqrus/public_html/wps/wp-content/themes/cmiv2/css/structure2.css",
+		"/private/var/folders/ht/_3qxwfd154z3598_zl4xk0yc0000gn/T/77d360fb-2486-4a97-9f43-28d11fb47e87/home/sqrus/public_html/wps/wp-content/themes/cmiv2/css/fittings2.css",
+		"/private/var/folders/ht/_3qxwfd154z3598_zl4xk0yc0000gn/T/77d360fb-2486-4a97-9f43-28d11fb47e87/home/sqrus/public_html/wps/wp-content/themes/cmiv2/style.css",
+		"/private/var/folders/ht/_3qxwfd154z3598_zl4xk0yc0000gn/T/77d360fb-2486-4a97-9f43-28d11fb47e87/home/sqrus/public_html/wps/wp-content/themes/cmiv2/footer.php",
+		"/private/var/folders/ht/_3qxwfd154z3598_zl4xk0yc0000gn/T/77d360fb-2486-4a97-9f43-28d11fb47e87/home/sqrus/public_html/wps/wp-content/themes/cmiv2/style2.css",
+		"/private/var/folders/ht/_3qxwfd154z3598_zl4xk0yc0000gn/T/77d360fb-2486-4a97-9f43-28d11fb47e87/home/sqrus/public_html/index.html",
+		"/private/var/folders/ht/_3qxwfd154z3598_zl4xk0yc0000gn/T/6ebd6e48-0bf2-418c-bf6f-203bf88aa0af/home/sqrus/public_html/wp/wp-content/themes/cmiv1/style.css",
+		"/private/var/folders/ht/_3qxwfd154z3598_zl4xk0yc0000gn/T/6ebd6e48-0bf2-418c-bf6f-203bf88aa0af/home/sqrus/public_html/wp/wp-content/themes/cmiv1/style3.css",
+		"/private/var/folders/ht/_3qxwfd154z3598_zl4xk0yc0000gn/T/6ebd6e48-0bf2-418c-bf6f-203bf88aa0af/home/sqrus/public_html/wp/wp-content/themes/cmiv1/style2.css",
+		"/private/var/folders/ht/_3qxwfd154z3598_zl4xk0yc0000gn/T/77d360fb-2486-4a97-9f43-28d11fb47e87/home/sqrus/public_html/wps/wp-content/themes/cmiv2/html-footer.php",
+		"/Users/Greg/Dropbox/CMI/ftp/jquery.js",
+		"/private/var/folders/ht/_3qxwfd154z3598_zl4xk0yc0000gn/T/77d360fb-2486-4a97-9f43-28d11fb47e87/home/sqrus/public_html/wps/wp-content/themes/cmiv2/page.php",
+		"/private/var/folders/ht/_3qxwfd154z3598_zl4xk0yc0000gn/T/77d360fb-2486-4a97-9f43-28d11fb47e87/home/sqrus/public_html/wps/wp-content/themes/cmiv2/single.php",
+		"/private/var/folders/ht/_3qxwfd154z3598_zl4xk0yc0000gn/T/77d360fb-2486-4a97-9f43-28d11fb47e87/home/sqrus/public_html/wps/wp-content/themes/cmiv2/comments.php",
+		"/Users/Greg/Dropbox/CMI/v2/ftp/html-header.php",
+		"/Users/Greg/Dropbox/CMI/v2/ftp/header.php",
+		"/private/var/folders/ht/_3qxwfd154z3598_zl4xk0yc0000gn/T/77d360fb-2486-4a97-9f43-28d11fb47e87/home/sqrus/public_html/wps/wp-content/themes/cmiv2/parts/shared/header.php",
+		"/private/var/folders/ht/_3qxwfd154z3598_zl4xk0yc0000gn/T/77d360fb-2486-4a97-9f43-28d11fb47e87/home/sqrus/public_html/wps/wp-content/themes/cmiv2/parts/shared/html-header.php",
+		"/private/var/folders/ht/_3qxwfd154z3598_zl4xk0yc0000gn/T/6ebd6e48-0bf2-418c-bf6f-203bf88aa0af/home/sqrus/public_html/wp/wp-content/themes/cmiv1/content-single.php",
+		"/private/var/folders/ht/_3qxwfd154z3598_zl4xk0yc0000gn/T/6ebd6e48-0bf2-418c-bf6f-203bf88aa0af/home/sqrus/public_html/wp/wp-content/themes/cmiv1/content-super.php",
+		"/private/var/folders/ht/_3qxwfd154z3598_zl4xk0yc0000gn/T/6ebd6e48-0bf2-418c-bf6f-203bf88aa0af/home/sqrus/public_html/wp/wp-content/themes/cmiv1/single.php",
+		"/private/var/folders/ht/_3qxwfd154z3598_zl4xk0yc0000gn/T/6ebd6e48-0bf2-418c-bf6f-203bf88aa0af/home/sqrus/public_html/wp/wp-content/themes/cmiv1/super.php",
+		"/private/var/folders/ht/_3qxwfd154z3598_zl4xk0yc0000gn/T/6ebd6e48-0bf2-418c-bf6f-203bf88aa0af/home/sqrus/public_html/wp/wp-content/themes/cmiv1/functions.php",
+		"/private/var/folders/ht/_3qxwfd154z3598_zl4xk0yc0000gn/T/6ebd6e48-0bf2-418c-bf6f-203bf88aa0af/home/sqrus/public_html/wp/wp-content/themes/cmiv1/single-super.php",
+		"/private/var/folders/ht/_3qxwfd154z3598_zl4xk0yc0000gn/T/6ebd6e48-0bf2-418c-bf6f-203bf88aa0af/home/sqrus/public_html/wp/wp-content/themes/cmiv1/content-featured.php",
+		"/private/var/folders/ht/_3qxwfd154z3598_zl4xk0yc0000gn/T/6ebd6e48-0bf2-418c-bf6f-203bf88aa0af/home/sqrus/public_html/wp/wp-content/themes/cmiv1/content.php",
+		"/private/var/folders/ht/_3qxwfd154z3598_zl4xk0yc0000gn/T/6ebd6e48-0bf2-418c-bf6f-203bf88aa0af/home/sqrus/public_html/wp/wp-content/themes/cmiv1/header.php",
+		"/private/var/folders/ht/_3qxwfd154z3598_zl4xk0yc0000gn/T/6ebd6e48-0bf2-418c-bf6f-203bf88aa0af/home/sqrus/public_html/wp/banner.php",
+		"/private/var/folders/ht/_3qxwfd154z3598_zl4xk0yc0000gn/T/6ebd6e48-0bf2-418c-bf6f-203bf88aa0af/home/sqrus/public_html/wp/wp-content/themes/cmiv1/page-home.php",
+		"/Users/Greg/Dropbox/CMI/ftp/banner.php",
+		"/Users/Greg/Sites/jitter/jquery.lettering-0.6.1.min.js",
+		"/Users/Greg/Sites/jitter/index3.html",
+		"/Users/Greg/Sites/jitter/style.css",
+		"/Users/Greg/Sites/jitter/index2.html",
+		"/private/var/folders/ht/_3qxwfd154z3598_zl4xk0yc0000gn/T/20c64633-0445-4d7e-81a7-d3a0fddea3a6/home/gnemes/gregnemes.com/jitter/index.html",
+		"/private/var/folders/ht/_3qxwfd154z3598_zl4xk0yc0000gn/T/c5d9ed8f-13ea-47af-a7ae-01c10a839b1f/home/gnemes/gregnemes.com/jitter/index.html",
+		"/Users/Greg/Sites/jitter.html",
+		"/Users/Greg/Sites/jquery.js",
+		"/Users/Greg/Dropbox/CMI/www/index.html",
+		"/private/var/folders/ht/_3qxwfd154z3598_zl4xk0yc0000gn/T/ab25ccb7-3b3c-4513-b9a9-ce5ed90776dc/public_html/wp/wp-content/themes/cmiv1/style3.css",
+		"/private/var/folders/ht/_3qxwfd154z3598_zl4xk0yc0000gn/T/ab25ccb7-3b3c-4513-b9a9-ce5ed90776dc/public_html/wp/wp-content/themes/cmiv1/style.css",
+		"/private/var/folders/ht/_3qxwfd154z3598_zl4xk0yc0000gn/T/ab25ccb7-3b3c-4513-b9a9-ce5ed90776dc/public_html/wp/wp-content/themes/cmiv1/page-home.php",
+		"/private/var/folders/ht/_3qxwfd154z3598_zl4xk0yc0000gn/T/ab25ccb7-3b3c-4513-b9a9-ce5ed90776dc/public_html/wp/wp-content/themes/cmiv1/header.php",
+		"/private/var/folders/ht/_3qxwfd154z3598_zl4xk0yc0000gn/T/ab25ccb7-3b3c-4513-b9a9-ce5ed90776dc/public_html/wp/wp-content/themes/cmiv1/functions.php",
+		"/private/var/folders/ht/_3qxwfd154z3598_zl4xk0yc0000gn/T/ab25ccb7-3b3c-4513-b9a9-ce5ed90776dc/public_html/wp/wp-content/themes/cmiv1/footer.php",
+		"/private/var/folders/ht/_3qxwfd154z3598_zl4xk0yc0000gn/T/ab25ccb7-3b3c-4513-b9a9-ce5ed90776dc/public_html/wp/wp-content/themes/cmiv1/page-courses.php",
+		"/Users/Greg/Dropbox/CMI/ftp/page-conversations.php",
+		"/private/var/folders/ht/_3qxwfd154z3598_zl4xk0yc0000gn/T/fz3temp-1/style.css",
+		"/private/var/folders/ht/_3qxwfd154z3598_zl4xk0yc0000gn/T/fz3temp-1/style3.css",
+		"/private/var/folders/ht/_3qxwfd154z3598_zl4xk0yc0000gn/T/fz3temp-1/header.php",
+		"/Users/Greg/Dropbox/CMI/ftp/page-courses.php",
+		"/private/var/folders/ht/_3qxwfd154z3598_zl4xk0yc0000gn/T/fz3temp-1/category.php",
+		"/private/var/folders/ht/_3qxwfd154z3598_zl4xk0yc0000gn/T/fz3temp-1/content.php",
+		"/private/var/folders/ht/_3qxwfd154z3598_zl4xk0yc0000gn/T/fz3temp-1/footer.php",
+		"/private/var/folders/ht/_3qxwfd154z3598_zl4xk0yc0000gn/T/fz3temp-1/functions.php",
+		"/private/var/folders/ht/_3qxwfd154z3598_zl4xk0yc0000gn/T/fz3temp-1/index.php",
+		"/private/var/folders/ht/_3qxwfd154z3598_zl4xk0yc0000gn/T/fz3temp-1/page-home.php",
+		"/Users/Greg/Dropbox/CMI/ftp/twentyeleven/functions.php",
+		"/Users/Greg/Library/Application Support/Sublime Text 2/Packages/Default/Preferences.sublime-settings",
+		"/private/var/folders/ht/_3qxwfd154z3598_zl4xk0yc0000gn/T/fz3temp-1/header 2.php",
+		"/private/var/folders/ht/_3qxwfd154z3598_zl4xk0yc0000gn/T/fz3temp-1/style2.css",
+		"/Users/Greg/Library/Application Support/Sublime Text 2/Packages/User/Preferences.sublime-settings",
+		"/Users/Greg/Dropbox/CMI/www/displaytest.html",
+		"/Users/Greg/Dropbox/CMI/ftp/style2.css",
+		"/private/var/folders/ht/_3qxwfd154z3598_zl4xk0yc0000gn/T/fz3temp-1/page2.php",
+		"/private/var/folders/ht/_3qxwfd154z3598_zl4xk0yc0000gn/T/fz3temp-1/index.html",
+		"/private/var/folders/ht/_3qxwfd154z3598_zl4xk0yc0000gn/T/fz3temp-1/page3.php",
+		"/Users/Greg/Desktop/teaching/CE/DDFS 2012/navigation/nav.html",
+		"/Users/Greg/Desktop/teaching/CE/DDFS 2012/navigation/style.css",
+		"/Users/Greg/Desktop/teaching/CE/DDFS 2012/kathy/style.css",
+		"/Users/Greg/Desktop/teaching/CE/DDFS 2012/kathy/index.html",
+		"/Users/Greg/Dropbox/CMI/www/base.html",
+		"/Users/Greg/Dropbox/CMI/www/base-store.html",
+		"/Users/Greg/Dropbox/CMI/www/dispatch.fcgi",
+		"/Users/Greg/Sites/php_sandbox/databases.php",
+		"/Users/Greg/Sites/php_sandbox/secondpage.php"
+	],
+	"find":
+	{
+		"height": 37.0
+	},
+	"find_in_files":
+	{
+		"height": 0.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"/_/",
+			"<hr />",
+			"<hr ?>",
+			".75",
+			"page",
+			"grid6",
+			"id",
+			"main",
+			"grid2",
+			"grid4",
+			"grid3",
+			"add_image_size",
+			"thumbnail"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+			"/assets/",
+			" ",
+			"",
+			".9",
+			".5",
+			"class",
+			"grid3",
+			"grid2",
+			"grid4"
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"sheets":
+			[
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 29.0
+	},
+	"input":
+	{
+		"height": 39.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"project": "cm.sublime-project",
+	"replace":
+	{
+		"height": 68.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+			[
+				"",
+				"/Users/Greg/Dropbox/CMI/www/index.html"
+			]
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": false,
+	"show_open_files": true,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 236.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}
