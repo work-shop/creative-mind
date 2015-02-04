@@ -18,14 +18,14 @@
 	require_once('library/globals.php');
 
 	/* [2] */
-	require_once('library/abstracts/abstract-action-set.php');
-	require_once('library/abstracts/abstract-filter-set.php');
+	require_once('library/abstracts/abstract_action_set.php');
+	require_once('library/abstracts/abstract_filter_set.php');
 
 	/* [3] */
-	require_once('library/theme-options.php');
+	require_once('library/theme_options.php');
 
 	/* [4] */
-	require_once( 'library/classes/class-init-actions.php' );
-	require_once( 'library/classes/class-init-filters.php');
+	require_once( 'library/classes/class_init_actions.php' );
+	require_once( 'library/classes/class_init_filters.php');
  
 ?>
