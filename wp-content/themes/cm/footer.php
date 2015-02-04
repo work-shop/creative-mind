@@ -1,6 +1,7 @@
 
 	</div><!--/#content-->
 
+	<?php /*search modal*/ ?>
 	
 	<?php if(!is_home()): get_template_part('signpost'); endif; ?>
 	
