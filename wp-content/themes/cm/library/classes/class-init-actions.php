@@ -11,22 +11,17 @@ class CM_Init_Actions extends WS_Action_Set {
 
 		parent::__construct(
 			array(
-				'init' 							=> 'create_collections',
-				'init' 							=> 'create_stories',
-				'wp_enqueue_scripts' 					=> 'enqueue_theme_scripts',
-				'wp_enqueue_scripts'					=> 'enqueue_theme_styles',
+				'init' 							=> 'create_post_types',
+				'wp_enqueue_scripts' 					=> 'enqueue_theme_assets',
 				'after_theme_setup'					=> array( 'remove_post_formats', 11, 0 ),
 				'login_head'						=> 'login_css',
 				'admin_head'						=> 'admin_css',
-				'admin_menu'						=> 'remove_menus',
-				'admin_menu'						=> 'remove_acf_menu' 
+				'admin_menu'						=> 'remove_menus'
 		));
 	}
 
-	/**
-	 * register the collections post type.
-	 */
-	public function create_collections() {
+	/** POST TYPES */
+	public function create_post_types() {
 		register_post_type( 'collections',
 			array(
 				'labels' => array(
@@ -47,13 +42,8 @@ class CM_Init_Actions extends WS_Action_Set {
 				'rewrite' => array('slug' => 'collections'),
 				'supports' => array( 'title', 'thumbnail'),		
 				'taxonomies' => array( 'category' )				
-		));	
-	}
+		));
 
-	/**
-	 * register the collections post type.
-	 */
-	public function create_stories() {
 		register_post_type( 'stories',
 			array(
 				'labels' => array(
@@ -63,7 +53,7 @@ class CM_Init_Actions extends WS_Action_Set {
 				    'add_new_item' => 'Add New Story',
 				    'edit_item' => 'Edit Story',
 				    'new_item' => 'New Story',
-				    'all_items' => 'All Story',
+				    'all_items' => 'All Stories',
 				    'view_item' => 'View Story',
 				    'search_items' => 'Search Stories',
 				    'not_found' =>  'No Stories found',
@@ -76,7 +66,14 @@ class CM_Init_Actions extends WS_Action_Set {
 		));
 	}
 
-	public function enqueue_theme_scripts() {
+
+	/** THEME ASSETS */
+	public function enqueue_theme_assets() {
+		$this->enqueue_theme_scripts();
+		$this->enqueue_theme_styles();
+	}
+
+	private function enqueue_theme_scripts() {
 		wp_deregister_script( 'jquery' );
 
 		wp_register_script( 'jquery', get_template_directory_uri() . '/_/js/jquery.js');
@@ -99,8 +96,7 @@ class CM_Init_Actions extends WS_Action_Set {
 
 	}
 
-
-	public function enqueue_theme_styles() { 
+	private function enqueue_theme_styles() { 
 
 		wp_register_style( 'bootstrap', get_template_directory_uri() . '/_/css/bootstrap/bootstrap.css');    
 
@@ -119,12 +115,16 @@ class CM_Init_Actions extends WS_Action_Set {
 	}
 	
 
+
+	/** ADMIN ASSETS */
 	public function remove_post_formats() { remove_theme_support('post-formats'); }
 
 	public function login_css() { wp_enqueue_style( 'login_css', get_template_directory_uri() . '/assets/css/login.css' ); }
 
 	public function admin_css() { wp_enqueue_style( 'admin_css', get_template_directory_uri() . '/assets/css/admin.css' ); }
 
+
+	/** MENU SETTINGS */
 	public function remove_menus () {
 		global $menu;
 
@@ -135,10 +135,12 @@ class CM_Init_Actions extends WS_Action_Set {
 			$value = explode(' ',$menu[key($menu)][0]);
 			if(in_array($value[0] != NULL?$value[0]:"" , $restricted)){unset($menu[key($menu)]);}
 		}
+
+		$this->remove_acf_menu();
 	}
 
 
-	public function remove_acf_menu(){
+	private function remove_acf_menu(){
 	    // provide a list of usernames who can edit custom field definitions here
 	    $admins = array( 
 	        'dev','greg','nic'
