@@ -1,62 +1,29 @@
 
-	</div><!--/#content-->
+		</div><!--/#content-->
+		
+		<?php get_template_part('break'); ?>	
+		<?php get_template_part('back_to_top'); ?>
+		<?php get_template_part('guidepost'); ?>
+		<?php get_template_part('footer_menu'); ?>
+		<?php get_template_part('search_modal'); ?>
 
-	<?php /*search modal*/ ?>
-	
-	<?php if(!is_home()): get_template_part('signpost'); endif; ?>
-	
-	<?php if(is_page(8)): 
-	
-		 get_template_part('contact');
-		 get_template_part('invitation');
-	 
-	 else:
-	 
-	 	get_template_part('invitation');	
-	 	get_template_part('contact'); 
-	 	
-	 	endif; ?>	
-  
-</div><!-- /#state -->
-
-<div id="foot" class="hidden">
+	</div><!-- /#wrapper -->
 
 	<script type="text/javascript">
-		//get fonts
-		WebFontConfig = { fontdeck: { id: '37770' } };
-		
-		(function() {
-		  var wf = document.createElement('script');
-		  wf.src = ('https:' == document.location.protocol ? 'https' : 'http') +
-		  '://ajax.googleapis.com/ajax/libs/webfont/1/webfont.js';
-		  wf.type = 'text/javascript';
-		  wf.async = 'true';
-		  var s = document.getElementsByTagName('script')[0];
-		  s.parentNode.insertBefore(wf, s);
-		})();	
 		//google analytics
 		  var _gaq = _gaq || [];
 		  _gaq.push(['_setAccount', 'UA-43897729-1']);
 		  _gaq.push(['_trackPageview']);
-		
 		  (function() {
 		    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
 		    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
 		    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
 		  })();
-	
 	</script> 	 		
 
-	<?php 
-		if ( !file_exists( dirname(__FILE__) . 'env_prod' )  ) { 
-			include('less.php');
-		}
-	?>
+	<?php if ( !file_exists( dirname(__FILE__) . 'env_prod' )  ) : include('less.php'); endif; ?>
 
-</div>
+	<?php wp_footer(); ?>
 
-<?php wp_footer(); ?>
-
-</body>
-
+	</body>
 </html>

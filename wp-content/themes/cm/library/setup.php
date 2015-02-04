@@ -49,25 +49,6 @@ function create_post_type() {
 		));	
 			
 }
-/*
-
-function collections_taxonomy() {  
-   register_taxonomy(  
-    'collection_categories',  
-    'collections',  
-    array(  
-        'hierarchical' => true,  
-        'label' => 'Collection Categories',  
-        'query_var' => true,  
-        'show_ui' => false,
-        'rewrite' => array('slug' => 'collection_categories')  
-    )  
-);  
-}
-add_action( 'init', 'collections_taxonomy' );  
-*/
-
-
 
 	
 function theme_scripts() {
@@ -79,7 +60,6 @@ function theme_scripts() {
     wp_register_script( 'bootstrap', get_template_directory_uri() . '/_/js/bootstrap.js');
     wp_register_script( 'flexslider', get_template_directory_uri() . '/_/js/flexslider.js');
     wp_register_script( 'functions', get_template_directory_uri() . '/_/js/functions.js');
-    wp_register_script( 'instafeed', get_template_directory_uri() . '/_/js/instafeed.min.js' );
     wp_register_script( 'current', get_template_directory_uri() . '/_/js/current.js' );
 
     wp_enqueue_script( 'jquery' );
@@ -87,9 +67,7 @@ function theme_scripts() {
     wp_enqueue_script( 'less' );    
     wp_enqueue_script( 'bootstrap' );
     wp_enqueue_script( 'flexslider' );
-    wp_enqueue_script( 'instafeed' ); 
     wp_enqueue_script( 'functions' );
-    wp_enqueue_script( 'current', $deps = array( 'jquery', 'instafeed' ) );
 	
 }
 add_action('wp_enqueue_scripts', 'theme_scripts');

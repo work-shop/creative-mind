@@ -82,17 +82,13 @@ class CM_Init_Actions extends WS_Action_Set {
 		wp_register_script( 'bootstrap', get_template_directory_uri() . '/_/js/bootstrap.js');
 		wp_register_script( 'flexslider', get_template_directory_uri() . '/_/js/flexslider.js');
 		wp_register_script( 'functions', get_template_directory_uri() . '/_/js/functions.js');
-		//wp_register_script( 'instafeed', get_template_directory_uri() . '/_/js/instafeed.min.js' );
-		//wp_register_script( 'current', get_template_directory_uri() . '/_/js/current.js' );
 
 		wp_enqueue_script( 'jquery' );
 		wp_enqueue_script( 'jquery-viewport' );
 		wp_enqueue_script( 'less' );    
 		wp_enqueue_script( 'bootstrap' );
 		wp_enqueue_script( 'flexslider' );
-		//wp_enqueue_script( 'instafeed' ); 
 		wp_enqueue_script( 'functions' );
-		//wp_enqueue_script( 'current', $deps = array( 'jquery', 'instafeed' ) );
 
 	}
 
@@ -128,7 +124,7 @@ class CM_Init_Actions extends WS_Action_Set {
 	public function remove_menus () {
 		global $menu;
 
-		$restricted = array( __('Comments'),/*__('Tools') ,__('Posts'),__('Settings') */ );
+		$restricted = array( __('Comments'),__('Posts')/*__('Tools'),__('Settings') */ );
 		end ($menu);
 
 		while (prev($menu)){
