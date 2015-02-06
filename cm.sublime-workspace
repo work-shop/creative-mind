@@ -67,11 +67,23 @@
 	"build_system": "",
 	"command_palette":
 	{
-		"height": 0.0,
+		"height": 392.0,
 		"selected_items":
 		[
+			[
+				"pack",
+				"Package Control: Install Package"
+			],
+			[
+				"package",
+				"Package Control: Install Package"
+			],
+			[
+				"browse",
+				"Preferences: Browse Packages"
+			]
 		],
-		"width": 0.0
+		"width": 449.0
 	},
 	"console":
 	{
@@ -94,30 +106,35 @@
 	[
 		"/Applications/MAMP/htdocs/cm/wp-content/themes/cm",
 		"/Applications/MAMP/htdocs/cm/wp-content/themes/cm/assets",
+		"/Applications/MAMP/htdocs/cm/wp-content/themes/cm/assets/css",
 		"/Applications/MAMP/htdocs/cm/wp-content/themes/cm/assets/img",
 		"/Applications/MAMP/htdocs/cm/wp-content/themes/cm/library",
-		"/Applications/MAMP/htdocs/cm/wp-content/themes/cm/library/abstracts",
 		"/Applications/MAMP/htdocs/cm/wp-content/themes/cm/library/classes"
 	],
 	"file_history":
 	[
-		"/Applications/MAMP/htdocs/cm/wp-content/themes/cm/header.php",
 		"/Applications/MAMP/htdocs/cm/wp-content/themes/cm/library/classes/class_init_actions.php",
+		"/Applications/MAMP/htdocs/cm/wp-content/themes/cm/assets/css/variables.scss",
+		"/Applications/MAMP/htdocs/cm/wp-content/themes/cm/assets/css/animations.scss",
+		"/Applications/MAMP/htdocs/cm/wp-content/themes/cm/assets/css/oo.scss",
+		"/Applications/MAMP/htdocs/cm/wp-content/themes/cm/assets/css/reset.scss",
 		"/Applications/MAMP/htdocs/cm/wp-content/themes/cm/assets/css/style.less",
+		"/Applications/MAMP/htdocs/cm/wp-content/themes/cm/index.php",
+		"/Applications/MAMP/htdocs/cm/wp-content/themes/cm/footer.php",
+		"/Applications/MAMP/htdocs/cm/wp-content/themes/cm/single-collections.php",
+		"/Applications/MAMP/htdocs/cm/wp-content/themes/cm/header.php",
+		"/Applications/MAMP/htdocs/cm/wp-content/themes/cm/library/theme_options.php",
 		"/Applications/MAMP/htdocs/cm/wp-content/themes/cm/partials/landing.php",
 		"/Applications/MAMP/htdocs/cm/wp-content/themes/cm/assets/fonts/pictograms.css",
-		"/Applications/MAMP/htdocs/cm/wp-content/themes/cm/footer.php",
 		"/Applications/MAMP/htdocs/cm/wp-content/themes/cm/partials/search_modal.php",
 		"/Applications/MAMP/htdocs/cm/wp-content/themes/cm/library/setup.php",
 		"/Users/Greg/Library/Application Support/Sublime Text 3/Packages/User/Preferences.sublime-settings",
 		"/Applications/MAMP/htdocs/cm/wp-content/themes/cm/partials/ie.php",
 		"/Applications/MAMP/htdocs/cm/wp-content/themes/cm/assets/css/animations.less",
 		"/Applications/MAMP/htdocs/cm/wp-content/themes/cm/functions.php",
-		"/Applications/MAMP/htdocs/cm/wp-content/themes/cm/single-collections.php",
 		"/Applications/MAMP/htdocs/cm/wp-content/themes/cm/category.php",
 		"/Applications/MAMP/htdocs/cm/wp-content/themes/cm/partials/category_header.php",
 		"/Applications/MAMP/htdocs/cm/wp-content/themes/cm/partials/search.php",
-		"/Applications/MAMP/htdocs/cm/wp-content/themes/cm/index.php",
 		"/Applications/MAMP/htdocs/cm/wp-content/themes/cm/partials/break.php",
 		"/Applications/MAMP/htdocs/cm/wp-content/themes/cm/search.php",
 		"/Applications/MAMP/htdocs/cm/wp-content/themes/cm/partials/collection.php",
@@ -223,12 +240,7 @@
 		"/Users/Greg/Desktop/teaching/CE/DDFS 2012/navigation/nav.html",
 		"/Users/Greg/Desktop/teaching/CE/DDFS 2012/navigation/style.css",
 		"/Users/Greg/Desktop/teaching/CE/DDFS 2012/kathy/style.css",
-		"/Users/Greg/Desktop/teaching/CE/DDFS 2012/kathy/index.html",
-		"/Users/Greg/Dropbox/CMI/www/base.html",
-		"/Users/Greg/Dropbox/CMI/www/base-store.html",
-		"/Users/Greg/Dropbox/CMI/www/dispatch.fcgi",
-		"/Users/Greg/Sites/php_sandbox/databases.php",
-		"/Users/Greg/Sites/php_sandbox/secondpage.php"
+		"/Users/Greg/Desktop/teaching/CE/DDFS 2012/kathy/index.html"
 	],
 	"find":
 	{
@@ -336,6 +348,10 @@
 		"height": 0.0,
 		"selected_items":
 		[
+			[
+				"footer",
+				"footer.php"
+			],
 			[
 				"",
 				"/Users/Greg/Dropbox/CMI/www/index.html"

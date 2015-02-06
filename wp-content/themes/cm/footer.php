@@ -1,13 +1,16 @@
 
 		</div><!--/#content-->
 		
-		<?php get_template_part('break'); ?>	
-		<?php get_template_part('back_to_top'); ?>
-		<?php get_template_part('guidepost'); ?>
-		<?php get_template_part('footer_menu'); ?>
-		<?php get_template_part('search_modal'); ?>
+		<?php get_template_part('partials/break'); ?>	
+		<?php get_template_part('partials/back_to_top'); ?>
+		<?php get_template_part('partials/guidepost'); ?>
+		<?php get_template_part('partials/footer_menu'); ?>
+		<?php get_template_part('partials/search_modal'); ?>
 
 	</div><!-- /#wrapper -->
+
+	<script src="//use.typekit.net/reo8aih.js"></script>
+	<script>try{Typekit.load();}catch(e){}</script>	
 
 	<script type="text/javascript">
 		//google analytics
@@ -20,8 +23,6 @@
 		    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
 		  })();
 	</script> 	 		
-
-	<?php if ( !file_exists( dirname(__FILE__) . 'env_prod' )  ) : include('less.php'); endif; ?>
 
 	<?php wp_footer(); ?>
 

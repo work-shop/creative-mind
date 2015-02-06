@@ -1,0 +1,391 @@
+
+@import 'mixins';
+
+
+
+/********** @VARIABLES *********/
+
+$brand: #cb2026;
+$ultra-light: #fafafa;
+$light: #f1f1f1;
+$dark: #222222;
+$error: #ff4a4a;
+$brown: #3a1e1a;
+
+$font-family: 'Proxima Nova','Helvetica Neue', Helvetica, Arial, sans-serif;
+$font-family-serif:  'Adriane', georgia, serif; 
+
+$header-height: 90px;
+$nav-height: 50px;
+$mobile-margins: 30px;
+
+$transitions: .25s;
+
+
+/********** @RESET *********/
+
+@import 'reset';
+
+
+
+/********** @TYPE *********/
+
+*{
+	font-family: $font-family;
+	font-weight: 400;
+	font-size: 18px;
+}
+
+.serif{
+	font-family: $font-family-serif;
+	letter-spacing: .02em;
+}
+
+h1,h2,h3,h4,h5,h6{
+	line-height: 1.3;
+	font-weight: 700;
+}
+
+h1{
+	font-size: 3em;
+}
+
+h2{
+	font-size: 2em;
+}
+
+h3{
+	font-size: 1.25em;
+}
+
+h4{
+	font-size: 1em;
+}
+
+h5{
+	font-size: .9em;
+}
+
+h6{
+	font-size: .8em;
+}
+
+p{
+	line-height: 1.6;
+}
+
+//md
+@media (max-width: 1200px) {
+	*{
+		font-size: 17px;
+	}
+}
+
+//sm
+@media (max-width: 992px) {
+	*{
+		font-size: 15px;
+	}
+} 
+
+//xs
+@media (max-width: 767px) {
+	*{
+		font-size: 14px;
+	}
+
+	h1{
+		font-size: 2em;
+	}
+
+	h2{
+		font-size: 1.5em;
+	}
+
+	h3{
+		font-size: 1.2em;
+	}
+
+	h4{
+		font-size: 1em;
+	}
+
+	h5{
+		font-size: 1em;
+	}
+
+	h6{
+		font-size: .9em;
+	}
+
+}
+
+.bold{
+	font-weight: 700;
+}
+
+.italic{
+	font-style: italic;
+}
+
+.white{
+	color: white;
+}
+
+.dark{
+	color: $dark;
+}
+
+.brand{
+	color: $brand;
+}
+
+.uppercase{
+	text-transform: uppercase;
+}
+
+.centered{
+	text-align: center;
+}
+
+.icon{
+	&:before {
+    content: attr(data-icon);
+    font-family: "modern_pictograms_proregular";
+	font-size: 30px;
+	line-height: 100%;
+	vertical-align: middle;
+	position: relative;	
+	}
+	
+	&.large:before{
+		font-size: 72px;
+	}
+
+}
+
+
+
+/********** @MARGINS AND PADDING *********/
+
+.m0{
+	margin: 0;
+}
+
+@for $i from 1 through 5 {
+  .m#{$i} { 
+  	margin-bottom: 1em * $i;
+  	margin-top: 1em * $i;
+  }
+}
+
+@for $i from 1 through 5 {
+  .mb#{$i} { 
+  	margin-bottom: 1em * $i;
+  }
+}
+
+@for $i from 1 through 5 {
+  .mt#{$i} { 
+  	margin-top: 1em * $i;
+  }
+}
+
+@for $i from 1 through 5 {
+  .ml#{$i} { 
+  	margin-left: 1em * $i;
+  }
+}
+
+@for $i from 1 through 5 {
+  .mr#{$i} { 
+  	margin-right: 1em * $i;
+  }
+}
+
+.padded-less{
+	padding-top: 2%;
+	padding-bottom: 3%;
+}
+
+.padded{
+	padding-top: 5%;
+	padding-bottom: 6%;
+}
+
+.padded-more{
+	padding-top: 8%;
+	padding-bottom: 10%;
+}
+
+
+
+/********** @BACKGROUNDS *********/
+
+.bg-white{
+	background: white;
+}
+
+.bg-light{
+	background: $light;
+}
+
+.bg-brand{
+	background: $brand;
+}
+
+.bg-dark{
+	background: $dark;
+}
+
+.bg-brown{
+ 	background: $brown;
+}
+
+.bg-gradient{
+ 	@include gradient();
+}
+
+.shadow{
+	@include box-shadow(0,0,1px,rgba(53,50,50,.35));
+}
+
+.yellow{
+	background: yellow;
+}
+
+.pink{
+	background: pink;
+}
+
+.orange{
+	background: orange;
+}
+
+.green{
+	background: lime;
+}
+
+
+
+/********** @STRUCTURE AND POSITION *********/
+
+.full{
+	width: 100%;
+}
+
+.left{
+	float: left;
+}
+
+.right{
+	float: right;
+}
+
+.vertical-center{
+	margin-top: 0;
+	position: relative;
+	top: 45%;
+	-webkit-transform: translate(0,-50%);	
+}
+
+.display-block{
+	display: block;
+}
+
+
+
+/********** @FANCY OBJECTS *********/
+
+.loading{
+	@include transition(opacity,1s);
+	opacity: 0 !important;	
+}
+
+.loaded{
+	opacity: 1 !important;	
+}
+
+.landed{
+	display: none;
+}
+
+.block{
+	position: relative;
+	width: 100%;
+	display: block;
+	z-index: 1;
+
+	&.crop{
+		overflow: hidden;
+	}
+
+	&.active{
+
+	}
+
+	&.activated{
+
+	}
+
+}
+
+.block-background{
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: -1;
+	background-size: cover;
+	background-position: center top;	
+	
+	&:after{
+		content: '';
+		display: block;
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		top: 0;
+		left: 0;
+		z-index: 2;
+		background: rgba(0,0,0,0);
+		@include transition(all);
+	}
+}
+
+
+.nav{
+	height: $nav-height;
+
+	li{
+
+		&:hover{
+			a{
+				background: $ultra-light;
+			}
+		}
+
+		a{
+			color: $dark;
+			box-sizing: padding-box;
+			display: block;
+			padding: 0 15px;
+		}
+
+	}	
+
+	&.nav-inline{
+		li{
+			display: inline-block;			
+			height: $nav-height - 3px;			
+			line-height: $nav-height - 3px;
+			vertical-align: middle;			
+			margin-right: 5px;
+			position: relative;
+			top: 3px;
+		}
+	}
+
+}
+

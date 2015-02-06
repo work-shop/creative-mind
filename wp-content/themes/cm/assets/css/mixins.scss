@@ -1,0 +1,61 @@
+
+/********** @MIXINS *********/
+
+@mixin transition($property: all,$duration: $transitions, $delay: 0s, $easing: ease){
+	transition: $property $duration $delay $easing;
+	-moz-transition: $property $duration $delay $easing; 
+	-webkit-transition: $property $duration $delay $easing; 
+	-o-transition: $property $duration $delay $easing; 	
+}
+
+@mixin box-shadow($x: 0px, $y: 0px, $size: 4px, $shadow-color: rgba(50,50,50,.25)){
+	-moz-box-shadow: $x $y $size $shadow-color;
+	-webkit-box-shadow: $x $y $size $shadow-color;
+	box-shadow: $x $y $size $shadow-color;		
+}
+
+@mixin text-shadow($x: 1px, $y: 1px, $spread: 0px, $shadow-color: rgba(50,50,50,.25)){
+	-moz-text-shadow: $x $y $spread $shadow-color;
+	-webkit-text-shadow: $x $y $spread $shadow-color;
+	text-shadow: $x $y $spread $shadow-color;	
+}
+
+@mixin border-radius($radius: 0px){
+	-webkit-border-radius: $radius;
+	-moz-border-radius: $radius;
+	-o-border-radius: $radius;
+	-ms-border-radius: $radius;			
+	border-radius: $radius;
+}
+
+@mixin animation($name: animation, $duration: 1s, $easing: ease, $delay: 0s, $iteration: 1){	
+	animation: $name $duration $easing $delay $iteration;
+	-ms-animation: $name $duration $easing $delay $iteration;
+	-webkit-animation: $name $duration $easing $delay $iteration;
+	-o-animation:move $name $duration $easing $delay $iteration;
+	-moz-animation:move $name $duration $easing $delay $iteration;
+	animation-fill-mode: forwards;
+    -webkit-animation-fill-mode: forwards;	
+}
+
+@mixin gradient{ 
+	background: #60b3ff;
+	background: #ffffff; 
+	background: -moz-linear-gradient(top,  #ffffff 0%, #eeeeee 100%);
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ffffff), color-stop(100%,#eeeeee)); 
+	background: -webkit-linear-gradient(top,  #ffffff 0%,#eeeeee 100%); 
+	background: -o-linear-gradient(top,  #ffffff 0%,#eeeeee 100%); 
+	background: -ms-linear-gradient(top,  #ffffff 0%,#eeeeee 100%); 
+	background: linear-gradient(to bottom,  #ffffff 0%,#eeeeee 100%); 
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#eeeeee',GradientType=0 ); 
+}
+
+@mixin gradient-dark{
+	background: -moz-linear-gradient(top,  rgba(0,0,0,0) 0%, rgba(0,0,0,0.65) 100%);
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(0,0,0,0)), color-stop(100%,rgba(0,0,0,0.65))); 
+	background: -webkit-linear-gradient(top,  rgba(0,0,0,0) 0%,rgba(0,0,0,0.65) 100%);
+	background: -o-linear-gradient(top,  rgba(0,0,0,0) 0%,rgba(0,0,0,0.65) 100%);
+	background: -ms-linear-gradient(top,  rgba(0,0,0,0) 0%,rgba(0,0,0,0.65) 100%); 
+	background: linear-gradient(to bottom,  rgba(0,0,0,0) 0%,rgba(0,0,0,0.65) 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', endColorstr='#a6000000',GradientType=0 ); 
+}
