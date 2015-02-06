@@ -301,7 +301,10 @@ p {
   margin-top: 0;
   position: relative;
   top: 45%;
-  -webkit-transform: translate(0, -50%); }
+  transform: translate(0, -50%);
+  -moz-transform: translate(0, -50%);
+  -webkit-transform: translate(0, -50%);
+  -o-transform: translate(0, -50%); }
 
 .display-block {
   display: block; }
@@ -441,6 +444,63 @@ gform_wrapper .gfield_required {
 img.gform_ajax_spinner {
   display: none !important; }
 
+/********** $FLEXSLIDER *********/
+.flexslider-direction {
+  opacity: .1;
+  height: 100%;
+  z-index: 6;
+  position: absolute;
+  right: 15px;
+  width: auto;
+  margin: 0 10px;
+  height: 60px;
+  top: 48%;
+  margin-top: -30px;
+  transition: all 0.25s 0s ease;
+  -moz-transition: all 0.25s 0s ease;
+  -webkit-transition: all 0.25s 0s ease;
+  -o-transition: all 0.25s 0s ease; }
+  .flexslider-direction .icon:before {
+    font-size: 90px;
+    color: #cb2026; }
+  .flexslider-direction.previous {
+    right: auto;
+    left: 15px; }
+  .flexslider-direction:hover {
+    cursor: pointer;
+    cursor: w-resize; }
+  .flexslider-direction.next:hover {
+    cursor: pointer;
+    cursor: e-resize; }
+
+.flexslider-controls {
+  position: absolute;
+  width: 300px;
+  z-index: 192;
+  margin: 0 auto;
+  left: 50%;
+  text-align: center;
+  bottom: 15px;
+  height: 20px; }
+  .flexslider-controls li {
+    list-style: none;
+    margin: 0 7px;
+    display: inline-block; }
+    .flexslider-controls li a {
+      display: block;
+      text-indent: 9999px;
+      width: 11px;
+      height: 11px;
+      background: #f1f1f1;
+      border: 1px solid #222222;
+      -webkit-border-radius: 30px;
+      -moz-border-radius: 30px;
+      -o-border-radius: 30px;
+      -ms-border-radius: 30px;
+      border-radius: 30px; }
+      .flexslider-controls li a.flex-active {
+        background: #222222; }
+
 /********** @STRUCTURE *********/
 #topbar {
   position: fixed;
@@ -458,7 +518,10 @@ img.gform_ajax_spinner {
 
 #header-brown {
   height: 40px;
-  position: relative; }
+  width: 100%;
+  position: absolute;
+  left: 0;
+  z-index: 8; }
   #header-brown #logo-brown img {
     width: 100px; }
 
@@ -466,7 +529,12 @@ img.gform_ajax_spinner {
   height: 50px;
   -moz-box-shadow: 0px 0px 4px rgba(50, 50, 50, 0.25);
   -webkit-box-shadow: 0px 0px 4px rgba(50, 50, 50, 0.25);
-  box-shadow: 0px 0px 4px rgba(50, 50, 50, 0.25); }
+  box-shadow: 0px 0px 4px rgba(50, 50, 50, 0.25);
+  position: absolute;
+  top: 40px;
+  left: 0;
+  width: 100%;
+  z-index: 7; }
   #header-cm .menu-toggle {
     position: relative;
     top: 13px; }
@@ -479,10 +547,14 @@ img.gform_ajax_spinner {
       top: 5px; }
 
 /********** @SLIDESHOW *********/
-.slides li {
-  min-height: 400px;
-  max-height: 600px;
-  height: 500px; }
+.flexslider:hover .flexslider-direction {
+  opacity: 1; }
+
+.slides {
+  height: 500px;
+  outline: 10px solid yellow; }
+  .slides li {
+    height: inherit; }
 
 /********** @SEARCH *********/
 .modal-backdrop.in {

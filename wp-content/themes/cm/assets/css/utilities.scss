@@ -95,3 +95,80 @@ img.gform_ajax_spinner {
     display: none !important;
 }
 
+
+
+
+
+
+/********** $FLEXSLIDER *********/
+
+.flexslider-direction{
+	opacity: .1;
+	height: 100%;
+	z-index: 6;
+	position: absolute;
+	right: 15px;
+	width: auto;
+	margin: 0 10px;
+	height: 60px;
+	top: 48%;
+	margin-top: -30px;
+	@include transition(all,.25s);
+	
+	.icon:before{
+		font-size: 90px;
+		color: $brand;
+		//@include text-shadow(0,0,2px,rgba(0,0,0,.5));
+	}
+	
+	&.previous{
+		right: auto;
+		left: 15px;
+	}
+	
+	&:hover{
+		cursor: pointer;
+		cursor: w-resize;
+	}
+	
+	&.next:hover{
+		cursor: pointer;
+		cursor: e-resize;
+	}
+	
+}
+
+.flexslider-controls{	
+	position: absolute;
+	width: 300px;
+	z-index: 192;
+	margin: 0 auto;
+	left: 50%;
+	
+	text-align: center;
+	bottom: 15px;
+	height: 20px;
+	
+	li{
+		list-style: none;
+		margin: 0 7px;
+		display: inline-block;
+		
+		a{
+			display: block;
+			text-indent: 9999px;
+			width: 11px;
+			height: 11px;
+			background: $light;	
+			border: 1px solid $dark;	
+			@include border-radius(30px);
+			
+			&.flex-active{
+				background: $dark;			
+			}	
+		}
+	}
+}
+
+
+

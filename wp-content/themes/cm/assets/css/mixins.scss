@@ -1,6 +1,13 @@
 
 /********** @MIXINS *********/
 
+@mixin transform($properties){
+	transform: $properties;
+	-moz-transform: $properties; 
+	-webkit-transform: $properties; 
+	-o-transform: $properties; 	
+}	
+
 @mixin transition($property: all,$duration: $transitions, $delay: 0s, $easing: ease){
 	transition: $property $duration $delay $easing;
 	-moz-transition: $property $duration $delay $easing; 
