@@ -67,7 +67,7 @@
 						</div>
 					</div>
 				</div>
-				<div id="header-cm">
+				<div id="header-cm" class="bg-white">
 					<div class="container">
 						<div class="row">
 							<div id="logo-cm" class="col-sm-4 m0 col-xs-6">

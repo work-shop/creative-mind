@@ -18,6 +18,7 @@
 	height: $header-height;
 	position: relative;
 	top: 5px;
+	z-index: 9;
 }
 
 #header-brown {
@@ -51,6 +52,18 @@
 
   }
 
+}
+
+
+
+/********** @SLIDESHOW *********/
+
+.slides{
+	li{
+		min-height: 400px;
+		max-height: 600px;
+		height: 500px;
+	}
 }
 
 

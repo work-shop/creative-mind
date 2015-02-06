@@ -25,12 +25,12 @@ img,video{
 }
 
 a{
-	color: $brand;
+	color: $dark;
 	@include transition(color,.125s);
 
 	&:hover{
 		text-decoration: none;
-		color: darken($brand,5%);
+		
 	}
 
 	&:focus{
