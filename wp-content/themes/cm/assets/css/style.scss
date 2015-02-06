@@ -3,6 +3,7 @@
 @import 'utilities';
 
 
+
 /********** @STRUCTURE *********/
 
 #topbar{
@@ -73,18 +74,47 @@
 			opacity: 1;
 		}
 	}
-	
+
 }
 
 .slides{
-	height: 500px;
-	outline: 10px solid yellow;
+	height: 600px;
 	li{
 		height: inherit;
 	}
 }
 
+.slideshow-caption{
+	padding: 30px;
 
+	*{
+		color: white;
+	}
+
+	&.slideshow-caption-1{
+		background: $lectures;
+	}
+	&.slideshow-caption-2{
+		background: $lectures;
+	}
+	&.slideshow-caption-3{
+		background: $lectures;
+	}
+	&.slideshow-caption-4{
+		background: $lectures;
+	}
+
+}
+
+.flex-active-slide{
+	.slideshow-caption{
+		@extend .fade-in-slide-up;
+	}
+	.slideshow-caption-link{
+		@extend .fade-in-slide-down;
+	}
+
+}
 
 
 

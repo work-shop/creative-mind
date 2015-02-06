@@ -11,6 +11,12 @@ var log = console.log;
 jQuery(document).ready(function($) {
 
 	view();
+
+	$('#fade').click(function(event) {
+	  	event.preventDefault();
+		console.log('fade');
+		$(this).addClass('fade-out');
+	});
 	
 	$('#backtotop').click(function(event) {
 	  	event.preventDefault();
@@ -35,13 +41,13 @@ jQuery(document).ready(function($) {
 		scrollLink(href);	
 	});
 	
-	$('.flexslider-full .flex-previous').click(function() {
-	    $('.flexslider-full').flexslider('prev');
+	$('.flexslider .flex-previous').click(function() {
+	    $('.flexslider').flexslider('prev');
 	    return false;		
 	});		
 	
-	$('.flexslider-full .flex-next').click(function() {
-	    $('.flexslider-full').flexslider('next');
+	$('.flexslider .flex-next').click(function() {
+	    $('.flexslider').flexslider('next');
 	    return false;		
 	});	
 	
@@ -154,8 +160,8 @@ function flexsliderSetup(){
 	$('.flexslider').flexslider({	
 	      animation: 'fade',
 	      controlsContainer: '.flexslider-controls',	      
-	      slideshowSpeed: 4000,           
-		  animationSpeed: 1000,
+	      slideshowSpeed: 5000,           
+		  animationSpeed: 1500,
 	      directionNav: false,
 	      controlNav: false
 	 });	 			 
