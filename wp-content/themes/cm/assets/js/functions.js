@@ -50,32 +50,10 @@ jQuery(document).ready(function($) {
 	    $('.flexslider').flexslider('next');
 	    return false;		
 	});	
-	
-
-	$('.flex-end-previous').click(function() {
-		console.log('previous');
-	    $('.flexslider-end').flexslider('prev');
-	    return false;		
-	});		
-	
-	$('.flex-end-next').click(function() {
-		console.log('next');
-	    $('.flexslider-end').flexslider('next');
-	    return false;		
-	});	
-	
-/*
-	$('.flexslider-project-end-slideshow .flex-next').click(function() {
-		console.log('next');
-	    $('.flexslider-project-end-slideshow').flexslider('next');
-	    return false;		
-	});	
-			
-*/
-	
-
 
 });//end document.ready
+
+
 
 $(window).ready(function() {
 
@@ -84,11 +62,14 @@ $(window).ready(function() {
 });//end window.ready
 
 
+
 $(window).resize(function() {
 
 	view();	
 	
 });//end window.resize
+
+
 
 //FUNCTIONS
 
@@ -160,7 +141,7 @@ function flexsliderSetup(){
 	$('.flexslider').flexslider({	
 	      animation: 'fade',
 	      controlsContainer: '.flexslider-controls',	      
-	      slideshowSpeed: 5000,           
+	      slideshowSpeed: 8000,           
 		  animationSpeed: 1500,
 	      directionNav: false,
 	      controlNav: false
@@ -251,6 +232,7 @@ function view(){
 //once all elements are sized, slideshows initialized, fade in the content
 function loadPage(){
 	loaded = true;
+	console.log('loadPage');
 	
 	flexsliderSetup();
 

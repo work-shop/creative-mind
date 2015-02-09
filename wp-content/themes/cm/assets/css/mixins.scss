@@ -5,7 +5,8 @@
 	transform: $properties;
 	-moz-transform: $properties; 
 	-webkit-transform: $properties; 
-	-o-transform: $properties; 	
+	-o-transform: $properties; 
+	-ms-transform: $properties; 			
 }	
 
 @mixin transition($property: all,$duration: $transitions, $delay: 0s, $easing: ease){
@@ -13,15 +14,20 @@
 	-moz-transition: $property $duration $delay $easing; 
 	-webkit-transition: $property $duration $delay $easing; 
 	-o-transition: $property $duration $delay $easing; 	
+	-ms-transition: $property $duration $delay $easing; 		
 }
 
 @mixin box-shadow($x: 0px, $y: 0px, $size: 4px, $shadow-color: rgba(50,50,50,.25)){
+	-o-box-shadow: $x $y $size $shadow-color;
+	-ms-box-shadow: $x $y $size $shadow-color;
 	-moz-box-shadow: $x $y $size $shadow-color;
 	-webkit-box-shadow: $x $y $size $shadow-color;
 	box-shadow: $x $y $size $shadow-color;		
 }
 
 @mixin text-shadow($x: 1px, $y: 1px, $spread: 0px, $shadow-color: rgba(50,50,50,.25)){
+	-o-text-shadow: $x $y $spread $shadow-color;
+	-ms-text-shadow: $x $y $spread $shadow-color;
 	-moz-text-shadow: $x $y $spread $shadow-color;
 	-webkit-text-shadow: $x $y $spread $shadow-color;
 	text-shadow: $x $y $spread $shadow-color;	

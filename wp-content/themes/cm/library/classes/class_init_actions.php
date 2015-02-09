@@ -76,12 +76,14 @@ class CM_Init_Actions extends WS_Action_Set {
 	private function enqueue_theme_scripts() {
 		wp_deregister_script( 'jquery' );
 
+		wp_register_script( 'modernizr', get_template_directory_uri() . '/assets/js/modernizr.js');
 		wp_register_script( 'jquery', get_template_directory_uri() . '/assets/js/jquery.js');
 		wp_register_script( 'jquery-viewport', get_template_directory_uri() . '/assets/js/jquery.viewport.js');
 		wp_register_script( 'bootstrap', get_template_directory_uri() . '/assets/js/bootstrap.js');
 		wp_register_script( 'flexslider', get_template_directory_uri() . '/assets/js/flexslider.js');
 		wp_register_script( 'functions', get_template_directory_uri() . '/assets/js/functions.js');
 
+		wp_enqueue_script( 'modernizr' );
 		wp_enqueue_script( 'jquery' );
 		wp_enqueue_script( 'jquery-viewport' );
 		wp_enqueue_script( 'bootstrap' );

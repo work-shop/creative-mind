@@ -8,10 +8,11 @@
 		<?php get_template_part('partials/search_modal'); ?>
 
 	</div><!-- /#wrapper -->
-<!-- 
+ 
 	<script src="//use.typekit.net/reo8aih.js"></script>
 	<script>try{Typekit.load();}catch(e){}</script>	
 
+<!-- 
 	<script type="text/javascript">
 		//google analytics
 		  var _gaq = _gaq || [];
@@ -23,6 +24,7 @@
 		    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
 		  })();
 	</script> 	 		
+
  -->
 	<?php wp_footer(); ?>
 
