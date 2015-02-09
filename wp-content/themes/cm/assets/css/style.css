@@ -129,6 +129,18 @@ p {
 .brand {
   color: #cb2026; }
 
+.courses {
+  color: #47c1c3; }
+
+.research {
+  color: #8cc63e; }
+
+.interviews {
+  color: #00a1d3; }
+
+.lectures {
+  color: #cb2026; }
+
 .uppercase {
   text-transform: uppercase; }
 
@@ -1764,8 +1776,12 @@ img.gform_ajax_spinner {
 
 /********** @RESPONSIVE *********/
 @media (max-width: 767px) {
+  #header {
+    height: 50px; }
+
   #header-cm {
-    top: 0px; }
+    top: 0px;
+    overflow: hidden; }
 
   .nav.nav-inline {
     height: auto;

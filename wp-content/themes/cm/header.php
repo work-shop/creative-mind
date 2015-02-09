@@ -71,7 +71,7 @@
 					<div class="container">
 						<div class="row">
 							<div id="logo-cm" class="col-sm-4 m0 col-xs-6">
-								<a href="<?php bloginfo('url'); ?>" target="blank">
+								<a href="<?php bloginfo('url'); ?>">
 									<img src="<?php bloginfo('template_directory'); ?>/assets/img/logo-cm-small.png" alt="creative mind logo" />
 								</a>
 							</div>
