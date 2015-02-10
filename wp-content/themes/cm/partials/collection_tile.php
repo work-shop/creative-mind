@@ -1,5 +1,5 @@
 	
-	<section id="collection-<?php echo $i; ?>" class="block padded">
+	<section id="collection-<?php echo $i; ?>" class="block padded target">
 		<div class="container">
 			<div class="row">
 				
@@ -11,6 +11,7 @@
 				<?php for ($j=0; $j <= 7; $j++) { ?>
 
 					<?php if($j === 0){ ?>
+					
 						<article class="col-sm-4 story-tile story-tile-collection-title" id="story-<?php echo $j; ?>">
 							<a href="<?php the_permalink();?>">
 								<h2 class="serif">
@@ -18,8 +19,11 @@
 								</h2>
 							</a>
 						</article>
+
 					<?php } else{ ?>
+
 						<?php get_template_part('partials/story_tile'); ?>
+
 					<?php } ?>
 
 				<?php } ?>

@@ -2,8 +2,9 @@
 		</div><!--/#content-->
 		
 		<?php get_template_part('partials/break'); ?>	
-		<?php get_template_part('partials/back_to_top'); ?>
+		<?php // get_template_part('partials/back_to_top'); ?>
 		<?php get_template_part('partials/guidepost'); ?>
+		<?php get_template_part('partials/share'); ?>
 		<?php get_template_part('partials/footer_menu'); ?>
 		<?php get_template_part('partials/search_modal'); ?>
 
@@ -11,6 +12,10 @@
  
 	<script src="//use.typekit.net/reo8aih.js"></script>
 	<script>try{Typekit.load();}catch(e){}</script>	
+
+	<script type="text/javascript">var addthis_config = {"data_track_addressbar":true};</script>
+	<script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-50f20b8a658458ce"></script>	
+	<script type="text/javascript">var addthis_config = {"data_track_clickback":true};</script>
 
 <!-- 
 	<script type="text/javascript">

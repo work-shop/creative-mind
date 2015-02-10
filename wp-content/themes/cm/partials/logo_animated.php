@@ -1,4 +1,4 @@
-<div class="logo logo-animated">
+<div class="logo logo-animated active">
 	<?php get_template_part('partials/logo_svg'); ?>
 </div> 
 <div class="logo logo-static">

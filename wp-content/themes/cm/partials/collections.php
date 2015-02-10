@@ -1,4 +1,4 @@
-<section id="collections-intro" class="block padded-less">
+<section id="collections-intro" class="block padded-less target">
 	<div class="container">
 		<div class="row">
 			<div class="col-sm-12">
