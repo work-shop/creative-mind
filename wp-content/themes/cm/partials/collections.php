@@ -17,7 +17,7 @@
 	loop through the collections on this page
 	*/
 
-	$collections = 7;
+	$collections = 5;
 	for ($i=1; $i <= $collections; $i++) { ?>
 
 		<?php get_template_part('partials/collection_tile'); ?>
