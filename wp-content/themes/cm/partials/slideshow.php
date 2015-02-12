@@ -15,7 +15,7 @@
 
 							<div class="col-sm-6 col-md-4 col-md-offset-6 slideshow-caption slideshow-caption-<?php echo $i;?>">
 								<a href="#">
-									<h6>Featured Collection</h6>
+									<h6 class="m0">Featured Collection</h6>
 									<h2 class="serif m0">Collection <?php echo $i; ?></h2>
 									<p class="m0">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
 									tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
@@ -28,7 +28,7 @@
 
 							<div class="col-sm-6 col-md-4 slideshow-caption slideshow-caption-<?php echo $i;?>">
 								<a href="#">
-									<h6>Featured Collection</h6>
+									<h6 class="m0">Featured Collection</h6>
 									<h2 class="serif m0">Collection <?php echo $i; ?></h2>
 									<p class="m0">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
 									tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,

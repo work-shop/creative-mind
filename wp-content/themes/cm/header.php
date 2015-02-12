@@ -51,7 +51,7 @@
 		<?php get_template_part('partials/ie'); ?>
 		<?php get_template_part('partials/landing'); ?>
 
-		<div id="wrapper" class="loading">
+		<div id="wrapper" class="loading spy">
 
 			<div id="topbar" class="bg-brand"></div>
 	

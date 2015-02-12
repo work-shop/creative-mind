@@ -70,7 +70,7 @@ h1 {
   font-size: 3em; }
 
 h2 {
-  font-size: 2em; }
+  font-size: 1.75em; }
 
 h3 {
   font-size: 1.25em; }
@@ -92,7 +92,16 @@ p {
     font-size: 17px; } }
 @media (max-width: 992px) {
   * {
-    font-size: 15px; } }
+    font-size: 15px; }
+
+  h1 {
+    font-size: 2.5em; }
+
+  h2 {
+    font-size: 1.25em; }
+
+  h3 {
+    font-size: 1.1em; } }
 @media (max-width: 767px) {
   * {
     font-size: 14px; }
@@ -101,10 +110,10 @@ p {
     font-size: 2em; }
 
   h2 {
-    font-size: 1.5em; }
+    font-size: 1.25em; }
 
   h3 {
-    font-size: 1.2em; }
+    font-size: 1.1em; }
 
   h4 {
     font-size: 1em; }
@@ -140,6 +149,9 @@ p {
 
 .lectures {
   color: #cb2026; }
+
+.brown-yellow {
+  color: #ffcc00; }
 
 .uppercase {
   text-transform: uppercase; }
@@ -642,8 +654,6 @@ p {
   z-index: 1; }
   .block.crop {
     overflow: hidden; }
-  .block.active {
-    outline: 10px solid #cb2026; }
 
 .block-background {
   width: 100%;
@@ -704,8 +714,7 @@ p {
     box-sizing: padding-box;
     display: block;
     padding: 0 15px;
-    font-size: 19px;
-    font-weight: 600; }
+    font-size: 19px; }
   .nav.nav-inline li {
     display: inline-block;
     height: 47px;
@@ -713,7 +722,7 @@ p {
     vertical-align: middle;
     margin-right: 5px;
     position: relative;
-    top: 3px; }
+    top: 2px; }
 
 @media (max-width: 992px) {
   .nav li a {
@@ -939,56 +948,57 @@ img.gform_ajax_spinner {
   -o-transform: translate(0, 0%);
   -ms-transform: translate(0, 0%);
   fill: #cb2026; }
-.logo-animated.active #alogo-creative {
-  animation: creative 7s 2s ease 1;
-  -ms-animation: creative 7s 2s ease 1;
-  -webkit-animation: creative 7s 2s ease 1;
-  -o-animation: move creative 7s 2s ease 1;
-  -moz-animation: move creative 7s 2s ease 1;
+
+#site-description.active #alogo-creative {
+  animation: creative 7s 0.5s ease 1;
+  -ms-animation: creative 7s 0.5s ease 1;
+  -webkit-animation: creative 7s 0.5s ease 1;
+  -o-animation: move creative 7s 0.5s ease 1;
+  -moz-animation: move creative 7s 0.5s ease 1;
   animation-fill-mode: forwards;
   -webkit-animation-fill-mode: forwards;
   -moz-animation-fill-mode: forwards;
   -ms-animation-fill-mode: forwards;
   -o-animation-fill-mode: forwards; }
-.logo-animated.active #alogo-mind {
-  animation: mind 7s 2s ease 1;
-  -ms-animation: mind 7s 2s ease 1;
-  -webkit-animation: mind 7s 2s ease 1;
-  -o-animation: move mind 7s 2s ease 1;
-  -moz-animation: move mind 7s 2s ease 1;
+#site-description.active #alogo-mind {
+  animation: mind 7s 0.5s ease 1;
+  -ms-animation: mind 7s 0.5s ease 1;
+  -webkit-animation: mind 7s 0.5s ease 1;
+  -o-animation: move mind 7s 0.5s ease 1;
+  -moz-animation: move mind 7s 0.5s ease 1;
   animation-fill-mode: forwards;
   -webkit-animation-fill-mode: forwards;
   -moz-animation-fill-mode: forwards;
   -ms-animation-fill-mode: forwards;
   -o-animation-fill-mode: forwards; }
-.logo-animated.active #alogo-brown path {
-  animation: brown 7s 2s ease 1;
-  -ms-animation: brown 7s 2s ease 1;
-  -webkit-animation: brown 7s 2s ease 1;
-  -o-animation: move brown 7s 2s ease 1;
-  -moz-animation: move brown 7s 2s ease 1;
+#site-description.active #alogo-brown path {
+  animation: brown 7s 0.5s ease 1;
+  -ms-animation: brown 7s 0.5s ease 1;
+  -webkit-animation: brown 7s 0.5s ease 1;
+  -o-animation: move brown 7s 0.5s ease 1;
+  -moz-animation: move brown 7s 0.5s ease 1;
   animation-fill-mode: forwards;
   -webkit-animation-fill-mode: forwards;
   -moz-animation-fill-mode: forwards;
   -ms-animation-fill-mode: forwards;
   -o-animation-fill-mode: forwards; }
-.logo-animated.active #alogo-dot-1 {
-  animation: dot1 7s 2s ease 1;
-  -ms-animation: dot1 7s 2s ease 1;
-  -webkit-animation: dot1 7s 2s ease 1;
-  -o-animation: move dot1 7s 2s ease 1;
-  -moz-animation: move dot1 7s 2s ease 1;
+#site-description.active #alogo-dot-1 {
+  animation: dot1 7s 0.5s ease 1;
+  -ms-animation: dot1 7s 0.5s ease 1;
+  -webkit-animation: dot1 7s 0.5s ease 1;
+  -o-animation: move dot1 7s 0.5s ease 1;
+  -moz-animation: move dot1 7s 0.5s ease 1;
   animation-fill-mode: forwards;
   -webkit-animation-fill-mode: forwards;
   -moz-animation-fill-mode: forwards;
   -ms-animation-fill-mode: forwards;
   -o-animation-fill-mode: forwards; }
-.logo-animated.active #alogo-dot-2 {
-  animation: dot2 7s 2s ease 1;
-  -ms-animation: dot2 7s 2s ease 1;
-  -webkit-animation: dot2 7s 2s ease 1;
-  -o-animation: move dot2 7s 2s ease 1;
-  -moz-animation: move dot2 7s 2s ease 1;
+#site-description.active #alogo-dot-2 {
+  animation: dot2 7s 0.5s ease 1;
+  -ms-animation: dot2 7s 0.5s ease 1;
+  -webkit-animation: dot2 7s 0.5s ease 1;
+  -o-animation: move dot2 7s 0.5s ease 1;
+  -moz-animation: move dot2 7s 0.5s ease 1;
   animation-fill-mode: forwards;
   -webkit-animation-fill-mode: forwards;
   -moz-animation-fill-mode: forwards;
@@ -1777,7 +1787,7 @@ img.gform_ajax_spinner {
   opacity: 1; }
 
 .slides {
-  height: 600px; }
+  height: 660px; }
   .slides li {
     height: inherit; }
 
@@ -1841,12 +1851,28 @@ img.gform_ajax_spinner {
   background: none; }
 
 /********** @COLLECTIONS *********/
+.collection {
+  transition: all 1s 0s ease;
+  -moz-transition: all 1s 0s ease;
+  -webkit-transition: all 1s 0s ease;
+  -o-transition: all 1s 0s ease;
+  -ms-transition: all 1s 0s ease;
+  opacity: .5; }
+  .collection.active {
+    opacity: 1; }
+
 /********** @TILES *********/
+.story-tile.story-tile-collection-title {
+  position: relative;
+  overflow: visible; }
+  .story-tile.story-tile-collection-title h2 {
+    margin-top: 0; }
+  .story-tile.story-tile-collection-title h6 {
+    margin-left: 5px; }
+
 .story-tile {
   position: relative;
-  width: 33%;
-  float: left;
-  margin: 30px;
+  margin-bottom: 30px;
   overflow: hidden; }
   .story-tile .overlay {
     position: absolute;
@@ -1875,7 +1901,6 @@ img.gform_ajax_spinner {
     opacity: 0;
     top: 60%;
     color: #222222;
-    font-family: "Adriane", georgia, serif;
     font-size: 27px; }
   .story-tile:hover .overlay {
     top: 0;

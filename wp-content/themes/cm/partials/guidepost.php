@@ -3,9 +3,9 @@
 		<div class="container">
 			<div class="row">
 				<div class="col-sm-12">
-					<h3 class="serif bold centered mb1">
+					<h2 class="serif bold centered mb1">
 					Explore the Creative Mind!
-					</h3>
+					</h2>
 				</div>
 			</div>
 			<div class="row">
@@ -29,7 +29,7 @@
 						Interviews
 						</h3>
 						<h4 class="centered">
-						Conversations with students, faculty, and staff about creativity.
+						Watch video conversations with students, faculty, and staff about creativity and the creative process.
 						</h4>
 					</a>
 				</div>

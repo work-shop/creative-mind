@@ -113,26 +113,30 @@
 		fill: $brand;					
 	}		
 
+}
+
+#site-description{
+
 	&.active{
 		#alogo-creative{
-			@include animation(creative,7s,2s,ease,1);
+			@include animation(creative,7s,.5s,ease,1);
 		}
 
 		#alogo-mind{
-			@include animation(mind,7s,2s,ease,1);
+			@include animation(mind,7s,.5s,ease,1);
 		}
 
 		#alogo-brown path{
-			@include animation(brown,7s,2s,ease,1);			
+			@include animation(brown,7s,.5s,ease,1);			
 		}
 
 		#alogo-dot-1{
-			@include animation(dot1,7s,2s,ease,1);	
+			@include animation(dot1,7s,.5s,ease,1);	
 
 		}	
 
 		#alogo-dot-2{
-			@include animation(dot2,7s,2s,ease,1);			
+			@include animation(dot2,7s,.5s,ease,1);			
 		}			
 
 	}
@@ -269,7 +273,7 @@ $icon-margin: 15px;
 }
 
 .slides{
-	height: 600px;
+	height: 660px;
 	li{
 		height: inherit;
 	}
@@ -359,14 +363,44 @@ $icon-margin: 15px;
 /********** @COLLECTIONS *********/
 
 
+.collection{
+	@include transition(all,1s);
+	opacity: .5;
+
+	&.active{
+		opacity: 1;		
+	}
+
+}
+
 
 /********** @TILES *********/
 
+
+.story-tile.story-tile-collection-title{
+	position: relative;
+	overflow: visible;
+
+	.collection-title{
+		// position: absolute;
+		// top: 0;
+		// left: 0;
+		// width: 100%;
+	}
+
+	h2{
+		//width: 66%;
+		margin-top: 0;	
+	}
+
+	h6{
+		margin-left: 5px;
+	}
+}
+
 .story-tile{
 	position: relative;
-	width: 33%;
-	float: left;
-	margin: 30px;
+	margin-bottom: 30px;
 	overflow: hidden;
 
 	.overlay{
@@ -390,7 +424,6 @@ $icon-margin: 15px;
 		opacity: 0;
 		top: 60%;
 		color: $dark;
-		font-family: $font-family-serif;
 		font-size: 27px;
 	}
 

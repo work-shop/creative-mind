@@ -264,12 +264,16 @@ $(window).scroll(function() {
 
 $(document).on('spy-init', function() {
 
+	console.log('spy-init');
+
 	var current = undefined;
 
 	spied = {};
 
-	$('.spy .jump:not(.exclude)').each( function( i,d ) { 
-		spied[ $(d).attr('href') ] = true;
+	$('.spy .target:not(.exclude)').each( function( i,d ) { 
+		spied[ $(d).attr('id') ] = true;
+			console.log(spied);
+
 	});
 	/**
 	 * When spying on the state of the page, we're interested in:
@@ -279,9 +283,7 @@ $(document).on('spy-init', function() {
 	 */
 
 	 $(document).on('spy-recalculate', function() {
-	 	decideActive(  $('.block:in-viewport').filter(
-	 		function( i,x ) { return spied[ '#' + $(x).attr('id') ]; }
-	 	));
+	 	decideActive(  $('.block.target:in-viewport'));
 	 });
 
 	 $(document).on('spy-repaint', function( event, d ) {
@@ -291,8 +293,6 @@ $(document).on('spy-init', function() {
 
 	 		c.removeClass('active');
 	 		d.addClass('active').addClass('activated');
-	 		$('.spy .jump[href="#' + c.attr('id') + '"]').removeClass('active');
-	 		$('.spy .jump[href="#' + d.attr('id') + '"]').addClass('active');
 
 	 		current = d;
 	 	}
@@ -301,7 +301,6 @@ $(document).on('spy-init', function() {
 
 	 $(window).on('scroll', function() {
 	 	if( !$('html').hasClass('menu-open') ) {	
-	 		if ( current == undefined ) { $('.spy .jump').removeClass('active'); }
 	 		$(document).trigger('spy-recalculate');
 	 	}
 	 });
@@ -316,10 +315,6 @@ $(document).on('spy-init', function() {
 		 * and trigger the desired action on them.
 		 */
 
-
-		if($('.spy').hasClass('falloff')){
-			var falloffPosition = $( $('.falloff-link').attr('href')).offset().top;
-		}
 
 		var w = $(window), doc = $(document);
 		var centerline = w.scrollTop() + (w.height() / 2);

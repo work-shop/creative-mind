@@ -1,11 +1,11 @@
 
-	<section class="block padded target share" id="share">
+	<section class="block padded-more target share" id="share">
 		<div class="container">
 			<div class="row">
 				<div class="col-sm-6 col-sm-offset-3">
-					<h3 class="serif bold centered mb1">
+					<h2 class="serif bold centered mb1">
 					Share the Creativity!
-					</h3>
+					</h2>
 				</div>
 				<div class="col-sm-4 col-sm-offset-4">
 					<div class="share-icons">
