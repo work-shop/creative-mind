@@ -19,7 +19,7 @@
 									<h2 class="serif">
 										Communicating Science Through Visual Media
 									</h2>
-									<h6 class="m0">7 Stories</h6>
+									<h6 class="m0">In Courses, 7 Stories</h6>
 									<h6 class="m0">View collection <span class="icon" data-icon="&#8222;"></span></h6>
 								</div>
 							</a>

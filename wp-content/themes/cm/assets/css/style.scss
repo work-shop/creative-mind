@@ -63,6 +63,58 @@
 
 }
 
+#collection-intro{
+	@include transition(all,.5s);
+
+	*{
+		@include transition(all,.5s);
+	}
+
+	.collection-title-story-title{
+		display: none;
+	}
+
+}
+
+.after{
+	#header-cm{
+		position: fixed;
+		top: 4px;
+	}
+
+	// #collection-intro{
+	// 	position: fixed;
+	// 	width: 100%;
+	// 	left: 0;
+	// 	top: $nav-height;
+	// 	height: 60px;
+	// 	padding: 0;
+	// 	overflow: hidden;
+	// 	background: $light;
+	// 	z-index: 6;
+	// 	&:after{
+	// 		height: 1000px;
+	// 		display: block;
+	// 		content: '';
+	// 	}
+
+	// 	h2{
+	// 		margin-top: 20px;
+	// 		font-size: 20px;
+	// 	}
+
+	// 	.collection-title-story-title{
+	// 		display: inline;
+	// 	}
+
+	// }
+
+	// .collection{
+	// 	margin-top: 200px;
+	// }
+
+}
+
 
 
 /********** @LOGO *********/
@@ -200,12 +252,54 @@ $dot-margin: 12px;
 		height: $dot-width;
 		@include border-radius($dot-width/2);
 		display: inline-block;
+		@include transition(all,.25s);
 	}
 
 	.dot-1,.dot-2,.dot-3{
 		margin-right: $dot-margin;
 	}
 
+}
+
+.break.active{
+	.dot-1{
+		@include animation(break1,1.5s,0s,ease,1);			
+	}
+	.dot-2{
+		@include animation(break2,1.5s,0s,ease,1);			
+	}
+	.dot-3{
+		@include animation(break3,1.5s,0s,ease,1);			
+	}
+	.dot-4{
+		@include animation(break4,1.5s,0s,ease,1);			
+	}	
+
+
+}
+
+@include keyframes(break1){
+	0%{ @include transform(translate(0,0)); }
+	50%{ @include transform(translate(-25%,-150%)); }
+	100%{ @include transform(translate(0,0%)); }
+}
+
+@include keyframes(break2){
+	0%{ @include transform(translate(0,0)); }
+	50%{ @include transform(translate(0,50%)); }
+	100%{ @include transform(translate(0,0%)); }
+}
+
+@include keyframes(break3){
+	0%{ @include transform(translate(0,0)); }
+	50%{ @include transform(translate(5%,250%)); }
+	100%{ @include transform(translate(0,0%)); }
+}
+
+@include keyframes(break4){
+	0%{ @include transform(translate(0,0)); }
+	50%{ @include transform(translate(20%,-75%)); }
+	100%{ @include transform(translate(0,0%)); }
 }
 
 
@@ -364,7 +458,7 @@ $icon-margin: 15px;
 
 
 .collection{
-	@include transition(all,1s);
+	@include transition(opacity,1s);
 	opacity: .5;
 
 	&.active{
@@ -380,6 +474,8 @@ $icon-margin: 15px;
 .story-tile.story-tile-collection-title{
 	position: relative;
 	overflow: visible;
+		//background-clip: content-box;
+
 
 	.collection-title{
 		// position: absolute;
@@ -402,14 +498,18 @@ $icon-margin: 15px;
 	position: relative;
 	margin-bottom: 30px;
 	overflow: hidden;
+	background-clip: content-box;		
 
 	.overlay{
 		position: absolute;
 		top: 0;
 		left: 0;		
 		width: 100%;
+		padding-left: 15px;
+		padding-right: 15px;		
 		height: 101%;	
 		background: white;
+		background-clip: content-box;		
 		@include transition(all,.35s);
 		opacity: 0;		
 		top: -25%;	
@@ -417,12 +517,14 @@ $icon-margin: 15px;
 
 	.story-title{
 		position: absolute;
-		margin-top: -15px;
 		text-align: center;		
 		width: 100%;
+		padding-left: 15px;
+		padding-right: 15px;	
 		@include transition(all,.35s);
 		opacity: 0;
-		top: 60%;
+		top: 50%;
+		@include transform(translate(-15px,-75%));
 		color: $dark;
 		font-size: 27px;
 	}

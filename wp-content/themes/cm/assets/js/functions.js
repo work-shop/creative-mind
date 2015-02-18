@@ -249,7 +249,7 @@ $(window).scroll(function() {
 
 	if( !$('html').hasClass('menu-open') ) {	
 	
-		var after = $('body').offset().top + 200;
+		var after = $('body').offset().top + 40;
 		       
 		if($(this).scrollTop() >= after && $("body").hasClass('before')){
 			$("body").removeClass('before').addClass('after');
