@@ -1,6 +1,6 @@
 
 <?php $random = rand(0,3); ?>
-<article class="story-tile <?php if($random == 2){ echo 'col-sm-8';}else{echo 'col-sm-4';}?>">
+<article class="story-tile inactive <?php if($random == 2){ echo 'col-sm-8';}else{echo 'col-sm-4';}?>">
 	<a href="<?php bloginfo('url' );?>/stories/imaginary-product-development">
 		<div class="story-tile-image">
 			<img src="<?php echo get_template_directory_uri();?>/assets/img/2.jpg" alt="story thumbnail" class="display-block" />

@@ -28,11 +28,6 @@ jQuery(document).ready(function($) {
 		menuToggle();
 		console.log('.menu-toggle clicked');
 	});
-	
-	$('.invitation-toggle').click(function(event) {
-	  	event.preventDefault();
-		invitationToggle();
-	});	
 
 	$(".jump").click(function(e){
 		e.preventDefault();
@@ -50,6 +45,11 @@ jQuery(document).ready(function($) {
 	    $('.flexslider').flexslider('next');
 	    return false;		
 	});	
+
+	$('.single .story-tile').click(function(event) {
+	  	event.preventDefault();
+		storyToggle($(this));
+	});		
 
 });//end document.ready
 
@@ -184,12 +184,27 @@ function menuToggle(){
 	
 }
 
-function invitationToggle(){
+function storyToggle(clicked){
+
+	ch = $(window).height();
+	cw = $(window).width();
+	heroHeight = cw/3.5;
+
+	//append styles to the active story tile
+	$('.story-tile').removeClass('active').addClass('inactive');
+	clicked.removeClass('inactive').addClass('active');
 	
-	if($('.invitation-form').hasClass('closed')){
-		$('.invitation-form').removeClass('closed');
-		$('.invitation-form').addClass('open');
-	}
+	//transition to story-loading state
+	
+	$('html,body').animate({scrollTop: 0},1000);	
+	$('#active-story').addClass('story-loading');
+
+	setTimeout(function(){
+		console.log(cw);
+		$('#active-story .story .story-hero').height(heroHeight);
+		$('#active-story').removeClass('story-loading').addClass('story-loaded');
+		
+	},2000);
 	
 }
 

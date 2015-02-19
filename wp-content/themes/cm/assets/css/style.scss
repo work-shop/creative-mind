@@ -275,7 +275,6 @@ $dot-margin: 12px;
 		@include animation(break4,1.5s,0s,ease,1);			
 	}	
 
-
 }
 
 @include keyframes(break1){
@@ -301,7 +300,6 @@ $dot-margin: 12px;
 	50%{ @include transform(translate(20%,-75%)); }
 	100%{ @include transform(translate(0,0%)); }
 }
-
 
 
 /********** @GUIDEPOST *********/
@@ -456,8 +454,7 @@ $icon-margin: 15px;
 
 /********** @COLLECTIONS *********/
 
-
-.collection{
+.collection:not(.collection-single){
 	@include transition(opacity,1s);
 	opacity: .5;
 
@@ -467,6 +464,99 @@ $icon-margin: 15px;
 
 }
 
+
+
+/********** @COLLECTION SINGLE *********/
+
+#active-story-loading .dots{
+	width: ($dot-width * 2) + ($dot-margin*2) + 5;
+	margin: 0 auto;	
+}
+
+#active-story{
+	@include transition(all,1s);
+	height: 0px;
+	overflow: hidden;
+
+	.story{
+		opacity: 0;
+	}
+	
+	&.story-loading {
+		display: block;
+		height: 125px;
+		padding: 50px 0;
+
+		#active-story-loading{
+			.dot-1{
+				@include animation(load1,4s,.5s,ease,infinite);			
+			}
+			.dot-2{
+				@include animation(load2,4s,.5s,ease,infinite);			
+			}
+		}	
+	}	
+
+	&.story-loaded{
+		height: auto;
+
+		#active-story-loading{
+			display: none;
+		}
+
+		.story{
+			opacity: 1;
+		}		
+
+	}
+}
+
+@include keyframes(load1){
+	0%{ @include transform(translate(0,0)); }
+	25%{ @include transform(translate(0%,-150%)); }
+	50%{ @include transform(translate(0%,75%)); }	
+	75%{ @include transform(translate(0%,-200%)); }
+	100%{ @include transform(translate(0,0%)); }
+}
+
+@include keyframes(load2){
+	0%{ @include transform(translate(0,0)); }
+	25%{ @include transform(translate(0%,250%)); }
+	50%{ @include transform(translate(0%,-150%)); }	
+	75%{ @include transform(translate(0%,100%)); }
+	100%{ @include transform(translate(0,0%)); }
+}
+
+
+
+/********** @STORY *********/
+
+.story{
+	@include transition(all,.5s);
+
+	.story-hero{
+		overflow: hidden;
+		position: relative;
+
+		&:after{
+			position: absolute;
+			content: '';
+			display: block;
+			width: 100%;
+			height: 100%;
+			top: 0;
+			left: 0;
+			background: rgba(255,255,255,.75);
+			@include linear-gradient(rgba(255,255,255,0),rgba(255,255,255,0),rgba(255,255,255,.5),rgba(255,255,255,1));
+		}
+	}
+
+	.story-meta{
+		position: relative;
+		@include transform(translate(0,-50%));
+	}
+
+}
 
 /********** @TILES *********/
 
@@ -498,7 +588,9 @@ $icon-margin: 15px;
 	position: relative;
 	margin-bottom: 30px;
 	overflow: hidden;
-	background-clip: content-box;		
+	background-clip: content-box;	
+	@include transition(all,.35s);
+
 
 	.overlay{
 		position: absolute;
@@ -529,16 +621,24 @@ $icon-margin: 15px;
 		font-size: 27px;
 	}
 
-	&:hover{
-		.overlay{
-			top: 0;
-			opacity: .75;
+	&.inactive{
+
+		&:hover{
+			.overlay{
+				top: 0;
+				opacity: .75;
+			}
+
+			.story-title{
+				top: 50%;
+				opacity: 1;
+			}
 		}
 
-		.story-title{
-			top: 50%;
-			opacity: 1;
-		}
+	}	
+
+	&.active{
+		opacity: .25;
 	}
 }
 
