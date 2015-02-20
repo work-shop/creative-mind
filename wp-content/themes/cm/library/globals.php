@@ -83,4 +83,14 @@ function is_child( $parent = '' ) {
     }
 }
 
+
+function vimeo_frame( $vimeo_id, $player_id, $classes = '' ) {
+	return '<iframe class="vimeo-video '.$classes.'" id="'.$player_id.'" src=' 
+	     . '"//player.vimeo.com/video/' 
+	     . $vimeo_id 
+	     . '?js_api=1&js_swf_id='
+	     . $player_id
+	     . '" frameborder=0 width="100%" height="100%" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>';
+}	
+
 ?>

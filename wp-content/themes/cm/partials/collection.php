@@ -20,23 +20,27 @@
 <section id="collection-intro" class="block padded-less target">
 	<div class="container-fluid">
 		<div class="row collection-intro-heading">
-			<div class="col-sm-3">		
+			<div class="col-sm-3 col-xs-1">		
 				<a class="story-toggle" href="#">
-					<h5 class="serif courses bold collection-previous">
-						<span class="icon" data-icon="‰"></span>	
-						Previous Story: Communicating Medical Risk
-					</h5>
+					<h6 class="serif courses bold collection-previous">
+						<span class="icon previous" data-icon="‰"></span>	
+						<span class="h6 previous-story-label">Previous Story </span> 
+						<span class="previous-story-title h6 bold">: Communicating Medical Risk</span>
+					</h6>
 				</a>
 			</div>
-			<div class="col-sm-6 collection-title">		
-				<h2 class="serif courses bold centered m0">Communicating Science Through Visual Media <span class="collection-suffix bold serif">: Empathy</span></h2>
+			<div class="col-sm-6 col-xs-10">		
+				<h2 class="serif courses bold centered m0 collection-title">Communicating Science Through Visual Media 
+				<span class="collection-suffix bold serif h2">: Empathy</span>
+				</h2>
 			</div>
-			<div class="col-sm-3">		
+			<div class="col-sm-3 col-xs-1">		
 				<a class="story-toggle" href="#">
-					<h5 class="serif courses righted bold  collection-next">
-						Next Story: Penguins
-						<span class="icon" data-icon="„"></span>
-					</h5>
+					<h6 class="serif courses righted bold collection-next">
+						<span class="h6 next-story-label">Next Story </span> 
+						<span class="next-story-title h6 bold">: Penguins </span>
+						<span class="icon next" data-icon="„"></span>
+					</h6>
 				</a>
 			</div>		
 		</div>

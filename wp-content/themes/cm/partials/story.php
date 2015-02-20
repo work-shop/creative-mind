@@ -6,12 +6,52 @@
 
 	?>
 
-	<article class="story block">
-		<div class="story-header">
-
-		<?php ?>
+	<article class="story block target story-type-<?php echo $story_type;?>">
+		<div class="story-header story-header-<?php echo $story_type;?>">
 			<div class="story-hero">
-				<img src="<?php echo get_template_directory_uri();?>/assets/img/2.jpg" alt="story thumbnail" class="display-block" />
+				<?php 
+				switch ($story_type) {
+					case 'video': ?>
+						<div class="story-video-container">	
+							<div class="story-video">				
+								<?php
+								$vimeo_id = '93171956';
+								echo vimeo_frame($vimeo_id,'story-video-1'); 
+								?>
+							</div>
+							<div class="story-video-poster">
+								<img src="<?php bloginfo('template_directory');?>/assets/img/empathy.jpg" />
+							</div>
+							<div class="story-video-play" data-toggle="tooltip" data-placement="top" title="watch the video!">
+								<span class="icon" data-icon="Ò"></span>
+							</div>
+						</div>
+					<?php break;
+
+					case 'image_gallery': ?>
+
+
+
+					<?php break;
+
+					case 'video_gallery': ?>
+
+
+
+					<?php break;
+
+					case 'video_and_image_gallery': ?>
+
+
+
+					<?php break;						
+
+					default: ?>
+						
+					<?php break;
+
+				} 
+				?>
 			</div>
 			<div class="story-meta centered">
 				<div class="container">

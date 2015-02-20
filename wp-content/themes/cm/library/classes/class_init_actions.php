@@ -11,8 +11,8 @@ class CM_Init_Actions extends WS_Action_Set {
 
 		parent::__construct(
 			array(
-				'init' 							=> 'create_post_types',
-				'wp_enqueue_scripts' 					=> 'enqueue_theme_assets',
+				'init' 								=> 'create_post_types',
+				'wp_enqueue_scripts' 				=> 'enqueue_theme_assets',
 				'after_theme_setup'					=> array( 'remove_post_formats', 11, 0 ),
 				'login_head'						=> 'login_css',
 				'admin_head'						=> 'admin_css',
@@ -151,6 +151,7 @@ class CM_Init_Actions extends WS_Action_Set {
 	}
 
 }
+
 
 new CM_Init_Actions();
 

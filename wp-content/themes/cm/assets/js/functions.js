@@ -54,7 +54,12 @@ jQuery(document).ready(function($) {
 	$('.story-toggle').click(function(event) {
 	  	event.preventDefault();
 		storyToggle($(this));
-	});		
+	});	
+
+	$('.story-video-play').click(function(event) {
+	  	event.preventDefault();
+		playVideo();
+	});			
 
 });//end document.ready
 
@@ -197,7 +202,7 @@ function storyToggle(clicked){
 	storyHeight = ch - 80;
 
 	if($('#active-story').hasClass('story-loaded')){
-		$('body').removeClass('story-loaded').addClass('story-loading');
+		$('body').removeClass('story-loaded').removeClass('story-video-active').addClass('story-loading');
 		$('#active-story').removeClass('story-loaded').addClass('story-loading');
 	}
 
@@ -223,6 +228,13 @@ function storyToggle(clicked){
 	
 }
 
+function playVideo(){
+
+	$('body').addClass('story-video-active');
+	view();
+	
+}
+
 //measure, resize, and adjust the viewport
 function view(){
 	
@@ -230,8 +242,20 @@ function view(){
 	cw = $(window).width();
 	ph = ch - 130;
 	fw = cw*.5;
+	storyHeight = cw/3;
+	storyVideoHeight = ch - 200;
 	
 	if($(window).width() >= 768){		
+
+		if($('body').hasClass('story-video-active')){
+			$('.story-hero').css('height',storyVideoHeight);
+			$('.story-video-container').css('height',storyVideoHeight);
+		}
+		else{
+			$('.story-hero').css('height',storyHeight);
+			$('.story-video-container').css('height',storyHeight);		
+		}
+
 		$('.block.half').css('height',ch/2);
 		$('.block.golden-max').css('max-height',ch*.72);		
 		$('.block.sixty').css('height',ch*.69);										
@@ -250,7 +274,7 @@ function view(){
 		$('.block.min-large').css('min-height','none');	
 		$('.block.three-quarter').css('height',ph);			
 		$('.block.three-quarter-max').css('max-height',ph);	
-		//$('.flexslider-hero').css('height',fw);																																	
+		//$('.flexslider-hero').css('height',fw);																															
 	}
 	
 	if(!loaded){
@@ -295,13 +319,13 @@ $(window).scroll(function() {
 $(document).on('spy-init', function() {
 
 	var current = undefined;
+	var previousBodyClass;
+
 
 	spied = {};
 
 	$('.spy .target:not(.exclude)').each( function( i,d ) { 
 		spied[ $(d).attr('id') ] = true;
-			console.log(spied);
-
 	});
 	/**
 	 * When spying on the state of the page, we're interested in:
@@ -318,15 +342,17 @@ $(document).on('spy-init', function() {
 	 	if ( current != d ) {
 	 		var c = $(current);
 	 		    d = $( d );
+	 		
+	 		var b = $('body');
+	 		var bodyClass = 'block-active-' + d.attr('id');
 
+	 		console.log('removing previousBodyClass: ' + previousBodyClass);
+	 		b.removeClass(previousBodyClass);
 	 		c.removeClass('active');
 	 		d.addClass('active').addClass('activated');
-
-	 		if($('#active-story').hasClass('story-activated') && d.attr('id') == 'collection-single'){
-	 			// $('#collection-intro').removeClass('tucked').addClass('untucked');
-				$('body').removeClass('story-loaded').removeClass('story-loading').removeClass('story-activated');
-
-	 		}
+	 		b.addClass(bodyClass);
+	 		previousBodyClass = bodyClass;
+	 		console.log('setting previousBodyClass to: ' + previousBodyClass);
 
 	 		current = d;
 	 	}

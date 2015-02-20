@@ -11,7 +11,7 @@
 					</div>					
 				</div>
 				<div class="col-sm-3 col-sm-offset-1">
-					<h3 class="brown-yellow mb1">Creative Mind</h3>
+					<a href="<?php bloginfo('url' );?>"><h3 class="brown-yellow mb1">Creative Mind</h3></a>
 					<ul>
 						<li><a href="<?php bloginfo('url' );?>/interviews" class="brown-yellow">Courses</a>
 						<li><a href="<?php bloginfo('url' );?>/interviews" class="brown-yellow">Research</a>
