@@ -100,7 +100,7 @@ img.gform_ajax_spinner {
 /********** $FLEXSLIDER *********/
 
 .flexslider-direction{
-	opacity: .05;
+	opacity: .1;
 	height: 100%;
 	z-index: 6;
 	position: absolute;
@@ -135,13 +135,13 @@ img.gform_ajax_spinner {
 	
 }
 
+
 .flexslider-controls{	
 	position: absolute;
 	width: 300px;
 	margin-left: -150px;
 	z-index: 6;
 	left: 50%;
-	//background: yellow;
 	text-align: center;
 	bottom: 15px;
 	height: 20px;
@@ -150,20 +150,24 @@ img.gform_ajax_spinner {
 		list-style: none;
 		margin: 0 7px;
 		display: inline-block;
-		background: yellow;
+		overflow: hidden;
 		
 		a{
 			display: block;
 			text-indent: 9999px;
-			width: 13px;
-			height: 13px;
+			width: 15px;
+			height: 15px;
 			background: $light;	
-			border: 2px solid black;
-			border: 1px solid $dark;	
+			//border: 2px solid black;
+			//border: 1px solid $dark;	
 			@include border-radius(30px);
+
+			&:hover{
+				cursor: pointer;
+			}
 			
 			&.flex-active{
-				background: $dark;			
+				background: $brand;			
 			}	
 		}
 	}

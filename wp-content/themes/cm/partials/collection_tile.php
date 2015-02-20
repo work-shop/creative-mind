@@ -1,6 +1,6 @@
 
 <section id="collection-<?php echo rand(0,25); ?>" class="block collection padded target">
-	<div class="container">
+	<div class="container-fluid">
 		<div class="row">
 			
 			<?php /*

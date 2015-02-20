@@ -148,21 +148,30 @@ $(document).keydown(function(e){
 //initialize flexslider slideshows
 function flexsliderSetup(){
 
-	$('.flexslider').flexslider({	
+	$('.flexslider-hero').flexslider({	
 	      animation: 'fade',
 	      controlsContainer: '.flexslider-controls',	      
 	      slideshowSpeed: 8000,           
 		  animationSpeed: 1500,
 	      directionNav: false,
-	      controlNav: false
-	 });	 			 
+	      controlNav: true
+	 });	 
+
+	$('.flexslider-story').flexslider({	
+	      animation: 'fade',
+	      controlsContainer: '.flexslider-controls',	      
+	      slideshowSpeed: 8000,           
+		  animationSpeed: 500,
+	      directionNav: false,
+	      controlNav: true
+	 }); 			 
 	 	 	
 }
 
 //animate jump links
 function scrollLink(destination){
 	$('html,body').animate({
-		scrollTop: $(destination).offset().top - 0
+		scrollTop: $(destination).offset().top - 100
 	},1500);
 }
 
@@ -220,10 +229,9 @@ function storyToggle(clicked){
 		$('#active-story').addClass('story-activated');
 		$('body').addClass('story-activated');		
 		$('#active-story').height(storyHeight);		
-		$('#active-story .story .story-hero').height(heroHeight);
 		$('#active-story').removeClass('story-loading').addClass('story-loaded');
 		$('body').removeClass('story-loading').addClass('story-loaded');
-		
+		view();
 	},2000);
 	
 }
@@ -244,8 +252,10 @@ function view(){
 	fw = cw*.5;
 	storyHeight = cw/3;
 	storyVideoHeight = ch - 200;
-	
-	if($(window).width() >= 768){		
+
+
+
+	if($('.story').hasClass('story-type-video')){
 
 		if($('body').hasClass('story-video-active')){
 			$('.story-hero').css('height',storyVideoHeight);
@@ -255,6 +265,17 @@ function view(){
 			$('.story-hero').css('height',storyHeight);
 			$('.story-video-container').css('height',storyHeight);		
 		}
+	}
+	else if($('.story').hasClass('story-type-video_gallery')){	
+		$('.story-hero').css('height','auto');
+		$('.video-gallery-main').css('height',ch/2);
+	}	
+	else{
+		$('.story-hero').css('height',storyHeight);
+	}	
+	
+	if($(window).width() >= 768){		
+
 
 		$('.block.half').css('height',ch/2);
 		$('.block.golden-max').css('max-height',ch*.72);		
@@ -267,6 +288,7 @@ function view(){
 		//$('.flexslider-hero').css('height',fw);																									
 	}
 	else{
+
 		$('.block.half').css('height',ch/2);
 		$('.block.golden-max').css('max-height',ch*.70);		
 		$('.block.full').css('height',ch+60);	
