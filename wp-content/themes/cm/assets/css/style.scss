@@ -63,17 +63,24 @@
 
 }
 
+.single{
+
+	#header{
+		height: 50px;
+	}
+
+	#header-cm {
+	  top: 4px;
+	}
+
+	#headerfix{
+		height: 50px;
+	}
+}
+
 #collection-intro{
 	@include transition(all,.5s);
-
-	*{
-		@include transition(all,.5s);
-	}
-
-	.collection-title-story-title{
-		display: none;
-	}
-
+	padding-top: 4%;
 }
 
 .after{
@@ -468,15 +475,76 @@ $icon-margin: 15px;
 
 /********** @COLLECTION SINGLE *********/
 
-#active-story-loading .dots{
-	width: ($dot-width * 2) + ($dot-margin*2) + 5;
-	margin: 0 auto;	
+.single #collection-intro{
+	.collection-prefix,.collection-suffix{
+		display: none;
+	}
+
+	.collection-previous,.collection-next{
+		opacity: 0;
+		@include transition();
+		position: relative;
+		top: -15px;
+	}
+
+}
+
+.collection-single{
+	padding: 1% 0;
+}
+
+.story-activated{
+
+	#header-cm,#headerfix,#topbar{
+		height: 0;
+		overflow: hidden;
+	}
+
+	#collection-intro{
+		border-top: 3px solid $courses;
+		padding-top: 30px;
+
+		// height: 60px;
+		// position: fixed;
+		// top: 50px;
+		// z-index: 6;
+		// overflow: hidden;
+		// background: white;
+		// border-bottom: 3px solid $courses;
+
+
+		.collection-prefix,.collection-suffix{
+			display: inline;
+			font-size: 21px;
+		}
+
+		.collection-previous,.collection-next{
+			opacity: 1;
+		}		
+
+		h2{
+			font-size: 21px;
+			position: relative;
+			top: -5px;			
+		}
+	}
+
+}
+
+#active-story-loading {
+	height: 0px;
+	@include transition(opacity,.5s);
+	opacity: 0;
+	.dots{
+		width: ($dot-width * 2) + ($dot-margin*2) + 5;
+		margin: 0 auto;		
+	}
 }
 
 #active-story{
-	@include transition(all,1s);
+	@include transition(all,1.5s);
 	height: 0px;
-	overflow: hidden;
+	overflow: scroll;
 
 	.story{
 		opacity: 0;
@@ -485,9 +553,15 @@ $icon-margin: 15px;
 	&.story-loading {
 		display: block;
 		height: 125px;
-		padding: 50px 0;
+
+		.story{
+			opacity: 0;
+		}
 
 		#active-story-loading{
+			height: 125px;
+			opacity: 1;
+
 			.dot-1{
 				@include animation(load1,4s,.5s,ease,infinite);			
 			}
@@ -497,15 +571,32 @@ $icon-margin: 15px;
 		}	
 	}	
 
+	&.story-activated{
+
+		&.story-loading {
+			height: 100%;
+		}
+	
+	}
+
 	&.story-loaded{
-		height: auto;
 
 		#active-story-loading{
-			display: none;
+			opacity: 0;
 		}
 
 		.story{
 			opacity: 1;
+		}
+
+		.story-heading{
+			//@include animation(type 4s steps(60, end));
+			//-webkit-animation: type 2s steps(8, end);
+			// white-space: nowrap;
+			// overflow: hidden;
+			// width: 300px;
+			// margin-left: auto;
+			// margin-right: auto;
 		}		
 
 	}
@@ -527,12 +618,45 @@ $icon-margin: 15px;
 	100%{ @include transform(translate(0,0%)); }
 }
 
+@include keyframes(type){
+ from { width: 0; } 
+} 
+
+#header{
+	//display: none;
+}
+
+#collections-intro{
+	position: fixed;
+	top: 50%;
+	margin-top: -100px;
+	right: 0px;
+	height: 60px;
+	width: 200px;
+	z-index: 9;
+	padding: 0;
+
+   -ms-transform-origin: 0% 0%; /* IE 9 */
+    -webkit-transform-origin: 50% 50%; /* Chrome, Safari, Opera */
+    transform-origin: 50% 50%;
+	@include transform(rotate(90deg));
+
+	h2{
+		//font-size: 21px;
+		letter-spacing: .05em;
+		font-family: $font-family;
+
+		font-weight: 400;
+	}
+}
+
 
 
 /********** @STORY *********/
 
 .story{
 	@include transition(all,.5s);
+	padding-bottom: 8%;
 
 	.story-hero{
 		overflow: hidden;
@@ -547,16 +671,34 @@ $icon-margin: 15px;
 			top: 0;
 			left: 0;
 			background: rgba(255,255,255,.75);
-			@include linear-gradient(rgba(255,255,255,0),rgba(255,255,255,0),rgba(255,255,255,.5),rgba(255,255,255,1));
+			@include linear-gradient(rgba(255,255,255,0),rgba(255,255,255,0),rgba(255,255,255,.6),rgba(255,255,255,1));
 		}
 	}
 
 	.story-meta{
-		position: relative;
-		@include transform(translate(0,-50%));
+		@include transition();
+		@include transform(translate(0,-150px));
+	}
+
+	.story-body{
+		@include transform(translate(0,-75px));
+
+		p{
+			font-size: 1.25em;
+			line-height: 1.7;
+			margin-bottom: 2em;			
+			//font-family: $font-family-serif;
+			//letter-spacing: .01em;
+		}
+
+		a{
+			text-decoration: underline;
+		}
 	}
 
 }
+
+
 
 /********** @TILES *********/
 
@@ -564,18 +706,13 @@ $icon-margin: 15px;
 .story-tile.story-tile-collection-title{
 	position: relative;
 	overflow: visible;
-		//background-clip: content-box;
 
-
-	.collection-title{
-		// position: absolute;
-		// top: 0;
-		// left: 0;
-		// width: 100%;
-	}
+	.category-badge{
+		padding: 7px;
+		@include border-radius(2px);
+	}	
 
 	h2{
-		//width: 66%;
 		margin-top: 0;	
 	}
 
@@ -615,7 +752,7 @@ $icon-margin: 15px;
 		padding-right: 15px;	
 		@include transition(all,.35s);
 		opacity: 0;
-		top: 50%;
+		top: 60%;
 		@include transform(translate(-15px,-75%));
 		color: $dark;
 		font-size: 27px;

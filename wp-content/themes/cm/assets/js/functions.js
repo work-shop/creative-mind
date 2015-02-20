@@ -51,6 +51,11 @@ jQuery(document).ready(function($) {
 		storyToggle($(this));
 	});		
 
+	$('.story-toggle').click(function(event) {
+	  	event.preventDefault();
+		storyToggle($(this));
+	});		
+
 });//end document.ready
 
 
@@ -188,21 +193,31 @@ function storyToggle(clicked){
 
 	ch = $(window).height();
 	cw = $(window).width();
-	heroHeight = cw/3.5;
+	heroHeight = cw/3;
+	storyHeight = ch - 80;
+
+	if($('#active-story').hasClass('story-loaded')){
+		$('body').removeClass('story-loaded').addClass('story-loading');
+		$('#active-story').removeClass('story-loaded').addClass('story-loading');
+	}
 
 	//append styles to the active story tile
 	$('.story-tile').removeClass('active').addClass('inactive');
 	clicked.removeClass('inactive').addClass('active');
 	
-	//transition to story-loading state
-	
+	//transition to story-loading state	
 	$('html,body').animate({scrollTop: 0},1000);	
+	$('#active-story').animate({scrollTop: 0},1000);		
 	$('#active-story').addClass('story-loading');
+	$('body').addClass('story-loading');
 
 	setTimeout(function(){
-		console.log(cw);
+		$('#active-story').addClass('story-activated');
+		$('body').addClass('story-activated');		
+		$('#active-story').height(storyHeight);		
 		$('#active-story .story .story-hero').height(heroHeight);
 		$('#active-story').removeClass('story-loading').addClass('story-loaded');
+		$('body').removeClass('story-loading').addClass('story-loaded');
 		
 	},2000);
 	
@@ -279,8 +294,6 @@ $(window).scroll(function() {
 
 $(document).on('spy-init', function() {
 
-	console.log('spy-init');
-
 	var current = undefined;
 
 	spied = {};
@@ -308,6 +321,12 @@ $(document).on('spy-init', function() {
 
 	 		c.removeClass('active');
 	 		d.addClass('active').addClass('activated');
+
+	 		if($('#active-story').hasClass('story-activated') && d.attr('id') == 'collection-single'){
+	 			// $('#collection-intro').removeClass('tucked').addClass('untucked');
+				$('body').removeClass('story-loaded').removeClass('story-loading').removeClass('story-activated');
+
+	 		}
 
 	 		current = d;
 	 	}

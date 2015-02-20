@@ -54,10 +54,10 @@
 		<div id="wrapper" class="loading spy">
 
 			<div id="topbar" class="bg-brand"></div>
-	
+			<?php if(!is_single()): ?>
 			<header id="header" class="closed">
 				<div id="header-brown" class="bg-brown hidden-xs">
-					<div class="container">
+					<div class="container-fluid">
 						<div class="row">
 							<div id="logo-brown" class="col-sm-4 m0">
 								<a href="http://brown.edu" target="blank">
@@ -67,8 +67,9 @@
 						</div>
 					</div>
 				</div>
+				<?php endif; ?>
 				<div id="header-cm" class="bg-white">
-					<div class="container">
+					<div class="container-fluid">
 						<div class="row">
 							<div id="logo-cm" class="col-sm-4 m0 col-xs-6">
 								<a href="<?php bloginfo('url'); ?>">

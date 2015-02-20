@@ -1,10 +1,10 @@
 
-<section id="collection-<?php echo rand(0,25); ?>" class="block collection collection-single padded-less target">
+<section id="collection-single" class="block collection collection-single padded-less target">
 	<div class="container">
 		<div class="row">
 			
 			<?php /*
-			loop through stories in this collection, maximum 7 in featured collections, no max in categories
+			loop through stories in this collection
 			*/
 			?>
 

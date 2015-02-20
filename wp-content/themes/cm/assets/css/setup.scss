@@ -47,31 +47,31 @@ $transitions: .25s;
 }
 
 h1,h2,h3,h4,h5,h6{
-	line-height: 1.45;
+	line-height: 1.4;
 	font-weight: 500;
 }
 
-h1{
+h1,.h1{
 	font-size: 3em;
 }
 
-h2{
+h2,.h2{
 	font-size: 1.75em;
 }
 
-h3{
+h3,.h3{
 	font-size: 1.25em;
 }
 
-h4{
+h4,.h4{
 	font-size: 1em;
 }
 
-h5{
+h5,.h5{
 	font-size: .9em;
 }
 
-h6{
+h6,.h6{
 	font-size: .8em;
 }
 
@@ -92,15 +92,15 @@ p{
 		font-size: 15px;
 	}
 
-	h1{
+	h1,.h1{
 		font-size: 2.5em;
 	}
 
-	h2{
+	h2,.h2{
 		font-size: 1.25em;
 	}
 
-	h3{
+	h3,.h3{
 		font-size: 1.1em;
 	}
 
@@ -112,27 +112,27 @@ p{
 		font-size: 14px;
 	}
 
-	h1{
+	h1,.h1{
 		font-size: 2em;
 	}
 
-	h2{
+	h2,.h2{
 		font-size: 1.25em;
 	}
 
-	h3{
+	h3,.h3{
 		font-size: 1.1em;
 	}
 
-	h4{
+	h4,.h4{
 		font-size: 1em;
 	}
 
-	h5{
+	h5,.h5{
 		font-size: 1em;
 	}
 
-	h6{
+	h6,.h6{
 		font-size: .9em;
 	}
 
@@ -182,8 +182,16 @@ p{
 	text-transform: uppercase;
 }
 
+.underline{
+	text-decoration: underline;
+}
+
 .centered{
 	text-align: center;
+}
+
+.righted{
+	text-align: right;
 }
 
 .icon{
@@ -509,7 +517,7 @@ $slide-distance-vertical: 20px;
 			height: $nav-height - 3px;			
 			line-height: $nav-height - 3px;
 			vertical-align: middle;			
-			margin-right: 5px;
+			margin-right: 4px;
 			position: relative;
 			top: 3px;
 		}
