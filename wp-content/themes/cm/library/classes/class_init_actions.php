@@ -4,6 +4,14 @@
 class CM_Init_Actions extends WS_Action_Set {
 
 	/**
+	 * @var array(string => string) $field_keys, an ACF lookup table of field_names to field keys.
+	 */
+	public static $field_keys = array(
+		'story_collections' => 'field_54cbc00606362',
+		'collection_stories' => 'field_54cba3508d3c7'
+	);
+
+	/**
 	 * Constructor
 	 */
 	public function __construct() {
@@ -68,7 +76,7 @@ class CM_Init_Actions extends WS_Action_Set {
 
 		if ( function_exists( 'add_theme_support' ) ) {
 			add_theme_support( 'post-thumbnails' );
-		    set_post_thumbnail_size( 300, 150, true ); 
+		    	set_post_thumbnail_size( 300, 150, true ); 
 		}
 		if ( function_exists( 'add_image_size' ) ) { 
 			add_image_size( 'tile_small', 300, 150, true );  	
@@ -91,11 +99,11 @@ class CM_Init_Actions extends WS_Action_Set {
 
 		if ( $post->post_type == 'collections' ) {
 			$this->set_collection_category( $post );
-			//$this->set_collections_for_story( $post );
+			$this->set_collections_for_story( $post_id );
 		}
 
 		else if ( $post->post_type == 'stories' ) {
-			//$this->set_stories_for_collection( $post );
+			$this->set_stories_for_collection( $post_id );
 		}
 
 	}
@@ -125,23 +133,110 @@ class CM_Init_Actions extends WS_Action_Set {
 	}
 
 	/**
+	 *
 	 * Given a post object of type collections,
 	 * Ensure that newly-added stories have this collection in their collection-set
 	 *
 	 * @param WP_Post $post the post to manipulate.
+	 *
 	 */
-	private function set_collections_for_story( $post ) {
-		
+	private function set_collections_for_story( $post_id ) {
+		$this->set_xs_for_ys_with_x( 'story_collections', 'collection_stories', $post_id );
 	}
 
 	/**
 	 * Given a post object of type collections or type stories,
 	 * Ensure that newly-added collections have this story in their story-set
 	 * 
-	 * @param WP_Post $post the post to manipulate.
+	 * @param int $post_id the id of the post to manipulate.
 	 */
-	private function set_stories_for_collection( $post ) {
+	private function set_stories_for_collection( $post_id ) {
+		$this->set_xs_for_ys_with_x( 'collection_stories', 'story_collections', $post_id );
+	}
+
+	/**
+	 * This is a GENERAL database consistency routine that ensures bidirectional consistency across a pair
+	 * of mutually inverse one->many relationship. Effectively, it maintains a many<->many relationship accross
+	 * post types in the database
+	 *
+	 * @param string $xs name of the set to normalize
+	 * @param string $ys name of the normal set
+	 * @param string $y name of the element in the normal set to manipulate.
+	 */
+	private function set_xs_for_ys_with_x( $xs, $ys, $y ) { // story_collections, collection_stories, collection_id 
+		global $wpdb;
+
+		/* 	[1.]
+			This query will establish our frame condition, ensuring that we select any and ALL
+			xs affected by this update. We may as well save time and 
+			select their y-sets as well. 
+ 		*/
+		$all_xs = $wpdb->get_results(
+			$wpdb->prepare( 
+				"SELECT post_id, meta_value FROM $wpdb->postmeta
+			  	  WHERE meta_key = %s
+			  	  AND meta_value LIKE %s",
+			  	  $xs, "%" . $y . "%"
+			), ARRAY_N
+		);
+
+		/* 	[2.]
+			Now that we have all the xs that are affected by this update, [the frame condition],
+			We can ensure that they're still consistent with the affected y record,
+			and operate on them accordingly.
+ 		*/
+		$y_xs 		= ( $cll = get_field( self::$field_keys[ $ys ], $y ) ) 
+					? array_map( function( $x ) { return $x->ID; }, $cll) 
+					: array();
+
+		$found_xs		= array();
+
+		foreach ( $all_xs as $an_x ) {
+			
+			$x_id = $an_x[0];
+			$x_ys = unserialize( $an_x[ 1 ] );
+
+			array_push( $found_xs, $x_id );
+			if ( 
+			      !in_array($x_id, $y_xs) 	
+			   && in_array($y, $x_ys ) 		
+			) {
+				/* this given x is no longer in the y's xs, but still in the x's ys. remove it. */
+				$x_ys = remove_array_value($y, $x_ys);
+			}
+
+			else if ( 
+				in_array($x_id, $y_xs) 
+			  && !in_array($y, $x_ys )
+			) {
+				/* this given x is in the y's xs, but not in the x's ys. add it. */
+				$x_ys[] = $y; 
+			}
+
+			update_field( self::$field_keys[ $xs ], $x_ys, $x_id );
+		}
+
+		/*	[3.]
+			Finally, we need to add this y to any xs that didn't previously have it. To do this,
+			we take the difference of the ys (representing the normal set), and the xs
+			we've found. Any xs in this difference represent xs we haven't discovered yet, and need to update.
+
+			NB: ACF does not like it if a field is uninitialized. To circumvent this, we use field_keys, not field names, as throughout.
+		 */
+
+		foreach ( array_diff($y_xs, $found_xs) as $x_id ) {
+			$x_ys = ( $coll = get_field( $xs, $x_id ) ) ? $coll : array();
+			$x_ys[] = $y;
+			update_field( self::$field_keys[ $xs ], $x_ys, $x_id );
+		}
+
+		/*	[4.]
+			At this point, the data should be consistent, IE:
 		
+			all x : xs, y : ys . [ x : xs( y ) <=> y : ys( x ) ]
+			
+
+		 */
 	}
 
 
