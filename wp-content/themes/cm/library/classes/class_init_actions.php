@@ -11,12 +11,13 @@ class CM_Init_Actions extends WS_Action_Set {
 
 		parent::__construct(
 			array(
-				'init' 								=> 'create_post_types',
-				'wp_enqueue_scripts' 				=> 'enqueue_theme_assets',
+				'init' 							=> 'create_post_types',
+				'wp_enqueue_scripts' 					=> 'enqueue_theme_assets',
 				'after_theme_setup'					=> array( 'remove_post_formats', 11, 0 ),
 				'login_head'						=> 'login_css',
 				'admin_head'						=> 'admin_css',
-				'admin_menu'						=> 'remove_menus'
+				'admin_menu'						=> 'remove_menus',
+				'save_post'							=> 'ensure_consistency'
 		));
 	}
 
@@ -76,6 +77,71 @@ class CM_Init_Actions extends WS_Action_Set {
 			add_image_size( 'slideshow_home', 1440, 600, true );  
 		}
 
+	}
+
+	/** POST CONSISTENCY */
+	/**
+	 * Given the post_id of a collection or story, this routine ensures that the given
+	 * post's included-in or included list is consistent in both directions.
+	 *
+	 * @param int $post_id
+	 */
+	public function ensure_consistency( $post_id ) {
+		$post = get_post( $post_id );
+
+		if ( $post->post_type == 'collections' ) {
+			$this->set_collection_category( $post );
+			//$this->set_collections_for_story( $post );
+		}
+
+		else if ( $post->post_type == 'stories' ) {
+			//$this->set_stories_for_collection( $post );
+		}
+
+	}
+
+	/**
+	 * Given a post object of type collections,
+	 * Ensure that the selected category is reflected in the built in a category.
+	 * Additionally, ensure that no collection is in more than one category.
+	 *
+	 * @param WP_Post $post the post to manipulate.
+	 */
+	private function set_collection_category( $post ) {
+		$c1 = get_field('collection_category', $post->ID );
+		$c2 = ( $c1 ) ? get_category_by_slug( $this->normalize_category_slug( $c1 ) ) : false;
+
+		if ( $c2 ) wp_set_post_categories( $post->ID, $c2->term_id, false );
+	}
+
+	/**
+	 * Given a backend-entered category slug, normalize it to the slug name for the desired category
+	 *
+	 * @param string $category_name the name of the category to return the slug for
+	 * @return the desired category slug.
+	 */
+	private function normalize_category_slug( $category_name ) {
+		return $category_name;
+	}
+
+	/**
+	 * Given a post object of type collections,
+	 * Ensure that newly-added stories have this collection in their collection-set
+	 *
+	 * @param WP_Post $post the post to manipulate.
+	 */
+	private function set_collections_for_story( $post ) {
+		
+	}
+
+	/**
+	 * Given a post object of type collections or type stories,
+	 * Ensure that newly-added collections have this story in their story-set
+	 * 
+	 * @param WP_Post $post the post to manipulate.
+	 */
+	private function set_stories_for_collection( $post ) {
+		
 	}
 
 
