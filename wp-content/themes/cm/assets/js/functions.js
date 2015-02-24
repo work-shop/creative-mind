@@ -203,6 +203,9 @@ function menuToggle(){
 	
 }
 
+/**
+ * storyToggle : jQuery(clicked-tile) -> ()
+ */
 function storyToggle(clicked){
 
 	ch = $(window).height();
@@ -225,6 +228,7 @@ function storyToggle(clicked){
 	$('#active-story').addClass('story-loading');
 	$('body').addClass('story-loading');
 
+	//replace setTimeout with ajax function?
 	setTimeout(function(){
 		$('#active-story').addClass('story-activated');
 		$('body').addClass('story-activated');		
@@ -308,7 +312,6 @@ function view(){
 //once all elements are sized, slideshows initialized, fade in the content
 function loadPage(){
 	loaded = true;
-	console.log('loadPage');
 	
 	flexsliderSetup();
 
@@ -368,13 +371,11 @@ $(document).on('spy-init', function() {
 	 		var b = $('body');
 	 		var bodyClass = 'block-active-' + d.attr('id');
 
-	 		console.log('removing previousBodyClass: ' + previousBodyClass);
 	 		b.removeClass(previousBodyClass);
 	 		c.removeClass('active');
 	 		d.addClass('active').addClass('activated');
 	 		b.addClass(bodyClass);
 	 		previousBodyClass = bodyClass;
-	 		console.log('setting previousBodyClass to: ' + previousBodyClass);
 
 	 		current = d;
 	 	}
@@ -399,7 +400,7 @@ $(document).on('spy-init', function() {
 
 
 		var w = $(window), doc = $(document);
-		var centerline = w.scrollTop() + (w.height() / 2);
+		var centerline = w.scrollTop() + (w.height() / 3);
 
 		candidates.each( function( i,d ) {
 			d = $( d );
@@ -418,9 +419,11 @@ $(document).on('spy-init', function() {
 		});
 	 }
 
+	 //currently unused
 	 function decideOffset() {
 	 	var w = $(window);
-	 	return ($('body').hasClass('home')) ? ((w.width() < 768) ? 350 : (w.height() / 2)) : 80;
+	 	return 0;
+	 	//return ($('body').hasClass('home')) ? ((w.width() < 768) ? 350 : (w.height() / 2)) : 80;
 	 }
 });
 

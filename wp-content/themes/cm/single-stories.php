@@ -2,6 +2,8 @@
 
 	<?php get_template_part('partials/story');?>
 
+	<?php get_template_part('partials/category_link');?>	
+
 	<?php get_template_part('partials/site_description');?>
 
 	<?php get_template_part('partials/featured_collections');?>

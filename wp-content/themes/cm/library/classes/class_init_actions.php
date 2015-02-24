@@ -64,6 +64,18 @@ class CM_Init_Actions extends WS_Action_Set {
 				'rewrite' => array('slug' => 'stories'),
 				'supports' => array( 'title', 'thumbnail', 'editor')
 		));
+
+		if ( function_exists( 'add_theme_support' ) ) {
+			add_theme_support( 'post-thumbnails' );
+		    set_post_thumbnail_size( 300, 150, true ); 
+		}
+		if ( function_exists( 'add_image_size' ) ) { 
+			add_image_size( 'tile_small', 300, 150, true );  	
+			add_image_size( 'tile_large', 600, 330, true );  
+			add_image_size( 'story_hero', 1440, 768, true );  					
+			add_image_size( 'slideshow_home', 1440, 600, true );  
+		}
+
 	}
 
 
