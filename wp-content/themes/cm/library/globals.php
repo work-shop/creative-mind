@@ -93,4 +93,17 @@ function vimeo_frame( $vimeo_id, $player_id, $classes = '' ) {
 	     . '" frameborder=0 width="100%" height="100%" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>';
 }	
 
+/**
+ */
+function remove_array_value( $needle, $haystack, $once = false ) {
+	$r = array();
+
+	foreach ( $haystack as $value ) {
+		if ( $needle != $value ) $r[] = $value; 
+		if ( $once ) break;
+	}
+
+	return $r;
+}
+
 ?>
