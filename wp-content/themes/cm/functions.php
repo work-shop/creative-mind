@@ -28,7 +28,7 @@
 	require_once( 'library/classes/class_init_actions.php' );
 	require_once( 'library/classes/class_init_filters.php');
  	require_once( 'library/classes/class_ajax.php');
- 	require_once( 'library/classes/class_category_controller.php');
+ 	require_once( 'library/classes/class_collection_controller.php');
  	require_once( 'library/classes/class_story_controller.php');
  	require_once( 'library/classes/class_tile_layout_manager.php');
  	require_once( 'library/classes/class_deterministic_layout_manager.php');
