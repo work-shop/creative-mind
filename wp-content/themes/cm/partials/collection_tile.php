@@ -1,40 +1,75 @@
+<?php
 
-<section id="collection-<?php //name ?>" class="block collection padded target">
+$featured_limit = 7;
+
+$collection 	= get_global('current_collection');
+$featured 	= get_global('featured');
+
+$collection_category 	= CM_Collection_Controller::get_category_for_collection( $collection->ID );
+$collection_stories 	= CM_Collection_Controller::get_stories_for_collection( $collection->ID );
+
+if ( $collection_stories ) :
+
+	$story_count 		= CM_Collection_Controller::story_count_for_collection( $collection_stories );
+	$layout_manager		= new CM_Deterministic_Layout_Manager();
+
+	$layout_manager->reset( $story_count );
+
+	set_global( 'layout_manager', $layout_manager );	
+
+?>
+
+<section id="collection-<?php echo $collection->post_title; ?>" class="block collection padded target">
 	<div class="container-fluid">
 		<div class="row">
 			
-			<?php /*
-			loop through stories in this collection, maximum 7 in featured collections, no max in categories
-			*/
-			?>
 
-			<?php for ($j=0; $j <= 7; $j++) { ?>
+			<?php foreach ($collection_stories as $i => $story) { ?>
+				<?php if ( $featured && $i == $featured_limit ) break; ?>
 
-				<?php if($j === 0){ ?>
-				
-					<?php if(!is_single()): ?>
-						<article class="story-tile story-tile-collection-title col-sm-4" id="story-<?php echo $j; ?>">
-							<a href="<?php bloginfo('url' );?>/collections/communicating-science-through-visual-media">
+				<?php if($i === 0 && !is_single()) : ?>
+					
+					<div class="col-sm-4">
+						<article class="story-tile story-tile-collection-title col-sm-12" id="story-<?php echo $i; ?>">
+							<a href="<?php echo get_permalink( $collection->ID ); ?>">
 								<div class="collection-title">
-									<h6 class="mt0 mb1 uppercase white"><span class="bg-courses h4 white category-badge">Courses:</span></h6>
+									<h6 class="mt0 mb1 uppercase white"><span class="bg-<?php echo $collection_category->slug ?> h4 white category-badge"><?php echo $collection_category->name; ?>:</span></h6>
 									<h2 class="serif">
-										Communicating Science Through Visual Media
+										<?php echo $collection->post_title; ?>
 									</h2>
-									<h6 class="m0">7 Stories &nbsp; View collection <span class="icon" data-icon="&#8222;"></span></h6>
+									<h6 class="m0"><?php echo $story_count; ?>  &nbsp; View collection <span class="icon" data-icon="&#8222;"></span></h6>
 								</div>
 							</a>
 						</article>
-					<?php endif; ?>
+					</div>
+					<div class="col-sm-8">
+					<div class="row">
 
+				<?php endif; ?>
 
-				<?php } else{ ?>
+				<?php 
 
-					<?php get_template_part('partials/story_tile'); ?>
+				set_global('story', $story);
+				set_global('story_index', $i);
 
-				<?php } ?>
+				get_template_part('partials/story_tile'); 
+
+				unset_global('story_index' );
+				unset_global('story');
+
+				?>
 
 			<?php } ?>
+
+			<?php if ( !is_single() ) : ?> </div></div> <?php endif; ?>
 
 		</div>
 	</div>
 </section>
+
+<?php
+
+endif; 
+
+?>
+

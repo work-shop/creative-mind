@@ -1,22 +1,37 @@
 <div id="collections" class="target">
 	<?php /*unsure about general concept of collections-intro */ ?>
+	<?php 
+		$category = CM_Collection_Controller::get_current_category();
+		$featured = is_single() || is_home();
+	?>
 	<section id="collections-intro" class="block target hidden">
-		<?php if(is_home() || is_single() ){ ?>
+		<?php if( $featured ){ ?>
 			<h3 class="centered uppercase bold m0 ">Featured Collections</h3>
 		<?php } else{ ?>
-			<h3 class="centered bold m0 white bg-courses uppercase<?php /* echo the category slug here, so a css style can be applied to the color of the text */ ?>">Courses</h3>
+			<h3 class="centered bold m0 white bg-<?php echo $category->slug; ?> uppercase <?php echo $category->slug; ?>"><?php echo $category->name; ?></h3>
 		<?php } ?>
 	</section>
 
 	<?php 
-	/* 
-	loop through the collections on this page
-	*/
-	$collections = 5;
-	for ($i=1; $i <= $collections; $i++) { ?>
 
-		<?php get_template_part('partials/collection_tile'); ?>
+	$collections = ( $featured ) 
+			 ? CM_Collection_Controller::get_featured_collections() 
+			 : CM_Collection_Controller::get_collections_for_category( $category->slug ); 
+
+	set_global( 'featured', $featured );
+
+	foreach ($collections as $collection) { 
+
+		set_global( 'current_collection', $collection );
+
+		get_template_part('partials/collection_tile');
+
+		unset_global( 'current_collection', $collection );
 		
-	<?php } ?>
+	} 
+
+	unset_global( 'featured' );
+
+	?>
 
 </div>
