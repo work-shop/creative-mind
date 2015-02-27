@@ -65,6 +65,55 @@ function get_template_parts( $parts = array() ) {
 	};
 }	
 
+/**
+ * Sets a new global name, just in case the global has not
+ * yet been set. If it has been set, fail. This is an effort to 
+ * promote judicious tracking of global values...
+ *
+ * @return boolean, true if set is successful, false if not
+ */
+function set_global( $name, $value ) {
+	if ( !isset( $GLOBALS[ $name ]) ) {
+		$GLOBALS[ $name ] = $value;
+		return true;
+	}
+
+	return false;
+}
+
+/**
+ * Reads a the value of a global name, just in case the global has been
+ *  been set. If it has been set, fail. This is an effort to 
+ * promote judicious tracking of global values...
+ *
+ * @return Mixed value of the global if successful, false if not
+ */
+function get_global( $name ) {
+	if ( isset( $GLOBALS[ $name ]) ) {
+		return $GLOBALS[ $name ];
+	}
+
+	return false;
+}
+
+/**
+ * unsets an existing global name, just in case the global has 
+ * been set. If it has not been set, fail. This is an effort to 
+ * promote judicious tracking of global values...
+ *
+ * @return boolean, true if unset is successful, false if not
+ */
+function unset_global( $name ) {
+	if ( isset( $GLOBALS[ $name ] ) ) {
+		unset( $GLOBALS[ $name ] );
+		return true;
+	}
+
+	return false;
+}
+
+
+
 function is_child( $parent = '' ) {
     global $post;
 
