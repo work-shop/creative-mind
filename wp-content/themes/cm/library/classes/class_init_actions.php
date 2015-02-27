@@ -141,7 +141,7 @@ class CM_Init_Actions extends WS_Action_Set {
 	 *
 	 */
 	private function set_collections_for_story( $post_id ) {
-		$this->set_xs_for_ys_with_x( 'story_collections', 'collection_stories', $post_id );
+		$this->set_xs_for_ys_with_y( 'story_collections', 'collection_stories', $post_id );
 	}
 
 	/**
@@ -151,7 +151,7 @@ class CM_Init_Actions extends WS_Action_Set {
 	 * @param int $post_id the id of the post to manipulate.
 	 */
 	private function set_stories_for_collection( $post_id ) {
-		$this->set_xs_for_ys_with_x( 'collection_stories', 'story_collections', $post_id );
+		$this->set_xs_for_ys_with_y( 'collection_stories', 'story_collections', $post_id );
 	}
 
 	/**
@@ -163,7 +163,7 @@ class CM_Init_Actions extends WS_Action_Set {
 	 * @param string $ys name of the normal set
 	 * @param string $y name of the element in the normal set to manipulate.
 	 */
-	private function set_xs_for_ys_with_x( $xs, $ys, $y ) { // story_collections, collection_stories, collection_id 
+	private function set_xs_for_ys_with_y( $xs, $ys, $y ) { // story_collections, collection_stories, collection_id 
 		global $wpdb;
 
 		/* 	[1.]
@@ -255,6 +255,7 @@ class CM_Init_Actions extends WS_Action_Set {
 		wp_register_script( 'bootstrap', get_template_directory_uri() . '/assets/js/bootstrap.js');
 		wp_register_script( 'flexslider', get_template_directory_uri() . '/assets/js/flexslider.js');
 		wp_register_script( 'functions', get_template_directory_uri() . '/assets/js/functions.js');
+		//wp_register_script( 'async', get_template_directory_uri() . '/assets/js/async.js');
 
 		wp_enqueue_script( 'modernizr' );
 		wp_enqueue_script( 'jquery' );
@@ -262,12 +263,14 @@ class CM_Init_Actions extends WS_Action_Set {
 		wp_enqueue_script( 'bootstrap' );
 		wp_enqueue_script( 'flexslider' );
 		wp_enqueue_script( 'functions' );
+		//wp_enqueue_script( 'async' );
+
+		wp_localize_script( 'functions', 'async', array('url' => admin_url('admin-ajax.php') ) );
 
 		if (!file_exists( dirname( __FILE__ ) . '/env_prod' )){
 			wp_register_script( 'cssrefresh', get_template_directory_uri() . '/assets/js/cssrefresh.js');
 			wp_enqueue_script( 'cssrefresh' );		
-		}
-		else{} 		
+		}		
 
 	}
 
