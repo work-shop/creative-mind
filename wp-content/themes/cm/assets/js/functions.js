@@ -36,16 +36,6 @@ jQuery(document).ready(function($) {
 		scrollLink(href);	
 	});
 	
-	$('.flexslider .flex-previous').click(function() {
-	    $('.flexslider').flexslider('prev');
-	    return false;		
-	});		
-	
-	$('.flexslider .flex-next').click(function() {
-	    $('.flexslider').flexslider('next');
-	    return false;		
-	});	
-
 	$('.single .story-tile').click(function(event) {
 	  	event.preventDefault();
 		storyToggle($(this));
@@ -56,20 +46,33 @@ jQuery(document).ready(function($) {
 		storyToggle($(this));
 	});	
 
-	$('.story-video-play').click(function(event) {
-	  	event.preventDefault();
-		playVideo();
-	});			
+	storySetup();
+
+	loadInitialStory();			
 
 });//end document.ready
 
+function storySetup() {
+	$(window).ready(function() { $('[data-toggle="tooltip"]').tooltip(); });//end window.ready
+
+	$('.story-video-play').click(function(event) {
+	  	event.preventDefault();
+		playVideo();
+	});
+
+	$('.flexslider .flex-previous').click(function() {
+	    $('.flexslider').flexslider('prev');
+	    return false;		
+	});		
+	
+	$('.flexslider .flex-next').click(function() {
+	    $('.flexslider').flexslider('next');
+	    return false;		
+	});	
+
+}
 
 
-$(window).ready(function() {
-
-	$('[data-toggle="tooltip"]').tooltip();
-
-});//end window.ready
 
 
 
@@ -242,12 +245,17 @@ function storyToggle(clicked){
 		}, update_dom_contents
 	)
 	.done( cleanup_async_call )
-	.fail(function(){console.log('done with failure');});
-
-
-
-	
+	.fail(function(){console.log('done with failure');});	
 }
+
+function loadInitialStory() {
+	var target = $('#collection-single').attr('async-trigger');
+
+	if ( target ) {
+		storyToggle( $( '#story-' + target ) );
+	}
+}
+
 
 function update_dom_contents( quote ) {
 	try {
@@ -269,8 +277,6 @@ function update_dom_contents( quote ) {
 
 			next.text( data.next_story.title  );
 			next.closest('a.story-toggle').attr( 'async-source', data.next_story.id );
-
-			console.log( data.post );
 
 			story.html( data.post );
 
@@ -297,6 +303,7 @@ function cleanup_async_call() {
 	$('#active-story').removeClass('story-loading').addClass('story-loaded');
 	$('body').removeClass('story-loading').addClass('story-loaded');
 	flexsliderSetup();
+	storySetup();
 	view();
 }
 
