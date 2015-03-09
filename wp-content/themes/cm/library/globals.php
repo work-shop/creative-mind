@@ -65,6 +65,18 @@ function get_template_parts( $parts = array() ) {
 	};
 }	
 
+
+/**
+ * Check the url-string for an accompanying get-var, and if it is set, return it
+ * otherwise return false
+ *
+ * @param string $varname the name of the GET variable to check for
+ * @return string|bool, value of get var, or failure.
+ */
+function get_GETVAR( $varname ) {
+	return (isset( $_GET[ $varname ] ) && strlen( $_GET[ $varname ] ) > 0) ? $_GET[ $varname ] : false;
+}
+
 /**
  * Sets a new global name, just in case the global has not
  * yet been set. If it has been set, fail. This is an effort to 
