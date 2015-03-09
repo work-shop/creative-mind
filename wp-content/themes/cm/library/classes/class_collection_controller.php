@@ -5,6 +5,31 @@
  */
 
 class CM_Collection_Controller {
+	/**
+	 * This method returns the description of the given category by that category's id tag.
+	 *
+	 * @param int $id the term_id of the category in question
+	 * @return string, the description of the category with term_id = $id
+	 */
+	public static function get_category_description( $id ) {
+		switch( $id ) {
+
+			case 6: //research
+				return get_field('research_description', 'options');
+
+			case 7: //interviews
+				return get_field('conversations_description', 'options');
+
+			case 8: //courses
+				return get_field('courses_description', 'options');
+
+			case 9: //lectures
+				return get_field('lectures_description', 'options');
+
+			default:
+				return "Unrecognized Category.";
+		}
+	}
 
 	/**
 	 * This method delivers an in-order array of
@@ -22,11 +47,17 @@ class CM_Collection_Controller {
 	 * the collections that are currently contained in
 	 * the category specified by cat.
 	 *
-	 * @param string $category the slug of the category to retrieve collections for.
+	 * @param string $category the id of the category to retrieve collections for.
 	 * @return an array(WP_Post(type='collections', category=$category)) objects
 	 */
 	public static function get_collections_for_category( $category ) {
-		return array();
+		$posts = get_posts( array(
+			'posts_per_page' => -1,
+			'category' => $category,
+			'orderby' => 'menu_order',
+			'post_type' => 'collections'
+		));
+		return $posts;
 	}
 
 	// public static function get_collections_by_topology() { // cool idea...
