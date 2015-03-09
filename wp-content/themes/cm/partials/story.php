@@ -5,7 +5,7 @@
 	$id = get_the_ID();
 	$collection = get_global('collection');
 	$story_type = get_field('story_media_type');
-	$gallery = 1;
+
 	?>
 
 	<article class="story block target story-type-<?php echo $story_type;?>">
@@ -14,63 +14,65 @@
 				<?php 
 				switch ($story_type) {
 					case 'video': ?>
-						<div class="story-video-container">	
+						<div class="story-video-container">
+						<?php if ($vimeo_id = get_field('story_vimeo_id')) : ?>	
 							<div class="story-video">				
 								<?php
-								$vimeo_id = get_field('story_vimeo_id');
 								echo vimeo_frame($vimeo_id,'story-video-1'); 
 								?>
 							</div>
+						<?php endif; ?>
 							<div class="story-video-poster">
-								<!--<img src="<?php bloginfo('template_directory');?>/assets/img/empathy.jpg" />-->
 								<?php the_post_thumbnail('story_hero'); ?>
 							</div>
+						<?php if ( $vimeo_id ) : ?>
 							<div class="story-video-play" data-toggle="tooltip" data-placement="top" title="watch the video!">
 								<span class="icon" data-icon="Ò"></span>
 							</div>
+						<?php endif; ?>
 						</div>
 					<?php break;
 
 					case 'image_gallery': ?>
 						<div class="story-hero-image-container">	
-							<img src="<?php?>" />
+							<?php the_post_thumbnail('story_hero'); ?>
 						</div>
 
 					<?php break;
 
-					case 'video_gallery': ?>
-						<?php $vimeo_id = '93171956'; ?>
+					case 'video_and_image_gallery':
+					case 'video_gallery': 
+
+						if ($clips = get_field('video_gallery')) :
+						?>
 						<div id="video-gallery">
 							<div class="container">
+								<?php foreach ( $clips as $i => $clip ) :
+									if ( $i == 0 ) {
+								?>
 								<div class="row">
 									<div class="col-sm-12 video-gallery-main mt3 mb2">
-										<?php echo vimeo_frame($vimeo_id,'story-video-1'); ?>
+										<?php echo vimeo_frame($clip['vimeo_id'],'story-video-1'); ?>
+										<h6><?php echo $clip['video_title']; ?></h6>
 									</div> 
 								</div>
-								<div class="row">
+								<?php } else { ?>
+								<?php if ( $i == 1 ) : ?><div class="row"><?php endif; ?>
 									<div class="col-sm-2 col-xs-6 video-gallery-clip">
-										<?php echo vimeo_frame($vimeo_id,'story-video-1'); ?>
-										<h6>Clip 1: 30 second version</h6>
-									</div> 
-									<div class="col-sm-2 col-xs-6 video-gallery-clip">
-										<?php echo vimeo_frame($vimeo_id,'story-video-1'); ?>
-										<h6>Clip 2: 60 second version</h6>
-									</div> 
-									<div class="col-sm-2 col-xs-6 video-gallery-clip">
-										<?php echo vimeo_frame($vimeo_id,'story-video-1'); ?>
-										<h6>Clip 3: long version</h6>
-									</div> 
-									<div class="col-sm-2 col-xs-6 video-gallery-clip">
-										<?php echo vimeo_frame($vimeo_id,'story-video-1'); ?>
+										<?php echo vimeo_frame($clip['vimeo_id'],'story-video-1'); ?>
+										<h6><?php echo $clip['video_title']; ?></h6>
 									</div> 																											
-								</div>								
+								<?php if ( $i == count( $clips ) - 1 ) : ?></div><?php endif; ?>
+								<?php } endforeach; ?>								
 							</div>
 						</div>
+					<?php endif; ?>
 					<?php break;
-					
-					default: ?>
-						<div class="story-hero-image-container">	
-							<img src="<?php bloginfo('template_directory');?>/assets/img/empathy.jpg" />
+
+				       default: ?>
+						<div class="story-hero-image-container">
+							<?php the_post_thumbnail('story_hero'); ?>
+							<!-- <img src="<?php bloginfo('template_directory');?>/assets/img/empathy.jpg" /> -->
 						</div>
 					<?php break;
 
@@ -129,7 +131,20 @@
 				<div class="row">
 					<div class="col-sm-12 col-sm-offset-0 col-md-10 col-md-offset-1">
 						
-						<?php apply_filters('the_content', get_post($id)->post_content ); ?>
+						<?php 
+
+						// stupid hack to avoid a weird WP-internal global null condition.
+						if ( $text = get_global('formatted_content')  ) { 
+							// Asynchronously Generated Context
+							echo $text;
+						} else if ( have_posts() ) {
+							// Synchronously generated context.
+							while ( have_posts() ) : the_post();
+								the_content();
+							endwhile;
+						}
+
+						?>
 
 						<?php if (($cl = get_field('story_callout_link')) && ($cc = get_field('story_callout'))) : ?>
 							<aside class="story-callout bg-courses white">

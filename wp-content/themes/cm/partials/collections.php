@@ -16,7 +16,7 @@
 
 	$collections = ( $featured ) 
 			 ? CM_Collection_Controller::get_featured_collections() 
-			 : CM_Collection_Controller::get_collections_for_category( $category->slug ); 
+			 : CM_Collection_Controller::get_collections_for_category( $category->term_id ); 
 
 	set_global( 'featured', $featured );
 

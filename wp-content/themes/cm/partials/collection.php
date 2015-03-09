@@ -20,8 +20,6 @@ set_global('collection_category', $collection_category );
 set_global('collection_stories', $collection_stories );
 set_global('story_count', $story_count );
 
-//var_dump( $collection );
-
 ?>
 
 <section id="active-story" class="block inactive">
@@ -41,7 +39,7 @@ set_global('story_count', $story_count );
 	</div>
 </section>
 
-<section id="collection-intro" class="block padded-less target">
+<section id="collection-intro" class="block padded-less target border-top-<?php echo $collection_category->slug; ?>"><?php // make these CSS things ?>
 	<div class="container-fluid">
 		<div class="row collection-intro-heading">
 			<div class="col-sm-3 col-xs-1">		

@@ -2,7 +2,11 @@
 	$collection = get_global('collection');
 ?>
 
-<section id="collection-single" class="block collection collection-single padded-less target" async-source=<?php echo $collection->ID; ?>>
+<section 
+	id="collection-single" 
+	class="block collection collection-single padded-less target" 
+	<?php if ( $GET_story = get_GETVAR('story') ) : ?> async-trigger=<?php echo $GET_story; ?> <?php endif; ?>
+	async-source=<?php echo $collection->ID; ?>>
 	<div class="container">
 		<div class="row">
 			
