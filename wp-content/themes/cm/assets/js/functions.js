@@ -297,14 +297,18 @@ function cleanup_async_call() {
 	$('html,body').animate({scrollTop: 0},1000);	
 	$('#active-story').animate({scrollTop: 0},1000);
 
-	$('#active-story').addClass('story-activated');
-	$('body').addClass('story-activated');		
-	$('#active-story').height(storyHeight);		
-	$('#active-story').removeClass('story-loading').addClass('story-loaded');
-	$('body').removeClass('story-loading').addClass('story-loaded');
-	flexsliderSetup();
-	storySetup();
-	view();
+//	setTimeout( function() { // is this needed?
+
+		$('#active-story').addClass('story-activated');
+		$('body').addClass('story-activated');		
+		$('#active-story').height(storyHeight);		
+		$('#active-story').removeClass('story-loading').addClass('story-loaded');
+		$('body').removeClass('story-loading').addClass('story-loaded');
+		flexsliderSetup();
+		storySetup();
+		view();
+
+//	}, 1500 ); // is this needed?
 }
 
 
