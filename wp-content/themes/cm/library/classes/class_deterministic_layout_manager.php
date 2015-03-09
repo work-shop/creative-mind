@@ -11,30 +11,55 @@ class CM_Deterministic_Layout_Manager {
 	 * @var array(array(array(string))) determined layout sequences.
 	 */
 	private static $sequences = array(
+		// array(
+		// 	array( "col-sm-6" ),
+		// 	array( "col-sm-3" ),
+		// 	array( "col-sm-3" ),
+		// 	array( "col-sm-3" ),
+		// 	array( "col-sm-3" ),
+		// 	array( "col-sm-6" ),
+		// 	array( "col-sm-3" )
+		// ),
+		array(
+			array( "col-sm-3" ),
+			array( "col-sm-3" ),
+			array( "col-sm-3" ),
+			array( "col-sm-3" ),
+			array( "col-sm-6" ),
+			array( "col-sm-6" ),
+			array( "col-sm-3" ),
+			array( "col-sm-3" ),
+			array( "col-sm-3" ),
+			array( "col-sm-3" ),
+			array( "col-sm-6" ),
+			array( "col-sm-6" )
+		),
 		array(
 			array( "col-sm-6" ),
+			array( "col-sm-6" ),
+			array( "col-sm-6" ),
+			array( "col-sm-6" ),
 			array( "col-sm-3" ),
 			array( "col-sm-3" ),
 			array( "col-sm-3" ),
 			array( "col-sm-3" ),
 			array( "col-sm-6" ),
+			array( "col-sm-6" ),
+			array( "col-sm-6" ),
+			array( "col-sm-6" ),
+			array( "col-sm-3" ),
+			array( "col-sm-3" ),
+			array( "col-sm-3" ),
 			array( "col-sm-3" )
 		),
 		array(
-			array( "col-sm-3" ),
-			array( "col-sm-3" ),
-			array( "col-sm-3" ),
-			array( "col-sm-3" ),
-			array( "col-sm-6" ),
-			array( "col-sm-6" ),
-			array( "col-sm-3" )
-		),
-		array(
 			array( "col-sm-6" ),
 			array( "col-sm-6" ),
 			array( "col-sm-3" ),
 			array( "col-sm-3" ),
 			array( "col-sm-6" ),
+			array( "col-sm-3", "col-sm-offset-6" ),
+			array( "col-sm-3" ),
 			array( "col-sm-3", "col-sm-offset-6" ),
 			array( "col-sm-3" ),
 			array( "col-sm-3", "col-sm-offset-6" ),
@@ -43,6 +68,17 @@ class CM_Deterministic_Layout_Manager {
 			array( "col-sm-3" )
 		)
 	);
+
+	private static $sequences_sm = array(
+			array(
+				array( "col-sm-6" ),
+				array( "col-sm-6" ),
+				array( "col-sm-3" ),
+				array( "col-sm-3" )
+			)
+		);
+
+	private static $limit_sm = 4;
 
 	/**
 	 *
@@ -57,7 +93,13 @@ class CM_Deterministic_Layout_Manager {
 	 * @param int $cardinality the number of elements in the set to be layed out.
 	 */
 	public function reset( $cardinality ) {
-		$this->selected_sequence = self::$sequences[ rand(0, (count( self::$sequences ) - 1)) ];
+		if ( $cardinality <= self::$limit_sm ) {
+			$this->selected_sequence = self::$sequences_sm[ rand(0, (count( self::$sequences_sm ) - 1)) ];
+		} else {
+			$this->selected_sequence = self::$sequences[ rand(0, (count( self::$sequences ) - 1)) ];
+		}
+
+		
 	}
 
 	/**
