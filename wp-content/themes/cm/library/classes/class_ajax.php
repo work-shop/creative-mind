@@ -43,6 +43,7 @@ class CM_Ajax {
 		$post = get_post( $story->ID );
 
 		setup_postdata( $post );
+		set_global('formatted_content', apply_filters('the_content', $post->post_content) );
 		set_global('collection', $collection );
 
 		ob_start();
@@ -53,6 +54,7 @@ class CM_Ajax {
 		ob_end_clean();
 
 		unset_global('collection');
+		unset_global('formatted_content');
 
 		die( json_encode( array(
 			'success' 			=> true,
