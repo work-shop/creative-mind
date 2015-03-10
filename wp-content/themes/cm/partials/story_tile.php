@@ -1,8 +1,8 @@
 
 <?php 
 
-$collection 		= get_global('current_collection');
-$story 		= get_global('story');
+$collection 	= get_global('current_collection');
+$story 			= get_global('story');
 $story_index 	= get_global('story_index');
 $manager 		= get_global('layout_manager');
 

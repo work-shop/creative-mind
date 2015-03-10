@@ -836,7 +836,7 @@ $icon-margin: 15px;
 	overflow: visible;
 
 	.category-badge{
-		padding: 7px;
+		padding: 9px 9px 7px 9px;
 		@include border-radius(2px);
 	}	
 
@@ -866,7 +866,7 @@ $icon-margin: 15px;
 		padding-left: 15px;
 		padding-right: 15px;		
 		height: 100%;	
-		background: $courses;
+		background: white;
 		background-clip: content-box;		
 		@include transition(all,.35s);
 		opacity: 0;		

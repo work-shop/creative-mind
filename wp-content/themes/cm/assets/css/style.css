@@ -3015,7 +3015,7 @@ img.gform_ajax_spinner {
   position: relative;
   overflow: visible; }
   .story-tile.story-tile-collection-title .category-badge {
-    padding: 7px;
+    padding: 9px 9px 7px 9px;
     -webkit-border-radius: 2px;
     -moz-border-radius: 2px;
     -o-border-radius: 2px;
@@ -3044,7 +3044,7 @@ img.gform_ajax_spinner {
     padding-left: 15px;
     padding-right: 15px;
     height: 100%;
-    background: #47c1c3;
+    background: white;
     background-clip: content-box;
     transition: all 0.35s 0s ease;
     -moz-transition: all 0.35s 0s ease;
