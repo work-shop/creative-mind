@@ -1,5 +1,5 @@
 
-	<section class="block padded-more target share" id="share">
+	<section class="block padded-less target share bg-light" id="share">
 		<div class="container">
 			<div class="row">
 				<div class="col-sm-6 col-sm-offset-3">

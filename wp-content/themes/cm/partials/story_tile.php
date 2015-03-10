@@ -17,7 +17,10 @@ $size 			= $manager->layout_tile( $story_index );
 		</div>
 		<div class="story-tile-overlay">
 			<div class="overlay"></div>
-			<h3 class="story-title story-tile-title"><?php echo $story->post_title; ?></h3>
+			<h5 class="hidden story-description story-tile-description"><?php the_field('story_description',$story->ID); ?></h5>
+		</div>
+		<div class="story-tile-title">
+			<h4 class="story-title"><?php echo $story->post_title; ?></h4>
 		</div>
 	</a>
 </article>	

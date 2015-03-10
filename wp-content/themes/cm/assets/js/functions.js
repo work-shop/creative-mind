@@ -74,8 +74,6 @@ function storySetup() {
 
 
 
-
-
 $(window).resize(function() {
 
 	view();	
@@ -217,7 +215,7 @@ function storyToggle(clicked){
 	ch = $(window).height();
 	cw = $(window).width();
 	heroHeight = cw/3;
-	storyHeight = ch - 80;
+	storyHeight = ch - 140;
 
 	if($('#active-story').hasClass('story-loaded')){
 		$('body').removeClass('story-loaded').removeClass('story-video-active').addClass('story-loading');
@@ -387,13 +385,21 @@ function loadPage(){
 	loaded = true;
 	
 	flexsliderSetup();
+	var duration;
+
+	if($('body').hasClass('home')){
+		duration = 4000;
+	}
+	else{
+		duration = 500;
+	}
 
 	setTimeout(function(){
 		$('.loading').addClass('loaded');
 		$('.landing').removeClass('landing').addClass('landed');
 		view();
 		if ( $('.spy').length > 0 ) { $(document).trigger('spy-init'); }	
-	},4000);	
+	},duration);	
 		
 }
 

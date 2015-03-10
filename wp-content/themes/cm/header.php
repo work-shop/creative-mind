@@ -48,13 +48,17 @@
     </head>
 	<body <?php body_class('before');?>>
 
+		<?php $category = CM_Collection_Controller::get_current_category(); ?>
+
 		<?php get_template_part('partials/ie'); ?>
 
 		<?php if(is_home()): get_template_part('partials/landing_home'); else: get_template_part('partials/landing'); endif; ?>
 
 		<div id="wrapper" class="loading spy">
 
-			<div id="topbar" class="bg-brand"></div>
+
+
+			<div id="topbar" class="bg-<?php echo $category->name;?>"></div>
 			<?php if(!is_single()): ?>
 			<header id="header" class="closed">
 				<div id="header-brown" class="bg-brown hidden-xs">

@@ -82,7 +82,7 @@
 			<div class="story-meta centered">
 				<div class="container">
 					<div class="row">
-						<div class="col-sm-10 col-sm-offset-1 col-md-8 col-md-offset-2">
+						<div class="col-sm-10 col-sm-offset-1">
 							<h1 class="m0 bold serif story-heading"><?php the_title(); ?></h1>
 							<h5 class="m0 <?php echo ( $collection ) ? "" : "hidden"; ?>"><?php if ( $collection ) { echo $collection->post_title; }?></h5>
 							<?php if ($description = get_field('story_description')) : ?><h2 class="m1"><?php echo $description; ?></h2><?php endif; ?>

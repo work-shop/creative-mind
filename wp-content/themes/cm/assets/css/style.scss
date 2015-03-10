@@ -522,12 +522,11 @@ $icon-margin: 15px;
 .story-activated{
 
 	#header-cm,#headerfix,#topbar{
-		height: 0;
-		overflow: hidden;
+		// height: 0;
+		// overflow: hidden;
 	}
 
 	#collection-intro{
-		border-top: 3px solid $courses;
 		padding-top: 0px;
 		//@include box-shadow($x: 0px,  $y: 0px,  $size: 4px,  $shadow-color: rgba(50, 50, 50, .75));
 	}
@@ -857,6 +856,10 @@ $icon-margin: 15px;
 	background-clip: content-box;	
 	@include transition(all,.35s);
 
+	img{
+		-webkit-filter: saturate(75%);
+	}
+
 
 	.overlay{
 		position: absolute;
@@ -887,7 +890,7 @@ $icon-margin: 15px;
 
 	.story-title{
 		height: 60px;
-		margin-top: 0;
+		margin-top: 3px;
 		padding-top: 4px;
 		padding-left: 6px;
 		line-height: 1;

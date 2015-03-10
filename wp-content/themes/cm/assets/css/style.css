@@ -63,14 +63,14 @@ ol, ul {
   letter-spacing: .01em; }
 
 h1, h2, h3, h4, h5, h6 {
-  line-height: 1.4;
+  line-height: 1.3;
   font-weight: 500; }
 
 h1, .h1 {
   font-size: 3em; }
 
 h2, .h2 {
-  font-size: 1.75em; }
+  font-size: 1.6em; }
 
 h3, .h3 {
   font-size: 1.25em; }
@@ -411,6 +411,18 @@ p {
   -o-transition: all 0.25s 0s ease;
   -ms-transition: all 0.25s 0s ease; }
 
+.border-top-courses {
+  border-top: 3px solid #47c1c3; }
+
+.border-top-research {
+  border-top: 3px solid #8cc63e; }
+
+.border-top-interviews {
+  border-top: 3px solid #00a1d3; }
+
+.border-top-lectures {
+  border-top: 3px solid #cb2026; }
+
 /********** @STRUCTURE AND POSITION *********/
 .full {
   width: 100%; }
@@ -729,7 +741,8 @@ p {
 .nav {
   height: 50px; }
   .nav li:hover a {
-    background: #fafafa; }
+    background: #fafafa;
+    background: #cb2026; }
   .nav li a {
     color: #222222;
     box-sizing: padding-box;
@@ -738,12 +751,12 @@ p {
     font-size: 19px; }
   .nav.nav-inline li {
     display: inline-block;
-    height: 47px;
-    line-height: 47px;
+    height: 50px;
+    line-height: 50px;
     vertical-align: middle;
     margin-right: 5px;
     position: relative;
-    top: 2px; }
+    top: 0px; }
 
 @media (max-width: 992px) {
   .nav li a {
@@ -2441,11 +2454,7 @@ img.gform_ajax_spinner {
 .collection-single {
   padding: 1% 0; }
 
-.story-activated #header-cm, .story-activated #headerfix, .story-activated #topbar {
-  height: 0;
-  overflow: hidden; }
 .story-activated #collection-intro {
-  border-top: 3px solid #47c1c3;
   padding-top: 0px; }
 .story-activated .collection-previous, .story-activated .collection-next {
   opacity: 1; }
@@ -3036,6 +3045,8 @@ img.gform_ajax_spinner {
   -webkit-transition: all 0.35s 0s ease;
   -o-transition: all 0.35s 0s ease;
   -ms-transition: all 0.35s 0s ease; }
+  .story-tile img {
+    -webkit-filter: saturate(75%); }
   .story-tile .overlay {
     position: absolute;
     top: 0;
@@ -3073,7 +3084,7 @@ img.gform_ajax_spinner {
     line-height: 1.3; }
   .story-tile .story-title {
     height: 60px;
-    margin-top: 0;
+    margin-top: 3px;
     padding-top: 4px;
     padding-left: 6px;
     line-height: 1; }
