@@ -390,10 +390,10 @@ function loadPage(){
 
 	setTimeout(function(){
 		$('.loading').addClass('loaded');
-		$('.landing').addClass('landed');
+		$('.landing').removeClass('landing').addClass('landed');
 		view();
 		if ( $('.spy').length > 0 ) { $(document).trigger('spy-init'); }	
-	},1000);		
+	},1000);	
 		
 }
 

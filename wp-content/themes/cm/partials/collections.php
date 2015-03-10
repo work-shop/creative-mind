@@ -1,4 +1,4 @@
-<div id="collections" class="target">
+<div id="collections" class="target padded">
 	<?php /*unsure about general concept of collections-intro */ ?>
 	<?php 
 		$category = CM_Collection_Controller::get_current_category();

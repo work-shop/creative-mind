@@ -104,7 +104,7 @@ img.gform_ajax_spinner {
 	height: 100%;
 	z-index: 6;
 	position: absolute;
-	right: 15px;
+	right: 5px;
 	width: auto;
 	margin: 0 10px;
 	height: 60px;
@@ -113,14 +113,14 @@ img.gform_ajax_spinner {
 	@include transition(all,.25s);
 	
 	.icon:before{
-		font-size: 60px;
+		font-size: 90px;
 		color: $brand;
 		//@include text-shadow(0,0,2px,rgba(0,0,0,.5));
 	}
 	
 	&.previous{
 		right: auto;
-		left: 15px;
+		left: 5px;
 	}
 	
 	&:hover{

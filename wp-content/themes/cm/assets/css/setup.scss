@@ -342,7 +342,7 @@ p{
 		top: 0;
 		left: 0;
 		//z-index: 1;
-		background: rgba(255,255,255,.75);
+		background: rgba(255,255,255,.5);
 		@include transition(all);
 	}
 }
@@ -400,7 +400,7 @@ $slide-distance-vertical: 20px;
 }
 
 .fade-in-slide-up{
-	@include animation(fade-in-slide-up, 2s, ease, 1s, 1);
+	@include animation(fade-in-slide-up, 1.5s, ease, 1s, 1);
 	position: relative;
 }
 @include keyframes(fade-in-slide-up){
@@ -432,8 +432,16 @@ $slide-distance-vertical: 20px;
 	opacity: 1 !important;	
 }
 
+.landing{
+	@include transition(opacity,1s);
+	opacity: 1 !important;		
+}
+
 .landed{
-	display: none;
+	@include transition(opacity,1s);	
+	opacity: 0 !important;
+	position: absolute;	
+	top: -100% !important;
 }
 
 .block{

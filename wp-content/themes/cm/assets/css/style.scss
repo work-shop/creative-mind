@@ -171,6 +171,28 @@
 
 }
 
+#landing-home{
+	#alogo-creative{
+		@include animation(creative,6s,.0s,ease,1);
+	}
+
+	#alogo-mind{
+		@include animation(mind,6s,.0s,ease,1);
+	}
+
+	#alogo-brown path{
+		@include animation(brown,6s,.0s,ease,1);			
+	}
+
+	#alogo-dot-1{
+		@include animation(dot1,6s,.0s,ease,1);	
+
+	}	
+	#alogo-dot-2{
+		@include animation(dot2,6s,.0s,ease,1);			
+	}		
+}
+
 @include keyframes(creative){
 	0%{ @include transform(translate(0,0)); }
 	25%{ @include transform(translate(0,60%)); }
@@ -377,14 +399,14 @@ $icon-margin: 15px;
 }
 
 .home .slides{
-	height: 550px;
+	height: 700px;
 	li{
 		height: inherit;
 	}
 }
 
 .slideshow-caption{
-	padding: 30px;
+	padding: 20px 10px 0px 20px;
 
 	*{
 		color: $dark;
@@ -469,7 +491,7 @@ $icon-margin: 15px;
 
 .collection:not(.collection-single){
 	@include transition(opacity,1s);
-	opacity: .5;
+	opacity: .75;
 
 	&.active{
 		opacity: 1;		
@@ -507,6 +529,7 @@ $icon-margin: 15px;
 	#collection-intro{
 		border-top: 3px solid $courses;
 		padding-top: 0px;
+		//@include box-shadow($x: 0px,  $y: 0px,  $size: 4px,  $shadow-color: rgba(50, 50, 50, .75));
 	}
 
 	.collection-previous,.collection-next{
@@ -832,6 +855,10 @@ $icon-margin: 15px;
 	overflow: hidden;
 	background-clip: content-box;	
 	@include transition(all,.35s);
+
+	img {
+      -webkit-filter: saturate(60%);
+	}
 
 
 	.overlay{

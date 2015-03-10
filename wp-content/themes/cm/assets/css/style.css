@@ -404,7 +404,7 @@ p {
   height: 100%;
   top: 0;
   left: 0;
-  background: rgba(255, 255, 255, 0.75);
+  background: rgba(255, 255, 255, 0.5);
   transition: all 0.25s 0s ease;
   -moz-transition: all 0.25s 0s ease;
   -webkit-transition: all 0.25s 0s ease;
@@ -513,11 +513,11 @@ p {
   100% {
     opacity: 0; } }
 .fade-in-slide-up, .flex-active-slide .slideshow-caption {
-  animation: fade-in-slide-up 2s ease 1s 1;
-  -ms-animation: fade-in-slide-up 2s ease 1s 1;
-  -webkit-animation: fade-in-slide-up 2s ease 1s 1;
-  -o-animation: move fade-in-slide-up 2s ease 1s 1;
-  -moz-animation: move fade-in-slide-up 2s ease 1s 1;
+  animation: fade-in-slide-up 1.5s ease 1s 1;
+  -ms-animation: fade-in-slide-up 1.5s ease 1s 1;
+  -webkit-animation: fade-in-slide-up 1.5s ease 1s 1;
+  -o-animation: move fade-in-slide-up 1.5s ease 1s 1;
+  -moz-animation: move fade-in-slide-up 1.5s ease 1s 1;
   animation-fill-mode: forwards;
   -webkit-animation-fill-mode: forwards;
   -moz-animation-fill-mode: forwards;
@@ -650,8 +650,23 @@ p {
 .loaded {
   opacity: 1 !important; }
 
+.landing {
+  transition: opacity 1s 0s ease;
+  -moz-transition: opacity 1s 0s ease;
+  -webkit-transition: opacity 1s 0s ease;
+  -o-transition: opacity 1s 0s ease;
+  -ms-transition: opacity 1s 0s ease;
+  opacity: 1 !important; }
+
 .landed {
-  display: none; }
+  transition: opacity 1s 0s ease;
+  -moz-transition: opacity 1s 0s ease;
+  -webkit-transition: opacity 1s 0s ease;
+  -o-transition: opacity 1s 0s ease;
+  -ms-transition: opacity 1s 0s ease;
+  opacity: 0 !important;
+  position: absolute;
+  top: -100% !important; }
 
 .block {
   position: relative;
@@ -809,7 +824,7 @@ img.gform_ajax_spinner {
   height: 100%;
   z-index: 6;
   position: absolute;
-  right: 15px;
+  right: 5px;
   width: auto;
   margin: 0 10px;
   height: 60px;
@@ -821,11 +836,11 @@ img.gform_ajax_spinner {
   -o-transition: all 0.25s 0s ease;
   -ms-transition: all 0.25s 0s ease; }
   .flexslider-direction .icon:before {
-    font-size: 60px;
+    font-size: 90px;
     color: #cb2026; }
   .flexslider-direction.previous {
     right: auto;
-    left: 15px; }
+    left: 5px; }
   .flexslider-direction:hover {
     cursor: pointer;
     cursor: w-resize; }
@@ -1024,6 +1039,62 @@ img.gform_ajax_spinner {
   -webkit-animation: dot2 7s 0.5s ease 1;
   -o-animation: move dot2 7s 0.5s ease 1;
   -moz-animation: move dot2 7s 0.5s ease 1;
+  animation-fill-mode: forwards;
+  -webkit-animation-fill-mode: forwards;
+  -moz-animation-fill-mode: forwards;
+  -ms-animation-fill-mode: forwards;
+  -o-animation-fill-mode: forwards; }
+
+#landing-home #alogo-creative {
+  animation: creative 6s 0s ease 1;
+  -ms-animation: creative 6s 0s ease 1;
+  -webkit-animation: creative 6s 0s ease 1;
+  -o-animation: move creative 6s 0s ease 1;
+  -moz-animation: move creative 6s 0s ease 1;
+  animation-fill-mode: forwards;
+  -webkit-animation-fill-mode: forwards;
+  -moz-animation-fill-mode: forwards;
+  -ms-animation-fill-mode: forwards;
+  -o-animation-fill-mode: forwards; }
+#landing-home #alogo-mind {
+  animation: mind 6s 0s ease 1;
+  -ms-animation: mind 6s 0s ease 1;
+  -webkit-animation: mind 6s 0s ease 1;
+  -o-animation: move mind 6s 0s ease 1;
+  -moz-animation: move mind 6s 0s ease 1;
+  animation-fill-mode: forwards;
+  -webkit-animation-fill-mode: forwards;
+  -moz-animation-fill-mode: forwards;
+  -ms-animation-fill-mode: forwards;
+  -o-animation-fill-mode: forwards; }
+#landing-home #alogo-brown path {
+  animation: brown 6s 0s ease 1;
+  -ms-animation: brown 6s 0s ease 1;
+  -webkit-animation: brown 6s 0s ease 1;
+  -o-animation: move brown 6s 0s ease 1;
+  -moz-animation: move brown 6s 0s ease 1;
+  animation-fill-mode: forwards;
+  -webkit-animation-fill-mode: forwards;
+  -moz-animation-fill-mode: forwards;
+  -ms-animation-fill-mode: forwards;
+  -o-animation-fill-mode: forwards; }
+#landing-home #alogo-dot-1 {
+  animation: dot1 6s 0s ease 1;
+  -ms-animation: dot1 6s 0s ease 1;
+  -webkit-animation: dot1 6s 0s ease 1;
+  -o-animation: move dot1 6s 0s ease 1;
+  -moz-animation: move dot1 6s 0s ease 1;
+  animation-fill-mode: forwards;
+  -webkit-animation-fill-mode: forwards;
+  -moz-animation-fill-mode: forwards;
+  -ms-animation-fill-mode: forwards;
+  -o-animation-fill-mode: forwards; }
+#landing-home #alogo-dot-2 {
+  animation: dot2 6s 0s ease 1;
+  -ms-animation: dot2 6s 0s ease 1;
+  -webkit-animation: dot2 6s 0s ease 1;
+  -o-animation: move dot2 6s 0s ease 1;
+  -moz-animation: move dot2 6s 0s ease 1;
   animation-fill-mode: forwards;
   -webkit-animation-fill-mode: forwards;
   -moz-animation-fill-mode: forwards;
@@ -2278,12 +2349,12 @@ img.gform_ajax_spinner {
     opacity: 1; }
 
 .home .slides {
-  height: 550px; }
+  height: 700px; }
   .home .slides li {
     height: inherit; }
 
 .slideshow-caption {
-  padding: 30px;
+  padding: 20px 10px 0px 20px;
   transition: all 1s 0s ease;
   -moz-transition: all 1s 0s ease;
   -webkit-transition: all 1s 0s ease;
@@ -2349,7 +2420,7 @@ img.gform_ajax_spinner {
   -webkit-transition: opacity 1s 0s ease;
   -o-transition: opacity 1s 0s ease;
   -ms-transition: opacity 1s 0s ease;
-  opacity: .5; }
+  opacity: .75; }
   .collection:not(.collection-single).active {
     opacity: 1; }
 
@@ -2965,6 +3036,8 @@ img.gform_ajax_spinner {
   -webkit-transition: all 0.35s 0s ease;
   -o-transition: all 0.35s 0s ease;
   -ms-transition: all 0.35s 0s ease; }
+  .story-tile img {
+    -webkit-filter: saturate(60%); }
   .story-tile .overlay {
     position: absolute;
     top: 0;

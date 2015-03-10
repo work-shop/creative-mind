@@ -10,7 +10,6 @@ $size 			= $manager->layout_tile( $story_index );
 
 ?>
 
-
 <article id="story-<?php echo $story->ID; ?>" class="story-tile inactive <?php echo $size; ?>" <?php if ( is_single() ) : ?> async-source=<?php echo $story->ID; ?> <?php endif; ?> >
 	<a href="<?php echo ( $collection ) ? get_permalink( $collection->ID ).'?story='.$story->ID : "#"; ?>">
 		<div class="story-tile-image">
