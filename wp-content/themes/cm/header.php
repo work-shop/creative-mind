@@ -56,11 +56,11 @@
 
 		<div id="wrapper" class="loading spy">
 
+			<?php if(is_home()): $bar_color = 'lectures'; else: $bar_color = strtolower($category->name); endif; ?>
+			<div id="topbar" class="bg-<?php echo $bar_color;?>"></div>
 
-
-			<div id="topbar" class="bg-<?php echo $category->name;?>"></div>
-			<?php if(!is_single()): ?>
 			<header id="header" class="closed">
+				<?php if(is_home()): ?>		
 				<div id="header-brown" class="bg-brown hidden-xs">
 					<div class="container-fluid">
 						<div class="row">

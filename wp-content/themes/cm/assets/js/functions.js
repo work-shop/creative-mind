@@ -215,7 +215,7 @@ function storyToggle(clicked){
 	ch = $(window).height();
 	cw = $(window).width();
 	heroHeight = cw/3;
-	storyHeight = ch - 140;
+	storyHeight = ch - 80;
 
 	if($('#active-story').hasClass('story-loaded')){
 		$('body').removeClass('story-loaded').removeClass('story-video-active').addClass('story-loading');
@@ -405,17 +405,21 @@ function loadPage(){
 
 $(window).scroll(function() { 
 
-	if( !$('html').hasClass('menu-open') ) {	
-	
-		var after = $('body').offset().top + 40;
-		       
-		if($(this).scrollTop() >= after && $("body").hasClass('before')){
-			$("body").removeClass('before').addClass('after');
-		} 
-		else if($(this).scrollTop() < after && $("body").hasClass('after')){
-			$("body").removeClass('after').addClass('before');	
-		} 
-	
+	if( !$('html').hasClass('menu-open') ) {
+
+			if($('body').hasClass('home')){	
+		
+			var after = $('body').offset().top + 40;
+			       
+			if($(this).scrollTop() >= after && $("body").hasClass('before')){
+				$("body").removeClass('before').addClass('after');
+			} 
+			else if($(this).scrollTop() < after && $("body").hasClass('after')){
+				$("body").removeClass('after').addClass('before');	
+			} 
+		
+		}
+
 	}
 
 });//end window.scroll

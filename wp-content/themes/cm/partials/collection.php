@@ -77,7 +77,7 @@ set_global('story_count', $story_count );
 				</h2>
 				<h3 class="centered <?php echo $collection_category->slug; ?>"><?php the_field('collection_description'); ?></h3>
 				<h5 class="m0 centered <?php echo $collection_category->slug; ?>">
-					In <?php echo $collection_category->name; ?>, <?php echo $story_count; ?> <span class="icon" data-icon="ﬁ"></span>
+					<?php echo $story_count; ?> <span class="icon" data-icon="ﬁ"></span>
 				</h5>				
 			</div>
 		</div>
