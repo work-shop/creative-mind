@@ -393,7 +393,7 @@ function loadPage(){
 		$('.landing').removeClass('landing').addClass('landed');
 		view();
 		if ( $('.spy').length > 0 ) { $(document).trigger('spy-init'); }	
-	},1000);	
+	},4000);	
 		
 }
 
