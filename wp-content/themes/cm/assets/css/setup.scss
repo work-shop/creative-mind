@@ -347,19 +347,19 @@ p{
 }
 
 .border-top-courses{
-	border-top: 3px solid $courses;
+	border-top: 2px solid $courses;
 }
 
 .border-top-research{
-	border-top: 3px solid $research;
+	border-top: 2px solid $research;
 }
 
 .border-top-interviews{
-	border-top: 3px solid $interviews;
+	border-top: 2px solid $interviews;
 }
 
 .border-top-lectures{
-	border-top: 3px solid $lectures;
+	border-top: 2px solid $lectures;
 }
 
 
@@ -415,7 +415,7 @@ $slide-distance-vertical: 20px;
 }
 
 .fade-in-slide-up{
-	@include animation(fade-in-slide-up, 1.5s, ease, 1s, 1);
+	@include animation(fade-in-slide-up, .5s, ease, 1s, 1);
 	position: relative;
 }
 @include keyframes(fade-in-slide-up){
@@ -425,7 +425,7 @@ $slide-distance-vertical: 20px;
 }
 
 .fade-in-slide-down{
-	@include animation(fade-in-slide-down, 3s, ease, 1s, 1);
+	@include animation(fade-in-slide-down, .5s, ease, 1s, 1);
 	position: relative;
 }
 @include keyframes(fade-in-slide-down){
@@ -521,43 +521,7 @@ $slide-distance-vertical: 20px;
 
 		&:hover{
 			a{
-				background: $ultra-light;
-			}
-		}
-
-		a{
-			color: $dark;
-			box-sizing: padding-box;
-			display: block;
-			padding: 0 15px;
-		}
-
-	}	
-
-	&.nav-inline{
-		li{
-			display: inline-block;			
-			height: $nav-height - 3px;			
-			line-height: $nav-height - 3px;
-			vertical-align: middle;			
-			margin-right: 4px;
-			position: relative;
-			top: 3px;
-		}
-	}
-
-}
-
-.nav{
-	height: $nav-height;
-
-	li{
-
-		&:hover{
-			a{
-				background: $ultra-light;
-					background: $lectures;
-			
+				background: $ultra-light;			
 			}
 		}
 
@@ -567,6 +531,15 @@ $slide-distance-vertical: 20px;
 			display: block;
 			padding: 0 15px;
 			font-size: 19px;
+			@include transition();
+
+			&.white{
+				color: white;
+
+				&:hover{
+					color: $dark;
+				}
+			}
 		}
 
 	}	
@@ -580,6 +553,7 @@ $slide-distance-vertical: 20px;
 			margin-right: 5px;
 			position: relative;
 			top: 0px;
+			padding-top: 0px;
 		}
 	}
 

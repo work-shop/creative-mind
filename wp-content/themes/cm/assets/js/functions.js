@@ -215,7 +215,7 @@ function storyToggle(clicked){
 	ch = $(window).height();
 	cw = $(window).width();
 	heroHeight = cw/3;
-	storyHeight = ch - 80;
+	storyHeight = ch - 110;
 
 	if($('#active-story').hasClass('story-loaded')){
 		$('body').removeClass('story-loaded').removeClass('story-video-active').addClass('story-loading');
@@ -326,7 +326,7 @@ function view(){
 	ph = ch - 130;
 	fw = cw*.5;
 	storyHeight = cw/3;
-	storyVideoHeight = ch - 200;
+	storyVideoHeight = ch - 110;
 
 
 
@@ -508,6 +508,41 @@ $(document).on('spy-init', function() {
 	 	return 0;
 	 	//return ($('body').hasClass('home')) ? ((w.width() < 768) ? 350 : (w.height() / 2)) : 80;
 	 }
+});
+
+
+
+
+$(function() {
+    var iframe = $('#story-video-1')[0];
+    var player = $f(iframe);
+    var status = $('.status');
+
+    // When the player is ready, add listeners for pause, finish, and playProgress
+    player.addEvent('ready', function() {
+        status.text('ready');
+        
+        player.addEvent('pause', onPause);
+        player.addEvent('finish', onFinish);
+        player.addEvent('playProgress', onPlayProgress);
+    });
+
+    // Call the API when a button is pressed
+    $('button').bind('click', function() {
+        player.api($(this).text().toLowerCase());
+    });
+
+    function onPause(id) {
+        status.text('paused');
+    }
+
+    function onFinish(id) {
+        status.text('finished');
+    }
+
+    function onPlayProgress(data, id) {
+        status.text(data.seconds + 's played');
+    }
 });
 
 

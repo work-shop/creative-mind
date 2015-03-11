@@ -44,25 +44,25 @@ set_global('story_count', $story_count );
 		<div class="row collection-intro-heading">
 			<div class="col-sm-3 col-xs-1">		
 				<a class="story-toggle" href="#">
-					<h6 class="serif <?php echo $collection_category->slug; ?> bold collection-previous">
+					<h4 class=" <?php echo $collection_category->slug; ?> collection-previous">
 						<span class="icon previous" data-icon="‰"></span>	
-						<span class="h6 previous-story-label">Previous Story</span> 
-						<span id="previous-story-title" class="previous-story-title h6 bold">: <span async-target="previous" class="next-story-title h6 bold"></span></span>
-					</h6>
+						<span class="h4 previous-story-label">Previous Story</span> 
+						<span id="previous-story-title" class="hidden previous-story-title h4 bold">: <span async-target="previous" class="next-story-title h4"></span></span>
+					</h4>
 				</a>
 			</div>
 			<div class="col-sm-6 col-xs-10">		
 				<h2 class="serif <?php echo $collection_category->slug; ?> bold centered m0 collection-title"><?php echo get_the_title(); ?>
-				<span id="active-story-title" class="collection-suffix bold serif h2">: <span async-target="current" class="next-story-title h6 bold"></span>
+				<span id="active-story-title" class="collection-suffix bold serif h2"> <span async-target="current" class="next-story-title h6 bold"></span>
 				</h2>
 			</div>
 			<div class="col-sm-3 col-xs-1">		
 				<a class="story-toggle" href="#">
-					<h6 class="serif <?php echo $collection_category->slug; ?> righted bold collection-next">
-						<span class="h6 next-story-label">Next Story</span> 
-						<span id="next-story-title" class="next-story-title h6 bold">: <span async-target="next" class="next-story-title h6 bold"></span></span>
+					<h4 class=" <?php echo $collection_category->slug; ?> righted collection-next">
+						<span class="h4 next-story-label">Next Story</span> 
+						<span id="next-story-title" class="next-story-title h4 hidden">: <span async-target="next" class="next-story-title h4"></span></span>
 						<span class="icon next" data-icon="„"></span>
-					</h6>
+					</h4>
 				</a>
 			</div>		
 		</div>
@@ -76,9 +76,9 @@ set_global('story_count', $story_count );
 					<span class="collection-suffix bold serif">: Empathy</span>
 				</h2>
 				<h3 class="centered <?php echo $collection_category->slug; ?>"><?php the_field('collection_description'); ?></h3>
-				<h5 class="m0 centered <?php echo $collection_category->slug; ?>">
+				<h4 class="m0 centered <?php echo $collection_category->slug; ?>">
 					<?php echo $story_count; ?> <span class="icon" data-icon="ﬁ"></span>
-				</h5>				
+				</h4>				
 			</div>
 		</div>
 	</div>

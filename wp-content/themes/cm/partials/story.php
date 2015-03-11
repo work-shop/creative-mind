@@ -86,8 +86,8 @@
 							<h1 class="m0 bold serif story-heading"><?php the_title(); ?></h1>
 							<h5 class="m0 <?php echo ( $collection ) ? "" : "hidden"; ?>"><?php if ( $collection ) { echo $collection->post_title; }?></h5>
 							<?php if ($description = get_field('story_description')) : ?><h2 class="m1"><?php echo $description; ?></h2><?php endif; ?>
-							<?php if ($byline = get_field('story_byline')) : ?><h5 class="m0"><?php echo $byline; ?></h5><?php endif; ?>
-							<?php if ($date = get_field('story_date')) : ?><h5 class="m0"><?php echo $date; ?></h5><?php endif; ?>
+							<?php if ($byline = get_field('story_byline')) : ?><h5 class="mt0 mb1"><?php echo $byline; ?></h5><?php endif; ?>
+							<?php if ($date = get_field('story_date')) : ?><h5 class="mt0 mb1"><?php echo $date; ?></h5><?php endif; ?>
 
 							<?php if ( $links = get_field('story_links') ) : ?>
 							<?php foreach( $links as $link) : ?>

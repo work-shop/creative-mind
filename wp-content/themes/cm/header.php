@@ -48,7 +48,9 @@
     </head>
 	<body <?php body_class('before');?>>
 
-		<?php $category = CM_Collection_Controller::get_current_category(); ?>
+		<?php $category = CM_Collection_Controller::get_current_category(); 
+			if(is_wp_error($category )): $category = CM_Collection_Controller::get_category_for_collection(get_the_ID()); endif;
+		?>
 
 		<?php get_template_part('partials/ie'); ?>
 
@@ -56,7 +58,7 @@
 
 		<div id="wrapper" class="loading spy">
 
-			<?php if(is_home()): $bar_color = 'lectures'; else: $bar_color = strtolower($category->name); endif; ?>
+			<?php if(is_home() || is_single()): $bar_color = 'lectures'; else: $bar_color = strtolower($category->name); endif; ?>
 			<div id="topbar" class="bg-<?php echo $bar_color;?>"></div>
 
 			<header id="header" class="closed">
@@ -84,13 +86,24 @@
 							<div class="visible-xs col-xs-6 m0">
 								<p class="right"><a href="#menu" class="menu-toggle">Menu<span class="icon" data-icon="&#64257;"></span></a></p>
 							</div>
+							<?php $activity = false; ?>
 							<nav class="col-sm-8 m0 col-xs-12">
 								<ul class="nav nav-inline right">
-									<li><a href="<?php bloginfo('url'); ?>/courses">Courses</a></li>
-									<li><a href="<?php bloginfo('url'); ?>/research">Research</a></li>
-									<li><a href="<?php bloginfo('url'); ?>/interviews">Interviews</a></li>		
-									<li><a href="<?php bloginfo('url'); ?>/lectures">Lectures</a></li>
-									<li><a href="<?php bloginfo('url'); ?>/about">About</a></li>
+									<li><a href="<?php bloginfo('url'); ?>/courses"
+										<?php // if($category->name == 'Courses' && is_single() && $activity): echo 'class="bg-courses white"'; endif; ?>
+									>Courses</a></li>
+									<li><a href="<?php bloginfo('url'); ?>/research"
+										<?php // if($category->name == 'Research' && is_single() && $activity): echo 'class="bg-research white"'; endif; ?>
+									>Research</a></li>
+									<li><a href="<?php bloginfo('url'); ?>/interviews"
+										<?php // if($category->name == 'Interviews' && is_single() && $activity): echo 'class="bg-interviews white"'; endif; ?>
+									>Interviews</a></li>		
+									<li><a href="<?php bloginfo('url'); ?>/lectures"
+										<?php // if($category->name == 'Lectures' && is_single() && $activity): echo 'class="bg-lectures white"'; endif; ?>
+									>Lectures</a></li>
+									<li><a href="<?php bloginfo('url'); ?>/about"
+										<?php // if($category->name == 'About' && is_single() && $activity): echo 'class="bg-brand white"'; endif; ?>
+									>About</a></li>
 									<li><a href="#search" data-toggle="modal" data-target="#searchModal"><span class="icon" data-icon="s"></span></a></li>
 								</ul>
 							</nav>

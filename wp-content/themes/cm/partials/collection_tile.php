@@ -32,7 +32,9 @@ if ( $collection_stories ) :
 						<article class="story-tile story-tile-collection-title col-sm-12" id="story-<?php echo $i; ?>">
 							<a href="<?php echo get_permalink( $collection->ID ); ?>">
 								<div class="collection-title">
-									<h6 class="mt0 mb1 uppercase white"><span class="bg-<?php echo $collection_category->slug ?> h4 white category-badge"><?php echo $collection_category->name; ?> collection:</span></h6>
+									<?php // if(!is_category()) : ?>
+										<h6 class="mt0 mb1 uppercase white"><span class="bg-<?php echo $collection_category->slug ?> h4 white category-badge"><?php echo $collection_category->name; ?> collection:</span></h6>
+									<?php // endif; ?>
 									<h2 class="serif">
 										<?php echo $collection->post_title; ?>
 									</h2>

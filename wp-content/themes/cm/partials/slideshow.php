@@ -22,7 +22,7 @@
 							  : wp_get_attachment_url( get_post_thumbnail_id( $slide['slide_collection'][0]->ID, 'slideshow_home' ) ));
 				?>
 
-				<li class="background-cover background-mask-light" style="background-image: url('<?php echo $image_url; ?>');">
+				<li class="background-cover background-mask-light-jank" style="background-image: url('<?php echo $image_url; ?>');">
 					<div class="vertical-center container slideshow-caption-container">
 						<div class="row">
 
@@ -44,7 +44,7 @@
 							case "story":
 						 ?>
 						 	<?php $story = $slide['slide_story'][0]; ?>
-							<div class="<?php echo $size; ?> slideshow-caption slideshow-caption-<?php echo $i;?>">
+							<div class="<?php echo $size; ?> slideshow-caption bg-white slideshow-caption-<?php echo $i;?>">
 								<a href="#">
 									<h6 class="m0">Featured Story</h6>
 									<h2 class="serif m0"><?php echo $story->post_title; ?></h2>
@@ -58,7 +58,7 @@
 							case "collection":
 						 ?>	
 						 	<?php $coll = $slide['slide_collection'][0];?>
-						 	<div class="<?php echo $size; ?> slideshow-caption slideshow-caption-<?php echo $i;?>">
+						 	<div class="<?php echo $size; ?> bg-white slideshow-caption slideshow-caption-<?php echo $i;?>">
 								<a href="#">
 									<h6 class="m0">Featured Collection</h6>
 									<h2 class="serif m0"><?php echo $coll->post_title; ?></h2>
