@@ -3,11 +3,11 @@
 }
 
 .wp-admin .acf_relationship .relationship_list{
-	 height: 600px; 
+	/* height: 600px; */
 }
 
 .wp-admin .acf_relationship .relationship_right .relationship_list{
-	 height: 600px  !important;	 
+	/* height: 600px  !important;	 */
 }
 
 .wp-admin #sorter_box{

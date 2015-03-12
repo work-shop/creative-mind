@@ -3098,7 +3098,7 @@ img.gform_ajax_spinner {
     line-height: 1;
     top: 100%; }
   .story-tile.inactive:hover img {
-    opacity: .7; }
+    opacity: .5; }
   .story-tile.inactive:hover .story-description {
     top: 5%;
     opacity: 1;

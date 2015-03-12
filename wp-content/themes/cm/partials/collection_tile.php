@@ -28,7 +28,7 @@ if ( $collection_stories ) :
 
 				<?php if($i === 0 && !is_single()) : ?>
 					
-					<div class="col-sm-4">
+					<div class="col-sm-6 col-sm-offset-3 mb3 centered">
 						<article class="story-tile story-tile-collection-title col-sm-12" id="story-<?php echo $i; ?>">
 							<a href="<?php echo get_permalink( $collection->ID ); ?>">
 								<div class="collection-title">
@@ -43,7 +43,7 @@ if ( $collection_stories ) :
 							</a>
 						</article>
 					</div>
-					<div class="col-sm-8">
+					<div class="col-sm-10 col-sm-offset-1">
 					<div class="row">
 
 				<?php endif; ?>
