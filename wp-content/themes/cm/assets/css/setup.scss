@@ -455,8 +455,10 @@ $slide-distance-vertical: 20px;
 .landed{
 	@include transition(opacity,1s);	
 	opacity: 0 !important;
-	position: absolute;	
-	top: -100% !important;
+	//position: absolute;	
+	//top: -100% !important;
+	position: relative;
+	z-index: -9999 !important;
 }
 
 .block{

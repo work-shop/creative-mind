@@ -361,11 +361,11 @@ $dot-margin: 12px;
 
 $icon-width: 40px;
 $icon-margin: 15px;
+	
 
 .share-icons{
 	width: ($icon-width * 3) + ($icon-margin*3);
 	margin: 0 auto;
-	display: none;
 
 	a{
 		text-align: center;
@@ -378,8 +378,7 @@ $icon-margin: 15px;
 		@include transition(transform,1s);
 
 		&:hover{
-			//background: $brown;
-			@include transform(rotate(180deg));
+			@include transform(rotate(360deg) scale(1.25));
 		}
 	}
 
@@ -523,12 +522,11 @@ $icon-margin: 15px;
 	padding: 1% 0;
 }
 
-.story-activated{
-
+.story-active{
 
 	#collection-intro{
 		padding-top: 0px;
-		@include box-shadow($x: 0px,  $y: 2px,  $size: 6px,  $shadow-color: rgba(255, 255, 255, .75));
+		@include box-shadow($x: 0px,  $y: -4px,  $size: 8px,  $shadow-color: rgba(255, 255, 255, .25));
 
 		.container-fluid{
 			padding: 0 30px;
@@ -550,6 +548,11 @@ $icon-margin: 15px;
 
 	.collection-title{
 		font-size: 19px;
+	}
+
+	.collection-prefix{
+		display: none;
+		font-size: 24px;		
 	}
 
 	.collection-suffix{
@@ -863,15 +866,18 @@ $icon-margin: 15px;
 
 .story-tile{
 	position: relative;
-	margin-bottom: 0px;
+	margin-bottom: 10px;
 	overflow: hidden;
 	background-clip: content-box;	
 	@include transition(all,.35s);
 
+	&.col-sm-6{
+		
+	}
+
 	img{
 		-webkit-filter: saturate(75%);
 	}
-
 
 	.overlay{
 		position: absolute;
@@ -882,7 +888,7 @@ $icon-margin: 15px;
 		padding-right: 15px;		
 		height: 100%;	
 		background: white;
-		background-clip: content-box;		
+		//background-clip: content-box;		
 		@include transition(all,.35s);
 		opacity: 0;		
 		top: -120px;	
@@ -891,34 +897,48 @@ $icon-margin: 15px;
 	.story-description{
 		position: absolute;
 		width: 100%;
-		padding-left: 20px;
+		padding-left: 30px;
 		padding-right: 20px;	
 		@include transition(all,.35s);
-		opacity: .9;
-		top: 1%;
+		opacity: .0;
+		top: 0%;
 		@include transform(translate(-10px,0%));
 		line-height: 1.3;
 	}
 
 	.story-title{
 		height: 60px;
-		margin-top: 3px;
+		margin-top: 10px;
 		padding-top: 4px;
 		padding-left: 6px;
 		line-height: 1;
+		//position: absolute;
+		top: 100%;
+		//margin-top: -60px;
+		//display: none;
 	}
 
 	&.inactive{
 
 		&:hover{
+
+			img{
+				opacity: .7;
+			}
+
 			.overlay{
-				top: -60px;
-				opacity: .95;
+				//top: -0px;
+				//opacity: .95;
 			}
 
 			.story-description{
-				top: 1%;
+				top: 5%;
 				opacity: 1;
+				color: $dark;
+
+				*{
+					color: $dark;
+				}
 			}
 
 			.story-title{
@@ -945,32 +965,32 @@ $icon-margin: 15px;
 	}
 
 	#collections-intro{
-		position: fixed;
-		top: 30%;
-		width: auto;
-		height: 37px;
-		padding: 5px 15px;
-		z-index: 9;
+		// position: fixed;
+		// top: 30%;
+		// width: auto;
+		// height: 37px;
+		// padding: 5px 15px;
+		// z-index: 9;
 
-		h3{
-			padding: 5px 15px;
-		}		
+		// h3{
+		// 	padding: 5px 15px;
+		// }		
 
-		// //hung from right
-		// right: 15px;
-		// margin-top: 120px;		
-	 //   -ms-transform-origin: 100% 0%;
-	 //   transform-origin: 100% 0%;
-	 //   -webkit-transform-origin: 100% 0%;
+		// // //hung from right
+		// // right: 15px;
+		// // margin-top: 120px;		
+	 // //   -ms-transform-origin: 100% 0%;
+	 // //   transform-origin: 100% 0%;
+	 // //   -webkit-transform-origin: 100% 0%;
+		// // @include transform(rotate(90deg));
+
+		// //hung from left
+		// left: 70px;
+		// margin-top: -100px;
+	 //    -ms-transform-origin: 00% 0%;
+	 //    transform-origin: 00% 0%;
+	 //    -webkit-transform-origin: 00% 0%;
 		// @include transform(rotate(90deg));
-
-		//hung from left
-		left: 70px;
-		margin-top: -100px;
-	    -ms-transform-origin: 00% 0%;
-	    transform-origin: 00% 0%;
-	    -webkit-transform-origin: 00% 0%;
-		@include transform(rotate(90deg));
 
 	}
 }	

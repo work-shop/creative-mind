@@ -12,6 +12,9 @@ jQuery(document).ready(function($) {
 
 	view();
 
+	//videoSetup();
+
+
 	$('#fade').click(function(event) {
 	  	event.preventDefault();
 		console.log('fade');
@@ -153,7 +156,7 @@ function flexsliderSetup(){
 	      animation: 'fade',
 	      controlsContainer: '.flexslider-controls',	      
 	      slideshowSpeed: 8000,           
-		  animationSpeed: 1500,
+		  animationSpeed: 700,
 	      directionNav: false,
 	      controlNav: true
 	 });	 
@@ -204,13 +207,29 @@ function menuToggle(){
 	
 }
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /**
  * storyToggle : jQuery(clicked-tile) -> ()
  */
 function storyToggle(clicked){
 
-	console.log( 'startToggle' );
-	console.log( clicked );
+	//console.log( 'startToggle' );
+	//console.log( clicked );
 
 	ch = $(window).height();
 	cw = $(window).width();
@@ -233,8 +252,8 @@ function storyToggle(clicked){
 	$('#active-story').addClass('story-loading');
 	$('body').addClass('story-loading');
 
-	console.log( 'sending:' + clicked.attr('async-source') );
-	console.log( $('#collection-single').attr('async-source') );
+	//console.log( 'sending:' + clicked.attr('async-source') );
+	//console.log( $('#collection-single').attr('async-source') );
 
 	$.post( async.url, {
 			'action': 'cm_get_story',
@@ -258,10 +277,10 @@ function loadInitialStory() {
 function update_dom_contents( quote ) {
 	try {
 		var data = $.parseJSON( quote );
-		console.log( data );
+			//console.log( data );
 
 		if ( data.success ) {
-			console.log( "success" );
+			//console.log( "success" );
 
 			var story = $('[async-target="story"]');
 			var prev = $('[async-target="previous"]');
@@ -277,6 +296,8 @@ function update_dom_contents( quote ) {
 			next.closest('a.story-toggle').attr( 'async-source', data.next_story.id );
 
 			story.html( data.post );
+			//videoSetup();
+
 
 		} else {
 
@@ -295,10 +316,16 @@ function cleanup_async_call() {
 	$('html,body').animate({scrollTop: 0},1000);	
 	$('#active-story').animate({scrollTop: 0},1000);
 
-//	setTimeout( function() { // is this needed?
+
+	ch = $(window).height();
+	cw = $(window).width();
+	heroHeight = cw/3;
+	storyHeight = ch - 110;
+
+	setTimeout( function() { // is this needed?
 
 		$('#active-story').addClass('story-activated');
-		$('body').addClass('story-activated');		
+		$('body').addClass('story-activated').addClass('story-active');		
 		$('#active-story').height(storyHeight);		
 		$('#active-story').removeClass('story-loading').addClass('story-loaded');
 		$('body').removeClass('story-loading').addClass('story-loaded');
@@ -306,7 +333,7 @@ function cleanup_async_call() {
 		storySetup();
 		view();
 
-//	}, 1500 ); // is this needed?
+	}, 1500 ); // is this needed?
 }
 
 
@@ -327,7 +354,6 @@ function view(){
 	fw = cw*.5;
 	storyHeight = cw/3;
 	storyVideoHeight = ch - 110;
-
 
 
 	if($('.story').hasClass('story-type-video')){
@@ -411,7 +437,7 @@ $(window).scroll(function() {
 		
 			var after = $('body').offset().top + 40;
 			       
-			if($(this).scrollTop() >= after && $("body").hasClass('before')){
+			if(76087066 >= after && $("body").hasClass('before')){
 				$("body").removeClass('before').addClass('after');
 			} 
 			else if($(this).scrollTop() < after && $("body").hasClass('after')){
@@ -422,7 +448,37 @@ $(window).scroll(function() {
 
 	}
 
+
+
+
+	console.log($(this).scrollTop());
+	if( $('body').hasClass('story-active') && $(this).scrollTop() > 0) {
+		$('body').removeClass('story-active').addClass('story-removed');
+	}
+	else if( $('body').hasClass('story-removed') && $(this).scrollTop() <= 0){
+		$('body').addClass('story-active').removeClass('story-removed');
+	}
+
+
+
 });//end window.scroll
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 $(document).on('spy-init', function() {
 
@@ -513,14 +569,13 @@ $(document).on('spy-init', function() {
 
 
 
-$(function() {
-    var iframe = $('#story-video-1')[0];
+function videoSetup(){
+    var iframe = $('#story-video-1');
     var player = $f(iframe);
-    var status = $('.status');
 
     // When the player is ready, add listeners for pause, finish, and playProgress
     player.addEvent('ready', function() {
-        status.text('ready');
+        console.log('ready');
         
         player.addEvent('pause', onPause);
         player.addEvent('finish', onFinish);
@@ -528,22 +583,22 @@ $(function() {
     });
 
     // Call the API when a button is pressed
-    $('button').bind('click', function() {
-        player.api($(this).text().toLowerCase());
+    $('.story-video-play').bind('click', function() {
+        player.api('play');
     });
 
     function onPause(id) {
-        status.text('paused');
+       console.log('paused');
     }
 
     function onFinish(id) {
-        status.text('finished');
+        console.log('finished');
     }
 
     function onPlayProgress(data, id) {
-        status.text(data.seconds + 's played');
+       console.log(data.seconds + 's played');
     }
-});
+}
 
 
 

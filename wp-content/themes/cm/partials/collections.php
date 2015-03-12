@@ -1,14 +1,14 @@
-<div id="collections" class="target padde">
+<div id="collections" class="target padded-less">
 	<?php /*unsure about general concept of collections-intro */ ?>
 	<?php 
 		$category = CM_Collection_Controller::get_current_category();
 		$featured = is_single() || is_home();
 	?>
-	<section id="collections-intro" class="block target hidden">
+	<section id="collections-intro" class="block target padded-less">
 		<?php if( $featured ){ ?>
-			<h3 class="centered uppercase bold m0 ">Featured Collections</h3>
+			<h1 class="centered serif bold m0 ">Featured Collections</h1>
 		<?php } else{ ?>
-			<h3 class="centered bold m0 white bg-<?php echo $category->slug; ?> uppercase <?php echo $category->slug; ?>"><?php echo $category->name; ?></h3>
+
 		<?php } ?>
 	</section>
 

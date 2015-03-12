@@ -40,9 +40,10 @@ set_global('story_count', $story_count );
 </section>
 
 <section id="collection-intro" class="block padded-less target border-top-<?php echo $collection_category->slug; ?>"><?php // make these CSS things ?>
+	<h4 class="hidden m0 white centered bg-<?php echo $collection_category->slug; ?>" style="padding: 5px;"><?php the_title(); ?></h4>
 	<div class="container-fluid">
 		<div class="row collection-intro-heading">
-			<div class="col-sm-3 col-xs-1">		
+			<div class="col-md-2 col-sm-4 col-xs-1">		
 				<a class="story-toggle" href="#">
 					<h4 class=" <?php echo $collection_category->slug; ?> collection-previous">
 						<span class="icon previous" data-icon="‰"></span>	
@@ -51,12 +52,12 @@ set_global('story_count', $story_count );
 					</h4>
 				</a>
 			</div>
-			<div class="col-sm-6 col-xs-10">		
-				<h2 class="serif <?php echo $collection_category->slug; ?> bold centered m0 collection-title"><?php echo get_the_title(); ?>
+			<div class="col-sm-8 col-xs-10">		
+				<h2 class="serif <?php echo $collection_category->slug; ?> bold centered m0 collection-title"><span class="collection-prefix h2 serif"><?php the_title(); ?></span>
 				<span id="active-story-title" class="collection-suffix bold serif h2"> <span async-target="current" class="next-story-title h6 bold"></span>
 				</h2>
 			</div>
-			<div class="col-sm-3 col-xs-1">		
+			<div class="col-md-2 col-sm-4 col-xs-1">		
 				<a class="story-toggle" href="#">
 					<h4 class=" <?php echo $collection_category->slug; ?> righted collection-next">
 						<span class="h4 next-story-label">Next Story</span> 
@@ -77,7 +78,7 @@ set_global('story_count', $story_count );
 				</h2>
 				<h3 class="centered <?php echo $collection_category->slug; ?>"><?php the_field('collection_description'); ?></h3>
 				<h4 class="m0 centered <?php echo $collection_category->slug; ?>">
-					<?php echo $story_count; ?> <span class="icon" data-icon="ﬁ"></span>
+					<?php echo $story_count; ?> <span class="icon hidden" data-icon="ﬁ"></span>
 				</h4>				
 			</div>
 		</div>

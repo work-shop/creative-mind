@@ -1,5 +1,5 @@
 
-	<section class="block target share bg-light" id="share">
+	<section class="block target share <?php if(!is_home()): ?>bg-light<?php endif;?>" id="share">
 		<div class="container">
 			<div class="row">
 				<div class="col-sm-6 col-sm-offset-3">

@@ -49,7 +49,7 @@
 	<body <?php body_class('before');?>>
 
 		<?php $category = CM_Collection_Controller::get_current_category(); 
-			if(is_wp_error($category )): $category = CM_Collection_Controller::get_category_for_collection(get_the_ID()); endif;
+			//if(is_wp_error($category )): $category = CM_Collection_Controller::get_category_for_collection(get_the_ID()); endif;
 		?>
 
 		<?php get_template_part('partials/ie'); ?>

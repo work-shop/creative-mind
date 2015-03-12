@@ -6,7 +6,7 @@ if ( $category ) :
 
 ?>
 
-<section id="category-link" class="block target padded-less"><!-- href to category -->
+<section id="category-link" class="block target padded"><!-- href to category -->
 	<a href="<?php echo esc_url( home_url( '/'.$category->slug ) ); ?>">
 	<h2 class="serif centered <?php echo $category->slug; ?>">Back to <?php echo $category->name; ?></h2>
 	</a>

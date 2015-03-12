@@ -84,15 +84,25 @@
 					<div class="row">
 						<div class="col-sm-10 col-sm-offset-1">
 							<h1 class="m0 bold serif story-heading"><?php the_title(); ?></h1>
-							<h5 class="m0 <?php echo ( $collection ) ? "" : "hidden"; ?>"><?php if ( $collection ) { echo $collection->post_title; }?></h5>
+							<h5 class="m0 <?php echo ( $collection ) ? "" : "hidden"; ?>">
+								Collection: <?php if ( $collection ) { echo $collection->post_title; }?>
+							</h5>
 							<?php if ($description = get_field('story_description')) : ?><h2 class="m1"><?php echo $description; ?></h2><?php endif; ?>
-							<?php if ($byline = get_field('story_byline')) : ?><h5 class="mt0 mb1"><?php echo $byline; ?></h5><?php endif; ?>
-							<?php if ($date = get_field('story_date')) : ?><h5 class="mt0 mb1"><?php echo $date; ?></h5><?php endif; ?>
-
+							<?php if ($byline = get_field('story_byline')) : ?>
+								<h4 class="mt0 mb1">
+								<?php 
+									echo $byline;
+									echo '&nbsp; &nbsp;';
+									if ($date = get_field('story_date')) : echo $date; endif; 
+								?>
+								</h4>
+							<?php endif; ?>
 							<?php if ( $links = get_field('story_links') ) : ?>
-							<?php foreach( $links as $link) : ?>
-								<h5 class="m0"><a class="underline" href="<?php echo $link['link_url']; ?>"><?php echo $link['link_text']; ?></a></h5>
-							<?php endforeach; ?>
+								<h5 class="m0">
+								<?php foreach( $links as $link) : ?>
+									&nbsp; &nbsp;<a class="underline" href="<?php echo $link['link_url']; ?>"><?php echo $link['link_text']; ?></a>&nbsp; &nbsp;
+								<?php endforeach; ?>
+								</h5>
 							<?php endif; ?>
 
 							<?php if($story_type == 'image_gallery'): ?>

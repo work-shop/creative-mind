@@ -5,7 +5,7 @@ class CM_Deterministic_Layout_Manager {
 	/**
 	 * @var default size
 	 */
-	public static $default = array('col-sm-3');
+	public static $default = array('col-sm-4');
 	private $cardinality;
 	private $seed;
 	/**
@@ -13,16 +13,14 @@ class CM_Deterministic_Layout_Manager {
 	 */
 	private static $sequences = array(
 		array(
-			array( "col-sm-3" ),
-			array( "col-sm-3" ),
-			array( "col-sm-3" ),
-			array( "col-sm-3" ),
+			array( "col-sm-4" ),
+			array( "col-sm-4" ),
+			array( "col-sm-4" ),
 			array( "col-sm-6" ),
 			array( "col-sm-6" ),
-			array( "col-sm-3" ),
-			array( "col-sm-3" ),
-			array( "col-sm-3" ),
-			array( "col-sm-3" ),
+			array( "col-sm-4" ),
+			array( "col-sm-4" ),
+			array( "col-sm-4" ),
 			array( "col-sm-6" ),
 			array( "col-sm-6" )
 		),
@@ -31,33 +29,32 @@ class CM_Deterministic_Layout_Manager {
 			array( "col-sm-6" ),
 			array( "col-sm-6" ),
 			array( "col-sm-6" ),
-			array( "col-sm-3" ),
-			array( "col-sm-3" ),
-			array( "col-sm-3" ),
-			array( "col-sm-3" ),
+			array( "col-sm-4" ),
+			array( "col-sm-4" ),
+			array( "col-sm-4" ),
 			array( "col-sm-6" ),
 			array( "col-sm-6" ),
 			array( "col-sm-6" ),
 			array( "col-sm-6" ),
-			array( "col-sm-3" ),
-			array( "col-sm-3" ),
-			array( "col-sm-3" ),
-			array( "col-sm-3" )
+			array( "col-sm-4" ),
+			array( "col-sm-4" ),
+			array( "col-sm-4" )
 		),
 		array(
 			array( "col-sm-6" ),
 			array( "col-sm-6" ),
-			array( "col-sm-3" ),
-			array( "col-sm-3" ),
+			array( "col-sm-4" ),
+			array( "col-sm-4" ),
+			array( "col-sm-4" ),			
 			array( "col-sm-6" ),
-			array( "col-sm-3", "col-sm-offset-6" ),
-			array( "col-sm-3" ),
-			array( "col-sm-3", "col-sm-offset-6" ),
-			array( "col-sm-3" ),
-			array( "col-sm-3", "col-sm-offset-6" ),
-			array( "col-sm-3" ),
-			array( "col-sm-3", "col-sm-offset-6" ),
-			array( "col-sm-3" )
+			array( "col-sm-4", "col-sm-offset-6" ),
+			array( "col-sm-4" ),
+			array( "col-sm-4", "col-sm-offset-6" ),
+			array( "col-sm-4" ),
+			array( "col-sm-4", "col-sm-offset-6" ),
+			array( "col-sm-4" ),
+			array( "col-sm-4", "col-sm-offset-6" ),
+			array( "col-sm-4" )
 		)
 	);
 
@@ -65,8 +62,8 @@ class CM_Deterministic_Layout_Manager {
 			array(
 				array( "col-sm-6" ),
 				array( "col-sm-6" ),
-				array( "col-sm-3" ),
-				array( "col-sm-3" )
+				array( "col-sm-4" ),
+				array( "col-sm-4" )
 			)
 		);
 
