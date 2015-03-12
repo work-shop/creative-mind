@@ -255,6 +255,7 @@ class CM_Init_Actions extends WS_Action_Set {
 		wp_register_script( 'bootstrap', get_template_directory_uri() . '/assets/js/bootstrap.js');
 		wp_register_script( 'flexslider', get_template_directory_uri() . '/assets/js/flexslider.js');
 		wp_register_script( 'vimeo', '//f.vimeocdn.com/js/froogaloop2.min.js');
+		//wp_register_script('vimeo', get_template_directory_uri() . '/assets/js/froogaloop.js');
 		wp_register_script( 'functions', get_template_directory_uri() . '/assets/js/functions.js');
 
 		wp_enqueue_script( 'modernizr' );
