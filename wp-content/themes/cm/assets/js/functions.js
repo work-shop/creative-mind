@@ -316,19 +316,20 @@ function cleanup_async_call() {
 	$('html,body').animate({scrollTop: 0},1000);	
 	$('#active-story').animate({scrollTop: 0},1000);
 
-
 	ch = $(window).height();
 	cw = $(window).width();
 	heroHeight = cw/3;
 	storyHeight = ch - 110;
 
 	setTimeout( function() { // is this needed?
+		storyHeight = $(window).height() - 110;
 
 		$('#active-story').addClass('story-activated');
-		$('body').addClass('story-activated').addClass('story-active');		
+		$('body').addClass('story-activated').addClass('story-active');	
 		$('#active-story').height(storyHeight);		
 		$('#active-story').removeClass('story-loading').addClass('story-loaded');
 		$('body').removeClass('story-loading').addClass('story-loaded');
+
 		flexsliderSetup();
 		videoSetup();
 		storySetup();
@@ -373,7 +374,7 @@ function view(){
 		$('.video-gallery-main').css('height',ch/2);
 	}	
 	else{
-		$('.story-hero').css('height',storyHeight);
+		//$('.story-hero').css('height',storyHeight);
 	}	
 	
 	if($(window).width() >= 768){		
@@ -567,7 +568,7 @@ $(document).on('spy-init', function() {
 	 }
 });
 
-function videoSetup(){
+function videoSetup() {
 	var players = [];
 
 	var iframe = $('#story-video-1');
