@@ -12,7 +12,7 @@ jQuery(document).ready(function($) {
 
 	view();
 
-	//videoSetup();
+	videoSetup();
 
 
 	$('#fade').click(function(event) {
@@ -330,6 +330,7 @@ function cleanup_async_call() {
 		$('#active-story').removeClass('story-loading').addClass('story-loaded');
 		$('body').removeClass('story-loading').addClass('story-loaded');
 		flexsliderSetup();
+		videoSetup();
 		storySetup();
 		view();
 
@@ -566,38 +567,27 @@ $(document).on('spy-init', function() {
 	 }
 });
 
-
-
-
 function videoSetup(){
-    var iframe = $('#story-video-1');
-    var player = $f(iframe);
+	var players = [];
 
-    // When the player is ready, add listeners for pause, finish, and playProgress
-    player.addEvent('ready', function() {
-        console.log('ready');
-        
-        player.addEvent('pause', onPause);
-        player.addEvent('finish', onFinish);
-        player.addEvent('playProgress', onPlayProgress);
-    });
+	var iframe = $('#story-video-1');
 
-    // Call the API when a button is pressed
-    $('.story-video-play').bind('click', function() {
-        player.api('play');
-    });
+	console.log( iframe );
 
-    function onPause(id) {
-       console.log('paused');
-    }
+	if ( !$.isEmptyObject( iframe ) ) {
+		iframe.each( function( undefined,frame ) {
+			var p = players[ $( frame ).attr('id') ] = $f( frame );
 
-    function onFinish(id) {
-        console.log('finished');
-    }
+			p.addEvent('ready', function( player_id ) {
+				 console.log('ready');
+				 p.addEvent('play', function(d){});
+			});
 
-    function onPlayProgress(data, id) {
-       console.log(data.seconds + 's played');
-    }
+			$('.story-video-play').bind('click', function() {
+		    		p.api('play');
+			});
+		});
+	}	
 }
 
 
