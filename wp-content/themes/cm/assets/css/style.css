@@ -53,14 +53,13 @@ ol, ul {
     margin-top: 30px;
     margin-bottom: 30px; } }
 /********** @TYPE *********/
-* {
-  font-family: "Proxima Nova", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-weight: 500;
+body {
   font-size: 18px; }
 
-.serif {
-  font-family: "Visuelt", georgia, serif;
-  letter-spacing: .01em; }
+div {
+  font-family: "A2 Regular Regular", Futura, sans-serif;
+  font-weight: normal;
+  font-style: normal; }
 
 h1, h2, h3, h4, h5, h6 {
   line-height: 1.3;

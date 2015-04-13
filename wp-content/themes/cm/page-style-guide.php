@@ -25,6 +25,9 @@
 					<?php endwhile; ?>
 				</div>
 			<?php endif; ?>
+			<div class="row mb1"><p>
+				This class, offered jointly by professors at RISD and Brown and in partnership with the Science Center and the Creative Mind Initiative, will explore and develop the pedagogy of using visual media to convey scientific concepts. There is a growing library of online content but often times it is not well suited for seamless adoption into educational use. The goal of this course will be to assess examples of existing material and design new material that not only fills an educational need but makes science engaging and accessible. Class time will be comprised of lectures, labs, screenings, discussions, critiques and guest speakers. After an introduction to science teaching pedagogy and the basics of animation and visual design, small student teams with a balance of science and art backgrounds will collaborate on a series of short exercises leading to the creation of final videos or animations that explain scientific concepts.
+			</p></div>
 		</div>
 	</div>
 

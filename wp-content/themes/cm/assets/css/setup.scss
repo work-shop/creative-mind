@@ -47,11 +47,6 @@ $lectures: #cb2026;
 $lectures: #cb2026;
 $lectures: #cb2026;//original
 
-
-
-$font-family: 'Proxima Nova','Helvetica Neue', Helvetica, Arial, sans-serif;
-$font-family-serif:  'Visuelt', georgia, serif; 
-
 $nav-height: 50px;
 $mobile-margins: 30px;
 
@@ -66,16 +61,12 @@ $transitions: .25s;
 
 /********** @TYPE *********/
 
-*{
-	font-family: $font-family;
-	font-weight: 500;
+body{
 	font-size: 18px;
 }
 
-.serif{
-	font-family: $font-family-serif;
-	letter-spacing: .01em;
-}
+// div { font-family:"A2 Regular Bold", Futura, sans-serif; font-weight:bold; font-style:normal; }
+div { font-family:"A2 Regular Regular", Futura, sans-serif; font-weight:normal; font-style:normal; }
 
 h1,h2,h3,h4,h5,h6{
 	line-height: 1.3;
