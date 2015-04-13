@@ -501,29 +501,6 @@ $slide-distance-vertical: 20px;
 
 /********** @FANCY OBJECTS *********/
 
-.loading{
-	@include transition(opacity,1s);
-	opacity: 0 !important;	
-}
-
-.loaded{	
-	opacity: 1 !important;	
-}
-
-.landing{
-	@include transition(opacity,1s);
-	opacity: 1 !important;		
-}
-
-.landed{
-	@include transition(opacity,1s);	
-	opacity: 0 !important;
-	//position: absolute;	
-	//top: -100% !important;
-	position: relative;
-	z-index: -9999 !important;
-}
-
 .block{
 	position: relative;
 	width: 100%;

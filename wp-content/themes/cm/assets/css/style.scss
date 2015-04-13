@@ -181,28 +181,6 @@
 
 }
 
-#landing-home{
-	#alogo-creative{
-		@include animation("creative",6s,.0s,ease,1);
-	}
-
-	#alogo-mind{
-		@include animation("mind",6s,.0s,ease,1);
-	}
-
-	#alogo-brown path{
-		@include animation("brown",6s,.0s,ease,1);			
-	}
-
-	#alogo-dot-1{
-		@include animation("dot1",6s,.0s,ease,1);	
-
-	}	
-	#alogo-dot-2{
-		@include animation("dot2",6s,.0s,ease,1);			
-	}		
-}
-
 @include keyframes("creative"){
 	0%{ @include transform(translate(0,0)); }
 	25%{ @include transform(translate(0,60%)); }

@@ -65,8 +65,6 @@
 
 		<?php get_template_part('partials/ie'); ?>
 
-		<?php if(is_home()): get_template_part('partials/landing_home'); else: get_template_part('partials/landing'); endif; ?>
-
 		<div id="wrapper" class="loading spy">
 
 			
