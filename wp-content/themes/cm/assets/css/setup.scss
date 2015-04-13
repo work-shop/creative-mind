@@ -439,6 +439,22 @@ p{
 	overflow: hidden;
 }
 
+.stuck {
+	position: fixed;
+	top: $nav-height;
+	left: 0;
+	padding: 0.5em 0;
+	text-align: left;
+	width: 100%;
+	z-index: 1;
+	background: $ultra-light;
+	h2 {
+		font-size: 1.25em;
+	}
+	> div > * {
+		display: inline;
+	}
+}
 
 
 /********** @ANIMATIONS *********/

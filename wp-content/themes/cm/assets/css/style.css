@@ -464,6 +464,20 @@ p {
 .crop {
   overflow: hidden; }
 
+.stuck {
+  position: fixed;
+  top: 50px;
+  left: 0;
+  padding: 0.5em 0;
+  text-align: left;
+  width: 100%;
+  z-index: 1;
+  background: #fafafa; }
+  .stuck h2 {
+    font-size: 1.25em; }
+  .stuck > div > * {
+    display: inline; }
+
 /********** @ANIMATIONS *********/
 .fade-in {
   animation: fade-in 1s ease 0s 1;
