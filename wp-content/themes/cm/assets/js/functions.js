@@ -14,7 +14,6 @@ jQuery(document).ready(function($) {
 
 	videoSetup();
 
-
 	$('#fade').click(function(event) {
 	  	event.preventDefault();
 		console.log('fade');
@@ -322,12 +321,14 @@ function cleanup_async_call() {
 	storyHeight = ch - 110;
 
 	setTimeout( function() { // is this needed?
+		storyHeight = $(window).height() - 110;
 
 		$('#active-story').addClass('story-activated');
-		$('body').addClass('story-activated').addClass('story-active');		
+		$('body').addClass('story-activated').addClass('story-active');	
 		$('#active-story').height(storyHeight);		
 		$('#active-story').removeClass('story-loading').addClass('story-loaded');
 		$('body').removeClass('story-loading').addClass('story-loaded');
+
 		flexsliderSetup();
 		videoSetup();
 		storySetup();
@@ -364,7 +365,7 @@ function view(){
 			$('.story-video-container').css('height',storyVideoHeight);
 		}
 		else{
-			$('.story-hero').css('height',storyVideoHeight);
+			$('.story-hero').css('height',storyHeight);
 			$('.story-video-container').css('height',storyVideoHeight);		
 		}
 	}
@@ -400,6 +401,8 @@ function view(){
 		$('.block.three-quarter-max').css('max-height',ph);	
 		//$('.flexslider-hero').css('height',fw);																															
 	}
+
+	$('.home .slides').css('height',ch-200);
 	
 	if(!loaded){
 		loadPage();
@@ -567,7 +570,7 @@ $(document).on('spy-init', function() {
 	 }
 });
 
-function videoSetup(){
+function videoSetup() {
 	var players = [];
 
 	var iframe = $('#story-video-1');

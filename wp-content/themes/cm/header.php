@@ -47,9 +47,20 @@
 
     </head>
 	<body <?php body_class('before');?>>
+	
+		<?php 
+			if(is_category()){
+				$category = CM_Collection_Controller::get_current_category(); 	
+				$category_color = $category->slug;			
+			}
+			 elseif (get_post_type() == 'collections') {
+			 	$category = CM_Collection_Controller::get_category_for_collection(get_the_ID());
+				$category_color = $category->slug;						 	
+			}
+			else{
+				$category_color = 'brand';				
+			}
 
-		<?php $category = CM_Collection_Controller::get_current_category(); 
-			//if(is_wp_error($category )): $category = CM_Collection_Controller::get_category_for_collection(get_the_ID()); endif;
 		?>
 
 		<?php get_template_part('partials/ie'); ?>
@@ -58,8 +69,8 @@
 
 		<div id="wrapper" class="loading spy">
 
-			<?php if(is_home() || is_single()): $bar_color = 'lectures'; else: $bar_color = strtolower($category->name); endif; ?>
-			<div id="topbar" class="bg-<?php echo $bar_color;?>"></div>
+			
+			<div id="topbar" class="bg-<?php echo $category_color;?>"></div>
 
 			<header id="header" class="closed">
 				<?php if(is_home()): ?>		

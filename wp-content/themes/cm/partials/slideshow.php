@@ -7,6 +7,17 @@
 
 		<?php foreach( $slides as $i => $slide ) : ?>
 
+				<?php  if($i == 0): ?>
+
+					<!-- <li class="background-cover"> -->
+
+					<?php //  get_template_part('partials/logo_animated'); ?>
+
+					<!-- </li> -->
+
+
+				<?php endif; ?>
+
 				<?php
 					if($i%2 == 0){
 						$size = 'col-md-6 col-sm-10 col-xs-12';
@@ -22,7 +33,7 @@
 							  : wp_get_attachment_url( get_post_thumbnail_id( $slide['slide_collection'][0]->ID, 'slideshow_home' ) ));
 				?>
 
-				<li class="background-cover background-mask-light-jank" style="background-image: url('<?php echo $image_url; ?>');">
+				<li class="background-cover background-mask-dark" style="background-image: url('<?php echo $image_url; ?>');">
 					<div class="vertical-center container slideshow-caption-container">
 						<div class="row">
 
@@ -31,11 +42,13 @@
 							case "custom":
 
 						?>
-							<div class="<?php echo $size; ?> bg-white slideshow-caption slideshow-caption-<?php echo $i;?>">
+							<div class="<?php echo $size; ?>slideshow-caption slideshow-caption-<?php echo $i;?>">
 								<a href="<?php echo $slide['slide_link']; ?>">
-									<h2 class="serif m0"><?php echo $slide['slide_title']; ?></h2>
-									<?php if ( $desc = $slide['slide_description'] ) : ?><p class="m0"><?php echo $desc; ?></p><?php endif; ?>
-									<h5 class="m1">Read more <span class="icon" data-icon="&#8222;"></span></h5>
+									<h2 class="white serif m0"><?php echo $slide['slide_title']; ?></h2>
+									<?php if ( $desc = $slide['slide_description'] ) : ?>
+									<p class="m0 white"><?php echo $desc; ?></p>
+									<?php endif; ?>
+									<h5 class="m1 white">Read more <span class="icon" data-icon="&#8222;"></span></h5>
 								</a>
 							</div>										
 
@@ -44,12 +57,14 @@
 							case "story":
 						 ?>
 						 	<?php $story = $slide['slide_story'][0]; ?>
-							<div class="<?php echo $size; ?> slideshow-caption bg-white slideshow-caption-<?php echo $i;?>">
+							<div class="<?php echo $size; ?> slideshow-caption slideshow-caption-<?php echo $i;?>">
 								<a href="#">
-									<h6 class="m0">Featured Story</h6>
-									<h2 class="serif m0"><?php echo $story->post_title; ?></h2>
-								<?php if ( $desc = get_field( 'story_description', $story->ID ) ) : ?><p class="m0"><?php echo $desc; ?></p><?php endif; ?>	
-								<h5 class="m1">Read more <span class="icon" data-icon="&#8222;"></span></h5>
+									<h6 class="m0 white">Featured Story</h6>
+									<h2 class="serif m0 white"><?php echo $story->post_title; ?></h2>
+									<?php if ( $desc = get_field( 'story_description', $story->ID ) ) : ?>
+									<p class="m0 white"><?php echo $desc; ?></p>
+									<?php endif; ?>	
+									<h5 class="m1 white">Read more <span class="icon" data-icon="&#8222;"></span></h5>
 								</a>
 							</div>
 
@@ -58,12 +73,13 @@
 							case "collection":
 						 ?>	
 						 	<?php $coll = $slide['slide_collection'][0];?>
-						 	<div class="<?php echo $size; ?> bg-white slideshow-caption slideshow-caption-<?php echo $i;?>">
+						 	<div class="<?php echo $size; ?> slideshow-caption slideshow-caption-<?php echo $i;?>">
 								<a href="#">
-									<h6 class="m0">Featured Collection</h6>
-									<h2 class="serif m0"><?php echo $coll->post_title; ?></h2>
-								<?php if ( $desc = get_field( 'collection_description', $coll->ID ) ) : ?><p class="m0"><?php echo $desc; ?></p><?php endif; ?>
-								<h5 class="m1">Read more <span class="icon" data-icon="&#8222;"></span></h5>		
+									<h6 class="m0 white">Featured Collection</h6>
+									<h2 class="serif m0 white"><?php echo $coll->post_title; ?></h2>
+								<?php if ( $desc = get_field( 'collection_description', $coll->ID ) ) : ?>
+									<p class="m0 white"><?php echo $desc; ?></p><?php endif; ?>
+									<h5 class="m1 white">Read more <span class="icon" data-icon="&#8222;"></span></h5>		
 								</a>
 							</div>
 
@@ -75,8 +91,6 @@
 						<div class=" hidden col-sm-3 col-md-3 slideshow-caption-link bg-white">
 							<h5 class="">Read more <span class="icon" data-icon="&#8222;"></span></h5>
 						</div>
-				
-
 
 						</div>	
 					</div>

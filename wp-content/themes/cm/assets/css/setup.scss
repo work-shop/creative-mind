@@ -12,13 +12,45 @@ $dark: #222222;
 $error: #ff4a4a;
 $brown: #3a1e1a;
 $yellow: #ffcc00;
+
+
+
+$courses: #47c1c3;//original
 $courses: #47c1c3;
+$courses: #47c1c3;
+$courses: #00f;//pow
+$courses: #002fa7;//classy academic blue
+$courses: #00ff3a;
+$courses: #47c1c3;//original
+
+
+$research: #8cc63e;//original
 $research: #8cc63e;
+$research: #8cc63e;
+$research: #8cc63e;
+$research: #f8ed31;
+$research: #8cc63e;//original
+
+
+$interviews: #00a1d3;//original
 $interviews: #00a1d3;
+$interviews: #00a1d3;
+$interviews: #00a1d3;
+$interviews: #00a1d3;
+$interviews: #00a1d3;//original
+
+
+$lectures: #cb2026;//original
 $lectures: #cb2026;
+$lectures: #cb2026;
+$lectures: #cb2026;
+$lectures: #cb2026;
+$lectures: #cb2026;//original
+
+
 
 $font-family: 'Proxima Nova','Helvetica Neue', Helvetica, Arial, sans-serif;
-$font-family-serif:  'Adriane', georgia, serif; 
+$font-family-serif:  'Visuelt', georgia, serif; 
 
 $nav-height: 50px;
 $mobile-margins: 30px;
@@ -249,13 +281,13 @@ p{
 }
 
 .padded-less{
-	padding-top: 3%;
-	padding-bottom: 3%;
+	padding-top: 2.5%;
+	padding-bottom: 2.5%;
 }
 
 .padded{
-	padding-top: 5%;
-	padding-bottom: 5.5%;
+	padding-top: 4%;
+	padding-bottom: 4.25%;
 }
 
 .padded-more{
@@ -342,6 +374,21 @@ p{
 		left: 0;
 		//z-index: 1;
 		background: rgba(255,255,255,.5);
+		@include transition(all);
+	}
+}
+
+.background-mask-dark{
+	&:before{
+		content: '';
+		display: block;
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		top: 0;
+		left: 0;
+		//z-index: 1;
+		background: rgba(40,30,30,.75);
 		@include transition(all);
 	}
 }
@@ -557,6 +604,43 @@ $slide-distance-vertical: 20px;
 			top: 0px;
 			padding-top: 0px;
 		}
+	}
+
+}
+
+#edit-button{
+	position: fixed;
+	bottom: 80px;
+	right: 30px;
+	z-index: 10000;
+	width: 40px;
+	height: 40px;
+	display: table;
+	@include transition();
+	background: #00f;
+	padding: 5px 9px;
+
+	&:hover{
+		bottom: 83px;
+		background: #11f;
+	}
+}
+
+#edit-button-2{
+	position: fixed;
+	bottom: 130px;
+	right: 30px;
+	z-index: 10000;
+	width: 40px;
+	height: 40px;
+	display: block;
+	@include transition();
+	background: #f8ed31;
+	padding: 5px 9px;
+
+
+	&:hover{
+		bottom: 133px;
 	}
 
 }

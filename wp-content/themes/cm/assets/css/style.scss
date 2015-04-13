@@ -409,7 +409,6 @@ $icon-margin: 15px;
 }
 
 .home .slides{
-	height: 700px;
 	li{
 		height: inherit;
 		-webkit-filter: saturate(75%);
@@ -420,20 +419,20 @@ $icon-margin: 15px;
 	padding: 20px 10px 0px 20px;
 
 	*{
-		color: $dark;
+		//color: $dark;
 	}
 
 	&.slideshow-caption-1{
-		background: white;
+		//background: white;
 	}
 	&.slideshow-caption-2{
-		background: white;
+		//background: white;
 	}
 	&.slideshow-caption-3{
-		background: white;
+		//background: white;
 	}
 	&.slideshow-caption-4{
-		background: white;
+		//background: white;
 	}
 
 	@include transition(all,1.5s);
@@ -453,6 +452,20 @@ $icon-margin: 15px;
 #header,#headerfix{
 	//display: none;
 }
+
+
+/********** @SCROLLY *********/
+
+#scrolly{
+	position: fixed;
+	bottom: 0px;
+	height: 110px;
+	width: 100%;
+	left: 0;
+	background: $light;
+	z-index: 3;
+}
+
 
 /********** @SEARCH *********/
 
