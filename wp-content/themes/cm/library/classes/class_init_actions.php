@@ -252,6 +252,8 @@ class CM_Init_Actions extends WS_Action_Set {
 		wp_register_script( 'modernizr', get_template_directory_uri() . '/assets/js/modernizr.js');
 		wp_register_script( 'jquery', get_template_directory_uri() . '/assets/js/jquery.js');
 		wp_register_script( 'jquery-viewport', get_template_directory_uri() . '/assets/js/jquery.viewport.js');
+		wp_register_script( 'waypoints', get_template_directory_uri() . '/assets/js/jquery.waypoints.js');
+		wp_register_script( 'sticky', get_template_directory_uri() . '/assets/js/sticky.js');
 		wp_register_script( 'bootstrap', get_template_directory_uri() . '/assets/js/bootstrap.js');
 		wp_register_script( 'flexslider', get_template_directory_uri() . '/assets/js/flexslider.js');
 		wp_register_script( 'vimeo', '//f.vimeocdn.com/js/froogaloop2.min.js');
@@ -262,6 +264,8 @@ class CM_Init_Actions extends WS_Action_Set {
 		wp_enqueue_script( 'modernizr' );
 		wp_enqueue_script( 'jquery' );
 		wp_enqueue_script( 'jquery-viewport' );
+		wp_enqueue_script( 'waypoints' );
+		wp_enqueue_script( 'sticky' );
 		wp_enqueue_script( 'bootstrap' );
 		wp_enqueue_script( 'flexslider' );
 		wp_enqueue_script( 'vimeo' );

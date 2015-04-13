@@ -458,7 +458,7 @@ $(window).scroll(function() {
 
 
 
-	console.log($(this).scrollTop());
+	//console.log($(this).scrollTop());
 	if( $('body').hasClass('story-active') && $(this).scrollTop() > 0) {
 		$('body').removeClass('story-active').addClass('story-removed');
 	}
