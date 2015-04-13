@@ -4,8 +4,6 @@
 
 	<?php // get_template_part('partials/scrolly');?>	
 
-	<?php get_template_part('partials/site_description');?>	
-
 	<?php get_template_part('partials/collections');?>	
 
 <?php get_footer(); ?>
