@@ -1053,55 +1053,55 @@ img.gform_ajax_spinner {
   fill: #cb2026; }
 
 #site-description.active #alogo-creative {
-  animation: creative 7s 0.5s ease 1;
-  -ms-animation: creative 7s 0.5s ease 1;
-  -webkit-animation: creative 7s 0.5s ease 1;
-  -o-animation: move creative 7s 0.5s ease 1;
-  -moz-animation: move creative 7s 0.5s ease 1;
+  animation: "creative" 7s 0.5s ease 1;
+  -ms-animation: "creative" 7s 0.5s ease 1;
+  -webkit-animation: "creative" 7s 0.5s ease 1;
+  -o-animation: move "creative" 7s 0.5s ease 1;
+  -moz-animation: move "creative" 7s 0.5s ease 1;
   animation-fill-mode: forwards;
   -webkit-animation-fill-mode: forwards;
   -moz-animation-fill-mode: forwards;
   -ms-animation-fill-mode: forwards;
   -o-animation-fill-mode: forwards; }
 #site-description.active #alogo-mind {
-  animation: mind 7s 0.5s ease 1;
-  -ms-animation: mind 7s 0.5s ease 1;
-  -webkit-animation: mind 7s 0.5s ease 1;
-  -o-animation: move mind 7s 0.5s ease 1;
-  -moz-animation: move mind 7s 0.5s ease 1;
+  animation: "mind" 7s 0.5s ease 1;
+  -ms-animation: "mind" 7s 0.5s ease 1;
+  -webkit-animation: "mind" 7s 0.5s ease 1;
+  -o-animation: move "mind" 7s 0.5s ease 1;
+  -moz-animation: move "mind" 7s 0.5s ease 1;
   animation-fill-mode: forwards;
   -webkit-animation-fill-mode: forwards;
   -moz-animation-fill-mode: forwards;
   -ms-animation-fill-mode: forwards;
   -o-animation-fill-mode: forwards; }
 #site-description.active #alogo-brown path {
-  animation: brown 7s 0.5s ease 1;
-  -ms-animation: brown 7s 0.5s ease 1;
-  -webkit-animation: brown 7s 0.5s ease 1;
-  -o-animation: move brown 7s 0.5s ease 1;
-  -moz-animation: move brown 7s 0.5s ease 1;
+  animation: "brown" 7s 0.5s ease 1;
+  -ms-animation: "brown" 7s 0.5s ease 1;
+  -webkit-animation: "brown" 7s 0.5s ease 1;
+  -o-animation: move "brown" 7s 0.5s ease 1;
+  -moz-animation: move "brown" 7s 0.5s ease 1;
   animation-fill-mode: forwards;
   -webkit-animation-fill-mode: forwards;
   -moz-animation-fill-mode: forwards;
   -ms-animation-fill-mode: forwards;
   -o-animation-fill-mode: forwards; }
 #site-description.active #alogo-dot-1 {
-  animation: dot1 7s 0.5s ease 1;
-  -ms-animation: dot1 7s 0.5s ease 1;
-  -webkit-animation: dot1 7s 0.5s ease 1;
-  -o-animation: move dot1 7s 0.5s ease 1;
-  -moz-animation: move dot1 7s 0.5s ease 1;
+  animation: "dot1" 7s 0.5s ease 1;
+  -ms-animation: "dot1" 7s 0.5s ease 1;
+  -webkit-animation: "dot1" 7s 0.5s ease 1;
+  -o-animation: move "dot1" 7s 0.5s ease 1;
+  -moz-animation: move "dot1" 7s 0.5s ease 1;
   animation-fill-mode: forwards;
   -webkit-animation-fill-mode: forwards;
   -moz-animation-fill-mode: forwards;
   -ms-animation-fill-mode: forwards;
   -o-animation-fill-mode: forwards; }
 #site-description.active #alogo-dot-2 {
-  animation: dot2 7s 0.5s ease 1;
-  -ms-animation: dot2 7s 0.5s ease 1;
-  -webkit-animation: dot2 7s 0.5s ease 1;
-  -o-animation: move dot2 7s 0.5s ease 1;
-  -moz-animation: move dot2 7s 0.5s ease 1;
+  animation: "dot2" 7s 0.5s ease 1;
+  -ms-animation: "dot2" 7s 0.5s ease 1;
+  -webkit-animation: "dot2" 7s 0.5s ease 1;
+  -o-animation: move "dot2" 7s 0.5s ease 1;
+  -moz-animation: move "dot2" 7s 0.5s ease 1;
   animation-fill-mode: forwards;
   -webkit-animation-fill-mode: forwards;
   -moz-animation-fill-mode: forwards;
@@ -1109,55 +1109,55 @@ img.gform_ajax_spinner {
   -o-animation-fill-mode: forwards; }
 
 #landing-home #alogo-creative {
-  animation: creative 6s 0s ease 1;
-  -ms-animation: creative 6s 0s ease 1;
-  -webkit-animation: creative 6s 0s ease 1;
-  -o-animation: move creative 6s 0s ease 1;
-  -moz-animation: move creative 6s 0s ease 1;
+  animation: "creative" 6s 0s ease 1;
+  -ms-animation: "creative" 6s 0s ease 1;
+  -webkit-animation: "creative" 6s 0s ease 1;
+  -o-animation: move "creative" 6s 0s ease 1;
+  -moz-animation: move "creative" 6s 0s ease 1;
   animation-fill-mode: forwards;
   -webkit-animation-fill-mode: forwards;
   -moz-animation-fill-mode: forwards;
   -ms-animation-fill-mode: forwards;
   -o-animation-fill-mode: forwards; }
 #landing-home #alogo-mind {
-  animation: mind 6s 0s ease 1;
-  -ms-animation: mind 6s 0s ease 1;
-  -webkit-animation: mind 6s 0s ease 1;
-  -o-animation: move mind 6s 0s ease 1;
-  -moz-animation: move mind 6s 0s ease 1;
+  animation: "mind" 6s 0s ease 1;
+  -ms-animation: "mind" 6s 0s ease 1;
+  -webkit-animation: "mind" 6s 0s ease 1;
+  -o-animation: move "mind" 6s 0s ease 1;
+  -moz-animation: move "mind" 6s 0s ease 1;
   animation-fill-mode: forwards;
   -webkit-animation-fill-mode: forwards;
   -moz-animation-fill-mode: forwards;
   -ms-animation-fill-mode: forwards;
   -o-animation-fill-mode: forwards; }
 #landing-home #alogo-brown path {
-  animation: brown 6s 0s ease 1;
-  -ms-animation: brown 6s 0s ease 1;
-  -webkit-animation: brown 6s 0s ease 1;
-  -o-animation: move brown 6s 0s ease 1;
-  -moz-animation: move brown 6s 0s ease 1;
+  animation: "brown" 6s 0s ease 1;
+  -ms-animation: "brown" 6s 0s ease 1;
+  -webkit-animation: "brown" 6s 0s ease 1;
+  -o-animation: move "brown" 6s 0s ease 1;
+  -moz-animation: move "brown" 6s 0s ease 1;
   animation-fill-mode: forwards;
   -webkit-animation-fill-mode: forwards;
   -moz-animation-fill-mode: forwards;
   -ms-animation-fill-mode: forwards;
   -o-animation-fill-mode: forwards; }
 #landing-home #alogo-dot-1 {
-  animation: dot1 6s 0s ease 1;
-  -ms-animation: dot1 6s 0s ease 1;
-  -webkit-animation: dot1 6s 0s ease 1;
-  -o-animation: move dot1 6s 0s ease 1;
-  -moz-animation: move dot1 6s 0s ease 1;
+  animation: "dot1" 6s 0s ease 1;
+  -ms-animation: "dot1" 6s 0s ease 1;
+  -webkit-animation: "dot1" 6s 0s ease 1;
+  -o-animation: move "dot1" 6s 0s ease 1;
+  -moz-animation: move "dot1" 6s 0s ease 1;
   animation-fill-mode: forwards;
   -webkit-animation-fill-mode: forwards;
   -moz-animation-fill-mode: forwards;
   -ms-animation-fill-mode: forwards;
   -o-animation-fill-mode: forwards; }
 #landing-home #alogo-dot-2 {
-  animation: dot2 6s 0s ease 1;
-  -ms-animation: dot2 6s 0s ease 1;
-  -webkit-animation: dot2 6s 0s ease 1;
-  -o-animation: move dot2 6s 0s ease 1;
-  -moz-animation: move dot2 6s 0s ease 1;
+  animation: "dot2" 6s 0s ease 1;
+  -ms-animation: "dot2" 6s 0s ease 1;
+  -webkit-animation: "dot2" 6s 0s ease 1;
+  -o-animation: move "dot2" 6s 0s ease 1;
+  -moz-animation: move "dot2" 6s 0s ease 1;
   animation-fill-mode: forwards;
   -webkit-animation-fill-mode: forwards;
   -moz-animation-fill-mode: forwards;
@@ -1945,44 +1945,44 @@ img.gform_ajax_spinner {
     margin-right: 12px; }
 
 .break.active .dot-1 {
-  animation: break1 1.5s 0s ease 1;
-  -ms-animation: break1 1.5s 0s ease 1;
-  -webkit-animation: break1 1.5s 0s ease 1;
-  -o-animation: move break1 1.5s 0s ease 1;
-  -moz-animation: move break1 1.5s 0s ease 1;
+  animation: "break1" 1.5s 0s ease 1;
+  -ms-animation: "break1" 1.5s 0s ease 1;
+  -webkit-animation: "break1" 1.5s 0s ease 1;
+  -o-animation: move "break1" 1.5s 0s ease 1;
+  -moz-animation: move "break1" 1.5s 0s ease 1;
   animation-fill-mode: forwards;
   -webkit-animation-fill-mode: forwards;
   -moz-animation-fill-mode: forwards;
   -ms-animation-fill-mode: forwards;
   -o-animation-fill-mode: forwards; }
 .break.active .dot-2 {
-  animation: break2 1.5s 0s ease 1;
-  -ms-animation: break2 1.5s 0s ease 1;
-  -webkit-animation: break2 1.5s 0s ease 1;
-  -o-animation: move break2 1.5s 0s ease 1;
-  -moz-animation: move break2 1.5s 0s ease 1;
+  animation: "break2" 1.5s 0s ease 1;
+  -ms-animation: "break2" 1.5s 0s ease 1;
+  -webkit-animation: "break2" 1.5s 0s ease 1;
+  -o-animation: move "break2" 1.5s 0s ease 1;
+  -moz-animation: move "break2" 1.5s 0s ease 1;
   animation-fill-mode: forwards;
   -webkit-animation-fill-mode: forwards;
   -moz-animation-fill-mode: forwards;
   -ms-animation-fill-mode: forwards;
   -o-animation-fill-mode: forwards; }
 .break.active .dot-3 {
-  animation: break3 1.5s 0s ease 1;
-  -ms-animation: break3 1.5s 0s ease 1;
-  -webkit-animation: break3 1.5s 0s ease 1;
-  -o-animation: move break3 1.5s 0s ease 1;
-  -moz-animation: move break3 1.5s 0s ease 1;
+  animation: "break3" 1.5s 0s ease 1;
+  -ms-animation: "break3" 1.5s 0s ease 1;
+  -webkit-animation: "break3" 1.5s 0s ease 1;
+  -o-animation: move "break3" 1.5s 0s ease 1;
+  -moz-animation: move "break3" 1.5s 0s ease 1;
   animation-fill-mode: forwards;
   -webkit-animation-fill-mode: forwards;
   -moz-animation-fill-mode: forwards;
   -ms-animation-fill-mode: forwards;
   -o-animation-fill-mode: forwards; }
 .break.active .dot-4 {
-  animation: break4 1.5s 0s ease 1;
-  -ms-animation: break4 1.5s 0s ease 1;
-  -webkit-animation: break4 1.5s 0s ease 1;
-  -o-animation: move break4 1.5s 0s ease 1;
-  -moz-animation: move break4 1.5s 0s ease 1;
+  animation: "break4" 1.5s 0s ease 1;
+  -ms-animation: "break4" 1.5s 0s ease 1;
+  -webkit-animation: "break4" 1.5s 0s ease 1;
+  -o-animation: move "break4" 1.5s 0s ease 1;
+  -moz-animation: move "break4" 1.5s 0s ease 1;
   animation-fill-mode: forwards;
   -webkit-animation-fill-mode: forwards;
   -moz-animation-fill-mode: forwards;
@@ -2553,22 +2553,22 @@ img.gform_ajax_spinner {
       height: 125px;
       opacity: 1; }
       #active-story.story-loading #active-story-loading .dot-1 {
-        animation: load1 4s 0.5s ease infinite;
-        -ms-animation: load1 4s 0.5s ease infinite;
-        -webkit-animation: load1 4s 0.5s ease infinite;
-        -o-animation: move load1 4s 0.5s ease infinite;
-        -moz-animation: move load1 4s 0.5s ease infinite;
+        animation: "load1" 4s 0.5s ease infinite;
+        -ms-animation: "load1" 4s 0.5s ease infinite;
+        -webkit-animation: "load1" 4s 0.5s ease infinite;
+        -o-animation: move "load1" 4s 0.5s ease infinite;
+        -moz-animation: move "load1" 4s 0.5s ease infinite;
         animation-fill-mode: forwards;
         -webkit-animation-fill-mode: forwards;
         -moz-animation-fill-mode: forwards;
         -ms-animation-fill-mode: forwards;
         -o-animation-fill-mode: forwards; }
       #active-story.story-loading #active-story-loading .dot-2 {
-        animation: load2 4s 0.5s ease infinite;
-        -ms-animation: load2 4s 0.5s ease infinite;
-        -webkit-animation: load2 4s 0.5s ease infinite;
-        -o-animation: move load2 4s 0.5s ease infinite;
-        -moz-animation: move load2 4s 0.5s ease infinite;
+        animation: "load2" 4s 0.5s ease infinite;
+        -ms-animation: "load2" 4s 0.5s ease infinite;
+        -webkit-animation: "load2" 4s 0.5s ease infinite;
+        -o-animation: move "load2" 4s 0.5s ease infinite;
+        -moz-animation: move "load2" 4s 0.5s ease infinite;
         animation-fill-mode: forwards;
         -webkit-animation-fill-mode: forwards;
         -moz-animation-fill-mode: forwards;

@@ -157,24 +157,24 @@
 
 	&.active{
 		#alogo-creative{
-			@include animation(creative,7s,.5s,ease,1);
+			@include animation("creative",7s,.5s,ease,1);
 		}
 
 		#alogo-mind{
-			@include animation(mind,7s,.5s,ease,1);
+			@include animation("mind",7s,.5s,ease,1);
 		}
 
 		#alogo-brown path{
-			@include animation(brown,7s,.5s,ease,1);			
+			@include animation("brown",7s,.5s,ease,1);			
 		}
 
 		#alogo-dot-1{
-			@include animation(dot1,7s,.5s,ease,1);	
+			@include animation("dot1",7s,.5s,ease,1);	
 
 		}	
 
 		#alogo-dot-2{
-			@include animation(dot2,7s,.5s,ease,1);			
+			@include animation("dot2",7s,.5s,ease,1);			
 		}			
 
 	}
@@ -183,27 +183,27 @@
 
 #landing-home{
 	#alogo-creative{
-		@include animation(creative,6s,.0s,ease,1);
+		@include animation("creative",6s,.0s,ease,1);
 	}
 
 	#alogo-mind{
-		@include animation(mind,6s,.0s,ease,1);
+		@include animation("mind",6s,.0s,ease,1);
 	}
 
 	#alogo-brown path{
-		@include animation(brown,6s,.0s,ease,1);			
+		@include animation("brown",6s,.0s,ease,1);			
 	}
 
 	#alogo-dot-1{
-		@include animation(dot1,6s,.0s,ease,1);	
+		@include animation("dot1",6s,.0s,ease,1);	
 
 	}	
 	#alogo-dot-2{
-		@include animation(dot2,6s,.0s,ease,1);			
+		@include animation("dot2",6s,.0s,ease,1);			
 	}		
 }
 
-@include keyframes(creative){
+@include keyframes("creative"){
 	0%{ @include transform(translate(0,0)); }
 	25%{ @include transform(translate(0,60%)); }
 	50%{ @include transform(translate(0,-35%)); }
@@ -212,7 +212,7 @@
 
 }
 
-@include keyframes(mind){
+@include keyframes("mind"){
 	0%{ @include transform(translate(0,0%)); }
 	25%{ @include transform(translate(0,-50%)); }
 	50%{ @include transform(translate(0,85%)); }
@@ -220,7 +220,7 @@
 	100%{ @include transform(translate(0,50%)); }
 }
 
-@include keyframes(brown){
+@include keyframes("brown"){
 	0%{ fill: $brand; }
 	25%{ fill: $courses; }
 	50%{ fill: $interviews; }
@@ -228,7 +228,7 @@
 	100%{ fill: $brand; }
 }
 
-@include keyframes(dot1){
+@include keyframes("dot1"){
 	0%{ fill: $brand; @include transform(translate3d(0,1000%,-1px)); }
 	25%{ fill: $courses; @include transform(translate3d(0,0%,-1px)); }
 	50%{ fill: $interviews; @include transform(translate3d(0,-100%,-1px)); }
@@ -236,7 +236,7 @@
 	100%{ fill: $brand; @include transform(translate3d(0,1000%,-1px)); }
 }
 
-@include keyframes(dot2){
+@include keyframes("dot2"){
 	0%{ fill: $brand; @include transform(translate3d(0,0%,-1px)); }
 	25%{ fill: $courses; @include transform(translate3d(0,700%,-1px)); }
 	50%{ fill: $interviews; @include transform(translate3d(0,0%,-1px)); }
@@ -305,39 +305,39 @@ $dot-margin: 12px;
 
 .break.active{
 	.dot-1{
-		@include animation(break1,1.5s,0s,ease,1);			
+		@include animation("break1",1.5s,0s,ease,1);			
 	}
 	.dot-2{
-		@include animation(break2,1.5s,0s,ease,1);			
+		@include animation("break2",1.5s,0s,ease,1);			
 	}
 	.dot-3{
-		@include animation(break3,1.5s,0s,ease,1);			
+		@include animation("break3",1.5s,0s,ease,1);			
 	}
 	.dot-4{
-		@include animation(break4,1.5s,0s,ease,1);			
+		@include animation("break4",1.5s,0s,ease,1);			
 	}	
 
 }
 
-@include keyframes(break1){
+@include keyframes("break1"){
 	0%{ @include transform(translate(0,0)); }
 	50%{ @include transform(translate(-25%,-150%)); }
 	100%{ @include transform(translate(0,0%)); }
 }
 
-@include keyframes(break2){
+@include keyframes("break2"){
 	0%{ @include transform(translate(0,0)); }
 	50%{ @include transform(translate(0,50%)); }
 	100%{ @include transform(translate(0,0%)); }
 }
 
-@include keyframes(break3){
+@include keyframes("break3"){
 	0%{ @include transform(translate(0,0)); }
 	50%{ @include transform(translate(5%,250%)); }
 	100%{ @include transform(translate(0,0%)); }
 }
 
-@include keyframes(break4){
+@include keyframes("break4"){
 	0%{ @include transform(translate(0,0)); }
 	50%{ @include transform(translate(20%,-75%)); }
 	100%{ @include transform(translate(0,0%)); }
@@ -607,10 +607,10 @@ $icon-margin: 15px;
 			opacity: 1;
 
 			.dot-1{
-				@include animation(load1,4s,.5s,ease,infinite);			
+				@include animation("load1",4s,.5s,ease,infinite);			
 			}
 			.dot-2{
-				@include animation(load2,4s,.5s,ease,infinite);			
+				@include animation("load2",4s,.5s,ease,infinite);			
 			}
 		}	
 	}	
