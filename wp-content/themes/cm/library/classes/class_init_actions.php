@@ -257,6 +257,7 @@ class CM_Init_Actions extends WS_Action_Set {
 		wp_register_script( 'vimeo', '//f.vimeocdn.com/js/froogaloop2.min.js');
 		//wp_register_script('vimeo', get_template_directory_uri() . '/assets/js/froogaloop.js');
 		wp_register_script( 'functions', get_template_directory_uri() . '/assets/js/functions.js');
+		wp_register_script('header-click', get_template_directory_uri() . '/assets/js/header-click.js' );
 
 		wp_enqueue_script( 'modernizr' );
 		wp_enqueue_script( 'jquery' );
@@ -265,6 +266,7 @@ class CM_Init_Actions extends WS_Action_Set {
 		wp_enqueue_script( 'flexslider' );
 		wp_enqueue_script( 'vimeo' );
 		wp_enqueue_script( 'functions' );
+		wp_enqueue_script( 'header-click' );
 
 		wp_localize_script( 'functions', 'async', array('url' => admin_url('admin-ajax.php') ) );
 

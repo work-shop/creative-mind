@@ -4,148 +4,516 @@
 		"selected_items":
 		[
 			[
-				"trans",
-				"transform($properties)	 mixins.scss"
+				"ver",
+				"vertex_set"
 			],
 			[
-				"pla",
-				"player_id"
+				"ax",
+				"axis"
 			],
 			[
-				"transition",
-				"transition($property: all, $duration: $transitions,  $delay: 0s,  $easing: ease)	 mixins.scss"
+				"re",
+				"require"
 			],
 			[
-				"coll",
-				"collection_stories"
+				"file",
+				"filename"
 			],
 			[
-				"vimeo",
-				"vimeo_id"
+				"fi",
+				"filename"
 			],
 			[
-				"font-",
-				"font-family-serif	 setup.scss"
+				"row",
+				"row_length"
 			],
 			[
-				"padde",
-				"padded-less	 setup.scss"
+				"sel",
+				"selector"
 			],
 			[
-				"templ",
-				"template_directory"
+				"act",
+				"act_trigger"
 			],
 			[
-				"fon-",
-				"font-family-serif	 type.scss"
+				"ne",
+				"nextview"
+			],
+			[
+				"nex",
+				"nextviews"
+			],
+			[
+				"scro",
+				"scrollTop"
+			],
+			[
+				"w",
+				"width"
+			],
+			[
+				"he",
+				"height"
+			],
+			[
+				"arr",
+				"arrow_size"
+			],
+			[
+				"ac",
+				"act_trigger"
+			],
+			[
+				"in",
+				"in-viewport"
+			],
+			[
+				"select",
+				"select_next_block"
+			],
+			[
+				"next",
+				"nextview"
+			],
+			[
+				"do",
+				"document"
+			],
+			[
+				"cur",
+				"currentview"
+			],
+			[
+				"back",
+				"background-color"
+			],
+			[
+				"h",
+				"handle_input"
+			],
+			[
+				"key",
+				"keyCode"
+			],
+			[
+				"sub",
+				"submitfield"
+			],
+			[
+				"te",
+				"textarea	Tag"
+			],
+			[
+				"a",
+				"append"
+			],
+			[
+				"th",
+				"thisResponseElement"
+			],
+			[
+				"ra",
+				"randomChoice"
+			],
+			[
+				"cre",
+				"createMessageElement"
+			],
+			[
+				"crea",
+				"createResponseElement"
+			],
+			[
+				"random",
+				"randomChoice"
+			],
+			[
+				"res",
+				"response"
+			],
+			[
+				"resp",
+				"response"
+			],
+			[
+				"time",
+				"timestamp"
+			],
+			[
+				"fun",
+				"function"
+			],
+			[
+				"new",
+				"newMessageHandler"
+			],
+			[
+				"sr",
+				"script	Tag"
+			],
+			[
+				"background-c",
+				"background-color"
+			],
+			[
+				"bac",
+				"background"
+			],
+			[
+				"action",
+				"actionset"
+			],
+			[
+				"map",
+				"mapping"
+			],
+			[
+				"s",
+				"source"
+			],
+			[
+				"st",
+				"storeName"
+			],
+			[
+				"font-s",
+				"font-style"
+			],
+			[
+				"add",
+				"addEvent"
+			],
+			[
+				"if",
+				"iframe"
+			],
+			[
+				"backgroun",
+				"background-color"
+			],
+			[
+				"fade",
+				"fadeOut"
+			],
+			[
+				"fa",
+				"fade_in"
+			],
+			[
+				"p",
+				"p	Tag"
+			],
+			[
+				"font",
+				"font-family"
+			],
+			[
+				"update",
+				"update_post_meta"
+			],
+			[
+				"up",
+				"update_post_meta"
 			],
 			[
 				"text",
 				"text-align"
 			],
 			[
-				"co",
-				"collections"
+				"su",
+				"subscribe-button"
 			],
 			[
-				"get_templ",
-				"get_template_directory_uri"
+				"tran",
+				"transition_form_overlay"
 			],
 			[
-				"tr",
-				"transition"
+				"close",
+				"close_form_overlay_failure"
 			],
 			[
-				"slide",
-				"slideshow-caption	 style.scss"
-			],
-			[
-				"blo",
-				"block-background	 oo.scss"
-			],
-			[
-				"backgr",
-				"background-cover	 setup.scss"
-			],
-			[
-				"border-ra",
-				"border-radius($radius: 0px)	 mixins.scss"
-			],
-			[
-				"col-s",
-				"col-sm-8	 reset.scss"
-			],
-			[
-				"inline",
-				"inline-block"
-			],
-			[
-				"inlin",
-				"inline-block"
-			],
-			[
-				"box-sh",
-				"box-shadow($x: 0px,  $y: 0px,  $size: 4px,  $shadow-color: rgba(50, 50, 50, .25))	 mixins.scss"
-			],
-			[
-				"transi",
-				"transition-duration"
-			],
-			[
-				"jchoi",
-				"jchoice2"
-			],
-			[
-				"chosen",
-				"chosen1"
-			],
-			[
-				"text-",
-				"text-transform"
-			],
-			[
-				"font",
+				"fon",
 				"font-size"
 			],
 			[
-				"mysql",
-				"mysql_error"
+				"bg",
+				"background-color"
 			],
 			[
-				"mysqlc",
-				"mysql_connect"
+				"gra",
+				"dark_gray_trigger"
 			],
 			[
-				"php",
-				"php"
+				"ab",
+				"about_trigger"
 			],
 			[
-				"G",
-				"_GET"
+				"for",
+				"forward"
 			],
 			[
-				"th",
-				"theNumber"
+				"dow",
+				"down-arrow"
 			],
 			[
-				"var",
-				"var2"
+				"act_",
+				"act_trigger_inverse"
 			],
 			[
-				"arr",
-				"array1"
+				"dar",
+				"dark-gray"
+			],
+			[
+				"Replica",
+				"ReplicaLight"
+			],
+			[
+				"tex",
+				"text-transform"
+			],
+			[
+				"mar",
+				"margin-right"
+			],
+			[
+				"tar",
+				"target"
+			],
+			[
+				"min",
+				"min-width"
+			],
+			[
+				"wi",
+				"width"
+			],
+			[
+				"fnt",
+				"font-family"
+			],
+			[
+				"margin",
+				"margin-top"
+			],
+			[
+				"scr",
+				"scrolling"
+			],
+			[
+				"bran",
+				"brand-color"
+			],
+			[
+				"story",
+				"storySetup"
+			],
+			[
+				"str",
+				"strstr"
+			],
+			[
+				"vm",
+				"vimeo_id"
+			],
+			[
+				"end",
+				"endif"
+			],
+			[
+				"stor",
+				"story_type"
+			],
+			[
+				"o",
+				"ol	Tag"
+			],
+			[
+				"pre",
+				"prereq-color"
+			],
+			[
+				"page",
+				"page-break-after"
 			],
 			[
 				"ar",
-				"array	$… = array (…)"
+				"article	Tag"
 			],
 			[
-				"arra",
-				"array3"
+				"light",
+				"light-gray"
 			],
 			[
-				"pading",
-				"padding-bottom"
+				"padding",
+				"padding-top"
+			],
+			[
+				"padd",
+				"padding"
+			],
+			[
+				"font-",
+				"font-family"
+			],
+			[
+				"list",
+				"list-style-type"
+			],
+			[
+				"lowe",
+				"lower-greek"
+			],
+			[
+				"lis",
+				"list-style-type"
+			],
+			[
+				"li",
+				"li	Tag"
+			],
+			[
+				"bra",
+				"brand-color"
+			],
+			[
+				"fotn",
+				"font-size"
+			],
+			[
+				"galle",
+				"gallery_image"
+			],
+			[
+				"ga",
+				"galler7_image"
+			],
+			[
+				"by",
+				"byline"
+			],
+			[
+				"cate",
+				"category"
+			],
+			[
+				"category",
+				"collection_category"
+			],
+			[
+				"colle",
+				"collection_category"
+			],
+			[
+				"sele",
+				"selected_sequence"
+			],
+			[
+				"seq",
+				"sequences"
+			],
+			[
+				"se",
+				"selected_sequence"
+			],
+			[
+				"var",
+				"var_dump"
+			],
+			[
+				"coice",
+				"choices"
+			],
+			[
+				"cho",
+				"choices"
+			],
+			[
+				"of",
+				"offsetmap"
+			],
+			[
+				"col",
+				"col-sm-6-offset"
+			],
+			[
+				"curre",
+				"current_offset"
+			],
+			[
+				"curr",
+				"current_row"
+			],
+			[
+				"curren",
+				"current_row"
+			],
+			[
+				"defa",
+				"defaults"
+			],
+			[
+				"rem",
+				"remaining_columns"
+			],
+			[
+				"size",
+				"sizedata"
+			],
+			[
+				"grid",
+				"gridcols"
+			],
+			[
+				"class",
+				"classmap"
+			],
+			[
+				"arbitra",
+				"arbitrary_choice"
+			],
+			[
+				"coll",
+				"collection_stories"
+			],
+			[
+				"fea",
+				"featured_limit"
+			],
+			[
+				"is",
+				"isset"
+			],
+			[
+				"cat",
+				"category"
+			],
+			[
+				"pop",
+				"population"
+			],
+			[
+				"set_c",
+				"set_collections_for_story"
+			],
+			[
+				"fiel",
+				"field_keys"
+			],
+			[
+				"story_",
+				"story_id"
+			],
+			[
+				"co",
+				"collection_stories"
+			],
+			[
+				"fou",
+				"found_stories"
+			],
+			[
+				"upda",
+				"update_field"
 			]
 		]
 	},
@@ -159,43 +527,58 @@
 	"build_varint": "",
 	"command_palette":
 	{
-		"height": 67.0,
-		"last_filter": "",
+		"height": 392.0,
+		"last_filter": "pack",
 		"selected_items":
 		[
+			[
+				"pack",
+				"Package Control: Discover Packages"
+			],
+			[
+				"",
+				"Package Control: List Packages"
+			],
+			[
+				"insta",
+				"Package Control: Install Package"
+			],
 			[
 				"install",
 				"Package Control: Install Package"
 			],
 			[
-				"Package Control: ",
-				"Package Control: Remove Package"
+				"list",
+				"Package Control: List Packages"
 			],
 			[
-				"install ",
+				"pa",
 				"Package Control: Install Package"
 			],
 			[
-				"pack",
+				"pac",
+				"Package Control: List Packages"
+			],
+			[
+				"packa",
 				"Package Control: Install Package"
 			],
 			[
-				"package",
+				"PackageC",
 				"Package Control: Install Package"
 			],
 			[
-				"browse",
-				"Preferences: Browse Packages"
+				"Package Control: In",
+				"Package Control: Install Package"
 			]
 		],
-		"width": 575.0
+		"width": 467.0
 	},
 	"console":
 	{
-		"height": 125.0,
+		"height": 0.0,
 		"history":
 		[
-			"import urllib.request,os,hashlib; h = 'eb2297e1a458f27d836c04bb0cbaf282' + 'd0e7a3098092775ccb37ca9d6b2e4b7d'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'http://packagecontrol.io/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by)"
 		]
 	},
 	"distraction_free":
@@ -209,146 +592,146 @@
 	},
 	"file_history":
 	[
-		"/Applications/MAMP/htdocs/wp.sh",
-		"/Applications/MAMP/htdocs/cm/wp-content/themes/cm/partials/scrolly.php",
-		"/Applications/MAMP/htdocs/cm/wp-content/themes/cm/index.php",
-		"/Applications/MAMP/htdocs/cm/wp-content/themes/cm/assets/js/functions.js",
-		"/Applications/MAMP/htdocs/cm/wp-content/themes/cm/assets/css/style.scss",
-		"/Applications/MAMP/htdocs/cm/wp-content/themes/cm/partials/slideshow.php",
-		"/Applications/MAMP/htdocs/cm/wp-content/themes/cm/page-style-guide.php",
-		"/Applications/MAMP/htdocs/cm/wp-content/themes/cm/assets/css/setup.scss",
-		"/Applications/MAMP/htdocs/cm/wp-content/themes/cm/partials/edit_button.php",
-		"/Applications/MAMP/htdocs/cm/wp-content/themes/cm/partials/story_tile.php",
-		"/Applications/MAMP/htdocs/cm/wp-content/themes/cm/library/classes/class_deterministic_layout_manager.php",
-		"/Applications/MAMP/htdocs/cm/wp-content/themes/cm/footer.php",
-		"/Applications/MAMP/htdocs/cm/wp-content/themes/cm/header.php",
-		"/Applications/MAMP/htdocs/cm/wp-content/themes/cm/page.php",
-		"/Applications/MAMP/htdocs/work-shop/wp-content/themes/work-shop/edit-button.php",
-		"/Applications/MAMP/htdocs/cm/wp-content/themes/cm/assets/css/admin.css",
-		"/Applications/MAMP/htdocs/cm/wp-content/themes/cm/assets/js/functions-save.js",
-		"/Applications/MAMP/htdocs/cm/wp-content/themes/cm/partials/category_link.php",
-		"/Applications/MAMP/htdocs/cm/wp-content/themes/cm/partials/collections.php",
-		"/Applications/MAMP/htdocs/cm/wp-content/themes/cm/partials/collection.php",
-		"/Applications/MAMP/htdocs/cm/wp-content/themes/cm/partials/collection_tile.php",
-		"/Applications/MAMP/htdocs/cm/wp-content/themes/cm/partials/site_description.php",
-		"/Applications/MAMP/htdocs/cm/wp-content/themes/cm/partials/share.php",
-		"/Applications/MAMP/htdocs/cm/wp-content/themes/cm/partials/story.php",
-		"/Applications/MAMP/htdocs/cm/wp-content/themes/cm/library/classes/class_init_actions.php",
-		"/Applications/MAMP/htdocs/cm/wp-content/themes/cm/assets/css/.sass-cache/e517f419fc7dc69ddfa37e9fd1968d6e91cab741/style.scssc",
-		"/Applications/MAMP/htdocs/cm/wp-content/themes/cm/assets/js/vimeo.js",
-		"/Applications/MAMP/htdocs/cm/wp-content/themes/cm/library/globals.php",
-		"/Applications/MAMP/htdocs/cm/wp-content/themes/cm/assets/css/utilities.scss",
-		"/Applications/MAMP/htdocs/cm/wp-content/themes/cm/partials/category_header.php",
-		"/Applications/MAMP/htdocs/cm/wp-content/themes/cm/category.php",
-		"/Applications/MAMP/htdocs/cm/wp-content/themes/cm/single-collections.php",
-		"/Applications/MAMP/htdocs/cm/wp-content/themes/cm/partials/landing.php",
-		"/Applications/MAMP/htdocs/cm/wp-content/themes/cm/partials/landing_home.php",
-		"/Applications/MAMP/htdocs/cm/wp-content/themes/cm/assets/css/style.css",
-		"/Users/Greg/Dropbox/Work-Shop/_projects/providence model/prototypes/round4/Pencil Testing/Settings Tests/gcode header",
-		"/Users/Greg/Dropbox/Work-Shop/_projects/providence model/prototypes/round4/Pencil Testing/Settings Tests/3Pencilv1.nc",
-		"/Users/Greg/Dropbox/Work-Shop/_projects/providence model/prototypes/round4/Pencil Testing/Settings Tests/2TerrainFinishing.nc",
-		"/Users/Greg/Dropbox/Work-Shop/_projects/providence model/prototypes/round4/Pencil Testing/Settings Tests/2TerrainFinishingandTextures.nc",
-		"/Users/Greg/Dropbox/Work-Shop/_projects/providence model/prototypes/round4/Pencil Testing/penciltestv4.nc",
-		"/Applications/MAMP/htdocs/readeasy/wp-content/themes/readeasy/footer.php",
-		"/Applications/MAMP/htdocs/cm/wp-content/themes/cm/single-stories.php",
-		"/Applications/MAMP/htdocs/work-shop/wp-content/themes/work-shop/functions.php",
-		"/Applications/MAMP/htdocs/cm/wp-content/themes/cm/partials/collections-intro-save.php",
-		"/Applications/MAMP/htdocs/cm/wp-content/themes/cm/partials/footer_menu.php",
-		"/Applications/MAMP/htdocs/cm/wp-content/themes/cm/partials/collection_tile_single.php",
-		"/Applications/MAMP/htdocs/cm/wp-content/themes/cm/assets/css/mixins.scss",
-		"/Applications/MAMP/htdocs/cm/wp-content/themes/cm/partials/logo_animated.php",
-		"/Applications/MAMP/htdocs/cm/wp-content/themes/cm/partials/guidepost.php",
-		"/Applications/MAMP/htdocs/cm/wp-content/themes/cm/assets/css/bootstrap/variables.less",
-		"/Applications/MAMP/htdocs/cm/wp-content/themes/cm/assets/css/bootstrap/list-group.less",
-		"/Applications/MAMP/htdocs/cm/wp-content/themes/cm/partials/break.php",
-		"/Applications/MAMP/htdocs/cm/wp-content/themes/cm/partials/back_to_top.php",
-		"/Applications/MAMP/htdocs/cm/wp-content/themes/cm/partials/logo_svg.php",
-		"/Applications/MAMP/htdocs/cm/wp-content/themes/cm/assets/js/modernizr.js",
-		"/Applications/MAMP/htdocs/cm/wp-content/themes/cm/library/classes/class_init_filters.php",
-		"/Applications/MAMP/htdocs/cm/wp-content/themes/cm/assets/css/reset.scss",
-		"/Applications/MAMP/htdocs/cm/wp-content/themes/cm/assets/img/logo.svg",
-		"/Applications/MAMP/htdocs/cm/wp-content/themes/cm/assets/img/logo2-03.svg",
-		"/Applications/MAMP/htdocs/cm/wp-content/themes/cm/partials/search_modal.php",
-		"/Users/Greg/Library/Application Support/Sublime Text 3/Packages/User/Preferences.sublime-settings",
-		"/Applications/MAMP/htdocs/work-shop/wp-content/themes/work-shop/_/css/style.less",
-		"/Applications/MAMP/htdocs/work-shop/wp-content/themes/work-shop/single-projects.php",
-		"/Applications/MAMP/htdocs/cm/wp-content/themes/cm/library/setup.php",
-		"/Users/Greg/.Trash/reset.scss",
-		"/Applications/MAMP/htdocs/cm/wp-content/themes/cm/assets/css/animations.scss",
-		"/Applications/MAMP/htdocs/cm/wp-content/themes/cm/assets/css/variables.scss",
-		"/Applications/MAMP/htdocs/cm/wp-content/themes/cm/partials/ie.php",
-		"/Applications/MAMP/htdocs/cm/wp-content/themes/cm/assets/css/type.scss",
-		"/Applications/MAMP/htdocs/work-shop/wp-content/themes/work-shop/contact.php",
-		"/Applications/MAMP/htdocs/work-shop/wp-content/themes/work-shop/footer.php",
-		"/Applications/MAMP/htdocs/cm/wp-content/themes/cm/assets/css/bootstrap/bootstrap.less",
-		"/Applications/MAMP/htdocs/wsp/index.html",
-		"/Applications/MAMP/htdocs/cm/wp-content/themes/cm/partials/elements.php",
-		"/Applications/MAMP/htdocs/cm/wp-content/themes/cm/assets/css/style.css.map",
-		"/Users/Greg/Library/Application Support/Sublime Text 3/Packages/Default/Preferences.sublime-settings",
-		"/Users/Greg/Library/Application Support/Sublime Text 3/Packages/User/css_style_completions.sublime-settings",
-		"/Applications/MAMP/htdocs/cm/cm.sublime-project",
-		"/Applications/MAMP/htdocs/cm/wp-content/themes/cm/less.php",
 		"/Applications/MAMP/htdocs/cm/makefile",
-		"/Applications/MAMP/htdocs/cm/wp-content/themes/cm/assets/js/cssrefresh.js",
-		"/Applications/MAMP/htdocs/cm/wp-content/themes/cm/assets/css/oo.scss",
-		"/Applications/MAMP/htdocs/cm/wp-content/themes/cm/assets/css/style.less",
-		"/Applications/MAMP/htdocs/cm/wp-content/themes/cm/library/theme_options.php",
-		"/Applications/MAMP/htdocs/cm/wp-content/themes/cm/assets/fonts/pictograms.css",
-		"/Applications/MAMP/htdocs/cm/wp-content/themes/cm/assets/css/animations.less",
+		"/Users/nicschumann/Work-Space/readme.md",
+		"/Applications/MAMP/htdocs/local-kitchen/wp-content/makefile",
+		"/Applications/MAMP/htdocs/cm/wp-content/themes/cm/assets/css/style.css",
+		"/Applications/MAMP/htdocs/local-kitchen/wp-content/.gitignore",
+		"/Applications/MAMP/htdocs/local-kitchen/wp-config.php",
+		"/Users/nicschumann/Work-Space/daisy-chain/sockets.js",
+		"/Users/nicschumann/Work-Space/daisy-chain/routes.js",
+		"/Users/nicschumann/Work-Space/daisy-chain/package.json",
+		"/Users/nicschumann/Work-Space/daisy-chain/app.js",
+		"/Users/nicschumann/Work-Space/daisy-chain/makefile",
+		"/Users/nicschumann/Work-Space/daisy-chain/index.js",
+		"/Users/nicschumann/Work-Space/daisy-chain/README.md",
+		"/Users/nicschumann/Dropbox/Work-Shop/_projects/providence model/spring 2015 two tiles/data from walt/twotiletest/ADDB.dae",
+		"/Users/nicschumann/Dropbox/Work-Shop/_projects/providence model/spring 2015 two tiles/data from walt/twotiletest/ID_1F1.dae",
+		"/Users/nicschumann/Dropbox/Work-Shop/_projects/providence model/spring 2015 two tiles/data from walt/twotiletest/layers",
+		"/Users/nicschumann/Work-Space/gov-lab/gov-lab-placeholder/makefile",
+		"/Users/nicschumann/Work-Space/gov-lab/gov-lab-placeholder/source/makefile",
+		"/Applications/MAMP/htdocs/coco/wp-content/themes/coco/page-closet.php",
+		"/Applications/MAMP/htdocs/coco/wp-content/themes/coco/woocommerce/emails/plain/customer-booking-notification.php",
+		"/Applications/MAMP/htdocs/coco/wp-content/themes/coco/woocommerce-bookings/emails/plain/customer-booking-notification.php",
+		"/Users/nicschumann/Work-Space/gov-lab/gov-lab-placeholder/source/styles/_site-specific.scss",
+		"/Users/nicschumann/Work-Space/gov-lab/gov-lab-placeholder/source/index.html",
+		"/Users/nicschumann/Work-Space/gov-lab/gov-lab-placeholder/source/scripts/scrolling.js",
+		"/Users/nicschumann/Work-Space/gov-lab/gov-lab-placeholder/m",
+		"/Users/nicschumann/Work-Space/gov-lab/gov-lab-placeholder/source/scripts/sizing.js",
+		"/Users/nicschumann/Work-Space/gov-lab/gov-lab-placeholder/target/index.html",
+		"/Users/nicschumann/Work-Space/gov-lab/gov-lab-placeholder/source/styles/_debug.scss",
+		"/Users/nicschumann/Work-Space/gov-lab/gov-lab-placeholder/source/scripts/subscribe.js",
+		"/Users/nicschumann/Desktop/euler/problem02.hs",
+		"/Users/nicschumann/Work-Space/rubber-duck/source/style.css",
+		"/Users/nicschumann/Work-Space/rubber-duck/README.md",
+		"/Users/nicschumann/Work-Space/rubber-duck/source/scripts/jquery-1.11.2.min.js",
+		"/Users/nicschumann/Downloads/jquery-1.11.2.min.js",
+		"/Users/nicschumann/Work-Space/rubber-duck/.gitignore",
+		"/Users/nicschumann/Work-Space/rubber-duck/package.json",
+		"/Users/nicschumann/Work-Space/diagram/core/datastore.js",
+		"/Users/nicschumann/Library/KeyBindings/DefaultKeyBinding.dict",
+		"/Users/nicschumann/Work-Space/coco-theme/makefile",
+		"/Users/nicschumann/Work-Space/gov-lab/gov-lab-placeholder/Gruntfile.js",
+		"/Users/nicschumann/Work-Space/gov-lab/gov-lab-placeholder/.gitignore",
+		"/Applications/MAMP/htdocs/coco/wp-content/makefile",
+		"/Applications/MAMP/htdocs/coco/wp-content/makefil",
+		"/Users/nicschumann/Work-Space/coco-theme/themes/coco/lib/lib.php",
+		"/Applications/MAMP/htdocs/coco2/.gitignore",
+		"/Applications/MAMP/htdocs/coco2/makefile",
+		"/Applications/MAMP/htdocs/coco2/password",
+		"/Applications/MAMP/htdocs/coco2/themes/coco/.g",
+		"/Users/nicschumann/.ssh/id_rsa.pub",
+		"/Users/nicschumann/Work-Space/diagram/package.json",
+		"/Users/nicschumann/Work-Space/diagram/README.md",
+		"/Applications/MAMP/htdocs/freedom-beat/wp-config.php",
+		"/Applications/MAMP/htdocs/coco/wp-content/themes/coco/_/js/flexslider.js",
+		"/Applications/MAMP/htdocs/cm/wp-content/themes/cm/library/classes/class_init_actions.php",
+		"/Applications/MAMP/htdocs/cm/wp-content/themes/cm/header.php",
+		"/Applications/MAMP/htdocs/coco/wp-content/plugins/woocommerce-bookings/includes/class-wc-product-booking-resource.php",
+		"/Users/nicschumann/Work-Space/gov-lab/gov-lab-placeholder/source/styles/_layout.scss",
+		"/Users/nicschumann/Work-Space/gov-lab/gov-lab-placeholder/source/styles/_variables.scss",
+		"/Users/nicschumann/Work-Space/gov-lab/gov-lab-placeholder/source/styles/_animations.scss",
+		"/Users/nicschumann/Work-Space/gov-lab/gov-lab-placeholder/source/styles/_typography.scss",
+		"/Users/nicschumann/Work-Space/gov-lab/gov-lab-placeholder/source/typography.html",
+		"/Users/nicschumann/Work-Space/desk-research/source/styles/_typography.scss",
+		"/Users/nicschumann/Work-Space/gov-lab/gov-lab-placeholder/source/styles/style.scss",
+		"/Applications/MAMP/htdocs/cm/wp-content/themes/cm/assets/js/functions.js",
+		"/Applications/MAMP/htdocs/cm/wp-content/themes/cm/partials/category_link.php",
+		"/Applications/MAMP/htdocs/cm/wp-content/themes/cm/partials/story.php",
+		"/Applications/MAMP/htdocs/cm/wp-content/themes/cm/partials/slideshow.php",
+		"/Applications/MAMP/htdocs/cm/wp-content/themes/cm/library/classes/class_ajax.php",
+		"/Users/nicschumann/Work-Space/desk-research/Gruntfile.js",
+		"/Users/nicschumann/Work-Space/desk-research/target/sets.html",
+		"/Users/nicschumann/Work-Space/desk-research/source/styles/_layout.scss",
+		"/Users/nicschumann/Work-Space/desk-research/source/styles/_variables.scss",
+		"/Applications/MAMP/htdocs/cm/wp-content/themes/cm/assets/js/async.js",
+		"/Applications/MAMP/htdocs/cm/wp-content/themes/cm/partials/collection_tile_single.php",
+		"/Applications/MAMP/htdocs/cm/wp-content/themes/cm/partials/story_tile.php",
 		"/Applications/MAMP/htdocs/cm/wp-content/themes/cm/functions.php",
-		"/Applications/MAMP/htdocs/cm/wp-content/themes/cm/partials/search.php",
-		"/Applications/MAMP/htdocs/cm/wp-content/themes/cm/search.php",
-		"/Applications/MAMP/htdocs/cm/wp-content/themes/cm/single.php",
-		"/Applications/MAMP/htdocs/cm/wp-content/themes/cm/partials/content_single_stories.php",
-		"/Applications/MAMP/htdocs/cm/wp-content/themes/cm/partials/content-single-stories.php",
-		"/Users/Greg/Library/Application Support/Sublime Text 3/Packages/User/Package Control.sublime-settings",
-		"/private/etc/hosts",
-		"/Applications/MAMP/htdocs/xml3d/README.md",
-		"/Applications/MAMP/htdocs/three/download/README.md",
-		"/Users/Greg/Downloads/JP-seat-40-professional-greg-nemes-1349-1.lic",
-		"/Users/Greg/Downloads/cssgrid-version2/README.md",
-		"/private/var/folders/ht/_3qxwfd154z3598_zl4xk0yc0000gn/T/77d360fb-2486-4a97-9f43-28d11fb47e87/home/sqrus/public_html/wps/wp-content/themes/cmiv2/page-project.php",
-		"/private/var/folders/ht/_3qxwfd154z3598_zl4xk0yc0000gn/T/77d360fb-2486-4a97-9f43-28d11fb47e87/home/sqrus/public_html/wps/wp-content/themes/cmiv2/page-courselist.php",
-		"/Users/Greg/Downloads/desandro-isotope-75ead41/README.mdown",
-		"/Users/Greg/Library/Caches/Coda 2/5DAC1319-DB90-49A2-A669-C1C12C1BC039/fittings.css",
-		"/Users/Greg/Downloads/bootstrap/css/bootstrap.css",
-		"/private/var/folders/ht/_3qxwfd154z3598_zl4xk0yc0000gn/T/77d360fb-2486-4a97-9f43-28d11fb47e87/home/sqrus/public_html/wps/wp-content/themes/cmiv2/single-courses.php",
-		"/private/var/folders/ht/_3qxwfd154z3598_zl4xk0yc0000gn/T/77d360fb-2486-4a97-9f43-28d11fb47e87/home/sqrus/public_html/wps/wp-content/themes/cmiv2/html-header.php",
-		"/private/var/folders/ht/_3qxwfd154z3598_zl4xk0yc0000gn/T/77d360fb-2486-4a97-9f43-28d11fb47e87/home/sqrus/public_html/wps/wp-content/themes/cmiv2/scripts.php",
-		"/private/var/folders/ht/_3qxwfd154z3598_zl4xk0yc0000gn/T/77d360fb-2486-4a97-9f43-28d11fb47e87/home/sqrus/public_html/wps/wp-content/themes/cmiv2/js/site.js",
-		"/private/var/folders/ht/_3qxwfd154z3598_zl4xk0yc0000gn/T/77d360fb-2486-4a97-9f43-28d11fb47e87/home/sqrus/public_html/wps/wp-content/themes/cmiv2/index.php",
-		"/private/var/folders/ht/_3qxwfd154z3598_zl4xk0yc0000gn/T/77d360fb-2486-4a97-9f43-28d11fb47e87/home/sqrus/public_html/wps/wp-content/themes/cmiv2/css/structure.css",
-		"/private/var/folders/ht/_3qxwfd154z3598_zl4xk0yc0000gn/T/77d360fb-2486-4a97-9f43-28d11fb47e87/home/sqrus/public_html/wps/wp-content/themes/cmiv2/css/fittings.css",
-		"/private/var/folders/ht/_3qxwfd154z3598_zl4xk0yc0000gn/T/77d360fb-2486-4a97-9f43-28d11fb47e87/home/sqrus/public_html/wps/wp-content/themes/cmiv2/sidebar-courses.php",
-		"/private/var/folders/ht/_3qxwfd154z3598_zl4xk0yc0000gn/T/77d360fb-2486-4a97-9f43-28d11fb47e87/home/sqrus/public_html/wps/wp-content/themes/cmiv2/social.php",
-		"/private/var/folders/ht/_3qxwfd154z3598_zl4xk0yc0000gn/T/77d360fb-2486-4a97-9f43-28d11fb47e87/home/sqrus/public_html/wps/wp-content/themes/cmiv2/single-projects.php",
-		"/private/var/folders/ht/_3qxwfd154z3598_zl4xk0yc0000gn/T/77d360fb-2486-4a97-9f43-28d11fb47e87/home/sqrus/public_html/wps/wp-content/themes/cmiv2/header.php",
-		"/private/var/folders/ht/_3qxwfd154z3598_zl4xk0yc0000gn/T/77d360fb-2486-4a97-9f43-28d11fb47e87/home/sqrus/public_html/wps/wp-content/themes/cmiv2/functions.php",
-		"/private/var/folders/ht/_3qxwfd154z3598_zl4xk0yc0000gn/T/77d360fb-2486-4a97-9f43-28d11fb47e87/home/sqrus/public_html/wps/wp-content/themes/cmiv2/css/reset.css",
-		"/private/var/folders/ht/_3qxwfd154z3598_zl4xk0yc0000gn/T/77d360fb-2486-4a97-9f43-28d11fb47e87/home/sqrus/public_html/wps/wp-content/themes/cmiv2/css/structure2.css",
-		"/private/var/folders/ht/_3qxwfd154z3598_zl4xk0yc0000gn/T/77d360fb-2486-4a97-9f43-28d11fb47e87/home/sqrus/public_html/wps/wp-content/themes/cmiv2/css/fittings2.css",
-		"/private/var/folders/ht/_3qxwfd154z3598_zl4xk0yc0000gn/T/77d360fb-2486-4a97-9f43-28d11fb47e87/home/sqrus/public_html/wps/wp-content/themes/cmiv2/style.css",
-		"/private/var/folders/ht/_3qxwfd154z3598_zl4xk0yc0000gn/T/77d360fb-2486-4a97-9f43-28d11fb47e87/home/sqrus/public_html/wps/wp-content/themes/cmiv2/footer.php",
-		"/private/var/folders/ht/_3qxwfd154z3598_zl4xk0yc0000gn/T/77d360fb-2486-4a97-9f43-28d11fb47e87/home/sqrus/public_html/wps/wp-content/themes/cmiv2/style2.css",
-		"/private/var/folders/ht/_3qxwfd154z3598_zl4xk0yc0000gn/T/77d360fb-2486-4a97-9f43-28d11fb47e87/home/sqrus/public_html/index.html",
-		"/private/var/folders/ht/_3qxwfd154z3598_zl4xk0yc0000gn/T/6ebd6e48-0bf2-418c-bf6f-203bf88aa0af/home/sqrus/public_html/wp/wp-content/themes/cmiv1/style.css",
-		"/private/var/folders/ht/_3qxwfd154z3598_zl4xk0yc0000gn/T/6ebd6e48-0bf2-418c-bf6f-203bf88aa0af/home/sqrus/public_html/wp/wp-content/themes/cmiv1/style3.css",
-		"/private/var/folders/ht/_3qxwfd154z3598_zl4xk0yc0000gn/T/6ebd6e48-0bf2-418c-bf6f-203bf88aa0af/home/sqrus/public_html/wp/wp-content/themes/cmiv1/style2.css",
-		"/private/var/folders/ht/_3qxwfd154z3598_zl4xk0yc0000gn/T/77d360fb-2486-4a97-9f43-28d11fb47e87/home/sqrus/public_html/wps/wp-content/themes/cmiv2/html-footer.php",
-		"/Users/Greg/Dropbox/CMI/ftp/jquery.js",
-		"/private/var/folders/ht/_3qxwfd154z3598_zl4xk0yc0000gn/T/77d360fb-2486-4a97-9f43-28d11fb47e87/home/sqrus/public_html/wps/wp-content/themes/cmiv2/page.php"
+		"/Applications/MAMP/htdocs/cm/wp-content/themes/cm/partials/collection_tile.php",
+		"/Applications/MAMP/htdocs/cm/wp-content/themes/cm/library/classes/class_category_controller.php",
+		"/Applications/MAMP/htdocs/cm/wp-content/themes/cm/library/classes/class_deterministic_layout_manager.php",
+		"/Applications/MAMP/htdocs/cm/wp-content/themes/cm/library/classes/class_tile_layout_manager.php",
+		"/Applications/MAMP/htdocs/cm/wp-content/themes/cm/library/globals.php",
+		"/Users/nicschumann/Work-Space/biject/test-grammar.pegjs",
+		"/Users/nicschumann/Work-Space/gov-lab/gov-lab-placeholder/target/scripts/main.js",
+		"/Users/nicschumann/Work-Space/gov-lab/gov-lab-placeholder/target/styles/bootstrap.css.map",
+		"/Users/nicschumann/Work-Space/gov-lab/gov-lab-placeholder/target/styles/main.css",
+		"/Users/nicschumann/Work-Space/visual-mathematics/derived/sets/diagrams/maps-one-def.svg",
+		"/Users/nicschumann/Work-Space/visual-mathematics/package.json",
+		"/Users/nicschumann/Work-Space/visual-mathematics/Gruntfile.js",
+		"/Users/nicschumann/Work-Space/visual-mathematics/derived/index.html",
+		"/Users/nicschumann/Desktop/Class/Logic/sketch/parser.hs",
+		"/Users/nicschumann/Work-Space/biject/inject/index.js",
+		"/Applications/iA Writer.app/Contents/Resources/iA Writer.writertemplate/Contents/Resources/core.css",
+		"/Applications/iA Writer.app/Contents/Resources/iA Writer.writertemplate/Contents/Resources/fonts.css",
+		"/Applications/iA Writer.app/Contents/Resources/iA Writer.writertemplate/Contents/Resources/screen.css",
+		"/Applications/iA Writer.app/Contents/Resources/iA Writer.writertemplate/Contents/Resources/print.css",
+		"/Applications/iA Writer.app/Contents/Resources/iA Writer.writertemplate/Contents/Resources/local.tpl.html",
+		"/Users/nicschumann/Work-Space/biject/README.md",
+		"/Users/nicschumann/Work-Space/biject/inject/inject",
+		"/Users/nicschumann/Work-Space/visual-mathematics/process/init.js",
+		"/Users/nicschumann/Work-Space/visual-mathematics/source/document/styleguide.html",
+		"/Users/nicschumann/Work-Space/visual-mathematics/source/document/.meta.json",
+		"/Users/nicschumann/Work-Space/visual-mathematics/process/walker.js",
+		"/Users/nicschumann/Work-Space/visual-mathematics/process/renderer.js",
+		"/Users/nicschumann/Work-Space/visual-mathematics/process/server.js",
+		"/Users/nicschumann/Work-Space/visual-mathematics/index.js",
+		"/Users/nicschumann/Work-Space/visual-mathematics/derived/proof/index.html",
+		"/Users/nicschumann/Work-Space/visual-mathematics/source/styles/_grid.scss",
+		"/Users/nicschumann/Work-Space/visual-mathematics/derived/trial.html",
+		"/Applications/MAMP/htdocs/coco/wp-content/themes/coco/lib/emails/class-cc-dry-cleaning-email.php",
+		"/Users/nicschumann/Work-Space/visual-mathematics/process/leaf.js",
+		"/Users/nicschumann/Work-Space/visual-mathematics/process/node.js",
+		"/Users/nicschumann/Work-Space/visual-mathematics/source/document/.meta",
+		"/Users/nicschumann/Desktop/TAPL/Prelim.agda",
+		"/Users/nicschumann/Desktop/TAPL/Play",
+		"/Users/nicschumann/Desktop/prf.hs",
+		"/Users/nicschumann/Work-Space/visual-mathematics/derived/styles/style.css",
+		"/Users/nicschumann/Work-Space/visual-mathematics/source/styles/_layout.scss",
+		"/Users/nicschumann/Work-Space/visual-mathematics/source/styles/_globals.scss",
+		"/Users/nicschumann/Work-Space/visual-mathematics/derived/scripts/cssrefresh.js",
+		"/Users/nicschumann/Work-Space/visual-mathematics/makefile",
+		"/Users/nicschumann/Work-Space/visual-mathematics/.gitignore",
+		"/Applications/MAMP/htdocs/cm/wp-content/plugins/reorder-post-within-categories/reorder-posts-within-categories.php",
+		"/Applications/MAMP/htdocs/cm/wp-content/themes/cm/library/classes/class-init-actions.php",
+		"/Applications/MAMP/htdocs/cm/wp-content/themes/cm/library/classes/class-init-filters.php",
+		"/Users/nicschumann/Library/Application Support/Sublime Text 3/Packages/User/Preferences.sublime-settings",
+		"/Applications/MAMP/htdocs/cm/wp-content/themes/cm/library/abstracts/abstract-filter-set.php",
+		"/Applications/MAMP/htdocs/cm/wp-content/themes/cm/library/abstracts/abstract-action-set.php",
+		"/Applications/MAMP/htdocs/cm/wp-content/themes/cm/library/classes/class-init.php"
 	],
 	"find":
 	{
-		"height": 37.0
+		"height": 25.0
 	},
 	"find_in_files":
 	{
 		"height": 93.0,
 		"where_history":
 		[
-			"mixins.scss",
-			""
+			"<project>",
+			"phar"
 		]
 	},
 	"find_state":
@@ -356,134 +739,122 @@
 		"case_sensitive": false,
 		"find_history":
 		[
-			"view",
-			"edit",
-			"storyto",
-			"playvi",
-			"story-video-active",
-			"story-tile",
-			"videosetup",
-			"story",
-			"scroll",
-			"collection-intro",
-			"tile",
-			"landing",
-			"landed",
-			"col-sm-3",
-			"60",
-			"tile",
-			"flex",
-			"collection-int",
-			"stories",
-			"story-activ",
-			"collections-intro",
-			"console",
-			"suc",
-			"dots",
-			"share",
-			"transform",
-			"intro",
-			"satura",
-			"h5",
-			"collection-int",
-			"collection",
-			"header-c",
-			"active",
-			"headerfix",
-			"tile",
-			"header",
-			"active",
-			"colleciton",
-			"category",
-			"scroll",
-			"header",
-			"modal",
-			"header",
-			"collection-intro",
-			"header",
-			"nav",
-			"collection",
-			"collection-intro",
-			"caption",
-			"slidesho",
-			"collection",
-			"tile",
-			"collection",
-			"landing",
-			"slideshow",
-			"4s",
-			"landing",
-			"logo",
-			"slideshow",
-			"collection-in",
-			"collection",
-			"catego",
-			"console",
-			"fixed",
-			"slides",
-			"#header",
-			"collections",
-			"decideO",
-			"home",
-			"story-meta",
+			"32",
+			"cleaning",
+			"console.log",
+			"color",
+			"true",
+			"e6d8d5",
+			"Muli",
+			"height",
+			"storySetup",
+			"$f",
+			"Froogaloop",
+			"Replica",
+			"grad",
 			"gradient",
-			"controls",
-			"jup",
-			"flexslid",
-			"flexs",
-			"flex-",
-			"slides",
-			"view",
-			"flexslider",
-			"play",
-			"view",
-			"active-lo",
-			"intro",
-			"collection-title\n",
-			"767",
-			".story",
-			"collection-i",
+			"10",
+			"mediated",
+			"vertical-center",
+			"strict",
+			"wc_booking_pricing",
+			"$this->wc_booking_pricing",
+			"block-",
+			"$gallery",
+			"gallery",
+			"}\n",
+			"//$",
+			"error",
+			"$100",
+			"100",
+			" \n",
+			"NOT GOOD",
+			"Unsafe",
+			"Nic",
+			"nic",
+			"cc_closet_values",
+			"HEAD",
 			"spy",
-			".story",
-			"header-",
-			"tile",
-			"activat",
-			"h1",
-			"collection",
-			"collection-in",
-			"header",
-			"prefix",
-			"collection-title",
-			"prefix",
-			"spy",
-			"story",
-			"headerfix",
-			"h4",
-			"after",
-			"setTi",
-			"single",
-			"collection",
-			"1.5s",
-			"1s",
-			"break",
-			"colle",
-			"coll",
-			"header",
-			"scroll",
-			"tile",
-			"header",
-			"nav",
-			"2s",
-			".block",
-			"logo",
-			"spy",
-			"brown",
-			"tile",
-			"logo",
-			"tile",
-			"7",
-			"logo",
-			"dot"
+			"modal",
+			"login-modal",
+			"echo",
+			"post-types",
+			"cancel_order",
+			"woocommerce_booking_cancelled",
+			"wc_create_refund",
+			"schedule_events",
+			"get_order",
+			"customer",
+			"woocommerce_booking_paid",
+			"woocommerce_booking_status_complete",
+			"woocommerce_booking_status_paid",
+			"woocommerce_booking_status_paid_notification",
+			"wc-booking-reminder",
+			"confirmed_notification",
+			"do_action",
+			"form-edit-address",
+			"get_resources",
+			"resource",
+			"new WC_Booking_Form",
+			"Please choose a resource type",
+			"get_resources",
+			"selectDay",
+			"local",
+			"wc_booking_pricing",
+			"cancel",
+			"wc_booking_pricing",
+			"$data",
+			"$booking_form",
+			"File",
+			"ajax",
+			"console.",
+			"parts",
+			"MEDIA_URL",
+			">",
+			"asset",
+			"display",
+			"bannar",
+			"TEMPLATE",
+			"Folder",
+			"LOCAL",
+			"lS",
+			"children",
+			"mod",
+			"_",
+			";\n",
+			"/n/4170.7125.201010411",
+			"delete",
+			".\")",
+			"Typ",
+			"TField",
+			")								",
+			"client_c_M",
+			"client_list.",
+			"wait",
+			"Tt",
+			"State",
+			"			=",
+			"a",
+			"fmap",
+			"$auth",
+			"$_SERVER[\"SERVER_NAME\"]",
+			"DOCUMENT_ROOT",
+			"col",
+			"callback",
+			"\n",
+			"parse",
+			"ast_t",
+			"i",
+			".east",
+			"leval",
+			"decompose",
+			"unused",
+			".visited",
+			"neighbor.visited",
+			"toffset",
+			"in_bounds",
+			"colors",
+			"$ignorable"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -491,43 +862,11 @@
 		"regex": false,
 		"replace_history":
 		[
-			"col-sm-4",
-			"h4",
-			"6s",
-			"h5",
-			"3s",
-			"2s",
-			".5s",
-			"5",
-			"icon",
-			"p",
-			"h3",
-			"7",
-			"4",
-			"000",
-			"$",
-			"6",
-			"5",
-			"4",
-			"23",
-			"2",
-			"$radius",
-			"@mixin ",
-			"$",
-			"/assets/",
-			" ",
-			"",
-			".9",
-			".5",
-			"class",
-			"grid3",
-			"grid2",
-			"grid4"
 		],
 		"reverse": false,
-		"show_context": false,
+		"show_context": true,
 		"use_buffer2": true,
-		"whole_word": false,
+		"whole_word": true,
 		"wrap": true
 	},
 	"groups":
@@ -540,11 +879,11 @@
 	],
 	"incremental_find":
 	{
-		"height": 26.0
+		"height": 25.0
 	},
 	"input":
 	{
-		"height": 39.0
+		"height": 38.0
 	},
 	"layout":
 	{
@@ -569,19 +908,23 @@
 		]
 	},
 	"menu_visible": true,
-	"output.CSS Extended Completions":
+	"output.exec":
 	{
-		"height": 0.0
+		"height": 112.0
 	},
 	"output.find_results":
 	{
 		"height": 0.0
 	},
+	"output.haskell_sublime_load":
+	{
+		"height": 27.0
+	},
 	"pinned_build_system": "",
 	"project": "cm.sublime-project",
 	"replace":
 	{
-		"height": 66.0
+		"height": 46.0
 	},
 	"save_all_on_build": true,
 	"select_file":
@@ -591,12 +934,8 @@
 		"selected_items":
 		[
 			[
-				"",
-				"partials/story_tile.php"
-			],
-			[
-				"footer",
-				"footer.php"
+				"fol",
+				"logobase/apps/core/templates/core/folders.html"
 			]
 		],
 		"width": 0.0
@@ -612,12 +951,12 @@
 	},
 	"select_symbol":
 	{
-		"height": 0.0,
+		"height": 392.0,
 		"last_filter": "",
 		"selected_items":
 		[
 		],
-		"width": 0.0
+		"width": 701.0
 	},
 	"selected_group": 0,
 	"settings":
