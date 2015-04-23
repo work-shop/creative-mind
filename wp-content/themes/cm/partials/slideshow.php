@@ -1,6 +1,6 @@
 <?php if ( $slides = get_field('home_page_slideshow', 'options') ) : ?>
 
-<section class="block crop" id="slideshow">
+<section class="block mb6" id="slideshow">
 
 	<div class="flexslider flexslider-hero">
 		<ul class="slides">
@@ -103,11 +103,11 @@
 		<div class="flexslider-controls"></div> 
 		
 		<div id="previous-home" class="flexslider-direction flex-previous previous">
-			<span class="icon" data-icon="&#8250;"></span>
+			<span class="icon" data-icon="&#8216;"></span>
 		</div>					
 		
 		<div id="next-home" class="flexslider-direction flex-next next">
-			<span class="icon" data-icon="&#8249;"></span>
+			<span class="icon" data-icon="&#8212;"></span>
 		</div>	
 		
 	</div>		

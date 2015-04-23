@@ -329,16 +329,13 @@ $icon-margin: 15px;
 
 /********** @SLIDESHOW *********/
 
-.flexslider{
-
-	&:hover{
-		.flexslider-direction{
-			opacity: 1;
-		}
-	}
-
+#slideshow {
 	position: relative;
+}
 
+.flexslider{
+	width: calc(100% - 80px);
+	margin: 0 auto;
 }
 
 .home .slides{

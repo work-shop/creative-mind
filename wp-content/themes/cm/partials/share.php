@@ -1,9 +1,9 @@
 
-	<section class="block target share <?php if(!is_home()): ?>bg-light<?php endif;?>" id="share">
+	<section class="block target share m3 <?php if(!is_home()): ?>bg-light<?php endif;?>" id="share">
 		<div class="container">
 			<div class="row">
 				<div class="col-sm-6 col-sm-offset-3">
-					<h2 class="bold centered mt2 h3">
+					<h2 class="bold centered h3">
 					Share the Creativity!
 					</h2>
 				</div>

@@ -402,7 +402,7 @@ function view(){
 		//$('.flexslider-hero').css('height',fw);																															
 	}
 
-	$('.home .slides').css('height',ch-200);
+	$('.home .slides').css('height',ch-240);
 	
 	if(!loaded){
 		loadPage();
