@@ -82,13 +82,11 @@
 
 		<div id="wrapper" class="loading spy">
 
-			
-			<div id="topbar" class="bg-<?php echo $category_color;?>"></div>
 
 			<header id="header" class="closed">
 				<?php if(is_home()): ?>		
-				<div id="header-brown" class="bg-brown hidden-xs">
-					<div class="container-fluid">
+				<div id="header-brown" class="bg-white hidden-xs">
+					<div class="container-fluid bg-brown">
 						<div class="row">
 							<div id="logo-brown" class="col-sm-4 m0">
 								<a href="http://brown.edu" target="blank">

@@ -46,6 +46,7 @@ $transitions: .25s;
 
 body{
 	font-size: 18px;
+	background: $ultra-light;
 }
 
 // div { font-family:"A2 Regular Bold", Futura, sans-serif; font-weight:bold; font-style:normal; }
@@ -286,7 +287,7 @@ p{
 /********** @BACKGROUNDS *********/
 
 .bg-white{
-	background: white;
+	background: $ultra-light;
 }
 
 .bg-light{
@@ -560,13 +561,10 @@ $slide-distance-vertical: 20px;
 	li{
 
 		&:hover{
-			a{
-				background: $ultra-light;			
-			}
+			border-bottom: 4px solid $dark;
 		}
 
 		a{
-			color: $dark;
 			box-sizing: padding-box;
 			display: block;
 			padding: 0 15px;
@@ -575,10 +573,6 @@ $slide-distance-vertical: 20px;
 
 			&.white{
 				color: white;
-
-				&:hover{
-					color: $dark;
-				}
 			}
 		}
 

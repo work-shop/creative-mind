@@ -27,9 +27,7 @@ a {
   -webkit-transition: color 0.125s 0s ease;
   -o-transition: color 0.125s 0s ease;
   -ms-transition: color 0.125s 0s ease; }
-  a:hover {
-    text-decoration: none; }
-  a:focus {
+  a:hover, a:focus {
     text-decoration: none;
     color: #cb2026;
     outline: none; }
@@ -54,7 +52,8 @@ ol, ul {
     margin-bottom: 15px; } }
 /********** @TYPE *********/
 body {
-  font-size: 18px; }
+  font-size: 18px;
+  background: #fafafa; }
 
 div {
   font-family: "A2 Regular Regular", Futura, sans-serif;
@@ -344,7 +343,7 @@ p {
 
 /********** @BACKGROUNDS *********/
 .bg-white {
-  background: white; }
+  background: #fafafa; }
 
 .bg-light {
   background: #f1f1f1; }
@@ -755,10 +754,9 @@ p {
 
 .nav {
   height: 50px; }
-  .nav li:hover a {
-    background: #fafafa; }
+  .nav li:hover {
+    border-bottom: 4px solid #222222; }
   .nav li a {
-    color: #222222;
     box-sizing: padding-box;
     display: block;
     padding: 0 15px;
@@ -770,8 +768,6 @@ p {
     -ms-transition: all 0.25s 0s ease; }
     .nav li a.white {
       color: white; }
-      .nav li a.white:hover {
-        color: #222222; }
   .nav.nav-inline li {
     display: inline-block;
     height: 50px;
@@ -953,41 +949,27 @@ img.gform_ajax_spinner {
         background: #cb2026; }
 
 /********** @STRUCTURE *********/
-#topbar {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 4px;
-  z-index: 10; }
-
 #header {
-  height: 50px;
   width: 100%;
   position: absolute;
-  top: 4px;
   z-index: 9; }
   #header .container-fluid {
     padding: 0 30px; }
 
 #header-brown {
-  height: 40px;
   width: 100%;
   position: absolute;
   left: 0;
   z-index: 8; }
+  #header-brown > div {
+    height: 40px; }
   #header-brown #logo-brown img {
     width: 100px; }
 
 #header-cm {
   height: 50px;
-  -o-box-shadow: 0px 0px 4px rgba(50, 50, 50, 0.25);
-  -ms-box-shadow: 0px 0px 4px rgba(50, 50, 50, 0.25);
-  -moz-box-shadow: 0px 0px 4px rgba(50, 50, 50, 0.25);
-  -webkit-box-shadow: 0px 0px 4px rgba(50, 50, 50, 0.25);
-  box-shadow: 0px 0px 4px rgba(50, 50, 50, 0.25);
+  border-bottom: 4px solid #cb2026;
   position: fixed;
-  top: 4px;
   left: 0;
   width: 100%;
   z-index: 7; }
@@ -1005,11 +987,6 @@ img.gform_ajax_spinner {
 #headerfix {
   height: 50px; }
 
-.home #header {
-  height: 90px; }
-.home #header-cm {
-  top: 40px;
-  position: absolute; }
 .home #headerfix {
   height: 90px; }
 
@@ -1020,10 +997,6 @@ img.gform_ajax_spinner {
   -o-transition: all 0.5s 0s ease;
   -ms-transition: all 0.5s 0s ease;
   padding-top: 4%; }
-
-.after #header-cm {
-  position: fixed;
-  top: 4px; }
 
 /********** @LOGO *********/
 .logo-static {
@@ -3149,9 +3122,6 @@ img.gform_ajax_spinner {
       .flexslider-story .flexslider-direction.previous:hover {
         left: 15px; } }
 @media (max-width: 767px) {
-  #header {
-    height: 50px; }
-
   #header-cm {
     top: 0px;
     overflow: hidden; }

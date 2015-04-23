@@ -6,20 +6,10 @@
 
 /********** @STRUCTURE *********/
 
-#topbar{
-	position: fixed;
-	top: 0;
-	left: 0;
-	width: 100%;
-	height: 4px;
-	z-index: 10;
-}
 
 #header{
-	height: 50px;
 	width: 100%;
 	position: absolute;
-	top: 4px;
 	z-index: 9;
 
 	.container-fluid{
@@ -28,11 +18,14 @@
 }
 
 #header-brown {
-  height: 40px;
   width: 100%;
   position: absolute;
   left: 0;
   z-index: 8;
+
+  > div {
+	height: 40px;
+  }
 
   #logo-brown img{
   	width: 100px;
@@ -42,9 +35,8 @@
 
 #header-cm {
   height: $nav-height;
-  @include box-shadow();
+  border-bottom: 4px solid $brand;
   position: fixed;
-  top: 4px;
   left: 0;
   width: 100%;
   z-index: 7;
@@ -74,15 +66,6 @@
 
 .home{
 
-	#header{
-		height: 90px;
-	}
-
-	#header-cm {
-	  top: 40px;
-	  position: absolute;
-	}
-
 	#headerfix{
 		height: 90px;
 	}
@@ -91,14 +74,6 @@
 #collection-intro{
 	@include transition(all,.5s);
 	padding-top: 4%;
-}
-
-.after{
-	#header-cm{
-		position: fixed;
-		top: 4px;
-	}
-
 }
 
 
@@ -405,10 +380,6 @@ $icon-margin: 15px;
 		top: 0px;
 	}
 
-}
-
-#header,#headerfix{
-	//display: none;
 }
 
 
@@ -1041,10 +1012,6 @@ $icon-margin: 15px;
 
 //xs
 @media (max-width: 767px) {
-
-	#header{
-		height: 50px;
-	}
 
 	#header-cm {
 	 	top: 0px;

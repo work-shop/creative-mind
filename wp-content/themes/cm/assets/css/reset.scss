@@ -28,12 +28,7 @@ a{
 	color: $dark;
 	@include transition(color,.125s);
 
-	&:hover{
-		text-decoration: none;
-		
-	}
-
-	&:focus{
+	&:hover,&:focus{
 		text-decoration: none;
 		color: $brand;
 		outline: none;
