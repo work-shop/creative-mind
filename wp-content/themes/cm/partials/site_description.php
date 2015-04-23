@@ -21,17 +21,17 @@
 			<div class="col-sm-12">
 				<h2 class="centered serif bold">Explore the Creative Mind!</h2>
 			</div>	
-			<div class="col-sm-3">	
-				<h3 class="centered"><a href="<?php bloginfo('url' );?>/courses" class="bg-courses centered white category-button">Courses</a></h3>
+			<div class="col-xs-6 col-sm-3 col-md-3">	
+				<a href="<?php bloginfo('url' );?>/courses" class="full border-courses centered courses category-button"><h3 class="centered h2">Courses</h3></a>
 			</div>
-			<div class="col-sm-3">	
-				<h3 class="centered"><a href="<?php bloginfo('url' );?>/research" class="bg-research centered white category-button">Research</a></h3>
+			<div class="col-xs-6 col-sm-3 col-md-3">	
+				<a href="<?php bloginfo('url' );?>/research" class="full border-research centered research category-button"><h3 class="centered h2">Research</h3></a>
 			</div>	
-			<div class="col-sm-3">	
-				<h3 class="centered"><a href="<?php bloginfo('url' );?>/interviews" class="bg-interviews centered white category-button">Interviews</a></h3>
+			<div class="col-xs-6 col-sm-3 col-md-3">	
+				<a href="<?php bloginfo('url' );?>/interviews" class="full border-interviews centered interviews category-button"><h3 class="centered h2">Interviews</h3></a>
 			</div>	
-			<div class="col-sm-3">	
-				<h3 class="centered"><a href="<?php bloginfo('url' );?>/lectures" class="bg-lectures centered white category-button">Lectures</a></h3>
+			<div class="col-xs-6 col-sm-3 col-md-3">	
+				<a href="<?php bloginfo('url' );?>/lectures" class="full border-lectures centered lectures category-button"><h3 class="centered h2">Lectures</h3></a>
 			</div>	
 			<div class="col-sm-4 col-sm-offset-4 mt2 hidden">	
 				<h3 class=""><a href="#collections" class=" jump bg-brand centered white category-button down large">Featured Collections <span class="icon" data-icon="ﬁ"></span></a></h3>

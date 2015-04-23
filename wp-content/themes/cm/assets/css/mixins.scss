@@ -107,3 +107,8 @@
   }
 }
 
+@mixin border($border-color) {
+	border: 5px solid $border-color;
+	@include transition(all);
+}
+

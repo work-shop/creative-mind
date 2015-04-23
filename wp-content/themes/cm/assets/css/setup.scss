@@ -16,39 +16,22 @@ $yellow: #ffcc00;
 
 
 $courses: #47c1c3;//original
-$courses: #47c1c3;
-$courses: #47c1c3;
-$courses: #00f;//pow
-$courses: #002fa7;//classy academic blue
-$courses: #00ff3a;
-$courses: #47c1c3;//original
+$courses: #E9C532;
 
 
 $research: #8cc63e;//original
-$research: #8cc63e;
-$research: #8cc63e;
-$research: #8cc63e;
-$research: #f8ed31;
-$research: #8cc63e;//original
+$research: #0E76BB;
 
 
 $interviews: #00a1d3;//original
-$interviews: #00a1d3;
-$interviews: #00a1d3;
-$interviews: #00a1d3;
-$interviews: #00a1d3;
-$interviews: #00a1d3;//original
+$interviews: #268080;
 
 
 $lectures: #cb2026;//original
-$lectures: #cb2026;
-$lectures: #cb2026;
-$lectures: #cb2026;
-$lectures: #cb2026;
-$lectures: #cb2026;//original
+$lectures: #00A0D2;
 
 $nav-height: 50px;
-$mobile-margins: 30px;
+$mobile-margins: 15px;
 
 $transitions: .25s;
 
@@ -103,14 +86,14 @@ p{
 
 //md
 @media (max-width: 1200px) {
-	*{
+	body{
 		font-size: 17px;
 	}
 }
 
 //sm
 @media (max-width: 992px) {
-	*{
+	body{
 		font-size: 15px;
 	}
 
@@ -130,7 +113,7 @@ p{
 
 //xs
 @media (max-width: 767px) {
-	*{
+	body{
 		font-size: 14px;
 	}
 
@@ -182,18 +165,30 @@ p{
 
 .courses{
 	color: $courses;
+	&:hover {
+		color: darken($courses,10);
+	}
 }
 
 .research{
 	color: $research;
+	&:hover {
+		color: darken($research,20);
+	}
 }
 
 .interviews{
 	color: $interviews;
+	&:hover {
+		color: darken($interviews,20);
+	}
 }
 
 .lectures{
 	color: $lectures;
+	&:hover {
+		color: darken($lectures,20);
+	}
 }
 
 .brown-yellow{
@@ -382,6 +377,34 @@ p{
 		background: rgba(40,30,30,.75);
 		@include transition(all);
 	}
+}
+
+.border-courses{
+ 	@include border($courses);
+ 	&:hover {
+ 		border-color: darken($courses,10);
+ 	}
+}
+
+.border-research{
+ 	@include border($research);
+ 	&:hover {
+ 		border-color: darken($research,10);
+ 	}
+}
+
+.border-interviews{
+ 	@include border($interviews);
+ 	&:hover {
+ 		border-color: darken($interviews,10);
+ 	}
+}
+
+.border-lectures{
+ 	@include border($lectures);
+ 	&:hover {
+ 		border-color: darken($lectures,10);
+ 	}
 }
 
 .border-top-courses{

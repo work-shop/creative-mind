@@ -249,32 +249,12 @@
 /********** @CATEGORY *********/
 
 .category-button{
-	padding: 7px 10px 5px 10px;
-	width: 180px;
+	padding: 34% 0;
+	background: $ultra-light;
 	display: block;
-	@include border-radius(2px);
-	@include transition();
-
-	&.large{
-		width: 300px;
+	h3 {
+		margin: 0;
 	}
-
-	&.centered{
-		margin-left: auto;
-		margin-right: auto;
-	}
-
-	&:hover{
-		color: white;
-		@include transform(translate(0,-5px));
-	}
-
-	&.down:hover{
-		@include transform(translate(0,5px));		
-	}
-
-	@extend .h4;
-	//text-transform: uppercase;
 }
 
 
@@ -1114,6 +1094,10 @@ $icon-margin: 15px;
 			}
 		}
 
+	}
+
+	.category-button{
+		padding: 15% 0;
 	}
 
 	.story-activated{
