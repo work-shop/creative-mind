@@ -3,7 +3,7 @@
 		<div class="container">
 			<div class="row">
 				<div class="col-sm-6 col-sm-offset-3">
-					<h2 class="serif bold centered mb1">
+					<h2 class="bold centered mt2 h3">
 					Share the Creativity!
 					</h2>
 				</div>

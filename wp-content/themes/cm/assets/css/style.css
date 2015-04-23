@@ -68,16 +68,16 @@ h1, .h1 {
   font-size: 3em; }
 
 h2, .h2 {
-  font-size: 1.6em; }
+  font-size: 2em; }
 
 h3, .h3 {
-  font-size: 1.25em; }
+  font-size: 1.6em; }
 
 h4, .h4 {
-  font-size: 1em; }
+  font-size: 1.25em; }
 
 h5, .h5 {
-  font-size: .9em; }
+  font-size: 1em; }
 
 h6, .h6 {
   font-size: .8em; }
@@ -122,7 +122,8 @@ p {
   h6, .h6 {
     font-size: .9em; } }
 .bold {
-  font-weight: 700; }
+  font-family: "A2 Regular Bold", Futura, sans-serif;
+  font-weight: bold; }
 
 .italic {
   font-style: italic; }
@@ -483,6 +484,18 @@ p {
 
 .border-top-lectures {
   border-top: 2px solid #00A0D2; }
+
+.border-bottom-courses {
+  border-bottom: 2px solid #E9C532; }
+
+.border-bottom-research {
+  border-bottom: 2px solid #0E76BB; }
+
+.border-bottom-interviews {
+  border-bottom: 2px solid #268080; }
+
+.border-bottom-lectures {
+  border-bottom: 2px solid #00A0D2; }
 
 /********** @STRUCTURE AND POSITION *********/
 .full {

@@ -85,7 +85,7 @@
 
 			<header id="header" class="closed">
 				<?php if(is_home()): ?>		
-				<div id="header-brown" class="bg-white hidden-xs">
+				<div id="header-brown" class="bg-light hidden-xs">
 					<div class="container-fluid bg-brown">
 						<div class="row">
 							<div id="logo-brown" class="col-sm-4 m0">
@@ -133,6 +133,5 @@
 					</div>
 				</div>
 			</header>	
-			<div id="headerfix"></div>
 
 			<div id="content">
