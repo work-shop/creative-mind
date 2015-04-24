@@ -2,7 +2,7 @@
 /********** $FORMS*********/
 
 input,textarea{
-	@include transition(all);
+	//@include transition(all,.25s);
 	padding: 5px;
 	border: 1px solid $brand;
 	outline: none;
@@ -98,6 +98,10 @@ img.gform_ajax_spinner {
 
 
 /********** $FLEXSLIDER *********/
+
+.flexslider li {
+	background-size: cover;
+}
 
 .flexslider-direction{
 	height: 100%;

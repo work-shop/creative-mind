@@ -862,11 +862,6 @@ article a {
     top: 3px; } }
 /********** $FORMS*********/
 input, textarea {
-  transition: all 0.25s 0s ease;
-  -moz-transition: all 0.25s 0s ease;
-  -webkit-transition: all 0.25s 0s ease;
-  -o-transition: all 0.25s 0s ease;
-  -ms-transition: all 0.25s 0s ease;
   padding: 5px;
   border: 1px solid #cb2026;
   outline: none;
@@ -926,6 +921,9 @@ img.gform_ajax_spinner {
   display: none !important; }
 
 /********** $FLEXSLIDER *********/
+.flexslider li {
+  background-size: cover; }
+
 .flexslider-direction {
   height: 100%;
   z-index: 6;
