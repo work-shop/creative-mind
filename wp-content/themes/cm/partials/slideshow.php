@@ -20,9 +20,9 @@
 
 				<?php
 					if($i%2 == 0){
-						$size = 'col-md-6 col-sm-10 col-xs-12';
+						$size = 'col-md-4 col-md-offset-1 col-sm-6 col-sm-offset-1 col-xs-10 col-xs-offset-1';
 					} else{
-						$size = 'col-md-6 col-md-offset-6 col-sm-10 col-sm-offset-1 col-xs-12';						
+						$size = 'col-md-4 col-md-offset-7 col-sm-6 col-sm-offset-5 col-xs-10 col-xs-offset-1';						
 					}
 
 
@@ -33,7 +33,7 @@
 							  : wp_get_attachment_url( get_post_thumbnail_id( $slide['slide_collection'][0]->ID, 'slideshow_home' ) ));
 				?>
 
-				<li class="background-cover background-mask-dark" style="background-image: url('<?php echo $image_url; ?>');">
+				<li style="background-image: url('<?php echo $image_url; ?>');">
 					<div class="vertical-center container slideshow-caption-container">
 						<div class="row">
 
@@ -42,13 +42,10 @@
 							case "custom":
 
 						?>
-							<div class="<?php echo $size; ?>slideshow-caption slideshow-caption-<?php echo $i;?>">
+							<div class="bg-white <?php echo $size; ?>slideshow-caption slideshow-caption-<?php echo $i;?>">
 								<a href="<?php echo $slide['slide_link']; ?>">
-									<h2 class="white serif m0"><?php echo $slide['slide_title']; ?></h2>
-									<?php if ( $desc = $slide['slide_description'] ) : ?>
-									<p class="m0 white"><?php echo $desc; ?></p>
-									<?php endif; ?>
-									<h5 class="m1 white">Read more <span class="icon" data-icon="&#8222;"></span></h5>
+									<h3 class="m0"><?php echo $slide['slide_title']; ?></h3>
+									<p class="m1">Watch Videos</p>
 								</a>
 							</div>										
 
@@ -57,14 +54,11 @@
 							case "story":
 						 ?>
 						 	<?php $story = $slide['slide_story'][0]; ?>
-							<div class="<?php echo $size; ?> slideshow-caption slideshow-caption-<?php echo $i;?>">
+							<div class="bg-white border-courses <?php echo $size; ?> slideshow-caption slideshow-caption-<?php echo $i;?>">
 								<a href="#">
-									<h6 class="m0 white">Featured Story</h6>
-									<h2 class="serif m0 white"><?php echo $story->post_title; ?></h2>
-									<?php if ( $desc = get_field( 'story_description', $story->ID ) ) : ?>
-									<p class="m0 white"><?php echo $desc; ?></p>
-									<?php endif; ?>	
-									<h5 class="m1 white">Read more <span class="icon" data-icon="&#8222;"></span></h5>
+									<h6 class="underline">Featured Story</h6>
+									<h3 class="m0"><?php echo $story->post_title; ?></h3>
+									<p class="m1">Watch Videos</span></p>
 								</a>
 							</div>
 
@@ -73,14 +67,11 @@
 							case "collection":
 						 ?>	
 						 	<?php $coll = $slide['slide_collection'][0];?>
-						 	<div class="<?php echo $size; ?> slideshow-caption slideshow-caption-<?php echo $i;?>">
+						 	<div class="bg-white border-courses <?php echo $size; ?> slideshow-caption slideshow-caption-<?php echo $i;?>">
 								<a href="#">
-									<h6 class="m0 white">Featured Collection</h6>
-									<h2 class="serif m0 white"><?php echo $coll->post_title; ?></h2>
-								<?php if ( $desc = get_field( 'collection_description', $coll->ID ) ) : ?>
-									<p class="m0 white"><?php echo $desc; ?></p><?php endif; ?>
-									<h5 class="m1 white">Read more <span class="icon" data-icon="&#8222;"></span></h5>		
-								</a>
+									<h6 class="underline">Featured Course</h6>
+									<h3 class="m0"><?php echo $coll->post_title; ?></h3>
+									<p class="m1">Watch Videos</span></p>		
 							</div>
 
 						<?php 	break; ?>									
