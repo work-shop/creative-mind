@@ -22,14 +22,9 @@ img, video, svg {
 
 a {
   color: #222222;
-  transition: color 0.125s 0s ease;
-  -moz-transition: color 0.125s 0s ease;
-  -webkit-transition: color 0.125s 0s ease;
-  -o-transition: color 0.125s 0s ease;
-  -ms-transition: color 0.125s 0s ease; }
+  text-decoration: none; }
   a:hover, a:focus {
     text-decoration: none;
-    color: #cb2026;
     outline: none; }
 
 ul {
@@ -56,9 +51,21 @@ body {
   background: #fafafa; }
 
 div {
-  font-family: "A2 Regular Regular", Futura, sans-serif;
-  font-weight: normal;
+  font-family: "Regular", Futura, sans-serif;
+  font-weight: 600;
   font-style: normal; }
+
+.uppercase {
+  text-transform: uppercase; }
+
+.underline, article a {
+  border-bottom: 2px solid; }
+
+.centered {
+  text-align: center; }
+
+.righted {
+  text-align: right; }
 
 h1, h2, h3, h4, h5, h6 {
   line-height: 1.3;
@@ -84,6 +91,15 @@ h6, .h6 {
 
 p {
   line-height: 1.6; }
+
+article a {
+  transition: all 0.125s 0s ease;
+  -moz-transition: all 0.125s 0s ease;
+  -webkit-transition: all 0.125s 0s ease;
+  -o-transition: all 0.125s 0s ease;
+  -ms-transition: all 0.125s 0s ease; }
+  article a:hover, article a:focus {
+    border-color: #cb2026; }
 
 @media (max-width: 1200px) {
   body {
@@ -129,7 +145,9 @@ p {
   font-style: italic; }
 
 .white {
-  color: white; }
+  color: #fafafa; }
+  .white:hover {
+    color: #fafafa; }
 
 .dark {
   color: #222222; }
@@ -159,18 +177,6 @@ p {
 
 .brown-yellow {
   color: #ffcc00; }
-
-.uppercase {
-  text-transform: uppercase; }
-
-.underline {
-  text-decoration: underline; }
-
-.centered {
-  text-align: center; }
-
-.righted {
-  text-align: right; }
 
 .icon:before {
   content: attr(data-icon);
@@ -497,15 +503,23 @@ p {
 
 .border-bottom-courses {
   border-bottom: 2px solid #E9C532; }
+  .border-bottom-courses:hover {
+    border-color: #d2ad16; }
 
 .border-bottom-research {
   border-bottom: 2px solid #0E76BB; }
+  .border-bottom-research:hover {
+    border-color: #0a588c; }
 
 .border-bottom-interviews {
   border-bottom: 2px solid #268080; }
+  .border-bottom-interviews:hover {
+    border-color: #1a5959; }
 
 .border-bottom-lectures {
   border-bottom: 2px solid #00A0D2; }
+  .border-bottom-lectures:hover {
+    border-color: #00799f; }
 
 /********** @STRUCTURE AND POSITION *********/
 .full {
@@ -968,6 +982,11 @@ img.gform_ajax_spinner {
         cursor: pointer; }
       .flexslider-controls li a.flex-active {
         background: #cb2026; }
+
+.nav a {
+  color: #222222; }
+  .nav a:hover, .nav a:focus {
+    color: #cb2026; }
 
 /********** @STRUCTURE *********/
 #header {

@@ -2,7 +2,13 @@
 @import 'setup';
 @import 'utilities';
 
+.nav a{
+	color: $dark;
+	&:hover,&:focus{
+		color: $brand;
+	}
 
+}
 
 /********** @STRUCTURE *********/
 

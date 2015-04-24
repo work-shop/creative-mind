@@ -26,14 +26,11 @@ img,video,svg{
 
 a{
 	color: $dark;
-	@include transition(color,.125s);
-
+	text-decoration: none;
 	&:hover,&:focus{
 		text-decoration: none;
-		color: $brand;
 		outline: none;
 	}
-
 }
 
 ul{

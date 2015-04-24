@@ -33,10 +33,10 @@ if ( $collection_stories ) :
 							<article class="story-tile story-tile-collection-title col-sm-12 mt6" id="story-<?php echo $i; ?>">
 								<div class="collection-title white">
 									<?php // if(!is_category()) : ?>
-										<h6 class="mt0 mb1 underline">
+										<h6 class="mt0 mb1"><span class="underline">
 											<span class="uppercase"><?php echo $collection_category->name; ?> collection:</span> 
 											<?php echo $story_count; ?>
-										</h6>
+										</span></h6>
 									<?php // endif; ?>
 									<h2>
 										<?php echo $collection->post_title; ?>

@@ -56,7 +56,7 @@
 						 	<?php $story = $slide['slide_story'][0]; ?>
 							<div class="bg-white border-courses <?php echo $size; ?> slideshow-caption slideshow-caption-<?php echo $i;?>">
 								<a href="#">
-									<h6 class="underline">Featured Story</h6>
+									<h6><span class="underline">Featured Story</span></h6>
 									<h3 class="m0"><?php echo $story->post_title; ?></h3>
 									<p class="m1">Watch Videos</span></p>
 								</a>
@@ -69,7 +69,7 @@
 						 	<?php $coll = $slide['slide_collection'][0];?>
 						 	<div class="bg-white border-courses <?php echo $size; ?> slideshow-caption slideshow-caption-<?php echo $i;?>">
 								<a href="#">
-									<h6 class="underline">Featured Course</h6>
+									<h6><span class="underline">Featured Course</span></h6>
 									<h3 class="m0"><?php echo $coll->post_title; ?></h3>
 									<p class="m1">Watch Videos</span></p>		
 							</div>

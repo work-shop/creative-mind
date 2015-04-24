@@ -49,7 +49,23 @@ body{
 	background: $ultra-light;
 }
 
-div { font-family:"A2 Regular Regular", Futura, sans-serif; font-weight:normal; font-style:normal; }
+div { font-family:"Regular", Futura, sans-serif; font-weight:600; font-style:normal; }
+
+.uppercase{
+	text-transform: uppercase;
+}
+
+.underline{
+	border-bottom: 2px solid;
+}
+
+.centered{
+	text-align: center;
+}
+
+.righted{
+	text-align: right;
+}
 
 h1,h2,h3,h4,h5,h6{
 	line-height: 1.3;
@@ -82,6 +98,16 @@ h6,.h6{
 
 p{
 	line-height: 1.6;
+}
+
+article a{
+	@extend .underline;
+	@include transition(all,.125s);
+
+	&:hover,&:focus{
+		border-color: $brand;
+	}
+
 }
 
 //md
@@ -153,7 +179,10 @@ p{
 }
 
 .white{
-	color: white;
+	color: $ultra-light;
+	&:hover {
+		color: $ultra-light;
+	}
 }
 
 .dark{
@@ -194,22 +223,6 @@ p{
 
 .brown-yellow{
 	color: $yellow;
-}
-
-.uppercase{
-	text-transform: uppercase;
-}
-
-.underline{
-	text-decoration: underline;
-}
-
-.centered{
-	text-align: center;
-}
-
-.righted{
-	text-align: right;
 }
 
 .icon{
@@ -433,18 +446,30 @@ p{
 
 .border-bottom-courses{
 	border-bottom: 2px solid $courses;
+	&:hover {
+		border-color: darken($courses,10);
+	}
 }
 
 .border-bottom-research{
 	border-bottom: 2px solid $research;
+	&:hover {
+		border-color: darken($research,10);
+	}
 }
 
 .border-bottom-interviews{
 	border-bottom: 2px solid $interviews;
+	&:hover {
+		border-color: darken($interviews,10);
+	}
 }
 
 .border-bottom-lectures{
 	border-bottom: 2px solid $lectures;
+	&:hover {
+		border-color: darken($lectures,10);
+	}
 }
 
 
