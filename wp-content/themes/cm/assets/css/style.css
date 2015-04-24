@@ -1843,6 +1843,9 @@ img.gform_ajax_spinner {
   .category-button h3 {
     margin: 0; }
 
+#category-header ul li {
+  display: inline; }
+
 /********** @DOTS *********/
 .dots {
   width: 105px;
