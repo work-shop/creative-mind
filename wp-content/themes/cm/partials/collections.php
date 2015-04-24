@@ -12,7 +12,7 @@
 		<?php } ?>
 	</section>
 
-	<?php 
+	<?php
 
 	$collections = ( $featured ) 
 			 ? CM_Collection_Controller::get_featured_collections() 

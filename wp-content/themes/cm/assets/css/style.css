@@ -433,6 +433,16 @@ p {
   -o-transition: all 0.25s 0s ease;
   -ms-transition: all 0.25s 0s ease; }
 
+.border-light {
+  border: 5px solid #f1f1f1;
+  transition: all 0.25s 0s ease;
+  -moz-transition: all 0.25s 0s ease;
+  -webkit-transition: all 0.25s 0s ease;
+  -o-transition: all 0.25s 0s ease;
+  -ms-transition: all 0.25s 0s ease; }
+  .border-light:hover {
+    border-color: #d7d7d7; }
+
 .border-courses {
   border: 5px solid #E9C532;
   transition: all 0.25s 0s ease;
@@ -3005,15 +3015,6 @@ img.gform_ajax_spinner {
 .story-tile.story-tile-collection-title {
   position: relative;
   overflow: visible; }
-  .story-tile.story-tile-collection-title .category-badge {
-    padding: 9px 9px 7px 9px;
-    -webkit-border-radius: 2px;
-    -moz-border-radius: 2px;
-    -o-border-radius: 2px;
-    -ms-border-radius: 2px;
-    border-radius: 2px;
-    position: relative;
-    left: -3px; }
   .story-tile.story-tile-collection-title h2 {
     margin-top: 0; }
   .story-tile.story-tile-collection-title h6 {
@@ -3021,7 +3022,7 @@ img.gform_ajax_spinner {
 
 .story-tile {
   position: relative;
-  margin-bottom: 10px;
+  height: 300px;
   overflow: hidden;
   background-clip: content-box;
   transition: all 0.35s 0s ease;

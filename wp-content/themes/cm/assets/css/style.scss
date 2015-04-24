@@ -787,12 +787,12 @@ $icon-margin: 15px;
 	position: relative;
 	overflow: visible;
 
-	.category-badge{
-		padding: 9px 9px 7px 9px;
-		@include border-radius(2px);
-		position: relative;
-		left: -3px;
-	}	
+	// .category-badge{
+	// 	padding: 9px 9px 7px 9px;
+	// 	@include border-radius(2px);
+	// 	position: relative;
+	// 	left: -3px;
+	// }	
 
 	h2{
 		margin-top: 0;	
@@ -806,14 +806,10 @@ $icon-margin: 15px;
 
 .story-tile{
 	position: relative;
-	margin-bottom: 10px;
+	height: 300px;
 	overflow: hidden;
 	background-clip: content-box;	
 	@include transition(all,.35s);
-
-	&.col-sm-6{
-		
-	}
 
 	img{
 		-webkit-filter: saturate(75%);
