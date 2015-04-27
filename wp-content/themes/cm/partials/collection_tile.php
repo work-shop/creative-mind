@@ -19,9 +19,8 @@ if ( $collection_stories ) :
 
 ?>
 
-<section id="collection-<?php echo $collection->post_title; ?>" class="block collection padded target">
+<section id="collection-<?php echo $collection->post_name; ?>" class="block collection padded target">
 	<div class="container-fluid">
-		<a href="<?php echo get_permalink( $collection->ID ); ?>">
 		<div class="row bg-<?php echo $collection_category->slug ?> border-light padded">
 
 			<?php foreach ($collection_stories as $i => $story) { ?>
@@ -30,26 +29,32 @@ if ( $collection_stories ) :
 				<?php if($i === 0 && !is_single()) : ?>
 					
 					<div class="centered">
-							<article class="col-sm-12 m6" id="story-<?php echo $i; ?>">
-								<div class="collection-title white">
+							<article class="m6" id="story-<?php echo $i; ?>">
+								<a href="<?php echo get_permalink( $collection->ID ); ?>"><img src="<?php bloginfo('template_directory'); ?>/assets/img/placeholder-collection.jpg" alt="<?php echo $collection->post_title; ?>"></a>
+								<div class="collection-title">
 									<?php // if(!is_category()) : ?>
-										<h6 class="mt0 mb1"><span class="underline">
+										<h6 class="mt0 mb1 white">
 											<span class="uppercase"><?php echo $collection_category->name; ?> collection:</span> 
 											<?php echo $story_count; ?>
-										</span></h6>
+										</h6>
 									<?php // endif; ?>
-									<h2>
+									<h2 class="bold white">
 										<?php echo $collection->post_title; ?>
 									</h2>
-									<p class="h4 col-md-8 col-md-offset-2">
+									<p class="h4 white">
 										This workshop explored collaborative strategies for developing new and innovative products.
 										<?php the_field('collection_description'); ?>
 									</p>
+									<ol class="col-md-12 mt2">
+										<li><a class="ml1 underline bold white" href="#">Imaginary Product Development</a></li>
+										<li><a class="ml1 underline bold white" href="#">Fashion Workshop</a></li>
+										<li><a class="ml1 underline bold white" href="#">Storytelling Workshop</a></li>
+										<li><a class="ml1 underline bold white" href="#">Bricolage Workshop</a></li>
+										<li><a class="ml1 underline bold white" href="#">Material Alchemy</a></li>
+									</ol>
 								</div>
 							</article>
 					</div>
-					<div class="col-sm-10 col-sm-offset-1">
-					<div class="row">
 
 				<?php endif; ?>
 
@@ -67,10 +72,7 @@ if ( $collection_stories ) :
 
 			<?php } ?>
 
-			<?php if ( !is_single() ) : ?> </div></div> <?php endif; ?>
-
 		</div>
-		</a>
 	</div>
 </section>
 
