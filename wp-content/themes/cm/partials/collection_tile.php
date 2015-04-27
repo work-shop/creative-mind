@@ -30,7 +30,7 @@ if ( $collection_stories ) :
 				<?php if($i === 0 && !is_single()) : ?>
 					
 					<div class="centered">
-							<article class="story-tile story-tile-collection-title col-sm-12 mt6" id="story-<?php echo $i; ?>">
+							<article class="col-sm-12 m6" id="story-<?php echo $i; ?>">
 								<div class="collection-title white">
 									<?php // if(!is_category()) : ?>
 										<h6 class="mt0 mb1"><span class="underline">

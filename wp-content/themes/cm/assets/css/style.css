@@ -3097,16 +3097,13 @@ img.gform_ajax_spinner {
     padding: 0 80px; }
 
   .story-tile {
-    height: 420px; }
+    height: 520px; }
     .story-tile .media-type {
       position: absolute;
       bottom: 0; }
     .story-tile:hover.hidden {
       display: inline-block !important;
       visibility: visible !important; } }
-@media (min-width: 1201px) {
-  .story-tile {
-    height: 520px; } }
 @media (max-width: 1200px) {
   .story-activated .collection-intro-heading {
     padding-top: 10px; }

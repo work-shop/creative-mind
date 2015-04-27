@@ -959,7 +959,7 @@ $icon-margin: 15px;
 	}
 
 	.story-tile {
-		height: 420px;
+		height: 520px;
 		.media-type {
 			position: absolute;
 			bottom: 0;
@@ -971,13 +971,6 @@ $icon-margin: 15px;
 	}
 	
 }	
-
-//lg
-@media (min-width: 1201px) {
-	.story-tile {
-		height: 520px;
-	}
-}
 
 //md
 @media (max-width: 1200px) {
