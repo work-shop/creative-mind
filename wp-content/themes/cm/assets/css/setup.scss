@@ -193,32 +193,32 @@ article a{
 	color: $brand;
 }
 
-.courses{
+.courses, .courses a{
 	color: $courses;
-	&:hover {
-		color: darken($courses,10);
-	}
+}
+.courses a:hover {
+	color: darken($courses,10);
 }
 
-.research{
+.research, .research a{
 	color: $research;
-	&:hover {
-		color: darken($research,20);
-	}
+}
+.research a:hover {
+	color: darken($research,20);
 }
 
-.interviews{
+.interviews, .interviews a{
 	color: $interviews;
-	&:hover {
-		color: darken($interviews,20);
-	}
+}
+.interviews a:hover {
+	color: darken($interviews,20);
 }
 
-.lectures{
+.lectures, .lectures a{
 	color: $lectures;
-	&:hover {
-		color: darken($lectures,20);
-	}
+}
+.lectures a:hover {
+	color: darken($lectures,20);
 }
 
 .brown-yellow{

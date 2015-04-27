@@ -216,8 +216,14 @@
 	}
 }
 
-#category-header ul li {
-	display: inline;
+#category-header, #collection-header {
+	line-height: 2em;
+	li {
+		display: inline;
+	}
+	a {
+		white-space: nowrap;
+	}
 }
 
 

@@ -155,25 +155,29 @@ article a {
 .brand {
   color: #cb2026; }
 
-.courses {
+.courses, .courses a {
   color: #E9C532; }
-  .courses:hover {
-    color: #d2ad16; }
 
-.research {
+.courses a:hover {
+  color: #d2ad16; }
+
+.research, .research a {
   color: #0E76BB; }
-  .research:hover {
-    color: #073a5c; }
 
-.interviews {
+.research a:hover {
+  color: #073a5c; }
+
+.interviews, .interviews a {
   color: #268080; }
-  .interviews:hover {
-    color: #0f3131; }
 
-.lectures {
+.interviews a:hover {
+  color: #0f3131; }
+
+.lectures, .lectures a {
   color: #00A0D2; }
-  .lectures:hover {
-    color: #00526c; }
+
+.lectures a:hover {
+  color: #00526c; }
 
 .brown-yellow {
   color: #ffcc00; }
@@ -1870,8 +1874,12 @@ img.gform_ajax_spinner {
   .category-button h3 {
     margin: 0; }
 
-#category-header ul li {
-  display: inline; }
+#category-header, #collection-header {
+  line-height: 2em; }
+  #category-header li, #collection-header li {
+    display: inline; }
+  #category-header a, #collection-header a {
+    white-space: nowrap; }
 
 /********** @DOTS *********/
 .dots {

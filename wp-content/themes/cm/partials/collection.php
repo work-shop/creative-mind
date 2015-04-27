@@ -22,7 +22,7 @@ set_global('story_count', $story_count );
 
 ?>
 
-<section id="active-story" class="block inactive">
+<!-- <section id="active-story" class="block inactive">
 	<div id="active-story-loading">
 		<div class="container vertical-center">
 			<div class="row">
@@ -37,50 +37,26 @@ set_global('story_count', $story_count );
 	</div>
 	<div id="active-story-container" class="inactive" async-target="story">
 	</div>
-</section>
+</section> -->
 
-<section id="collection-intro" class="block padded-less target border-top-<?php echo $collection_category->slug; ?>"><?php // make these CSS things ?>
-	<h4 class="hidden m0 white centered bg-<?php echo $collection_category->slug; ?>" style="padding: 5px;"><?php the_title(); ?></h4>
+<section id="collection-header" class="block target padded jank">
 	<div class="container-fluid">
-		<div class="row collection-intro-heading">
-			<div class="col-md-2 col-sm-4 col-xs-1">		
-				<a class="story-toggle" href="#">
-					<h4 class=" <?php echo $collection_category->slug; ?> collection-previous">
-						<span class="icon previous" data-icon="‰"></span>	
-						<span class="h4 previous-story-label">Previous Story</span> 
-						<span id="previous-story-title" class="hidden previous-story-title h4 bold">: <span async-target="previous" class="next-story-title h4"></span></span>
-					</h4>
-				</a>
-			</div>
-			<div class="col-sm-8 col-xs-10">		
-				<h2 class="serif <?php echo $collection_category->slug; ?> bold centered m0 collection-title"><span class="collection-prefix h2 serif"><?php the_title(); ?></span>
-				<span id="active-story-title" class="collection-suffix bold serif h2"> <span async-target="current" class="next-story-title h6 bold"></span>
+		<div class="row <?php echo $collection_category->slug ?> padded">		
+			<div class="centered">
+				<h2 class="bold">
+					<?php echo $collection->post_title; ?>
 				</h2>
-			</div>
-			<div class="col-md-2 col-sm-4 col-xs-1">		
-				<a class="story-toggle" href="#">
-					<h4 class=" <?php echo $collection_category->slug; ?> righted collection-next">
-						<span class="h4 next-story-label">Next Story</span> 
-						<span id="next-story-title" class="next-story-title h4 hidden">: <span async-target="next" class="next-story-title h4"></span></span>
-						<span class="icon next" data-icon="„"></span>
-					</h4>
-				</a>
-			</div>		
-		</div>
-	</div>
-	<div class="container">
-		<div class="row">
-			<div class="col-sm-10 col-sm-offset-1">		
-				<h2 class="hidden m0 centered serif bold <?php echo $collection_category->slug; ?>">
-					<span class="collection-prefix bold serif hidden">Collection:</span>
-					<?php the_title(); ?>
-					<span class="collection-suffix bold serif">: Empathy</span>
-				</h2>
-				<h3 class="centered <?php echo $collection_category->slug; ?>"><?php the_field('collection_description'); ?></h3>
-				<h4 class="m0 centered <?php echo $collection_category->slug; ?>">
-					<?php echo $story_count; ?> <span class="icon hidden" data-icon="ﬁ"></span>
-				</h4>				
-			</div>
+				<p class="h4 col-md-8 col-md-offset-2">
+					<?php the_field('collection_description'); ?>
+				</p>
+				<ol class="col-md-12 mt1">
+					<li><a class="ml1 underline bold" href="#">Imaginary Product Development</a></li>
+					<li><a class="ml1 underline bold" href="#">Fashion Workshop</a></li>
+					<li><a class="ml1 underline bold" href="#">Storytelling Workshop</a></li>
+					<li><a class="ml1 underline bold" href="#">Bricolage Workshop</a></li>
+					<li><a class="ml1 underline bold" href="#">Material Alchemy</a></li>
+				</ol>
+			</div>	
 		</div>
 	</div>
 </section>
