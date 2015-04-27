@@ -11,7 +11,7 @@
 		<div class="row m4">
 			<div class="col-sm-12">
 				<h2 class="centered m1">
-				The <a href="<?php bloginfo('url' );?>/courses" class="border-bottom-courses">courses</a>, <a href="<?php bloginfo('url' );?>/research" class="border-bottom-research">research</a>, <a href="<?php bloginfo('url' );?>/interviews" class="border-bottom-interviews">interviews</a> and <a href="<?php bloginfo('url' );?>/lectures" class="border-bottom-lectures">conversations</a> developed by the Creative Mind Initiative explore the roots of creative thinking and dissolve disciplinary boundaries in search of new modes of teaching.<br>
+				The <a href="<?php bloginfo('url' );?>/courses" class="border-bottom-courses">courses</a>, <a href="<?php bloginfo('url' );?>/research" class="border-bottom-research">research</a>, <a href="<?php bloginfo('url' );?>/interviews" class="border-bottom-interviews">interviews</a> and <a href="<?php bloginfo('url' );?>/lectures" class="border-bottom-lectures">lectures</a> developed by the Creative Mind Initiative explore the roots of creative thinking and dissolve disciplinary boundaries in search of new modes of teaching and learning.<br>
 				</h2>
 				<h3 class="centered hidden"><a href="<?php bloginfo('url' );?>">Learn More about the Creative Mind Initiative <span class="icon" data-icon="&#8222;"></span></a></h2>
 			</div>
