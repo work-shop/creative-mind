@@ -89,9 +89,6 @@ h5, .h5 {
 h6, .h6 {
   font-size: .8em; }
 
-p {
-  line-height: 1.6; }
-
 article a {
   transition: all 0.125s 0s ease;
   -moz-transition: all 0.125s 0s ease;
@@ -443,6 +440,16 @@ article a {
   -o-transition: all 0.25s 0s ease;
   -ms-transition: all 0.25s 0s ease; }
 
+.border-ultralight {
+  border: 5px solid #fafafa;
+  transition: all 0.25s 0s ease;
+  -moz-transition: all 0.25s 0s ease;
+  -webkit-transition: all 0.25s 0s ease;
+  -o-transition: all 0.25s 0s ease;
+  -ms-transition: all 0.25s 0s ease; }
+  .border-ultralight:hover {
+    border-color: #e1e1e1; }
+
 .border-light {
   border: 5px solid #f1f1f1;
   transition: all 0.25s 0s ease;
@@ -463,14 +470,14 @@ article a {
   .border-courses:hover {
     border-color: #d2ad16; }
 
-.border-research {
+.border-research, .story-tile:hover {
   border: 5px solid #0E76BB;
   transition: all 0.25s 0s ease;
   -moz-transition: all 0.25s 0s ease;
   -webkit-transition: all 0.25s 0s ease;
   -o-transition: all 0.25s 0s ease;
   -ms-transition: all 0.25s 0s ease; }
-  .border-research:hover {
+  .border-research:hover, .story-tile:hover {
     border-color: #0a588c; }
 
 .border-interviews {
@@ -3047,59 +3054,36 @@ img.gform_ajax_spinner {
 
 .story-tile {
   position: relative;
-  height: 300px;
+  height: 420px;
   overflow: hidden;
+  padding: 0;
   background-clip: content-box;
+  border: 5px solid #fafafa;
+  transition: all 0.25s 0s ease;
+  -moz-transition: all 0.25s 0s ease;
+  -webkit-transition: all 0.25s 0s ease;
+  -o-transition: all 0.25s 0s ease;
+  -ms-transition: all 0.25s 0s ease;
   transition: all 0.35s 0s ease;
   -moz-transition: all 0.35s 0s ease;
   -webkit-transition: all 0.35s 0s ease;
   -o-transition: all 0.35s 0s ease;
   -ms-transition: all 0.35s 0s ease; }
+  .story-tile:hover .hidden {
+    display: inline-block !important;
+    visibility: visible !important; }
   .story-tile img {
-    -webkit-filter: saturate(75%); }
-  .story-tile .overlay {
+    opacity: 0.75;
+    -webkit-filter: saturate(75%);
+    min-height: 160px;
+    background: #f1f1f1; }
+  .story-tile .text {
+    padding: 0 0.5em; }
+  .story-tile .media-type {
     position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    padding-left: 15px;
-    padding-right: 15px;
-    height: 100%;
-    background: white;
-    transition: all 0.35s 0s ease;
-    -moz-transition: all 0.35s 0s ease;
-    -webkit-transition: all 0.35s 0s ease;
-    -o-transition: all 0.35s 0s ease;
-    -ms-transition: all 0.35s 0s ease;
-    opacity: 0;
-    top: -120px; }
-  .story-tile .story-description {
-    position: absolute;
-    width: 100%;
-    padding-left: 30px;
-    padding-right: 20px;
-    transition: all 0.35s 0s ease;
-    -moz-transition: all 0.35s 0s ease;
-    -webkit-transition: all 0.35s 0s ease;
-    -o-transition: all 0.35s 0s ease;
-    -ms-transition: all 0.35s 0s ease;
-    opacity: .0;
-    top: 0%;
-    transform: translate(-10px, 0%);
-    -moz-transform: translate(-10px, 0%);
-    -webkit-transform: translate(-10px, 0%);
-    -o-transform: translate(-10px, 0%);
-    -ms-transform: translate(-10px, 0%);
-    line-height: 1.3; }
-  .story-tile .story-title {
-    height: 60px;
-    margin-top: 10px;
-    padding-top: 4px;
-    padding-left: 6px;
-    line-height: 1;
-    top: 100%; }
+    bottom: 0; }
   .story-tile.inactive:hover img {
-    opacity: .5; }
+    opacity: 1; }
   .story-tile.inactive:hover .story-description {
     top: 5%;
     opacity: 1;

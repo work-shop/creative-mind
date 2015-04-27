@@ -96,10 +96,6 @@ h6,.h6{
 	font-size: .8em;
 }
 
-p{
-	line-height: 1.6;
-}
-
 article a{
 	@extend .underline;
 	@include transition(all,.125s);
@@ -391,6 +387,13 @@ article a{
 		background: rgba(40,30,30,.75);
 		@include transition(all);
 	}
+}
+
+.border-ultralight{
+ 	@include border($ultra-light);
+ 	&:hover {
+ 		border-color: darken($ultra-light,10);
+ 	}
 }
 
 .border-light{

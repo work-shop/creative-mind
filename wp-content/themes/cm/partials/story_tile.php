@@ -15,12 +15,10 @@ $size 			= $manager->layout_tile( $story_index );
 		<div class="story-tile-image">
 			<?php echo get_the_post_thumbnail( $story->ID, (strstr($size, 'col-sm-6')) ? 'tile_large' : 'tile_small'); ?>
 		</div>
-		<div class="story-tile-overlay">
-			<div class="overlay"></div>
-			<h3 class="story-description story-tile-description">View Story <span class="icon" data-icon="&#8222;"></span><?php // the_field('story_description',$story->ID); ?></h3>
-		</div>
-		<div class="story-tile-title">
+		<div class="text">
 			<h4 class="story-title bold"><?php echo $story->post_title; ?></h4>
+			<p class="story-description story-tile-description"><?php the_field('story_description',$story->ID); ?></p>
+			<p class="media-type"><span class="hidden"><span class="icon" data-icon="&#210;"></span>Watch&nbsp;</span>Video</p>
 		</div>
 	</a>
 </article>	
