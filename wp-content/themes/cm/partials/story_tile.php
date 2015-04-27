@@ -18,7 +18,7 @@ $size 			= $manager->layout_tile( $story_index );
 		<div class="text">
 			<h4 class="story-title bold"><?php echo $story->post_title; ?></h4>
 			<p class="story-description story-tile-description"><?php the_field('story_description',$story->ID); ?></p>
-			<p class="media-type"><span class="hidden"><span class="icon" data-icon="&#210;"></span>Watch&nbsp;</span>Video</p>
+			<p class="media-type mt2"><span class="hidden"><span class="icon" data-icon="&#210;"></span>Watch&nbsp;</span>Video</p>
 		</div>
 	</a>
 </article>	

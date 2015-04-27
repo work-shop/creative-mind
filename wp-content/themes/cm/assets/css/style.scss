@@ -818,7 +818,6 @@ $icon-margin: 15px;
 
 .story-tile{
 	position: relative;
-	height: 420px;
 	overflow: hidden;
 	padding: 0;
 	background-clip: content-box;	
@@ -842,11 +841,6 @@ $icon-margin: 15px;
 
 	.text {
 		padding: 0 0.5em;
-	}
-
-	.media-type {
-		position: absolute;
-		bottom: 0;
 	}
 
 	.overlay{
@@ -963,7 +957,27 @@ $icon-margin: 15px;
 		// @include transform(rotate(90deg));
 
 	}
+
+	.story-tile {
+		height: 420px;
+		.media-type {
+			position: absolute;
+			bottom: 0;
+		}
+		&:hover.hidden {
+			display: inline-block !important;
+			visibility: visible !important;
+		}
+	}
+	
 }	
+
+//lg
+@media (min-width: 1201px) {
+	.story-tile {
+		height: 520px;
+	}
+}
 
 //md
 @media (max-width: 1200px) {
@@ -997,6 +1011,9 @@ $icon-margin: 15px;
 //sm
 @media (max-width: 992px) {
 
+	.story-tile {
+		// height: 500px;
+	}
 
 	.story{
 		.story-meta{
@@ -1072,6 +1089,11 @@ $icon-margin: 15px;
 
 	.category-button{
 		padding: 15% 0;
+	}
+
+	.story-tile .hidden { // don't hide on small sizes
+		display: inline-block !important;
+		visibility: visible !important;
 	}
 
 	.story-activated{

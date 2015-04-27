@@ -3054,7 +3054,6 @@ img.gform_ajax_spinner {
 
 .story-tile {
   position: relative;
-  height: 420px;
   overflow: hidden;
   padding: 0;
   background-clip: content-box;
@@ -3079,9 +3078,6 @@ img.gform_ajax_spinner {
     background: #f1f1f1; }
   .story-tile .text {
     padding: 0 0.5em; }
-  .story-tile .media-type {
-    position: absolute;
-    bottom: 0; }
   .story-tile.inactive:hover img {
     opacity: 1; }
   .story-tile.inactive:hover .story-description {
@@ -3098,7 +3094,19 @@ img.gform_ajax_spinner {
 /********** @RESPONSIVE *********/
 @media (min-width: 768px) {
   .container-fluid {
-    padding: 0 80px; } }
+    padding: 0 80px; }
+
+  .story-tile {
+    height: 420px; }
+    .story-tile .media-type {
+      position: absolute;
+      bottom: 0; }
+    .story-tile:hover.hidden {
+      display: inline-block !important;
+      visibility: visible !important; } }
+@media (min-width: 1201px) {
+  .story-tile {
+    height: 520px; } }
 @media (max-width: 1200px) {
   .story-activated .collection-intro-heading {
     padding-top: 10px; }
@@ -3166,6 +3174,10 @@ img.gform_ajax_spinner {
 
   .category-button {
     padding: 15% 0; }
+
+  .story-tile .hidden {
+    display: inline-block !important;
+    visibility: visible !important; }
 
   .story-activated .col-sm-3, .story-activated .col-sm-6 {
     margin-top: 0;
