@@ -226,7 +226,7 @@
 	}
 }
 
-.collection .row {
+#collections .row {
 	height: 520px;
 	position: relative;
 	img {
@@ -237,7 +237,7 @@
 	}
 }
 
-.collection article {
+#collections article {
 	max-width: 620px;
 	margin-left: auto;
 	margin-right: auto;
@@ -986,7 +986,7 @@ $icon-margin: 15px;
 	}
 
 	.story-tile {
-		height: 520px;
+		height: 420px;
 		.media-type {
 			position: absolute;
 			bottom: 0;
@@ -998,6 +998,13 @@ $icon-margin: 15px;
 	}
 	
 }	
+
+//lg
+@media (min-width: 1201px) {
+	.story-tile {
+		height: 520px;
+	}
+}
 
 //md
 @media (max-width: 1200px) {
