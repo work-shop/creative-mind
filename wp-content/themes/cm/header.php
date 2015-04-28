@@ -105,11 +105,11 @@
 									<img src="<?php bloginfo('template_directory'); ?>/assets/img/logo-cm-small.png" alt="creative mind logo" />
 								</a>
 							</div>
-							<div class="visible-xs col-xs-6 m0">
+							<nav class="menu-minimal visible-xs col-sm-8 col-xs-6 m0">
 								<p class="right"><a href="#menu" class="menu-toggle" data-toggle="modal" data-target="#searchModal">Menu <span class="icon" data-icon="&#200;"></span></a></p>
-							</div>
+							</nav>
 							<?php $activity = false; ?>
-							<nav class="col-sm-8 m0 col-xs-12">
+							<nav class="menu-full col-sm-8 col-xs-12 m0">
 								<ul class="nav nav-inline right">
 									<li><a href="<?php bloginfo('url'); ?>/courses"
 										<?php // if($category->name == 'Courses' && is_single() && $activity): echo 'class="bg-courses white"'; endif; ?>

@@ -452,9 +452,6 @@ $(window).scroll(function() {
 
 	}
 
-
-
-
 	console.log($(this).scrollTop());
 	if( $('body').hasClass('story-active') && $(this).scrollTop() > 0) {
 		$('body').removeClass('story-active').addClass('story-removed');
@@ -463,7 +460,14 @@ $(window).scroll(function() {
 		$('body').addClass('story-active').removeClass('story-removed');
 	}
 
-
+	if( $(this).scrollTop() > 60) {
+		$('.menu-minimal').removeClass('visible-xs');
+		$('.menu-full').addClass('hidden');
+	}
+	else if( $(this).scrollTop() < 60) {
+		$('.menu-minimal').addClass('visible-xs');
+		$('.menu-full').removeClass('hidden');
+	}
 
 });//end window.scroll
 
