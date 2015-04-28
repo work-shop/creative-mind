@@ -89,9 +89,11 @@
 									<img src="<?php bloginfo('template_directory'); ?>/assets/img/logo-cm-small.png" alt="creative mind logo" />
 								</a>
 							</div>
-							<nav class="menu-minimal visible-xs col-sm-8 col-xs-6 m0">
+
+							<nav class="visible-xs col-sm-8 col-xs-6 m0">
 								<p class="right"><a href="#menu" class="menu-toggle" data-toggle="modal" data-target="#searchModal">Menu <span class="icon" data-icon="&#200;"></span></a></p>
 							</nav>
+
 							<?php $activity = false; ?>
 							<nav class="menu-full col-sm-8 col-xs-12 m0">
 								<ul class="nav nav-inline right">
