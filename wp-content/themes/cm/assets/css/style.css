@@ -1905,6 +1905,9 @@ img.gform_ajax_spinner {
   margin-left: auto;
   margin-right: auto; }
 
+.collection-title {
+  position: relative; }
+
 /********** @DOTS *********/
 .dots {
   width: 105px;
