@@ -50,6 +50,10 @@
   .menu-toggle{
   	position: relative;
   	top: 13px;
+  	.icon:before {
+  		vertical-align: -14%;
+  		margin-left: 0.25em;
+  	}
   }
 
   #logo-cm{
@@ -437,19 +441,19 @@ $icon-margin: 15px;
 /********** @SEARCH *********/
 
 .modal-backdrop.in{
-	background: white;
+	background: $ultra-light;
 	z-index: 12;
 	width: 100%;
 	height: 100%;
-	opacity: .8;
+	opacity: .9;
 }
 
 #searchModal{
 
 	.close{
 		position: fixed;
-		top: 40px;
-		right: 50px;
+		top: -38px;
+		right: 3%;
 		opacity: 1;
 	}
 
@@ -464,6 +468,54 @@ $icon-margin: 15px;
 		border: none;
 		background: none;
 
+	}
+
+	.row.search {
+		border-bottom: 2px solid $dark;
+		position: relative;
+		.icon {
+			position: absolute;
+			right: 0;
+			bottom: 0;
+			&:before {
+				font-size: 3em;
+			}
+		}
+	}
+
+	label, input {
+		margin-bottom: 0;
+		line-height: 1em;
+	}
+
+	label {
+		display: inline-block;
+		padding-right: 0.25em;
+	}
+
+	input {
+		border: 0;
+		color: $brand;
+		background: transparent;
+	}
+
+	h2 {
+		display: inline-block;
+	}
+
+	li {
+		line-height: 1em;
+		margin-bottom: 0.5em;
+		position: relative;
+		.icon {
+			position: absolute;
+			top: -0.35em;
+			left: 0;
+		}
+		a {
+			display: block;
+			margin-left: 1em;
+		}
 	}
 
 }

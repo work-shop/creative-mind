@@ -1025,6 +1025,9 @@ img.gform_ajax_spinner {
   #header-cm .menu-toggle {
     position: relative;
     top: 13px; }
+    #header-cm .menu-toggle .icon:before {
+      vertical-align: -14%;
+      margin-left: 0.25em; }
   #header-cm #logo-cm {
     height: 50px; }
     #header-cm #logo-cm img {
@@ -2425,16 +2428,16 @@ img.gform_ajax_spinner {
 
 /********** @SEARCH *********/
 .modal-backdrop.in {
-  background: white;
+  background: #fafafa;
   z-index: 12;
   width: 100%;
   height: 100%;
-  opacity: .8; }
+  opacity: .9; }
 
 #searchModal .close {
   position: fixed;
-  top: 40px;
-  right: 50px;
+  top: -38px;
+  right: 3%;
   opacity: 1; }
 #searchModal .modal-dialog {
   width: 100%;
@@ -2452,6 +2455,38 @@ img.gform_ajax_spinner {
   box-shadow: 0px 0px 0px rgba(50, 50, 50, 0.25);
   border: none;
   background: none; }
+#searchModal .row.search {
+  border-bottom: 2px solid #222222;
+  position: relative; }
+  #searchModal .row.search .icon {
+    position: absolute;
+    right: 0;
+    bottom: 0; }
+    #searchModal .row.search .icon:before {
+      font-size: 3em; }
+#searchModal label, #searchModal input {
+  margin-bottom: 0;
+  line-height: 1em; }
+#searchModal label {
+  display: inline-block;
+  padding-right: 0.25em; }
+#searchModal input {
+  border: 0;
+  color: #cb2026;
+  background: transparent; }
+#searchModal h2 {
+  display: inline-block; }
+#searchModal li {
+  line-height: 1em;
+  margin-bottom: 0.5em;
+  position: relative; }
+  #searchModal li .icon {
+    position: absolute;
+    top: -0.35em;
+    left: 0; }
+  #searchModal li a {
+    display: block;
+    margin-left: 1em; }
 
 /********** @COLLECTIONS *********/
 .collection:not(.collection-single) {

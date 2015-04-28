@@ -106,7 +106,7 @@
 								</a>
 							</div>
 							<div class="visible-xs col-xs-6 m0">
-								<p class="right"><a href="#menu" class="menu-toggle">Menu<span class="icon" data-icon="&#64257;"></span></a></p>
+								<p class="right"><a href="#menu" class="menu-toggle" data-toggle="modal" data-target="#searchModal">Menu <span class="icon" data-icon="&#200;"></span></a></p>
 							</div>
 							<?php $activity = false; ?>
 							<nav class="col-sm-8 m0 col-xs-12">
