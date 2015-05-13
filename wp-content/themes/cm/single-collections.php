@@ -1,9 +1,49 @@
-<?php get_header(); ?>
+<?php
+/**
+ * COLLECTION ( single-collection.php ) 
+ *
+ * 1. Header
+ * 2. Collection Header
+ * 3. Collection Stories
+ * 4. Back + Share
+ * 5. Footer
+ * [ 6. Story Modal ]
+ *
+ */
+?>
 
-	<?php get_template_part('partials/collection');?>
 
-	<?php get_template_part('partials/category_link');?>		
+<?php 
 
-	<?php get_template_part('partials/site_description');?>	
+/** 1. Header */
+get_header(); 
 
-<?php get_footer(); ?>
+?>
+
+<?php 
+
+/** 2. Collection Header */
+get_template_part('partials/collection_header');
+
+?>
+
+<?php 
+
+/** 3. Collection Stories */
+get_template_part('partials/collection_stories');
+
+?>			
+
+<?php 
+
+/** 4. Back + Share */
+get_template_part('partials/back_and_share');
+
+?>	
+	
+<?php 
+
+/** 5. Footer */
+get_footer(); 
+
+?>
