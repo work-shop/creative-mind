@@ -2,6 +2,28 @@
 
 class CM_Story_Controller {
 
+	public static function is_story( $story ) {
+		return $story->post_type == "stories";
+	}
+
+
+	public static function get_collections_for_story( $story_id ) {
+		return get_field('story_collections', $story_id ); 
+	}
+
+	/** 
+	 * Given the id of a story, produce an array of categories associated
+	 * with the collections this story is assigned to.
+	 *
+	 * @param $story_id, int, the id of the story to collect categories for.
+	 * @return array(stdClass(Term))
+	 *
+	 */
+	public static function get_categories_for_story( $story_id ) {
+		$collections = self::get_collections_for_story( $story_id );
+		return array_map( function( $x ) { return CM_Collection_Controller::get_category_for_collection( $x->ID ); }, $collections );
+	}
+
 	/**
 	 * Given the id of a collection and the id of a story in that collection, 
 	 * get the previous adjacent story.
