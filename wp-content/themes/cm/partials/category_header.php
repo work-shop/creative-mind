@@ -1,4 +1,8 @@
+<!-- OLD OLD OLD -->
 <?php
+	/**
+	 * @var stdClass $category the current category we're in.
+	 */
 	$category = CM_Collection_Controller::get_current_category();
 ?>
 <section id="category-header" class="block target padded jank bg-<?php echo $category->slug;?>">
