@@ -1,4 +1,3 @@
-<!-- OLD -->
 <section class="block target padded bg-light" id="site-description">
 	<div class="container">
 		<div class="row mb3">

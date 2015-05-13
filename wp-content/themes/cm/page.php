@@ -4,9 +4,8 @@
  *
  * 1. Header
  * 2. Page Content
- * 4. Back + Share
- * 5. Footer
- * [ 6. Story Modal ]
+ * 3. Back + Share
+ * 4. Footer
  *
  */
 ?>

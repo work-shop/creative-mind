@@ -1,19 +1,30 @@
-<!-- OLD OLD OLD -->
-		</div><!--/#content-->
+		</main><!--/#content-->
 		
 		<?php get_template_part('partials/footer_menu'); ?>
-		<?php get_template_part('partials/edit_button'); ?>		
+		<?php get_template_part('partials/story_modal'); ?>
 
 	</div><!-- /#wrapper -->
- 
-	<script src="//use.typekit.net/reo8aih.js"></script>
-	<script>try{Typekit.load();}catch(e){}</script>	
+
+	<!-- Fontdeck -->
+	<script type="text/javascript">
+	WebFontConfig = { fontdeck: { id: '55448' } };
+
+	(function() {
+	  var wf = document.createElement('script');
+	  wf.src = ('https:' == document.location.protocol ? 'https' : 'http') +
+	  '://ajax.googleapis.com/ajax/libs/webfont/1/webfont.js';
+	  wf.type = 'text/javascript';
+	  wf.async = 'true';
+	  var s = document.getElementsByTagName('script')[0];
+	  s.parentNode.insertBefore(wf, s);
+	})();
+	</script>	
 
 	<script type="text/javascript">var addthis_config = {"data_track_addressbar":true};</script>
 	<script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-50f20b8a658458ce"></script>	
 	<script type="text/javascript">var addthis_config = {"data_track_clickback":true};</script>
 
-<!-- 
+	<!-- 
 	<script type="text/javascript">
 		//google analytics
 		  var _gaq = _gaq || [];
@@ -25,8 +36,8 @@
 		    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
 		  })();
 	</script> 	 		
-
- -->
+ 	-->
+ 	
 	<?php wp_footer(); ?>
 
 	</body>

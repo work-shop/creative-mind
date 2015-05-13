@@ -7,7 +7,6 @@
  * 3. Category Collections
  * 4. Back + Share
  * 5. Footer
- * [ 6. Story Modal ]
  *
  */
 ?>

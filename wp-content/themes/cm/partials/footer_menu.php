@@ -1,4 +1,3 @@
-<!-- OLD OLD OLD -->
 	<section class="block bg-brown padded-less">
 		<div class="container">
 			<div class="row">
