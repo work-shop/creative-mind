@@ -1,12 +1,7 @@
-
+<!-- OLD OLD OLD -->
 		</div><!--/#content-->
 		
-		<?php // get_template_part('partials/break'); ?>	
-		<?php // get_template_part('partials/back_to_top'); ?>
-		<?php // get_template_part('partials/guidepost'); ?>
-		<?php get_template_part('partials/share'); ?>
 		<?php get_template_part('partials/footer_menu'); ?>
-		<?php get_template_part('partials/search_modal'); ?>
 		<?php get_template_part('partials/edit_button'); ?>		
 
 	</div><!-- /#wrapper -->
