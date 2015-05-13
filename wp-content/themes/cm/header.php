@@ -8,7 +8,7 @@
 		   <?php
 	   	    if (is_category()) : single_cat_title(); echo ' - '; 
 	        elseif (is_archive()): wp_title(''); echo ' - ';  
-	      	elseif (is_search()) : echo 'Search for &quot;'.wp_specialchars($s).'&quot; - '; 
+	      	elseif (is_search()) : echo 'Search for &quot;'.get_search_query().'&quot; - '; 
 	      	elseif (!(is_404()) && (is_single()) || (is_page())) : wp_title(''); echo ' - '; 
 	     	elseif (is_404()) : echo 'Not Found - ';
 	     	endif;
@@ -64,17 +64,16 @@
 	<body <?php body_class('before');?>>
 	
 		<?php 
-			if(is_category()){
-				$category = CM_Collection_Controller::get_current_category(); 	
-				$category_color = $category->slug;			
-			}
-			 elseif (get_post_type() == 'collections') {
-			 	$category = CM_Collection_Controller::get_category_for_collection(get_the_ID());
-				$category_color = $category->slug;						 	
-			}
-			else{
-				$category_color = 'brand';				
-			}
+			/**
+			 * @var string $category_color the category color to use on this page.
+			 */
+			$category_color = (is_category()) ? CM_Collection_Controller::get_current_category()->slug
+					     : ((get_post_type() == 'collections') ? CM_Collection_Controller::get_category_for_collection(get_the_ID())->slug : "brand" );
+
+			/**
+			 * set the category as a color that we can globally access.
+			 */
+			set_global( 'category_color', $category_color );
 
 		?>
 
