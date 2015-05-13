@@ -60,10 +60,6 @@ class CM_Collection_Controller {
 		return $posts;
 	}
 
-	// public static function get_collections_by_topology() { // cool idea...
-
-	// }
-
 	/**
 	 * returns the category of a given collection indicated by it's id.
 	 *
@@ -91,13 +87,13 @@ class CM_Collection_Controller {
 	 * @param array(WP_Post) $stories the stories in this collection
 	 * @return pretty printed string
 	 */
-	public static function story_count_for_collection( $stories ) {
+	public static function story_count_for_collection( $stories, $category ) {
 		switch ( ($total = count( $stories )) ) {
 			case 1:
-				return "1 Story";
+				return "1 " . (($category->name == "Research") ? "Story" : substr( $category->name, 0, count( $category->name ) - 2 ));
 
 			default:
-				return $total . " Stories";
+				return $total . (($category->name == "Research") ? " Stories" : " " . $category->name );
 		}
 	}
 
@@ -118,7 +114,7 @@ class CM_Collection_Controller {
 	 * @return string the category slug or the empty string
 	 */
 	public static function get_current_category_slug() {
-		$category = get_category( get_query_var( 'cat' ) );
+		$category = self::get_current_category();
 		if ( is_wp_error( $category ) ) return '';
 		else return $category->slug;
 	}
