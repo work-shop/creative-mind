@@ -1,4 +1,4 @@
-<!-- OLD OLD OLD -->
+
 	<?php 
 
 	//video, image_gallery, video_gallery

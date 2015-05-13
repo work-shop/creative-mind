@@ -23,6 +23,8 @@ get_header();
 /** 2. Category Header */
 get_template_part('partials/category_header');
 
+get_template_part('partials/elements');
+
 ?>	
 
 <?php 
