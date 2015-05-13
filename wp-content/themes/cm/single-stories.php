@@ -1,11 +1,39 @@
-<?php get_header(); ?>
+<?php
+/**
+ * STORY ( single-stories.php ) 
+ *
+ * 1. Header
+ * 2. Story
+ * 3. Back + Share
+ * 4. Footer
+ *
+ */
+?>
 
-	<?php get_template_part('partials/story');?>
+<?php 
 
-	<?php get_template_part('partials/category_link');?>	
+/** 1. Header */
+get_header(); 
 
-	<?php get_template_part('partials/site_description');?>
+?>
 
-	<?php get_template_part('partials/featured_collections');?>
+<?php 
 
-<?php get_footer(); ?>
+/** 2. Story Content */
+get_template_part('partials/story');
+
+?>
+
+<?php 
+
+/** 3. Back + Share */
+get_template_part('partials/back_and_share');
+
+?>	
+	
+<?php 
+
+/** 4. Footer */
+get_footer(); 
+
+?>
