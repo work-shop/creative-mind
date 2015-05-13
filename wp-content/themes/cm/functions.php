@@ -1,7 +1,7 @@
 <?php
 
 /**
- * Table of Contents
+ * Table of Contents ( rooted at ./library/ )
  *
  * [1]. globals.php – defines independent, globally available php functions
  * [2] abstracts – abstract classes that build common structure
@@ -11,6 +11,12 @@
  * [4] classes – classes that encapsulate site functionality and site actions.
  * [4.1] classes/class-init-actions.php, a class that initializes state via actions on theme-load.
  * [4.2] classes/class-init-actions.php, a class that sets up init-specific filters on theme-load.
+ * [4.3] classes/class_ajax.php, this class encapsulates asynchronous loading and delivery of content.
+ * [4.4] classes/class_collection_controller.php, this class provides static methods for dealing with categories/collections
+ * [4.5] classes/class_story_controller.php, this class provides static methods for dealing with stories
+ * [4.6] DEPRACATED classes/class_tile_layout_manager, this class lays out tile grids 
+ * [4.7] DEPRACATED classes/class_deterministic_layour_manager.php, this class lays out tile grids
+ * [4.8] classes/class_grid_layout_manager.php, this class amalgamates data for the home page grid.
  *
  */
 	
@@ -30,7 +36,8 @@
  	require_once( 'library/classes/class_ajax.php');
  	require_once( 'library/classes/class_collection_controller.php');
  	require_once( 'library/classes/class_story_controller.php');
- 	require_once( 'library/classes/class_tile_layout_manager.php');
- 	require_once( 'library/classes/class_deterministic_layout_manager.php');
+ 	// require_once( 'library/classes/class_tile_layout_manager.php');
+ 	// require_once( 'library/classes/class_deterministic_layout_manager.php');
+ 	require_once( 'library/classes/class_grid_layout_manager.php');
 
 ?>
