@@ -335,24 +335,39 @@ $dot-margin: 12px;
 
 
 
-/********** @SHARE *********/
+/********** @BACK/SHARE *********/
 
 $icon-width: 40px;
 $icon-margin: 15px;
-	
+
+#back-link {
+	.icon {
+		color: white;
+	}
+	.p1 {
+		display: block;
+	}
+}
+
+.home #back-link .icon:before {
+	display: inline-block;
+	@include transform( rotate(90deg) );
+}	
+
+.share-icons a, #back-link .icon-wrapper {
+	text-align: center;
+	width: $icon-width;
+	height: $icon-width;
+	@include border-radius($icon-width/2);
+	display: inline-block;
+	margin-right: $icon-margin;
+	background: $brand;
+}
 
 .share-icons{
 	width: ($icon-width * 3) + ($icon-margin*3);
 	margin: 0 auto;
-
-	a{
-		text-align: center;
-		width: $icon-width;
-		height: $icon-width;
-		@include border-radius($icon-width/2);
-		display: inline-block;
-		margin-right: $icon-margin;
-		background: $brand;
+	a {
 		@include transition(transform,1s);
 
 		&:hover{

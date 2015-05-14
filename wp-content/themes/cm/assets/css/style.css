@@ -2361,22 +2361,37 @@ img.gform_ajax_spinner {
   .sign h4 {
     font-size: 21px; }
 
-/********** @SHARE *********/
+/********** @BACK/SHARE *********/
+#back-link .icon {
+  color: white; }
+#back-link .p1 {
+  display: block; }
+
+.home #back-link .icon:before {
+  display: inline-block;
+  transform: rotate(90deg);
+  -moz-transform: rotate(90deg);
+  -webkit-transform: rotate(90deg);
+  -o-transform: rotate(90deg);
+  -ms-transform: rotate(90deg); }
+
+.share-icons a, #back-link .icon-wrapper {
+  text-align: center;
+  width: 40px;
+  height: 40px;
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+  -o-border-radius: 20px;
+  -ms-border-radius: 20px;
+  border-radius: 20px;
+  display: inline-block;
+  margin-right: 15px;
+  background: #cb2026; }
+
 .share-icons {
   width: 165px;
   margin: 0 auto; }
   .share-icons a {
-    text-align: center;
-    width: 40px;
-    height: 40px;
-    -webkit-border-radius: 20px;
-    -moz-border-radius: 20px;
-    -o-border-radius: 20px;
-    -ms-border-radius: 20px;
-    border-radius: 20px;
-    display: inline-block;
-    margin-right: 15px;
-    background: #cb2026;
     transition: transform 1s 0s ease;
     -moz-transition: transform 1s 0s ease;
     -webkit-transition: transform 1s 0s ease;

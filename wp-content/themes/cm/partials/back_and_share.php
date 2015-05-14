@@ -18,6 +18,11 @@
  */
 $category = CM_Collection_Controller::get_current_category();
 
+/**
+ * @var $collection WP_Post | false, either the in-scope collection, or false if no collection is in scope.
+ */
+$collection = get_post( get_the_ID() );
+
 ?>
 
 <footer>
@@ -40,11 +45,43 @@ $category = CM_Collection_Controller::get_current_category();
 		</div>
 	</section>
 	<section id="back-link">
-		<a href="<?php echo esc_url( home_url( '/'.$category->slug ) ); ?>">
-		<h2 class="serif centered <?php echo $category->slug; ?>">
-			<span class="p1 border-<?php echo $category->slug; ?>">Back to <?php echo $category->name; ?></span>
-		</h2>
-		</a>
+		<?php if ( is_home() ) { ?>
+			<a href="#">
+			<div class="h2 centered brand">
+				<span class="icon-wrapper"><span class="icon" data-icon="&#8218;"></span></span>
+				<span class="p1">Back to Top</span>
+			</div>
+			</a>
+		<?php } elseif ( is_category() ) { ?>
+			<a href="<?php echo esc_url( home_url() ); ?>">
+			<div class="h2 centered brand">
+				<span class="icon-wrapper"><span class="icon" data-icon="&#8218;"></span></span>
+				<span class="p1">Home</span>
+			</div>
+			</a>
+		<?php } elseif ( is_singular('collections') ) { ?>
+			<a href="<?php echo esc_url( home_url( '/'.$category->slug ) ); ?>">
+			<div class="h2 centered <?php echo $category->slug; ?>">
+				<span class="icon-wrapper bg-<?php echo $category->slug; ?>"><span class="icon" data-icon="&#8218;"></span></span>
+				<span class="p1">Back to <?php echo $category->name; ?></span>
+			</div>
+			</a>
+		<?php } else { ?>
+			<?php
+			/**
+			 * @var array(WP_Post) an array of collections that this story belongs to.
+			 */
+			$collection = CM_Story_Controller::get_collections_for_story( get_the_ID() )[0];
+			?>
+
+			<a href="<?php echo get_permalink( $collection->ID ); ?>">
+			<div class="h2 centered <?php echo $category->slug; ?>">
+				<span class="icon-wrapper bg-<?php echo $category->slug; ?>"><span class="icon" data-icon="&#8218;"></span></span>
+				<span class="p1">Back to <?php echo $collection->post_title; ?></span>
+			</div>
+			</a>
+
+		<?php } ?>
 	</section>
 </footer>
 

@@ -104,7 +104,37 @@ class CM_Collection_Controller {
 	 * @return stdClass('taxonomy term') || WP_Error
 	 */
 	public static function get_current_category() {
-		return get_category( get_query_var( 'cat' ) );
+		if ( is_wp_error($category = $error = get_category( get_query_var( 'cat' ) ) ) ) {
+
+			if ( is_home() ) {
+				
+				return $error;
+
+			} else if ( is_singular( 'collections') ) {
+				
+				return self::get_category_for_collection( get_post( get_the_ID() ) );
+
+			} else if ( is_single() ) {
+				
+				if ( empty( $categories = CM_Story_Controller::get_categories_for_story( get_the_ID() ) ) ) {
+
+					return $error;
+
+				} else {
+
+					return $categories[ 0 ];
+
+				}
+
+			} else {
+
+				throw new RuntimeException('Undefined Case! Or is it??!');
+
+			}
+
+		} else {
+			return $category;
+		}
 	}
 
 	/**

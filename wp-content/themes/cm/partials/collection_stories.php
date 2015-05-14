@@ -14,7 +14,7 @@ $collection = get_post( get_the_ID() );
 /**
  * @var WP_Post the category of the colleciton whose page we're currently on.
  */
-$category = CM_Collections_Controller::get_category_for_collection( get_the_ID() );
+$category = CM_Collection_Controller::get_category_for_collection( get_the_ID() );
 
 /**
  * Let's set some global values and include the body of the collection.

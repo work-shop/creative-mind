@@ -1,6 +1,6 @@
 <?php
 /**
- * COLLECTION ( archive.php ) 
+ * COLLECTION ( single-collections.php ) 
  *
  * 1. Header
  * 2. Collection Header
@@ -40,6 +40,7 @@ get_header();
 	/** 4. Back + Share */
 	get_template_part('partials/back_and_share');
 
+
 	?>	
 
 </main>
@@ -49,4 +50,5 @@ get_header();
 /** 5. Footer */
 get_footer(); 
 
+unset_global('current_collection' );
 ?>
