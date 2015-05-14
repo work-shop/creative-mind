@@ -1,4 +1,4 @@
-<section class="block target padded bg-light" id="site-description">
+<header class="block target padded bg-light" id="site-description">
 	<div class="container">
 		<div class="row mb3">
 			<div class="col-sm-6 col-sm-offset-3">
@@ -15,4 +15,4 @@
 			</div>
 		</div>	
 	</div>
-</section>
+</header>

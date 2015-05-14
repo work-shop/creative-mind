@@ -3,9 +3,10 @@
  * PAGE ( page.php ) 
  *
  * 1. Header
- * 2. Page Content
- * 3. Back + Share
- * 4. Footer
+ * 2. Page Header
+ * 3. Page Content
+ * 4. Back + Share
+ * 5. Footer
  *
  */
 ?>
@@ -18,24 +19,34 @@ get_header();
 
 ?>
 
+<main>
+
+	<?php 
+
+	/** 2. Page Header */
+	get_template_part('partials/page_header');
+
+	?>
+
+	<?php 
+
+	/** 3. Page Content */
+	get_template_part('partials/page_body');
+
+	?>
+
+	<?php 
+
+	/** 4. Back + Share */
+	get_template_part('partials/back_and_share');
+
+	?>
+
+</main>
+
 <?php 
 
-/** 2. Page Title, Page Introduction, Page Content */
-get_template_part('partials/content_page');
-
-?>
-
-
-<?php 
-
-/** 3. Back + Share */
-get_template_part('partials/back_and_share');
-
-?>
-
-<?php 
-
-/** 4. Footer */
+/** 5. Footer */
 get_footer(); 
 
 ?>

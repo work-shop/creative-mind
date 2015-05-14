@@ -19,26 +19,30 @@ get_header();
 
 ?>
 
-<?php 
+<main>
 
-/** 2. Site Description */
-get_template_part('partials/site_description');
+	<?php 
 
-?>	
+	/** 2. Site Description */
+	get_template_part('partials/site_description');
 
-<?php 
+	?>	
 
-/** 3. Grid */
-get_template_part('partials/grid');
+	<?php 
 
-?>	
+	/** 3. Grid */
+	get_template_part('partials/grid');
 
-<?php 
+	?>	
 
-/** 4. Back + Share */
-get_template_part('partials/back_and_share');
+	<?php 
 
-?>	
+	/** 4. Back + Share */
+	get_template_part('partials/back_and_share');
+
+	?>	
+
+</main>
 	
 <?php 
 

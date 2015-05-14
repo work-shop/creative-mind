@@ -1,15 +1,16 @@
 <?php
 /**
- * CATEGORY ( category.php ) 
+ * COLLECTION ( archive.php ) 
  *
  * 1. Header
- * 2. Category Header
- * 3. Category Collections
+ * 2. Collection Header
+ * 3. Collection Stories
  * 4. Back + Share
  * 5. Footer
  *
  */
 ?>
+
 
 <?php 
 
@@ -19,20 +20,20 @@ get_header();
 ?>
 
 <main>
-	
-	<?php 
-
-	/** 2. Category Header */
-	get_template_part('partials/category_header');
-
-	?>	
 
 	<?php 
 
-	/** 3. Category Collections */
-	get_template_part('partials/collections');
+	/** 2. Collection Header */
+	get_template_part('partials/collection_header');
 
 	?>
+
+	<?php 
+
+	/** 3. Collection Stories */
+	get_template_part('partials/collection_stories');
+
+	?>			
 
 	<?php 
 

@@ -9,7 +9,7 @@
 	?>
 
 	<article class="story block target story-type-<?php echo $story_type;?>">
-		<div class="story-header story-header-<?php echo $story_type;?>">
+		<header class="story-header story-header-<?php echo $story_type;?>">
 			<div class="story-hero <?php if($story_type == 'video_gallery'): echo 'story-hero-unmasked'; endif; ?>">
 				<?php 
 				switch ($story_type) {
@@ -113,7 +113,7 @@
 				</div>
 
 			</div>
-		</div>
+		</header>
 		<div class="story-body">
 			<div class="container">
 				<?php if($gallery = get_field('story_image_gallery') ): ?>
