@@ -43,8 +43,23 @@ foreach ($categories as $category) {
 			 */
 			$category_name = $category_term->name;
 			$category_description = CM_Collection_Controller::get_category_description( $category_term->term_id );
+		?>
 
-		} 
+			<div class="col-xs-6 col-sm-4">
+				<a href="<?php echo esc_url( home_url( '/'.$category ) ); ?>">
+				<div class="tile tile-category mb2 white bg-<?php echo $category; ?> clearfix" >
+					<header>
+						<h3><?php echo $category_name; ?></h3>
+						<p><?php echo $category_description ?></p>
+					</header>
+					<footer class="action text-center bg-<?php echo $category; ?>">
+						<?php echo "View $category_name"; ?>
+					</footer>
+				</div>
+				</a>
+			</div>
+
+		<?php } 
 
 		/**
 		 * @var string $story_type what type of media is present in the story? 
@@ -60,7 +75,7 @@ foreach ($categories as $category) {
 
 				<div class="col-xs-6 col-sm-4">
 					<a href="<?php echo $story_permalink ?>">
-					<div class="tile-story mb2 <?php echo $category; ?> border-<?php echo $category; ?>" style="background-image: url('http://images.wisegeek.com/scientists-in-lab.jpg');" >
+					<div class="tile tile-story mb2 <?php echo $category; ?> border-<?php echo $category; ?>" style="background-image: url('http://images.wisegeek.com/scientists-in-lab.jpg');" >
 						<header>
 							<?php if ( $story_type == 'video' ) { ?>
 								<span class="icon" data-icon="&#210;"></span>

@@ -889,10 +889,27 @@ $icon-margin: 15px;
 /********** @TILES *********/
 
 
+.tile {
+	position: relative;
+	footer {
+		position: absolute;
+		bottom: 0;
+		width: 100%;
+		line-height: 1.75em;
+		height: 0;
+		@include transition(all,0.5s);
+	}
+	&:hover footer {
+		padding-top: 0.25em;
+		height: 2em;
+	}
+}
 
+.tile-category header {
+	margin: 0 8% 3em;
+}
 
 .tile-story {
-	position: relative;
 	background-size: cover;
 	> * {
 		position: inherit;
@@ -909,18 +926,6 @@ $icon-margin: 15px;
 	}
 	header {
 		margin: 4em 4%;
-	}
-	footer {
-		position: absolute;
-		bottom: 0;
-		width: 100%;
-		line-height: 1.75em;
-		height: 0;
-		@include transition(all,0.5s);
-	}
-	&:hover footer {
-		padding-top: 0.25em;
-		height: 2em;
 	}
 	.icon:before {
 		font-size: 3.5em;

@@ -3118,8 +3118,27 @@ img.gform_ajax_spinner {
       left: -65px; }
 
 /********** @TILES *********/
+.tile {
+  position: relative; }
+  .tile footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    line-height: 1.75em;
+    height: 0;
+    transition: all 0.5s 0s ease;
+    -moz-transition: all 0.5s 0s ease;
+    -webkit-transition: all 0.5s 0s ease;
+    -o-transition: all 0.5s 0s ease;
+    -ms-transition: all 0.5s 0s ease; }
+  .tile:hover footer {
+    padding-top: 0.25em;
+    height: 2em; }
+
+.tile-category header {
+  margin: 0 8% 3em; }
+
 .tile-story {
-  position: relative;
   background-size: cover; }
   .tile-story > * {
     position: inherit;
@@ -3135,20 +3154,6 @@ img.gform_ajax_spinner {
     opacity: 0.9; }
   .tile-story header {
     margin: 4em 4%; }
-  .tile-story footer {
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-    line-height: 1.75em;
-    height: 0;
-    transition: all 0.5s 0s ease;
-    -moz-transition: all 0.5s 0s ease;
-    -webkit-transition: all 0.5s 0s ease;
-    -o-transition: all 0.5s 0s ease;
-    -ms-transition: all 0.5s 0s ease; }
-  .tile-story:hover footer {
-    padding-top: 0.25em;
-    height: 2em; }
   .tile-story .icon:before {
     font-size: 3.5em; }
 
