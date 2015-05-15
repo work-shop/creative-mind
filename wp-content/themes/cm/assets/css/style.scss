@@ -889,125 +889,41 @@ $icon-margin: 15px;
 /********** @TILES *********/
 
 
-.story-tile.story-tile-collection-title{
+
+
+.tile-story {
 	position: relative;
-	overflow: visible;
-
-	// .category-badge{
-	// 	padding: 9px 9px 7px 9px;
-	// 	@include border-radius(2px);
-	// 	position: relative;
-	// 	left: -3px;
-	// }	
-
-	h2{
-		margin-top: 0;	
+	background-size: cover;
+	> * {
+		position: inherit;
+		z-index: 1;
 	}
-
-	h6{
-		margin-left: 5px;
+	&:after {
+		content: '';
+		position: absolute;
+		top: 0; left: 0;
+		width: 100%;
+		height: 100%;
+		background: white;
+		opacity: 0.9;
 	}
-}
-
-
-.story-tile{
-	position: relative;
-	overflow: hidden;
-	padding: 0;
-	background-clip: content-box;	
-	@include border($ultra-light);
-	@include transition(all,.35s);
-
-	&:hover {
-		@extend .border-research;
-		.hidden {
-			display: inline-block !important;
-			visibility: visible !important;
-		}
+	header {
+		margin: 4em 4%;
 	}
-
-	img{
-		opacity: 0.75;
-		-webkit-filter: saturate(75%);
-		min-height: 160px; // temporary, dev only
-		background: $light; // temporary, dev only
+	footer {
+		position: absolute;
+		bottom: 0;
+		width: 100%;
+		line-height: 1.75em;
+		height: 0;
+		@include transition(all,0.5s);
 	}
-
-	.text {
-		padding: 0 0.5em;
+	&:hover footer {
+		padding-top: 0.25em;
+		height: 2em;
 	}
-
-	.overlay{
-		// position: absolute;
-		// top: 0;
-		// left: 0;		
-		// width: 100%;
-		// padding-left: 15px;
-		// padding-right: 15px;		
-		// height: 100%;	
-		// background: white;
-		// background-clip: content-box;		
-		// @include transition(all,.35s);
-		// opacity: 0;		
-		// top: -120px;	
-	}
-
-	.story-description{
-		// position: absolute;
-		// width: 100%;
-		// padding-left: 30px;
-		// padding-right: 20px;	
-		// @include transition(all,.35s);
-		// opacity: .0;
-		// top: 0%;
-		// @include transform(translate(-10px,0%));
-		// line-height: 1.3;
-	}
-
-	.story-title{
-		// height: 60px;
-		// margin-top: 10px;
-		// padding-top: 4px;
-		// padding-left: 6px;
-		// line-height: 1;
-		//position: absolute;
-		// top: 100%;
-		//margin-top: -60px;
-		//display: none;
-	}
-
-	&.inactive{
-
-		&:hover{
-
-			img{
-				opacity: 1;
-			}
-
-			.overlay{
-				//top: -0px;
-				//opacity: .95;
-			}
-
-			.story-description{
-				top: 5%;
-				opacity: 1;
-				color: $dark;
-
-				*{
-					color: $dark;
-				}
-			}
-
-			.story-title{
-				color: $dark;
-			}
-		}
-
-	}	
-
-	&.active{
-		opacity: .25;
+	.icon:before {
+		font-size: 3.5em;
 	}
 }
 
@@ -1017,10 +933,6 @@ $icon-margin: 15px;
 /********** @RESPONSIVE *********/
 
 @media (min-width: 768px) {
-
-	.container-fluid{
-		padding: 0 80px;
-	}
 
 	#collections-intro{
 		// position: fixed;
@@ -1051,26 +963,11 @@ $icon-margin: 15px;
 		// @include transform(rotate(90deg));
 
 	}
-
-	.story-tile {
-		height: 420px;
-		.media-type {
-			position: absolute;
-			bottom: 0;
-		}
-		&:hover.hidden {
-			display: inline-block !important;
-			visibility: visible !important;
-		}
-	}
 	
 }	
 
 //lg
 @media (min-width: 1201px) {
-	.story-tile {
-		height: 520px;
-	}
 }
 
 //md
@@ -1104,10 +1001,6 @@ $icon-margin: 15px;
 
 //sm
 @media (max-width: 992px) {
-
-	.story-tile {
-		// height: 500px;
-	}
 
 	.story{
 		.story-meta{
@@ -1183,11 +1076,6 @@ $icon-margin: 15px;
 
 	.category-button{
 		padding: 15% 0;
-	}
-
-	.story-tile .hidden { // don't hide on small sizes
-		display: inline-block !important;
-		visibility: visible !important;
 	}
 
 	.story-activated{

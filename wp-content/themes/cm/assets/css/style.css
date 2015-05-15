@@ -338,16 +338,13 @@ article a {
   margin-right: 9em; }
 
 .padded-less {
-  padding-top: 2.5%;
-  padding-bottom: 2.5%; }
+  padding: 2.5%; }
 
 .padded {
-  padding-top: 4%;
-  padding-bottom: 4.25%; }
+  padding: 4% 4% 4.25%; }
 
 .padded-more {
-  padding-top: 8%;
-  padding-bottom: 9%; }
+  padding: 8% 8% 9%; }
 
 /********** @BACKGROUNDS *********/
 .bg-white {
@@ -460,6 +457,16 @@ article a {
   .border-light:hover {
     border-color: #d7d7d7; }
 
+.border-brand {
+  border: 5px solid #cb2026;
+  transition: all 0.25s 0s ease;
+  -moz-transition: all 0.25s 0s ease;
+  -webkit-transition: all 0.25s 0s ease;
+  -o-transition: all 0.25s 0s ease;
+  -ms-transition: all 0.25s 0s ease; }
+  .border-brand:hover {
+    border-color: #9f191e; }
+
 .border-courses {
   border: 5px solid #E9C532;
   transition: all 0.25s 0s ease;
@@ -470,14 +477,14 @@ article a {
   .border-courses:hover {
     border-color: #d2ad16; }
 
-.border-research, .story-tile:hover {
+.border-research {
   border: 5px solid #0E76BB;
   transition: all 0.25s 0s ease;
   -moz-transition: all 0.25s 0s ease;
   -webkit-transition: all 0.25s 0s ease;
   -o-transition: all 0.25s 0s ease;
   -ms-transition: all 0.25s 0s ease; }
-  .border-research:hover, .story-tile:hover {
+  .border-research:hover {
     border-color: #0a588c; }
 
 .border-interviews {
@@ -3111,69 +3118,41 @@ img.gform_ajax_spinner {
       left: -65px; }
 
 /********** @TILES *********/
-.story-tile.story-tile-collection-title {
+.tile-story {
   position: relative;
-  overflow: visible; }
-  .story-tile.story-tile-collection-title h2 {
-    margin-top: 0; }
-  .story-tile.story-tile-collection-title h6 {
-    margin-left: 5px; }
-
-.story-tile {
-  position: relative;
-  overflow: hidden;
-  padding: 0;
-  background-clip: content-box;
-  border: 5px solid #fafafa;
-  transition: all 0.25s 0s ease;
-  -moz-transition: all 0.25s 0s ease;
-  -webkit-transition: all 0.25s 0s ease;
-  -o-transition: all 0.25s 0s ease;
-  -ms-transition: all 0.25s 0s ease;
-  transition: all 0.35s 0s ease;
-  -moz-transition: all 0.35s 0s ease;
-  -webkit-transition: all 0.35s 0s ease;
-  -o-transition: all 0.35s 0s ease;
-  -ms-transition: all 0.35s 0s ease; }
-  .story-tile:hover .hidden {
-    display: inline-block !important;
-    visibility: visible !important; }
-  .story-tile img {
-    opacity: 0.75;
-    -webkit-filter: saturate(75%);
-    min-height: 160px;
-    background: #f1f1f1; }
-  .story-tile .text {
-    padding: 0 0.5em; }
-  .story-tile.inactive:hover img {
-    opacity: 1; }
-  .story-tile.inactive:hover .story-description {
-    top: 5%;
-    opacity: 1;
-    color: #222222; }
-    .story-tile.inactive:hover .story-description * {
-      color: #222222; }
-  .story-tile.inactive:hover .story-title {
-    color: #222222; }
-  .story-tile.active {
-    opacity: .25; }
+  background-size: cover; }
+  .tile-story > * {
+    position: inherit;
+    z-index: 1; }
+  .tile-story:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: white;
+    opacity: 0.9; }
+  .tile-story header {
+    margin: 4em 4%; }
+  .tile-story footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    line-height: 1.75em;
+    height: 0;
+    transition: all 0.5s 0s ease;
+    -moz-transition: all 0.5s 0s ease;
+    -webkit-transition: all 0.5s 0s ease;
+    -o-transition: all 0.5s 0s ease;
+    -ms-transition: all 0.5s 0s ease; }
+  .tile-story:hover footer {
+    padding-top: 0.25em;
+    height: 2em; }
+  .tile-story .icon:before {
+    font-size: 3.5em; }
 
 /********** @RESPONSIVE *********/
-@media (min-width: 768px) {
-  .container-fluid {
-    padding: 0 80px; }
-
-  .story-tile {
-    height: 420px; }
-    .story-tile .media-type {
-      position: absolute;
-      bottom: 0; }
-    .story-tile:hover.hidden {
-      display: inline-block !important;
-      visibility: visible !important; } }
-@media (min-width: 1201px) {
-  .story-tile {
-    height: 520px; } }
 @media (max-width: 1200px) {
   .story-activated .collection-intro-heading {
     padding-top: 10px; }
@@ -3241,10 +3220,6 @@ img.gform_ajax_spinner {
 
   .category-button {
     padding: 15% 0; }
-
-  .story-tile .hidden {
-    display: inline-block !important;
-    visibility: visible !important; }
 
   .story-activated .col-sm-3, .story-activated .col-sm-6 {
     margin-top: 0;

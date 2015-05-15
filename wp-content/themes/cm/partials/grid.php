@@ -17,7 +17,17 @@ $grid_elements = CM_Grid_Layout_Manager::build_grid( );
  * @var array(string) categories
  */
 $categories = array_keys( $grid_elements );
+?>
 
+<section class="block target padded" id="site-description">
+	<div class="container-fluid">
+		<div class="row m4">
+			<div class="col-xs-10 col-xs-offset-1 col-sm-4 col-sm-offset-0">
+				<div class="tile padded brand border-brand text-center">
+					<span class="h4">Explore the Creative Mind</span> <span class="icon" data-icon="&#91;"></span>
+				</div>
+			</div>
+<?php
 /**
  * Now that we've done our setup, let's iterate through each category and build the grid.
  */
@@ -46,7 +56,36 @@ foreach ($categories as $category) {
 		$story_type = get_field('story_media_type', $grid_element->ID );
 		$story_name = $grid_element->post_title;
 		$story_permalink = get_permalink( $grid_element->ID );
-		$story_collection_name = CM_Story_Controller::get_collections_for_story( $grid_element->ID )[0]->post_title;
+		$story_collection_name = CM_Story_Controller::get_collections_for_story( $grid_element->ID )[0]->post_title; ?>
+
+				<div class="col-xs-6 col-sm-4">
+					<a href="<?php echo $story_permalink ?>">
+					<div class="tile-story mb2 <?php echo $category; ?> border-<?php echo $category; ?>" style="background-image: url('http://images.wisegeek.com/scientists-in-lab.jpg');" >
+						<header>
+							<?php if ( $story_type == 'video' ) { ?>
+								<span class="icon" data-icon="&#210;"></span>
+							<?php } elseif ( $story_type == 'image_gallery' ) { ?>
+								<span class="icon" data-icon="&#8486;"></span>
+							<?php } ?>
+							<div class="h5 uppercase"><?php echo $story_collection_name ?></div>
+							<h3><?php echo $story_name ?></h3>
+						</header>
+						<footer class="action text-center white bg-<?php echo $category; ?>">
+							<?php 
+								if ( $story_type == 'video' ) { echo "Watch Video"; } 
+								elseif ( $story_type == 'image_gallery' ) { echo "View Gallery"; } 
+							?>
+						</footer>
+					</div>
+					</a>
+				</div>
+	<?php
 
 	}
 }
+?>
+
+		</div>	
+	</div>
+</section>
+

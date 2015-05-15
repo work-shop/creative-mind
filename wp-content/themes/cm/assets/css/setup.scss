@@ -277,18 +277,15 @@ article a{
 }
 
 .padded-less{
-	padding-top: 2.5%;
-	padding-bottom: 2.5%;
+	padding: 2.5%;
 }
 
 .padded{
-	padding-top: 4%;
-	padding-bottom: 4.25%;
+	padding: 4% 4% 4.25%;
 }
 
 .padded-more{
-	padding-top: 8%;
-	padding-bottom: 9%;
+	padding: 8% 8% 9%;
 }
 
 
@@ -400,6 +397,13 @@ article a{
  	@include border($light);
  	&:hover {
  		border-color: darken($light,10);
+ 	}
+}
+
+.border-brand{
+ 	@include border($brand);
+ 	&:hover {
+ 		border-color: darken($brand,10);
  	}
 }
 
