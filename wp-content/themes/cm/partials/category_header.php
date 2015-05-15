@@ -15,6 +15,17 @@
 	$category_description = CM_Collection_Controller::get_category_description( $category->term_id );
 ?>
 
+<header class="block padded bg-<?php echo $category_name; ?> bg-brand white">
+	<div class="container">
+		<div class="row mt4 mb2">
+			<div class="col-sm-10 col-sm-offset-1">
+				<h1 class="centered"><?php echo $category_name; ?></h1>
+				<p><?php echo $category_description; ?></p>
+			</div>
+		</div>	
+		<div class="row mb2">
+			<div class="col-sm-8 col-sm-offset-2">
+				<ul>
 <?php
 
 	/**
@@ -32,10 +43,11 @@
 		$collection_name = $collection[ 'title' ];
 		$collection_id = $collection['id'];
 		$collection_permalink = get_permalink( $collection_id );
-
-	}
-
-?>
-
-<header>
+	?>
+					<li><?php echo $collection_name; ?></li>
+	<?php } ?>
+				</ul>
+			</div>
+		</div>
+	</div>
 </header>
