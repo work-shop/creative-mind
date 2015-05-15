@@ -48,6 +48,23 @@ $story_qualifier = CM_Collection_Controller::story_count_for_collection( $storie
 
 ?>
 
+<section class="block padded-less border-brand">
+	<div class="container-fluid">
+		<div class="row">
+			<div class="col-sm-6 col-sm-offset-3">
+				<header class="text-center">
+					<ul class="list-inline">
+						<li># <?php echo $category_name; ?></li><li>Table of Contents</li><li>More Info</li><li>Share This Collection</li>
+					</ul>
+					<h2><?php echo $collection_name; ?></h2>
+				</header>					
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-sm-8 col-sm-offset-2">
+				<div class="slide border-brand padded">
+					<h3 class="text-center">Table of Contents</h3>
+					<ol>
 <?php
 
 foreach ( $stories as $i => $story ) {
@@ -77,7 +94,16 @@ foreach ( $stories as $i => $story ) {
 	$story_type = get_field('story_media_type', $story->ID );
 	$story_name = $story->post_title;
 	$story_permalink = get_permalink( $story->ID );
-	
+	?>
+						<li><?php echo $story_name ?></li>
+	<?php
 }
 
 ?>
+			
+					</ol>
+				</div> <!-- end .slide -->
+			</div>							
+		</div> <!-- end .row -->
+	</div> <!-- end .container -->
+</section>

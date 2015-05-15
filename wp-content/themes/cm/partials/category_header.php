@@ -16,11 +16,11 @@
 ?>
 
 <header class="block padded bg-<?php echo $category_name; ?> bg-brand white">
-	<div class="container">
+	<div class="container-fluid">
 		<div class="row mt4 mb2">
 			<div class="col-sm-10 col-sm-offset-1">
 				<h1 class="centered"><?php echo $category_name; ?></h1>
-				<p><?php echo $category_description; ?></p>
+				<p class="centered"><?php echo $category_description; ?></p>
 			</div>
 		</div>	
 		<div class="row mb2">
