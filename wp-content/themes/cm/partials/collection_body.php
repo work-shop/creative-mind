@@ -44,6 +44,43 @@ $story_count = count( $stories );
  */
 $story_qualifier = CM_Collection_Controller::story_count_for_collection( $stories, $category );
 
+
+/*
+* create a function to create display markup for list item
+*** <li><a>text</a></li>
+* create a new function to create list, given an array of items
+* call function on first half, then call function again on 2nd half
+*/
+
+/**
+ *
+ * split the array of stories into two pieces. 
+ * if the story count is an odd number, the first array has more items than the second. 
+ *
+ */
+function split_stories_array( $stories ) {
+	$length = count( $stories );
+	$midway = ceil( $length/2 );
+	$half_first = array_slice( $stories, 0, $midway );
+	$half_last = array_slice( $stories, $midway, $length - $midway );
+	return [$half_first, $half_last];
+}
+
+function create_list_item( $story ) {
+	return '<li><a href="#">' . $story->post_title . '</a></li>';
+}
+
+function create_list( $half ) {
+	$output = '';
+	foreach ( $half as $story ) {
+		$output = $output . create_list_item( $story );
+	}
+	return '<ol>' . $output . '</ol>';
+}
+
+$halves = split_stories_array( $stories );
+
+
 ?>
 
 <section class="block padded-less">
@@ -62,44 +99,7 @@ $story_qualifier = CM_Collection_Controller::story_count_for_collection( $storie
 			<div class="col-sm-8 col-sm-offset-2">
 				<div class="slide border-<?php echo $category_nicename ?> padded">
 					<h3 class="text-center">Table of Contents</h3>
-					<ol>
-<?php
-
-foreach ( $stories as $i => $story ) {
-	if ( $i == 0 ) {
-		/**
-		 *
-		 * @var array( array('title'=>string, 'id' => int) ) an in-order array of the titles
-		 * and ids of the stories in this collection. this is a convenience variable over the $stories
-		 * array, which contains the same information, and more.
-		 *
-		 * You'll have to iterate over one of these arrays and construct the output for the title slide here.
-		 *
-		 */
-		$story_titles = array_map( function( $p ) { return array( 
-			'title' => $p->post_title,
-			'id' => $p->ID
-		); }, $stories );
-
-	}
-
-  	/**
-	 * @var string $story_type what type of media is present in the story? 
-	 * options: "video", "video_gallery", "image_gallery", "video_and_image_gallery"
-	 * @var string $story_name the post title of this story
-	 * @var string $story_permalink href to the story
-	 */
-	$story_type = get_field('story_media_type', $story->ID );
-	$story_name = $story->post_title;
-	$story_permalink = get_permalink( $story->ID );
-	?>
-						<li><?php echo $story_name ?></li>
-	<?php
-}
-
-?>
-			
-					</ol>
+					<?php echo create_list( $halves[0] ); echo create_list( $halves[1] ) ?>
 				</div> <!-- end .slide -->
 			</div>							
 		</div> <!-- end .row -->
