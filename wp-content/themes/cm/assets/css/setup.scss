@@ -84,6 +84,10 @@ h6,.h6{
 	font-size: .6em;
 }
 
+ol {
+	line-height: 1.75em;
+}
+
 article a{
 	@extend .underline;
 	@include transition(all,.125s);

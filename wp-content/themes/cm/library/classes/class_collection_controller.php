@@ -98,6 +98,54 @@ class CM_Collection_Controller {
 	}
 
 	/**
+	 *
+	 * This function takes the total number of stories belonging to a collection, 
+	 * and splits them into two arrays (to be used in two-column Table of Contents).
+	 *
+	 * @param array $stories the stories within the current collection
+	 * @return the two sub-arrays that make up $stories
+	 *
+	 */
+	public static function split_stories_array( $stories ) {
+		$length = count( $stories );
+		$midway = ceil( $length/2 );
+		$half_first = array_slice( $stories, 0, $midway );
+		$half_last = array_slice( $stories, $midway, $length - $midway );
+		return [$half_first, $half_last];
+	}
+
+	/**
+	 *
+	 * This function takes a given story and creates an html list-item for it.
+	 *
+	 * @param object $story an individual story within the current collection
+	 * @return a list item containing the title and URL for that story
+	 *
+	 */
+	public static function create_list_item( $story ) {
+		return '<li><a href="#">' . $story->post_title . '</a></li>';
+	}
+
+
+	/**
+	 *
+	 * This function takes a given half of the $stories array and displays
+	 * it as an ordered list.
+	 *
+	 * @param array $half a subarray comprised of half of the $stories array
+	 * @param int $start where to begin the numbering for the ordered list
+	 * @return an ordered list containing half of the stories in a collection as list-items
+	 *
+	 */
+	public static function create_list( $half, $start ) {
+		$output = '';
+		foreach ( $half as $story ) {
+			$output = $output . self::create_list_item( $story );
+		}
+		return '<ol start="' . $start . '" >' . $output . '</ol>';
+	}
+
+	/**
 	 * This function return the current category of the page as a stdClass
 	 * or else WP_Error if there is none.
 	 *

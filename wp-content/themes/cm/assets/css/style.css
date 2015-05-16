@@ -89,6 +89,9 @@ h5, .h5 {
 h6, .h6 {
   font-size: .6em; }
 
+ol {
+  line-height: 1.75em; }
+
 article a {
   transition: all 0.125s 0s ease;
   -moz-transition: all 0.125s 0s ease;
@@ -2440,6 +2443,12 @@ img.gform_ajax_spinner {
 
 .flex-active-slide .slideshow-caption {
   top: 0px; }
+
+.slide {
+  height: 400px; }
+  .slide ol {
+    width: 50%;
+    float: left; }
 
 /********** @SCROLLY *********/
 #scrolly {

@@ -45,41 +45,14 @@ $story_count = count( $stories );
 $story_qualifier = CM_Collection_Controller::story_count_for_collection( $stories, $category );
 
 
-/*
-* create a function to create display markup for list item
-*** <li><a>text</a></li>
-* create a new function to create list, given an array of items
-* call function on first half, then call function again on 2nd half
-*/
-
 /**
  *
- * split the array of stories into two pieces. 
- * if the story count is an odd number, the first array has more items than the second. 
+ * @var array $halves contains two arrays, each containing half the stories in a collection
+ * @var int $start the number of items in the first half of stories, plus 1
  *
- */
-function split_stories_array( $stories ) {
-	$length = count( $stories );
-	$midway = ceil( $length/2 );
-	$half_first = array_slice( $stories, 0, $midway );
-	$half_last = array_slice( $stories, $midway, $length - $midway );
-	return [$half_first, $half_last];
-}
-
-function create_list_item( $story ) {
-	return '<li><a href="#">' . $story->post_title . '</a></li>';
-}
-
-function create_list( $half ) {
-	$output = '';
-	foreach ( $half as $story ) {
-		$output = $output . create_list_item( $story );
-	}
-	return '<ol>' . $output . '</ol>';
-}
-
-$halves = split_stories_array( $stories );
-
+*/
+$stories_halves = CM_Collection_Controller::split_stories_array( $stories );
+$start = count($stories_halves[0]) + 1;
 
 ?>
 
@@ -97,9 +70,12 @@ $halves = split_stories_array( $stories );
 		</div>
 		<div class="row">
 			<div class="col-sm-8 col-sm-offset-2">
-				<div class="slide border-<?php echo $category_nicename ?> padded">
+				<div class="slide border-<?php echo $category_nicename ?> padded-more clearfix">
 					<h3 class="text-center">Table of Contents</h3>
-					<?php echo create_list( $halves[0] ); echo create_list( $halves[1] ) ?>
+					<?php 
+						echo CM_Collection_Controller::create_list( $stories_halves[0], 1 ); 
+						echo CM_Collection_Controller::create_list( $stories_halves[1], $start ); 
+					?>
 				</div> <!-- end .slide -->
 			</div>							
 		</div> <!-- end .row -->
