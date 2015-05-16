@@ -12,10 +12,12 @@
 	 */
 	$category = CM_Collection_Controller::get_current_category();
 	$category_name = $category->name;
+	$category_nicename = $category->category_nicename;
 	$category_description = CM_Collection_Controller::get_category_description( $category->term_id );
+
 ?>
 
-<header class="block padded bg-<?php echo $category_name; ?> bg-brand white">
+<header class="block padded bg-<?php echo $category_nicename ?> white">
 	<div class="container-fluid">
 		<div class="row mt4 mb2">
 			<div class="col-sm-10 col-sm-offset-1">
