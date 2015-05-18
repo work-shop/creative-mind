@@ -70,8 +70,8 @@ $start = count($stories_halves[0]) + 1;
 				<div class="slide border-<?php echo $category_nicename ?> padded-more clearfix">
 					<h3 class="text-center">Table of Contents</h3>
 					<?php 
-						echo CM_Collection_Controller::create_story_list( $stories_halves[0], 1 ); 
-						echo CM_Collection_Controller::create_story_list( $stories_halves[1], $start ); 
+						echo CM_Collection_Controller::create_list( $stories_halves[0], 1, 'collection' ); 
+						echo CM_Collection_Controller::create_list( $stories_halves[1], $start, 'collection' ); 
 					?>
 				</div> <!-- end .slide -->
 			</div>							

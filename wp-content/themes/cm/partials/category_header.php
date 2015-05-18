@@ -45,8 +45,8 @@
 		<div class="row mb2">
 			<div class="col-sm-8 col-sm-offset-2">
 				<?php 
-					echo CM_Collection_Controller::create_collection_list( $collections_halves[0] ); 
-					echo CM_Collection_Controller::create_collection_list( $collections_halves[1] ); 
+					echo CM_Collection_Controller::create_list( $collections_halves[0], null, 'category' ); 
+					echo CM_Collection_Controller::create_list( $collections_halves[1], null, 'category' ); 
 				?>
 			</div>
 		</div>
