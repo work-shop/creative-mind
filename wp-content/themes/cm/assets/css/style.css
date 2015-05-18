@@ -143,7 +143,7 @@ ol {
 .dark {
   color: #222222; }
 
-.brand {
+.brand, .brand a {
   color: #cb2026; }
 
 .courses, .courses a {
@@ -2367,9 +2367,13 @@ img.gform_ajax_spinner {
     font-size: 21px; }
 
 /********** @BACK/SHARE *********/
+#share-links, #back-link {
+  width: 50%;
+  float: left; }
+
 #back-link .icon {
   color: white; }
-#back-link .p1 {
+#back-link .text {
   display: block; }
 
 .home #back-link .icon:before {
@@ -2389,14 +2393,14 @@ img.gform_ajax_spinner {
   -o-border-radius: 20px;
   -ms-border-radius: 20px;
   border-radius: 20px;
-  display: inline-block;
-  margin-right: 15px;
-  background: #cb2026; }
+  display: inline-block; }
 
 .share-icons {
   width: 165px;
   margin: 0 auto; }
   .share-icons a {
+    margin-right: 15px;
+    background: #cb2026;
     transition: transform 1s 0s ease;
     -moz-transition: transform 1s 0s ease;
     -webkit-transition: transform 1s 0s ease;

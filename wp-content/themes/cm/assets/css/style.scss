@@ -344,11 +344,16 @@ $dot-margin: 12px;
 $icon-width: 40px;
 $icon-margin: 15px;
 
+#share-links, #back-link {
+	width: 50%;
+	float: left;
+}
+
 #back-link {
 	.icon {
 		color: white;
 	}
-	.p1 {
+	.text {
 		display: block;
 	}
 }
@@ -364,14 +369,14 @@ $icon-margin: 15px;
 	height: $icon-width;
 	@include border-radius($icon-width/2);
 	display: inline-block;
-	margin-right: $icon-margin;
-	background: $brand;
 }
 
 .share-icons{
 	width: ($icon-width * 3) + ($icon-margin*3);
 	margin: 0 auto;
 	a {
+		margin-right: $icon-margin;
+		background: $brand;
 		@include transition(transform,1s);
 
 		&:hover{
