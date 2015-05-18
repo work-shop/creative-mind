@@ -957,11 +957,9 @@ img.gform_ajax_spinner {
     right: auto;
     left: 0; }
   .flexslider-direction:hover {
-    cursor: pointer;
-    cursor: w-resize; }
+    cursor: pointer; }
   .flexslider-direction.next:hover {
-    cursor: pointer;
-    cursor: e-resize; }
+    cursor: pointer; }
 
 .flexslider-controls {
   position: absolute;
@@ -2445,6 +2443,10 @@ img.gform_ajax_spinner {
 
 .slide {
   height: 400px; }
+  .slide a {
+    display: block;
+    width: 100%;
+    height: 100%; }
 
 /********** @SCROLLY *********/
 #scrolly {
