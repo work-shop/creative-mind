@@ -97,20 +97,20 @@ class CM_Collection_Controller {
 		}
 	}
 
+
 	/**
 	 *
-	 * This function takes the total number of stories belonging to a collection, 
-	 * and splits them into two arrays (to be used in two-column Table of Contents).
+	 * This function takes a group of items and splits them into two arrays.
 	 *
-	 * @param array $stories the stories within the current collection
-	 * @return the two sub-arrays that make up $stories
+	 * @param array $items the items within the current group
+	 * @return the two sub-arrays that make up $items
 	 *
 	 */
-	public static function split_stories_array( $stories ) {
-		$length = count( $stories );
+	public static function split_array( $items ) {
+		$length = count( $items );
 		$midway = ceil( $length/2 );
-		$half_first = array_slice( $stories, 0, $midway );
-		$half_last = array_slice( $stories, $midway, $length - $midway );
+		$half_first = array_slice( $items, 0, $midway );
+		$half_last = array_slice( $items, $midway, $length - $midway );
 		return [$half_first, $half_last];
 	}
 
@@ -118,32 +118,66 @@ class CM_Collection_Controller {
 	 *
 	 * This function takes a given story and creates an html list-item for it.
 	 *
-	 * @param object $story an individual story within the current collection
+	 * @param object $story a story
 	 * @return a list item containing the title and URL for that story
 	 *
 	 */
-	public static function create_list_item( $story ) {
-		return '<li><a href="#">' . $story->post_title . '</a></li>';
+	public static function create_story_list_item( $story ) {
+		$story_name = $story->post_title;
+		return '<li>' . $story_name . '</li>';
 	}
-
 
 	/**
 	 *
-	 * This function takes a given half of the $stories array and displays
-	 * it as an ordered list.
+	 * This function takes a given collection and creates an html list-item for it.
 	 *
-	 * @param array $half a subarray comprised of half of the $stories array
-	 * @param int $start where to begin the numbering for the ordered list
-	 * @return an ordered list containing half of the stories in a collection as list-items
+	 * @param object $collection an collection
+	 * @return a list item containing the title and URL for that collection
 	 *
 	 */
-	public static function create_list( $half, $start ) {
+	public static function create_collection_list_item( $collection ) {
+		$collection_name = $collection[ 'title' ];
+		$collection_id = $collection['id'];
+		$collection_permalink = get_permalink( $collection_id );
+		return '<li><a href="' . $collection_permalink . '">' . $collection_name . '</a></li>';
+	}
+
+	/**
+	 *
+	 * This function takes a given half of an array of stories and displays
+	 * it as an ordered list.
+	 *
+	 * @param array $half a subarray comprised of half of the array
+	 * @param int $start where to begin the numbering for the ordered list
+	 * @return an ordered list containing half of the stories in a group as list-items
+	 *
+	 */
+	public static function create_story_list( $half, $start ) {
 		$output = '';
 		foreach ( $half as $story ) {
-			$output = $output . self::create_list_item( $story );
+			$output = $output . self::create_story_list_item( $story );
 		}
-		return '<ol start="' . $start . '" >' . $output . '</ol>';
+		return '<div class="split-list"><ol start="' . $start . '" >' . $output . '</ol></div>';
 	}
+
+	/**
+	 *
+	 * This function takes a given half of an array of collections and displays
+	 * it as an unordered list.
+	 *
+	 * @param array $half a subarray comprised of half of the array
+	 * @param int $start where to begin the numbering for the ordered list
+	 * @return an ordered list containing half of the collections in a group as list-items
+	 *
+	 */
+	public static function create_collection_list( $half ) {
+		$output = '';
+		foreach ( $half as $collection ) {
+			$output = $output . self::create_collection_list_item( $collection );
+		}
+		return '<div class="split-list"><ul>' . $output . '</ul></div>';
+	}
+
 
 	/**
 	 * This function return the current category of the page as a stdClass

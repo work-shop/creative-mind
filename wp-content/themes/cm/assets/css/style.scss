@@ -87,6 +87,10 @@
 }
 
 
+.split-list ul, .split-list ol {
+	width: 50%;
+	float: left;
+}
 
 /********** @LOGO *********/
 
@@ -441,10 +445,6 @@ $icon-margin: 15px;
 
 .slide {
 	height: 400px;
-	ol {
-		width: 50%;
-		float: left;
-	}
 }
 
 

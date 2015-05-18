@@ -22,12 +22,9 @@ $category_nicename = $category->category_nicename;
 /**
  *
  * @var WP_Post $collection the post object for the current collection.
- * @var string $collection_name the name of this collection
- * @var string $collection_permalink the href for this collection
  */
 $collection = get_global( 'current_collection' );
 $collection_name = $collection->post_title;
-$collection_permalink = get_permalink( $collection->ID );
 
 /**
  *
@@ -47,11 +44,11 @@ $story_qualifier = CM_Collection_Controller::story_count_for_collection( $storie
 
 /**
  *
- * @var array $halves contains two arrays, each containing half the stories in a collection
+ * @var array $stories_halves contains two arrays, each containing half the stories in a collection
  * @var int $start the number of items in the first half of stories, plus 1
  *
 */
-$stories_halves = CM_Collection_Controller::split_stories_array( $stories );
+$stories_halves = CM_Collection_Controller::split_array( $stories );
 $start = count($stories_halves[0]) + 1;
 
 ?>
@@ -73,8 +70,8 @@ $start = count($stories_halves[0]) + 1;
 				<div class="slide border-<?php echo $category_nicename ?> padded-more clearfix">
 					<h3 class="text-center">Table of Contents</h3>
 					<?php 
-						echo CM_Collection_Controller::create_list( $stories_halves[0], 1 ); 
-						echo CM_Collection_Controller::create_list( $stories_halves[1], $start ); 
+						echo CM_Collection_Controller::create_story_list( $stories_halves[0], 1 ); 
+						echo CM_Collection_Controller::create_story_list( $stories_halves[1], $start ); 
 					?>
 				</div> <!-- end .slide -->
 			</div>							
