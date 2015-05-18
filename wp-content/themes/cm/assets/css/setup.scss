@@ -88,16 +88,6 @@ ol {
 	line-height: 1.75em;
 }
 
-article a{
-	@extend .underline;
-	@include transition(all,.125s);
-
-	&:hover,&:focus{
-		border-color: $brand;
-	}
-
-}
-
 //md
 @media (max-width: 1200px) {
 	body{

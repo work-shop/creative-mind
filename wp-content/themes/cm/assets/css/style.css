@@ -58,7 +58,7 @@ div {
 .uppercase {
   text-transform: uppercase; }
 
-.underline, article a {
+.underline {
   border-bottom: 2px solid; }
 
 .centered {
@@ -91,15 +91,6 @@ h6, .h6 {
 
 ol {
   line-height: 1.75em; }
-
-article a {
-  transition: all 0.125s 0s ease;
-  -moz-transition: all 0.125s 0s ease;
-  -webkit-transition: all 0.125s 0s ease;
-  -o-transition: all 0.125s 0s ease;
-  -ms-transition: all 0.125s 0s ease; }
-  article a:hover, article a:focus {
-    border-color: #cb2026; }
 
 @media (max-width: 1200px) {
   body {
@@ -3128,13 +3119,14 @@ img.gform_ajax_spinner {
       left: -65px; }
 
 .stories-nav a {
-  position: absolute;
-  top: 50px;
-  font-size: 3em; }
+  position: fixed;
+  top: 50%; }
   .stories-nav a.prev-story {
-    left: 50px; }
+    left: 1em; }
   .stories-nav a.next-story {
-    right: 50px; }
+    right: 1em; }
+  .stories-nav a .icon:before {
+    font-size: 5em; }
 
 /********** @TILES *********/
 .tile {

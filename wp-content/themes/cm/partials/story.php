@@ -2,10 +2,13 @@
 	<?php 
 
 	//video, image_gallery, video_gallery
-	$id = get_the_ID();
+	$story_id = get_the_ID();
 	$collection = CM_Story_Controller::get_collection_for_story( $id );
 	$collection_id = $collection->ID;
 	$story_type = get_field('story_media_type');
+
+	$previous_story_url = CM_Story_Controller::get_previous_story_in_collection( $story_id, $collection_id )->guid;
+	$next_story_url = CM_Story_Controller::get_next_story_in_collection( $story_id, $collection_id )->guid;
 
 	?>
 
@@ -170,6 +173,14 @@
 					</div>
 				</div>
 			</div>
+		</div> <!-- end .story-body -->
+		<div class="stories-nav hidden-xs">
+			<a class="prev-story" href="<?php echo $previous_story_url; ?>">
+				<span class="icon" data-icon="&#8216;"></span>
+			</a>
+			<a class="next-story" href="<?php echo $next_story_url; ?>">
+				<span class="icon" data-icon="&#8212;"></span>
+			</a>
 		</div>
 	</article>
 

@@ -893,14 +893,16 @@ $icon-margin: 15px;
 }
 
 .stories-nav a {
-	position: absolute;
-	top: 50px;
-	font-size: 3em;
+	position: fixed;
+	top: 50%;
 	&.prev-story {
-		left: 50px;
+		left: 1em;
 	}
 	&.next-story {
-		right: 50px;
+		right: 1em;
+	}
+	.icon:before {
+		font-size: 5em;
 	}
 }
 
