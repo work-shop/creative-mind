@@ -19,30 +19,26 @@ get_header();
 
 ?>
 
-<main>
+<?php 
 
-	<?php 
+/** 2. Page Header */
+get_template_part('partials/page_header');
 
-	/** 2. Page Header */
-	get_template_part('partials/page_header');
+?>
 
-	?>
+<?php 
 
-	<?php 
+/** 3. Page Content */
+get_template_part('partials/page_body');
 
-	/** 3. Page Content */
-	get_template_part('partials/page_body');
+?>
 
-	?>
+<?php 
 
-	<?php 
+/** 4. Back + Share */
+get_template_part('partials/back_and_share');
 
-	/** 4. Back + Share */
-	get_template_part('partials/back_and_share');
-
-	?>
-
-</main>
+?>
 
 <?php 
 

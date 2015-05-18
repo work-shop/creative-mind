@@ -17,23 +17,19 @@ get_header();
 
 ?>
 
-<main>
+<?php 
 
-	<?php 
+/** 2. Story Content */
+get_template_part('partials/story');
 
-	/** 2. Story Content */
-	get_template_part('partials/story');
+?>
 
-	?>
+<?php 
 
-	<?php 
+/** 3. Back + Share */
+get_template_part('partials/back_and_share');
 
-	/** 3. Back + Share */
-	get_template_part('partials/back_and_share');
-
-	?>	
-
-</main>
+?>	
 
 <?php 
 

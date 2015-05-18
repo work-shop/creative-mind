@@ -18,30 +18,26 @@ get_header();
 
 ?>
 
-<main>
-	
-	<?php 
+<?php 
 
-	/** 2. Category Header */
-	get_template_part('partials/category_header');
+/** 2. Category Header */
+get_template_part('partials/category_header');
 
-	?>	
+?>	
 
-	<?php 
+<?php 
 
-	/** 3. Category Collections */
-	get_template_part('partials/collections');
+/** 3. Category Collections */
+get_template_part('partials/collections');
 
-	?>
+?>
 
-	<?php 
+<?php 
 
-	/** 4. Back + Share */
-	get_template_part('partials/back_and_share');
+/** 4. Back + Share */
+get_template_part('partials/back_and_share');
 
-	?>	
-
-</main>
+?>	
 	
 <?php 
 

@@ -19,31 +19,27 @@ get_header();
 
 ?>
 
-<main>
+<?php 
 
-	<?php 
+/** 2. Collection Header */
+get_template_part('partials/collection_header');
 
-	/** 2. Collection Header */
-	get_template_part('partials/collection_header');
+?>
 
-	?>
+<?php 
 
-	<?php 
+/** 3. Collection Stories */
+get_template_part('partials/collection_stories');
 
-	/** 3. Collection Stories */
-	get_template_part('partials/collection_stories');
+?>			
 
-	?>			
+<?php 
 
-	<?php 
-
-	/** 4. Back + Share */
-	get_template_part('partials/back_and_share');
+/** 4. Back + Share */
+get_template_part('partials/back_and_share');
 
 
-	?>	
-
-</main>
+?>	
 	
 <?php 
 
