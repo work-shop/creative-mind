@@ -892,6 +892,18 @@ $icon-margin: 15px;
 	}
 }
 
+.stories-nav a {
+	position: absolute;
+	top: 50px;
+	font-size: 3em;
+	&.prev-story {
+		left: 50px;
+	}
+	&.next-story {
+		right: 50px;
+	}
+}
+
 
 
 /********** @TILES *********/

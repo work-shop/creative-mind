@@ -3127,6 +3127,15 @@ img.gform_ajax_spinner {
     .flexslider-story .flexslider-direction.previous:hover {
       left: -65px; }
 
+.stories-nav a {
+  position: absolute;
+  top: 50px;
+  font-size: 3em; }
+  .stories-nav a.prev-story {
+    left: 50px; }
+  .stories-nav a.next-story {
+    right: 50px; }
+
 /********** @TILES *********/
 .tile {
   position: relative; }

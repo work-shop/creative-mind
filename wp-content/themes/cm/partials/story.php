@@ -3,7 +3,8 @@
 
 	//video, image_gallery, video_gallery
 	$id = get_the_ID();
-	$collection = get_global('collection');
+	$collection = CM_Story_Controller::get_collection_for_story( $id );
+	$collection_id = $collection->ID;
 	$story_type = get_field('story_media_type');
 
 	?>
