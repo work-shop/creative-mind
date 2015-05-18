@@ -89,6 +89,9 @@ h5, .h5 {
 h6, .h6 {
   font-size: .6em; }
 
+ol {
+  line-height: 1.75em; }
+
 article a {
   transition: all 0.125s 0s ease;
   -moz-transition: all 0.125s 0s ease;
@@ -141,9 +144,9 @@ article a {
 .italic {
   font-style: italic; }
 
-.white {
+.white, .white a {
   color: #fafafa; }
-  .white:hover {
+  .white:hover, .white a:hover {
     color: #fafafa; }
 
 .dark {
@@ -1056,6 +1059,10 @@ img.gform_ajax_spinner {
   -o-transition: all 0.5s 0s ease;
   -ms-transition: all 0.5s 0s ease;
   padding-top: 4%; }
+
+.split-list ul, .split-list ol {
+  width: 50%;
+  float: left; }
 
 /********** @LOGO *********/
 .logo-static {
@@ -2440,6 +2447,9 @@ img.gform_ajax_spinner {
 
 .flex-active-slide .slideshow-caption {
   top: 0px; }
+
+.slide {
+  height: 400px; }
 
 /********** @SCROLLY *********/
 #scrolly {

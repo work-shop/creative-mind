@@ -97,6 +97,71 @@ class CM_Collection_Controller {
 		}
 	}
 
+
+	/**
+	 *
+	 * This function takes a group of items and splits them into two arrays.
+	 *
+	 * @param array $items the items within the current group
+	 * @return the two sub-arrays that make up $items
+	 *
+	 */
+	public static function split_array( $items ) {
+		$length = count( $items );
+		$midway = ceil( $length/2 );
+		$half_first = array_slice( $items, 0, $midway );
+		$half_last = array_slice( $items, $midway, $length - $midway );
+		return [$half_first, $half_last];
+	}
+
+	/**
+	 *
+	 * This function takes a given item and creates an html list-item for it.
+	 *
+	 * @param object $item an item
+	 * @param string $type the type of item – either a story or a collection
+	 * @return a list item containing the title of the story or collection
+	 *
+	 */
+	public static function create_list_item( $item, $type ) {
+		if ( $type == 'story' ) {
+			$story_name = $item->post_title;
+			return '<li>' . $story_name . '</li>';	
+		}
+		elseif ( $type == 'collection' ) {
+			$collection_name = $item[ 'title' ];
+			$collection_id = $item['id'];
+			$collection_permalink = get_permalink( $collection_id );
+			return '<li><a href="' . $collection_permalink . '">' . $collection_name . '</a></li>';
+		}
+	}
+
+	/**
+	 *
+	 * This function takes a given half of an array and displays it as a list.
+	 *
+	 * @param array $half a subarray comprised of half of the array
+	 * @param int $start where to begin the numbering for the ordered list
+	 * @return a list containing half of the items in a group as list-items
+	 *
+	 */
+	public static function create_list( $half, $start, $type ) {
+		$output = '';
+		if ( $type == 'collection' ) {
+			foreach ( $half as $story ) {
+				$output = $output . self::create_list_item( $story, 'story' );
+			}
+			return '<div class="split-list"><ol start="' . $start . '" >' . $output . '</ol></div>';
+		}
+		elseif ( $type == 'category' ) {
+			foreach ( $half as $collection ) {
+				$output = $output . self::create_list_item( $collection, 'collection' );
+			}
+			return '<div class="split-list"><ul>' . $output . '</ul></div>';
+		}
+	}
+
+
 	/**
 	 * This function return the current category of the page as a stdClass
 	 * or else WP_Error if there is none.
