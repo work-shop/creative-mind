@@ -259,7 +259,7 @@ ol {
 }
 
 .padded-less{
-	padding: 2.5%;
+	padding: 2.5% 0;
 }
 
 .padded{
@@ -296,18 +296,30 @@ ol {
 
 .bg-courses{
  	background: $courses;
+ 	&-dark {
+ 		background: darken($courses,10);
+ 	}
 }
 
 .bg-research{
  	background: $research;
+ 	&-dark {
+ 		background: darken($research,10);
+ 	}
 }
 
 .bg-interviews{
  	background: $interviews;
+ 	&-dark {
+ 		background: darken($interviews,10);
+ 	}
 }
 
 .bg-lectures{
  	background: $lectures;
+ 	&-dark {
+ 		background: darken($lectures,10);
+ 	}
 }
 
 .bg-gradient{

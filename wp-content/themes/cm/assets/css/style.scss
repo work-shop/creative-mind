@@ -503,10 +503,6 @@ $icon-margin: 15px;
 		background: transparent;
 	}
 
-	h2 {
-		display: inline-block;
-	}
-
 	li {
 		line-height: 1em;
 		margin-bottom: 0.5em;
@@ -941,6 +937,21 @@ $icon-margin: 15px;
 /********** @RESPONSIVE *********/
 
 @media (min-width: 768px) {
+
+	#megaNav {
+		header {
+			position: relative;
+			h4 {
+				@include transform( rotate(-90deg) );
+				position: absolute;
+				left: 0;
+				top: 50px;
+			}
+		}
+		.row {
+			min-height: 100px;
+		}
+	}
 
 	#collections-intro{
 		// position: fixed;

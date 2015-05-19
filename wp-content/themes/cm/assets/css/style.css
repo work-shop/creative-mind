@@ -332,7 +332,7 @@ ol {
   margin-right: 9em; }
 
 .padded-less {
-  padding: 2.5%; }
+  padding: 2.5% 0; }
 
 .padded {
   padding: 4% 4% 4.25%; }
@@ -358,15 +358,23 @@ ol {
 
 .bg-courses {
   background: #0575B9; }
+  .bg-courses-dark {
+    background: #045687; }
 
 .bg-research {
   background: #E5603C; }
+  .bg-research-dark {
+    background: #d2431c; }
 
 .bg-interviews {
   background: #25807F; }
+  .bg-interviews-dark {
+    background: #1a5858; }
 
 .bg-lectures {
   background: #58595B; }
+  .bg-lectures-dark {
+    background: #3f4041; }
 
 .bg-gradient {
   background: #60b3ff;
@@ -2487,8 +2495,6 @@ img.gform_ajax_spinner {
   border: 0;
   color: #cb2026;
   background: transparent; }
-#megaNav h2 {
-  display: inline-block; }
 #megaNav li {
   line-height: 1em;
   margin-bottom: 0.5em;
@@ -3156,6 +3162,20 @@ img.gform_ajax_spinner {
     font-size: 3.5em; }
 
 /********** @RESPONSIVE *********/
+@media (min-width: 768px) {
+  #megaNav header {
+    position: relative; }
+    #megaNav header h4 {
+      transform: rotate(-90deg);
+      -moz-transform: rotate(-90deg);
+      -webkit-transform: rotate(-90deg);
+      -o-transform: rotate(-90deg);
+      -ms-transform: rotate(-90deg);
+      position: absolute;
+      left: 0;
+      top: 50px; }
+  #megaNav .row {
+    min-height: 100px; } }
 @media (max-width: 1200px) {
   .story-activated .collection-intro-heading {
     padding-top: 10px; }
