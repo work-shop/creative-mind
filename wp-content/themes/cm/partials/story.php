@@ -14,6 +14,9 @@
 
 	<article class="story block target story-type-<?php echo $story_type;?>">
 		<header class="story-header story-header-<?php echo $story_type;?>">
+			<h5 class="uppercase centered">
+				<?php if ( $collection ) { echo $collection->post_title . ' / '; } the_title(); ?>
+			</h5>
 			<div class="story-hero <?php if($story_type == 'video_gallery'): echo 'story-hero-unmasked'; endif; ?>">
 				<?php 
 				switch ($story_type) {
@@ -30,8 +33,9 @@
 								<?php the_post_thumbnail('story_hero'); ?>
 							</div>
 						<?php if ( $vimeo_id ) : ?>
-							<div class="story-video-play" data-toggle="tooltip" data-placement="top" title="watch the video!">
+							<div class="story-video-play text-center" data-toggle="tooltip" data-placement="top" title="watch the video!">
 								<span class="icon" data-icon="Ò"></span>
+								<h1 class="m0 bold story-heading"><?php the_title(); ?></h1>
 							</div>
 						<?php endif; ?>
 						</div>
@@ -87,11 +91,7 @@
 				<div class="container">
 					<div class="row">
 						<div class="col-sm-10 col-sm-offset-1">
-							<h1 class="m0 bold serif story-heading"><?php the_title(); ?></h1>
-							<h5 class="m0 <?php echo ( $collection ) ? "" : "hidden"; ?>">
-								Collection: <?php if ( $collection ) { echo $collection->post_title; }?>
-							</h5>
-							<?php if ($description = get_field('story_description')) : ?><h2 class="m1"><?php echo $description; ?></h2><?php endif; ?>
+							<?php if ($description = get_field('story_description')) : ?><p class="m1 h3"><?php echo $description; ?></p><?php endif; ?>
 							<?php if ($byline = get_field('story_byline')) : ?>
 								<h4 class="mt0 mb1">
 								<?php 
@@ -102,7 +102,7 @@
 								</h4>
 							<?php endif; ?>
 							<?php if ( $links = get_field('story_links') ) : ?>
-								<h5 class="m0">
+								<h5 class="mb2">
 								<?php foreach( $links as $link) : ?>
 									&nbsp; &nbsp;<a class="underline" href="<?php echo $link['link_url']; ?>"><?php echo $link['link_text']; ?></a>&nbsp; &nbsp;
 								<?php endforeach; ?>

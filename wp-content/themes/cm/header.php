@@ -87,4 +87,6 @@
 				</div>
 			</header>	
 
-			<main id="content">
+			<main id="content" <?php if ( is_singular('stories') ) 
+				echo 'class="bg-' . CM_Collection_Controller::get_current_category()->slug . ' white"' 
+			?>>
