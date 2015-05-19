@@ -457,15 +457,13 @@ $icon-margin: 15px;
 
 /********** @MEGANAV *********/
 
-.modal-backdrop.in{
-	background: $ultra-light;
-	z-index: 12;
+#megaNav{
+
+	top: $nav-height;
+	@extend .bg-light;
 	width: 100%;
 	height: 100%;
-	opacity: .9;
-}
-
-#megaNav{
+	padding-bottom: $nav-height;
 
 	.close{
 		position: fixed;
@@ -476,7 +474,6 @@ $icon-margin: 15px;
 
 	.modal-dialog{
 		width: 100%;
-		margin-top: 50px;
 	}
 
 	.modal-content{
