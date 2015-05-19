@@ -4,14 +4,6 @@
       <section class="block">
         <div class="container-fluid">
 
-          <div class="row">
-            <div class="col-sm-5 col-sm-offset-1 bold">
-              <h4><a href="<?php bloginfo('url'); ?>/about">About the Creative Mind</a></h4>
-            </div>
-            <div class="col-sm-6 bold">
-              <h4><a href="<?php bloginfo('url'); ?>/contact">Contact Us</a></h4>
-            </div>
-          </div>
           <div class="row white bg-courses-dark">
             <div class="col-sm-1">
               <header class="bold">
@@ -111,6 +103,15 @@
               </div> <!-- end .row -->
             </div>
           </div> <!-- end .row -->
+
+          <div class="row">
+            <div class="col-sm-12 bold">
+              <ul class="list-inline centered mt1">
+                <li class="h4"><a href="<?php bloginfo('url'); ?>/about">About the Creative Mind</a></li>
+                <li class="h4 ml1"><a href="<?php bloginfo('url'); ?>/contact">Contact Us</a></li>
+              </ul>
+            </div>
+          </div>
 
         </div> <!-- /.container -->
       </section>

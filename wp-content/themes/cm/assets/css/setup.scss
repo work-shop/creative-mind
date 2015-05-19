@@ -297,28 +297,28 @@ ol {
 .bg-courses{
  	background: $courses;
  	&-dark {
- 		background: darken($courses,10);
+ 		background: darken($courses,7);
  	}
 }
 
 .bg-research{
  	background: $research;
  	&-dark {
- 		background: darken($research,10);
+ 		background: darken($research,7);
  	}
 }
 
 .bg-interviews{
  	background: $interviews;
  	&-dark {
- 		background: darken($interviews,10);
+ 		background: darken($interviews,7);
  	}
 }
 
 .bg-lectures{
  	background: $lectures;
  	&-dark {
- 		background: darken($lectures,10);
+ 		background: darken($lectures,7);
  	}
 }
 

@@ -359,22 +359,22 @@ ol {
 .bg-courses {
   background: #0575B9; }
   .bg-courses-dark {
-    background: #045687; }
+    background: #045f96; }
 
 .bg-research {
   background: #E5603C; }
   .bg-research-dark {
-    background: #d2431c; }
+    background: #e0471e; }
 
 .bg-interviews {
   background: #25807F; }
   .bg-interviews-dark {
-    background: #1a5858; }
+    background: #1d6464; }
 
 .bg-lectures {
   background: #58595B; }
   .bg-lectures-dark {
-    background: #3f4041; }
+    background: #464749; }
 
 .bg-gradient {
   background: #60b3ff;
@@ -2466,7 +2466,8 @@ img.gform_ajax_spinner {
   height: 100%;
   padding-bottom: 50px; }
   #megaNav .modal-dialog {
-    width: 100%; }
+    width: 100%;
+    margin: 0; }
   #megaNav .modal-content {
     -webkit-border-radius: 0px;
     -moz-border-radius: 0px;
