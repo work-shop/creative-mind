@@ -699,13 +699,15 @@ $icon-margin: 15px;
 	.story-hero {
 		width: 80%;
 		margin: 0 auto;
-		&:not(.story-hero-unmasked){
-			overflow: hidden;
-			position: relative;
+		position: relative;
+		h1 {
+			position: absolute;
 		}
+		// &:not(.story-hero-unmasked){
+		// 	overflow: hidden;
+		// 	position: relative;
+		// }
 	}
-
-	.story-hero
 
 	.story-meta{
 		@include transition();
@@ -756,7 +758,7 @@ $icon-margin: 15px;
 	max-width: 800px;
 	margin: 0 auto;
 	@include transition();
-	@include transform(translateY(-400px));
+	// @include transform(translateY(-400px));
 
 	.icon:after{
 		height: inherit;
@@ -771,7 +773,7 @@ $icon-margin: 15px;
 
 	cursor: pointer;
 	&:hover{
-		@include transform(translateY(-405px));
+		// @include transform(translateY(-405px));
 
 		.icon:after{
 			opacity: 1;

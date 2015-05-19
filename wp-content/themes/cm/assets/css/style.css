@@ -2955,12 +2955,11 @@ img.gform_ajax_spinner {
   padding-bottom: 8%; }
   .story .story-hero {
     width: 80%;
-    margin: 0 auto; }
-    .story .story-hero:not(.story-hero-unmasked) {
-      overflow: hidden;
-      position: relative; }
-  .story .story-hero
-  .story-meta {
+    margin: 0 auto;
+    position: relative; }
+    .story .story-hero h1 {
+      position: absolute; }
+  .story .story-meta {
     transition: all 0.25s 0s ease;
     -moz-transition: all 0.25s 0s ease;
     -webkit-transition: all 0.25s 0s ease;
@@ -3004,11 +3003,6 @@ img.gform_ajax_spinner {
   -webkit-transition: all 0.25s 0s ease;
   -o-transition: all 0.25s 0s ease;
   -ms-transition: all 0.25s 0s ease;
-  transform: translateY(-400px);
-  -moz-transform: translateY(-400px);
-  -webkit-transform: translateY(-400px);
-  -o-transform: translateY(-400px);
-  -ms-transform: translateY(-400px);
   cursor: pointer; }
   .story-video-play .icon:after, .story-video-play .menu-toggle:after {
     height: inherit;
@@ -3027,19 +3021,13 @@ img.gform_ajax_spinner {
     -webkit-transition: all 0.25s 0s ease;
     -o-transition: all 0.25s 0s ease;
     -ms-transition: all 0.25s 0s ease; }
-  .story-video-play:hover {
-    transform: translateY(-405px);
-    -moz-transform: translateY(-405px);
-    -webkit-transform: translateY(-405px);
-    -o-transform: translateY(-405px);
-    -ms-transform: translateY(-405px); }
-    .story-video-play:hover .icon:after, .story-video-play:hover .menu-toggle:after {
-      opacity: 1;
-      -o-text-shadow: 0px 0px 3px rgba(0, 0, 0, 0.5);
-      -ms-text-shadow: 0px 0px 3px rgba(0, 0, 0, 0.5);
-      -moz-text-shadow: 0px 0px 3px rgba(0, 0, 0, 0.5);
-      -webkit-text-shadow: 0px 0px 3px rgba(0, 0, 0, 0.5);
-      text-shadow: 0px 0px 3px rgba(0, 0, 0, 0.5); }
+  .story-video-play:hover .icon:after, .story-video-play:hover .menu-toggle:after {
+    opacity: 1;
+    -o-text-shadow: 0px 0px 3px rgba(0, 0, 0, 0.5);
+    -ms-text-shadow: 0px 0px 3px rgba(0, 0, 0, 0.5);
+    -moz-text-shadow: 0px 0px 3px rgba(0, 0, 0, 0.5);
+    -webkit-text-shadow: 0px 0px 3px rgba(0, 0, 0, 0.5);
+    text-shadow: 0px 0px 3px rgba(0, 0, 0, 0.5); }
 
 .story-video-active .story-video {
   z-index: 3; }
