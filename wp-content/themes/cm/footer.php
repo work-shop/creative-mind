@@ -2,6 +2,7 @@
 		
 		<?php get_template_part('partials/footer_menu'); ?>
 		<?php get_template_part('partials/story_modal'); ?>
+		<?php get_template_part('partials/mega_nav'); ?>
 
 	</div><!-- /#wrapper -->
 

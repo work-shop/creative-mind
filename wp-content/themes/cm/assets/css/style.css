@@ -1004,32 +1004,22 @@ img.gform_ajax_spinner {
   #header .container-fluid {
     padding: 0 30px; }
 
-#header-brown {
-  width: 100%;
-  position: absolute;
-  left: 0;
-  z-index: 8; }
-  #header-brown > div {
-    height: 40px; }
-  #header-brown #logo-brown img {
-    width: 100px; }
-
-#header-cm {
+#header {
   height: 50px;
   border-bottom: 4px solid #cb2026;
   position: fixed;
   left: 0;
   width: 100%;
   z-index: 7; }
-  #header-cm .menu-toggle {
+  #header .menu-toggle {
     position: relative;
     top: 13px; }
-    #header-cm .menu-toggle .icon:before {
+    #header .menu-toggle .icon:before {
       vertical-align: -14%;
       margin-left: 0.25em; }
-  #header-cm #logo-cm {
+  #header #logo-cm {
     height: 50px; }
-    #header-cm #logo-cm img {
+    #header #logo-cm img {
       max-width: 180px;
       width: 180px;
       position: relative;
@@ -3224,7 +3214,7 @@ img.gform_ajax_spinner {
       .flexslider-story .flexslider-direction.previous:hover {
         left: 15px; } }
 @media (max-width: 767px) {
-  #header-cm {
+  #header {
     top: 0px;
     overflow: hidden; }
 
