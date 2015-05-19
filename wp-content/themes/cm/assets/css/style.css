@@ -173,14 +173,14 @@ ol {
 .brown-yellow {
   color: #ffcc00; }
 
-.icon:before {
+.icon:after, .menu-toggle:after {
   content: attr(data-icon);
   font-family: "modern_pictograms_proregular";
   font-size: 30px;
   line-height: 100%;
   vertical-align: middle;
   position: relative; }
-.icon.large:before {
+.icon.large:after, .large.menu-toggle:after {
   font-size: 72px; }
 
 /********** @MARGINS AND PADDING *********/
@@ -958,7 +958,7 @@ img.gform_ajax_spinner {
   -webkit-transition: all 0.25s 0s ease;
   -o-transition: all 0.25s 0s ease;
   -ms-transition: all 0.25s 0s ease; }
-  .flexslider-direction .icon:before {
+  .flexslider-direction .icon:before, .flexslider-direction .menu-toggle:before {
     font-size: 90px;
     color: #cb2026; }
   .flexslider-direction.previous {
@@ -1022,9 +1022,6 @@ img.gform_ajax_spinner {
   #header .menu-toggle {
     position: relative;
     top: 13px; }
-    #header .menu-toggle .icon:before {
-      vertical-align: -14%;
-      margin-left: 0.25em; }
   #header #logo-cm {
     height: 50px; }
     #header #logo-cm img {
@@ -2367,12 +2364,12 @@ img.gform_ajax_spinner {
   width: 50%;
   float: left; }
 
-#back-link .icon {
+#back-link .icon, #back-link .menu-toggle {
   color: white; }
 #back-link .text {
   display: block; }
 
-.home #back-link .icon:before {
+.home #back-link .icon:after, .home #back-link .menu-toggle:after {
   display: inline-block;
   transform: rotate(90deg);
   -moz-transform: rotate(90deg);
@@ -2410,7 +2407,7 @@ img.gform_ajax_spinner {
       -ms-transform: rotate(360deg) scale(1.25); }
   .share-icons .addthis_button_email {
     margin-right: 0; }
-  .share-icons .icon:before {
+  .share-icons .icon:after, .share-icons .menu-toggle:after {
     color: white;
     top: 5px; }
 
@@ -2457,16 +2454,17 @@ img.gform_ajax_spinner {
   z-index: 3; }
 
 /********** @MEGANAV *********/
+.menu-toggle:after {
+  content: "\00C2"; }
+
+.modal-open .menu-toggle:after {
+  content: "\FB02"; }
+
 #megaNav {
   top: 50px;
   width: 100%;
   height: 100%;
   padding-bottom: 50px; }
-  #megaNav .close {
-    position: fixed;
-    top: -38px;
-    right: 3%;
-    opacity: 1; }
   #megaNav .modal-dialog {
     width: 100%; }
   #megaNav .modal-content {
@@ -2496,7 +2494,7 @@ img.gform_ajax_spinner {
     line-height: 1em;
     margin-bottom: 0.5em;
     position: relative; }
-    #megaNav li .icon {
+    #megaNav li .icon, #megaNav li .menu-toggle {
       position: absolute;
       top: -0.35em;
       left: 0; }
@@ -3027,7 +3025,7 @@ img.gform_ajax_spinner {
   -o-transition: all 0.25s 0s ease;
   -ms-transition: all 0.25s 0s ease;
   cursor: pointer; }
-  .story-video-play .icon:before {
+  .story-video-play .icon:after, .story-video-play .menu-toggle:after {
     height: inherit;
     width: 100%;
     font-size: 90px;
@@ -3050,7 +3048,7 @@ img.gform_ajax_spinner {
     -webkit-transform: translate(0, -5px);
     -o-transform: translate(0, -5px);
     -ms-transform: translate(0, -5px); }
-    .story-video-play:hover .icon:before {
+    .story-video-play:hover .icon:after, .story-video-play:hover .menu-toggle:after {
       opacity: 1;
       -o-text-shadow: 0px 0px 3px rgba(0, 0, 0, 0.5);
       -ms-text-shadow: 0px 0px 3px rgba(0, 0, 0, 0.5);
@@ -3115,7 +3113,7 @@ img.gform_ajax_spinner {
     left: 1em; }
   .stories-nav a.next-story {
     right: 1em; }
-  .stories-nav a .icon:before {
+  .stories-nav a .icon:after, .stories-nav a .menu-toggle:after {
     font-size: 5em; }
 
 /********** @TILES *********/
@@ -3155,7 +3153,7 @@ img.gform_ajax_spinner {
     opacity: 0.9; }
   .tile-story header {
     margin: 4em 4%; }
-  .tile-story .icon:before {
+  .tile-story .icon:after, .tile-story .menu-toggle:after {
     font-size: 3.5em; }
 
 /********** @RESPONSIVE *********/
@@ -3207,7 +3205,7 @@ img.gform_ajax_spinner {
   .flexslider-story .flexslider-direction {
     opacity: 1;
     right: 15px; }
-    .flexslider-story .flexslider-direction .icon:before {
+    .flexslider-story .flexslider-direction .icon:after, .flexslider-story .flexslider-direction .menu-toggle:after {
       color: white;
       -o-text-shadow: 0px 0px 2px rgba(0, 0, 0, 0.5);
       -ms-text-shadow: 0px 0px 2px rgba(0, 0, 0, 0.5);

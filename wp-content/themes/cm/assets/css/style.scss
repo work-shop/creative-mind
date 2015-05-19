@@ -34,10 +34,6 @@
   .menu-toggle{
   	position: relative;
   	top: 13px;
-  	.icon:before {
-  		vertical-align: -14%;
-  		margin-left: 0.25em;
-  	}
   }
 
   #logo-cm{
@@ -342,7 +338,7 @@ $icon-margin: 15px;
 	}
 }
 
-.home #back-link .icon:before {
+.home #back-link .icon:after {
 	display: inline-block;
 	@include transform( rotate(90deg) );
 }	
@@ -372,7 +368,7 @@ $icon-margin: 15px;
 		margin-right: 0;
 	}
 
-	.icon:before{
+	.icon:after{
 		color: white;
 		top: 5px;
 	}
@@ -457,6 +453,16 @@ $icon-margin: 15px;
 
 /********** @MEGANAV *********/
 
+.menu-toggle {
+	@extend .icon;
+	&:after {
+		content: "\00C2";
+	}
+}
+.modal-open .menu-toggle:after {
+	content: "\FB02";
+}
+
 #megaNav{
 
 	top: $nav-height;
@@ -464,13 +470,6 @@ $icon-margin: 15px;
 	width: 100%;
 	height: 100%;
 	padding-bottom: $nav-height;
-
-	.close{
-		position: fixed;
-		top: -38px;
-		right: 3%;
-		opacity: 1;
-	}
 
 	.modal-dialog{
 		width: 100%;
@@ -772,7 +771,7 @@ $icon-margin: 15px;
 	margin-top: -60px;
 	@include transition();
 
-	.icon:before{
+	.icon:after{
 		height: inherit;
 		width: 100%;
 		font-size: 90px;
@@ -787,7 +786,7 @@ $icon-margin: 15px;
 	&:hover{
 		@include transform(translate(0,-5px));
 
-		.icon:before{
+		.icon:after{
 			opacity: 1;
 			@include text-shadow(0px, 0px, 3px, rgba(0,0,0,.5));
 		}
@@ -875,7 +874,7 @@ $icon-margin: 15px;
 	&.next-story {
 		right: 1em;
 	}
-	.icon:before {
+	.icon:after {
 		font-size: 5em;
 	}
 }
@@ -923,7 +922,7 @@ $icon-margin: 15px;
 	header {
 		margin: 4em 4%;
 	}
-	.icon:before {
+	.icon:after {
 		font-size: 3.5em;
 	}
 }
@@ -1036,7 +1035,7 @@ $icon-margin: 15px;
 			right: 15px;
 
 
-			.icon:before{
+			.icon:after{
 				color: white;
 				@include text-shadow(0px,0px,2px,rgba(0,0,0,.5));
 			}			

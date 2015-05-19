@@ -76,7 +76,9 @@
 						</div>
 
 						<nav class="col-sm-8 col-xs-6 m0">
-							<p class="right"><a href="#menu" class="menu-toggle" data-toggle="modal" data-target="#megaNav">Menu <span class="icon" data-icon="&#200;"></span></a></p>
+							<p class="right"><a href="#menu" class="menu-toggle">
+								<span class="uppercase">Index</span>
+							</a></p>
 						</nav>
 
 						<?php $activity = false; ?>

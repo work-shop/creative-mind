@@ -204,7 +204,7 @@ ol {
 }
 
 .icon{
-	&:before {
+	&:after {
     content: attr(data-icon);
     font-family: "modern_pictograms_proregular";
 	font-size: 30px;
@@ -213,7 +213,7 @@ ol {
 	position: relative;	
 	}
 	
-	&.large:before{
+	&.large:after{
 		font-size: 72px;
 	}
 

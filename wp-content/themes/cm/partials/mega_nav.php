@@ -2,7 +2,6 @@
   <div class="modal-dialog">
     <div class="modal-content">
       <section class="block">
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span class="icon bold" data-icon="&#64258;" aria-hidden="true"></span></button>
         <div class="container-fluid">
 
           <div class="row">
