@@ -204,7 +204,7 @@ ol {
 }
 
 .icon{
-	&:before {
+	&:after {
     content: attr(data-icon);
     font-family: "modern_pictograms_proregular";
 	font-size: 30px;
@@ -213,7 +213,7 @@ ol {
 	position: relative;	
 	}
 	
-	&.large:before{
+	&.large:after{
 		font-size: 72px;
 	}
 
@@ -259,7 +259,7 @@ ol {
 }
 
 .padded-less{
-	padding: 2.5%;
+	padding: 2.5% 0;
 }
 
 .padded{
@@ -296,18 +296,30 @@ ol {
 
 .bg-courses{
  	background: $courses;
+ 	&-dark {
+ 		background: darken($courses,7);
+ 	}
 }
 
 .bg-research{
  	background: $research;
+ 	&-dark {
+ 		background: darken($research,7);
+ 	}
 }
 
 .bg-interviews{
  	background: $interviews;
+ 	&-dark {
+ 		background: darken($interviews,7);
+ 	}
 }
 
 .bg-lectures{
  	background: $lectures;
+ 	&-dark {
+ 		background: darken($lectures,7);
+ 	}
 }
 
 .bg-gradient{

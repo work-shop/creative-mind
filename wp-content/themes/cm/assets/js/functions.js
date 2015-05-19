@@ -24,11 +24,10 @@ jQuery(document).ready(function($) {
 	  	event.preventDefault();
 		$('body,html').animate({scrollTop:0},2000);
 	});
-	
+
 	$('.menu-toggle').click(function(event) {
-	  	event.preventDefault();
-		menuToggle();
-		console.log('.menu-toggle clicked');
+		event.preventDefault();
+		$('#megaNav').modal('toggle');
 	});
 
 	$(".jump").click(function(e){
@@ -87,19 +86,11 @@ $(window).resize(function() {
 //FUNCTIONS
 
 //m or M	
-$(document).keypress(function(e) {
-	if(e.which == 109 || e.which == 77) {	
-		if($("input:focus")){
-			var elem = document.activeElement;
-			if ( elem.type ){ 
-				
-			}
-			else{ 
-				menuToggle();	
-			}
-		}
+$(document).keypress(function(e) { 
+	if (e.which == 109 || e.which == 77) {
+		$('.menu-toggle').click(); 
 	}
-});
+} );
 
 //down arrow
 $(document).keydown(function(e){
@@ -177,45 +168,6 @@ function scrollLink(destination){
 		scrollTop: $(destination).offset().top - 100
 	},1500);
 }
-
-//open and close the menu
-function menuToggle(){
-	console.log('menutoggle');
-	
-	if($('#menu').hasClass('off')){
-		$('#menu').removeClass('off');
-		$('#menu').addClass('on');
-		$('html').removeClass('menu-closed');
-		$('html').addClass('menu-open');
-		$('#menu').scrollTop(0);				
-		$('html,body').scrollTop(0);			
-		var trim = $(window).height();		
-		$('html,body').css('height',trim);
-		$('html,body').css('overflow','hidden');
-	}
-	
-	else if($('#menu').hasClass('on')){
-		$('#menu').removeClass('on');
-		$('#menu').addClass('off');
-		$('html').removeClass('menu-open');
-		$('html').addClass('menu-closed');
-		$('html').scrollTop(0);	
-		$('html,body').css('height','100%');
-		$('html,body').css('overflow','visible');
-	}
-	
-}
-
-
-
-
-
-
-
-
-
-
-
 
 
 
