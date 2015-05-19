@@ -2448,7 +2448,7 @@ img.gform_ajax_spinner {
   background: #f1f1f1;
   z-index: 3; }
 
-/********** @SEARCH *********/
+/********** @MEGANAV *********/
 .modal-backdrop.in {
   background: #fafafa;
   z-index: 12;
@@ -2456,15 +2456,15 @@ img.gform_ajax_spinner {
   height: 100%;
   opacity: .9; }
 
-#searchModal .close {
+#megaNav .close {
   position: fixed;
   top: -38px;
   right: 3%;
   opacity: 1; }
-#searchModal .modal-dialog {
+#megaNav .modal-dialog {
   width: 100%;
   margin-top: 50px; }
-#searchModal .modal-content {
+#megaNav .modal-content {
   -webkit-border-radius: 0px;
   -moz-border-radius: 0px;
   -o-border-radius: 0px;
@@ -2477,36 +2477,27 @@ img.gform_ajax_spinner {
   box-shadow: 0px 0px 0px rgba(50, 50, 50, 0.25);
   border: none;
   background: none; }
-#searchModal .row.search {
-  border-bottom: 2px solid #222222;
-  position: relative; }
-  #searchModal .row.search .icon {
-    position: absolute;
-    right: 0;
-    bottom: 0; }
-    #searchModal .row.search .icon:before {
-      font-size: 3em; }
-#searchModal label, #searchModal input {
+#megaNav label, #megaNav input {
   margin-bottom: 0;
   line-height: 1em; }
-#searchModal label {
+#megaNav label {
   display: inline-block;
   padding-right: 0.25em; }
-#searchModal input {
+#megaNav input {
   border: 0;
   color: #cb2026;
   background: transparent; }
-#searchModal h2 {
+#megaNav h2 {
   display: inline-block; }
-#searchModal li {
+#megaNav li {
   line-height: 1em;
   margin-bottom: 0.5em;
   position: relative; }
-  #searchModal li .icon {
+  #megaNav li .icon {
     position: absolute;
     top: -0.35em;
     left: 0; }
-  #searchModal li a {
+  #megaNav li a {
     display: block;
     margin-left: 1em; }
 

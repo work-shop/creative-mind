@@ -8,7 +8,6 @@
 		   <?php
 	   	    if (is_category()) : single_cat_title(); echo ' - '; 
 	        elseif (is_archive()): wp_title(''); echo ' - ';  
-	      	elseif (is_search()) : echo 'Search for &quot;'.get_search_query().'&quot; - '; 
 	      	elseif (!(is_404()) && (is_single()) || (is_page())) : wp_title(''); echo ' - '; 
 	     	elseif (is_404()) : echo 'Not Found - ';
 	     	endif;
@@ -77,7 +76,7 @@
 						</div>
 
 						<nav class="col-sm-8 col-xs-6 m0">
-							<p class="right"><a href="#menu" class="menu-toggle" data-toggle="modal" data-target="#searchModal">Menu <span class="icon" data-icon="&#200;"></span></a></p>
+							<p class="right"><a href="#menu" class="menu-toggle" data-toggle="modal" data-target="#megaNav">Menu <span class="icon" data-icon="&#200;"></span></a></p>
 						</nav>
 
 						<?php $activity = false; ?>

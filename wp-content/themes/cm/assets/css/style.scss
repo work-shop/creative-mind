@@ -455,7 +455,7 @@ $icon-margin: 15px;
 }
 
 
-/********** @SEARCH *********/
+/********** @MEGANAV *********/
 
 .modal-backdrop.in{
 	background: $ultra-light;
@@ -465,7 +465,7 @@ $icon-margin: 15px;
 	opacity: .9;
 }
 
-#searchModal{
+#megaNav{
 
 	.close{
 		position: fixed;
@@ -485,19 +485,6 @@ $icon-margin: 15px;
 		border: none;
 		background: none;
 
-	}
-
-	.row.search {
-		border-bottom: 2px solid $dark;
-		position: relative;
-		.icon {
-			position: absolute;
-			right: 0;
-			bottom: 0;
-			&:before {
-				font-size: 3em;
-			}
-		}
 	}
 
 	label, input {

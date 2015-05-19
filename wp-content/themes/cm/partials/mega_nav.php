@@ -1,12 +1,9 @@
-<div class="modal fade" id="searchModal" role="dialog" aria-hidden="true">
+<div class="modal fade" id="megaNav" role="dialog" aria-hidden="true">
   <div class="modal-dialog">
     <div class="modal-content">
       <section class="block">
         <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span class="icon bold" data-icon="&#64258;" aria-hidden="true"></span></button>
         <div class="container">
-          <div class="row search">
-            <label for="search" class="h1 bold">Search for:</label><input type="search" name="search" class="h1" autofocus></input><span class="icon" data-icon="s"></span>
-          </div>
           <div class="row m3">
             <div class="col-md-3 col-sm-6">
               <h2 class="courses bold underline mb1"><a href="<?php bloginfo('url'); ?>/courses">Courses</a></h2>
