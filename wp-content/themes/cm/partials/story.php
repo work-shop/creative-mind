@@ -17,10 +17,10 @@
 
 		<div class="story-body">
 
-			<div class="story-meta centered">
-				<div class="container">
-					<div class="row">
-						<div class="col-sm-10 col-sm-offset-1">
+			<div class="container-fluid">
+				<div class="row">
+					<div class="col-sm-10 col-sm-offset-1">
+						<div class="story-meta centered">
 							<?php if ($byline = get_field('story_byline')) : ?>
 								<h4 class="mt0 mb1">
 								<?php 
@@ -37,13 +37,9 @@
 								<?php endforeach; ?>
 								</h5>
 							<?php endif; ?>
-						</div>
+						</div> <!-- end .story-meta -->
 					</div>
 				</div>
-			</div> <!-- end .story-meta -->
-
-			<div class="container">
-
 				<div class="row">
 					<div class="col-sm-12 col-sm-offset-0 col-md-10 col-md-offset-1">
 						
@@ -75,7 +71,9 @@
 					</div>
 				</div>
 			</div>
+
 		</div> <!-- end .story-body -->
+
 		<div class="stories-nav hidden-xs">
 			<a class="prev-story" href="<?php echo $previous_story_url; ?>">
 				<span class="icon" data-icon="&#8216;"></span>
@@ -84,6 +82,7 @@
 				<span class="icon" data-icon="&#8212;"></span>
 			</a>
 		</div>
+		
 	</article>
 
 	<?php // get_template_part('partials/break'); ?>
