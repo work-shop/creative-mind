@@ -37,43 +37,12 @@
 								<?php endforeach; ?>
 								</h5>
 							<?php endif; ?>
-
-							<?php if($story_type == 'image_gallery'): ?>
-								<h5 class="m0"><a class="jump" href="#story-gallery">View the Slideshow <span class="icon" data-icon="ﬁ"></span></a></h5>
-							<?php endif; ?>
 						</div>
 					</div>
 				</div>
 			</div> <!-- end .story-meta -->
 
 			<div class="container">
-				<div class="row">
-					<?php if ($description = get_field('story_description')) : ?>
-					<p class="m1 h3"><?php echo $description; ?></p>
-					<?php endif; ?>
-				</div>
-				<?php if($gallery = get_field('story_image_gallery') ): ?>
-				<div class="row m3">
-					<div class="col-sm-12 col-md-10 col-md-offset-1">
-						<div class="flexslider-story flexslider" id="story-gallery">
-							<ul class="slides clearfix">
-								<?php foreach ($gallery as $gallery_image) { ?>
-									<li>
-									<img title="<?php echo $gallery_image['title']; ?>" src="<?php echo $gallery_image['sizes']['large'] ?>" alt="<?php echo $gallery_image['alt']; ?>"/>
-									</li>
-								 <?php } ?>
-							</ul>
-							<div class="flexslider-controls"></div> 
-							<div id="flex-previous-story" class="flexslider-direction flex-previous previous">
-								<span class="icon" data-icon="&#8250;"></span>
-							</div>					
-							<div id="flex-next-story" class="flexslider-direction flex-next next">
-								<span class="icon" data-icon="&#8249;"></span>
-							</div>								
-						</div>
-					</div>
-				</div>
-				<?php endif; ?>
 
 				<div class="row">
 					<div class="col-sm-12 col-sm-offset-0 col-md-10 col-md-offset-1">
