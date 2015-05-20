@@ -29,10 +29,8 @@ $collection_name = $collection->post_title;
 /**
  *
  * @var $stories array(WP_Post) an array of stories attached to this post.
- * @var int $story_count the number of stories in this collection
  */
-$stories = CM_Collection_Controller::get_stories_for_collection( $collection_id );
-$story_count = count( $stories );
+$stories = CM_Collection_Controller::get_stories_for_collection( $collection );
 
 /**
  *
@@ -59,7 +57,7 @@ $start = count($stories_halves[0]) + 1;
 			<div class="col-sm-6 col-sm-offset-3">
 				<header class="text-center">
 					<ul class="list-inline">
-						<li><?php echo $story_count, '&nbsp;', $category_name; ?></li><li>Table of Contents</li><li>More Info</li><li>Share This Collection</li>
+						<li><?php echo $story_qualifier ?></li><li>Table of Contents</li><li>More Info</li><li>Share This Collection</li>
 					</ul>
 					<h2><?php echo $collection_name; ?></h2>
 				</header>					
