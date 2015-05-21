@@ -133,6 +133,32 @@ class CM_Collection_Controller {
 			$collection_id = $item['id'];
 			$collection_permalink = get_permalink( $collection_id );
 			return '<li><a href="' . $collection_permalink . '">' . $collection_name . '</a></li>';
+		} 
+		elseif ( $type == "menu" ) {
+
+			$collection_name = $item[ 'title' ];
+			$collection_id = $item['id'];
+			$collection_permalink = get_permalink( $collection_id );
+
+			$output = '<li><a href="' . $collection_permalink . '">' . $collection_name . '</a>';
+
+			$stories = CM_Collection_Controller::get_stories_for_collection( $item['id'] );
+
+			if ( $stories ) {
+				$output .= '<ul>';
+
+				foreach ($stories as $story) {
+
+					$output .= '<li><a href="' . get_permalink( $story->ID ) . '">' . $story->post_title . '</a></li>';
+				}
+
+				$output .= '</ul>';
+
+			}
+			
+
+			return $output . '</li>';
+
 		}
 	}
 
@@ -157,6 +183,18 @@ class CM_Collection_Controller {
 			foreach ( $half as $collection ) {
 				$output = $output . self::create_list_item( $collection, 'collection' );
 			}
+			return '<div class="split-list"><ul>' . $output . '</ul></div>';
+		}
+
+		elseif ( $type == 'menu' ) {
+
+			foreach ($half as $collection) {
+				
+				$output .= self::create_list_item( $collection, 'menu' );
+
+			}
+
+
 			return '<div class="split-list"><ul>' . $output . '</ul></div>';
 		}
 	}
