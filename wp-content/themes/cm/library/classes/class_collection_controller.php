@@ -145,14 +145,14 @@ class CM_Collection_Controller {
 			$stories = CM_Collection_Controller::get_stories_for_collection( $item['id'] );
 
 			if ( $stories ) {
-				$output .= '<ul>';
+				$output .= '<ol>';
 
 				foreach ($stories as $story) {
 
 					$output .= '<li><a href="' . get_permalink( $story->ID ) . '">' . $story->post_title . '</a></li>';
 				}
 
-				$output .= '</ul>';
+				$output .= '</ol>';
 
 			}
 			

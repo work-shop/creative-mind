@@ -1041,7 +1041,7 @@ img.gform_ajax_spinner {
   -ms-transition: all 0.5s 0s ease;
   padding-top: 4%; }
 
-.split-list ul, .split-list ol {
+.split-list > ul, .split-list > ol {
   width: 50%;
   float: left; }
 
@@ -2494,9 +2494,20 @@ img.gform_ajax_spinner {
       position: absolute;
       top: -0.35em;
       left: 0; }
-    #megaNav li a {
+    #megaNav li > a {
+      margin-left: 1em;
+      border-bottom: 1px solid transparent; }
+    #megaNav li ol {
+      display: none; }
+    #megaNav li.open > a {
+      border-color: white; }
+      #megaNav li.open > a:after {
+        content: "\00B7";
+        font-family: "modern_pictograms_proregular";
+        margin-left: 1em; }
+    #megaNav li.open ol {
       display: block;
-      margin-left: 1em; }
+      margin: 1em 0 0 2.5em; }
 
 /********** @COLLECTIONS *********/
 .collection:not(.collection-single) {

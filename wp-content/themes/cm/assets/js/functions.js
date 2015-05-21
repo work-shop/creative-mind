@@ -30,6 +30,11 @@ jQuery(document).ready(function($) {
 		$('#megaNav').modal('toggle');
 	});
 
+	$('#megaNav ul > li').click( function(event){
+		event.preventDefault();
+		submenuToggle($(this));
+	});
+
 	$(".jump").click(function(e){
 		e.preventDefault();
 		var href = $(this).attr("href");
@@ -169,10 +174,14 @@ function scrollLink(destination){
 	},1500);
 }
 
-
-
-
-
+//toggle submenu
+function submenuToggle(item) {
+	if ( $(item).hasClass('open') ) {
+		$(item).removeClass('open');
+	} else {
+		$(item).addClass('open');
+	}	
+}
 
 /**
  * storyToggle : jQuery(clicked-tile) -> ()
