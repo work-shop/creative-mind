@@ -1,4 +1,5 @@
 <?php
+	$id = get_the_ID();
 	$collection = CM_Story_Controller::get_collection_for_story( $id );
 	$story_type = get_field('story_media_type'); //video, image_gallery, video_gallery
 ?>
@@ -13,11 +14,22 @@
 				</h5>
 				<?php switch ($story_type) {
 					case 'video': ?>
-						<div class="centered"><span class="icon large" data-icon="Ò"></span></div>
+						<?php if ( $vimeo_id = get_field('story_vimeo_id') ) : ?>
+							<div class="story-video-play centered" data-toggle="tooltip" data-placement="top" title="watch the video!">
+								<span class="icon" data-icon="Ò"></span>
+							</div>
+						<?php endif; ?>
 						<h1 class="m0 bold story-heading centered"><?php the_title(); ?></h1>
 						<div class="story-video-poster">
 							<?php the_post_thumbnail('story_hero'); ?>
 						</div>
+						<?php if ($vimeo_id = get_field('story_vimeo_id')) : ?>	
+							<div class="story-video">				
+								<?php
+								echo vimeo_frame($vimeo_id,'story-video-1'); 
+								?>
+							</div>
+						<?php endif; ?>
 						<?php if ($description = get_field('story_description')) : ?>
 							<p class="m1 h3 centered"><?php echo $description; ?></p>
 						<?php endif; ?>

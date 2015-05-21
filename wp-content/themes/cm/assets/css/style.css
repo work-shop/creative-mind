@@ -2980,9 +2980,6 @@ img.gform_ajax_spinner {
 
 .story-video {
   height: inherit;
-  position: absolute;
-  top: 0;
-  left: 0;
   width: 100%;
   z-index: -1; }
   .story-video iframe {
