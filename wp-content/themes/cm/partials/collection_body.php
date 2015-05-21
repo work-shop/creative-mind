@@ -79,6 +79,10 @@ $start = count($stories_halves[0]) + 1;
 							$story_description = $story->story_description;
 							$story_type = $story->story_media_type;
 							$story_permalink = get_permalink($story);
+							/**
+							 * @var string $story_featured_image URL of the featured image.
+							 */
+							$story_featured_image = ( has_post_thumbnail( $story->ID ) ) ? wp_get_attachment_image_src( get_post_thumbnail_id( $story->ID ), 'thumbnail' )[0] : 'http://images.wisegeek.com/scientists-in-lab.jpg';
 						?>
 							<li class="slide border-<?php echo $category_nicename ?> text-center clearfix">
 							<a class="padded-more" href="<?php echo $story_permalink ?>">

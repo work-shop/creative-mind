@@ -5,19 +5,13 @@
   $category = CM_Collection_Controller::get_current_category();
 
   /**
-   * @var $collections array(array('title' => title, 'id' => id, 'permalink' => permalink )) the set of collections in this category.
+   * get an array of relevant categories for the nav
+   *
+   * @var array(stdClass) $categories an array of taxonomy terms.
    */
-  $collections = array_map( function( $p ) { return array(
-    'id' => $p->ID,
-    'title' => $p->post_title
-  ); }, CM_Collection_Controller::get_collections_for_category( $category->term_id ) );
-
-  /**
-   *
-   * @var array $collections_halves contains two arrays, each containing half the collections in a category
-   *
-  */
-  $collections_halves = CM_Collection_Controller::split_array( $collections );
+  $categories = array_filter( get_terms('category'), function( $x ) {
+    return $x->term_id != 1;
+  } );
 
 ?>
 
@@ -27,77 +21,44 @@
       <section class="block">
         <div class="container-fluid">
 
-          <div class="row white bg-courses-dark">
+        <?php foreach ($categories as $category ) { ?>
 
-            <div class="col-sm-1">
-              <header class="bold">
-                <h4 class="uppercase"><a href="<?php bloginfo('url'); ?>/courses">Courses</a></h4>
-              </header>
-            </div>
-            <div class="col-sm-11 bg-courses padded-less m0">
-              <div class="row">
-                <?php 
-                  echo CM_Collection_Controller::create_list( $collections_halves[0], null, 'category' ); 
-                  echo CM_Collection_Controller::create_list( $collections_halves[1], null, 'category' ); 
-                ?>
-              </div>
-            </div>
-            
-          </div> <!-- end .row -->
+        <div class="row white bg-<?php echo $category->slug; ?>-dark">
 
-          <div class="row white bg-research-dark">
+        <div class="col-sm-1">
+          <header class="bold">
+            <h4 class="uppercase"><a href="<?php echo get_term_link( $category ); ?>"><?php echo $category->name; ?></a></h4>
+          </header>
+        </div>
+        <div class="col-sm-11 bg-<?php echo $category->slug; ?> padded-less m0">
+          <div class="row">
+            <?php 
 
-            <div class="col-sm-1">
-              <header class="bold">
-                <h4 class="uppercase"><a href="<?php bloginfo('url'); ?>/research">Research</a></h4>
-              </header>
-            </div>
-            <div class="col-sm-11 bg-research padded-less m0">
-              <div class="row">
-                <?php 
-                  echo CM_Collection_Controller::create_list( $collections_halves[0], null, 'category' ); 
-                  echo CM_Collection_Controller::create_list( $collections_halves[1], null, 'category' ); 
-                ?>
-              </div>
-            </div>
-            
-          </div> <!-- end .row -->
+                /**
+                 * @var $collections array(array('title' => title, 'id' => id, 'permalink' => permalink )) the set of collections in this category.
+                 */
+                $collections = array_map( function( $p ) { return array(
+                  'id' => $p->ID,
+                  'title' => $p->post_title
+                ); }, CM_Collection_Controller::get_collections_for_category( $category->term_id ) );
 
-          <div class="row white bg-interviews-dark">
+                /**
+                 *
+                 * @var array $collections_halves contains two arrays, each containing half the collections in a category
+                 *
+                 */
+                $collections_halves = CM_Collection_Controller::split_array( $collections );
 
-            <div class="col-sm-1">
-              <header class="bold">
-                <h4 class="uppercase"><a href="<?php bloginfo('url'); ?>/interviews">Interviews</a></h4>
-              </header>
-            </div>
-            <div class="col-sm-11 bg-interviews padded-less m0">
-              <div class="row">
-                <?php 
-                  echo CM_Collection_Controller::create_list( $collections_halves[0], null, 'category' ); 
-                  echo CM_Collection_Controller::create_list( $collections_halves[1], null, 'category' ); 
-                ?>
-              </div>
-            </div>
-            
-          </div> <!-- end .row -->
+                echo CM_Collection_Controller::create_list( $collections_halves[0], null, 'menu' ); 
+                echo CM_Collection_Controller::create_list( $collections_halves[1], null, 'menu' ); 
 
-          <div class="row white bg-lectures-dark">
+            ?>
+          </div>
+        </div>
 
-            <div class="col-sm-1">
-              <header class="bold">
-                <h4 class="uppercase"><a href="<?php bloginfo('url'); ?>/lectures">Lectures</a></h4>
-              </header>
-            </div>
-            <div class="col-sm-11 bg-lectures padded-less m0">
-              <div class="row">
-                <?php 
-                  echo CM_Collection_Controller::create_list( $collections_halves[0], null, 'category' ); 
-                  echo CM_Collection_Controller::create_list( $collections_halves[1], null, 'category' ); 
-                ?>
-              </div>
-            </div>
-            
-          </div> <!-- end .row -->
+        </div> <!-- end .row -->
+
+        <?php } ?>
 
           <div class="row">
             <div class="col-sm-12 bold">
