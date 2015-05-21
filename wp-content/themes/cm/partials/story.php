@@ -68,6 +68,25 @@
 							</aside>
 						<?php endif; ?>
 
+						<?php if ( ($story_type == 'video_and_image_gallery') && ($gallery = get_field('story_image_gallery')) && ($clips = get_field('video_gallery')) ) { ?>
+		 					<div class="flexslider-story flexslider" id="story-gallery">
+		 						<ul class="slides clearfix">
+								<?php foreach ($gallery as $gallery_image) { ?>
+									<li>
+									<img title="<?php echo $gallery_image['title']; ?>" src="<?php echo $gallery_image['sizes']['large'] ?>" alt="<?php echo $gallery_image['alt']; ?>"/>
+									</li>
+								 <?php } ?>
+		 						</ul>
+		 						<div class="flexslider-controls"></div> 
+		 						<div id="flex-previous-story" class="flexslider-direction flex-previous previous">
+		 							<span class="icon" data-icon="&#8250;"></span>
+		 						</div>					
+		 						<div id="flex-next-story" class="flexslider-direction flex-next next">
+		 							<span class="icon" data-icon="&#8249;"></span>
+		 						</div>								
+		 					</div>
+	 					<?php } ?>
+
 					</div>
 				</div>
 			</div>
