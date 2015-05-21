@@ -43,21 +43,21 @@ $collection = get_post( get_the_ID() );
 					<?php if ( is_home() ) { ?>
 						<div class="h3 bold centered brand">
 						<a href="#">
-							<span class="icon-wrapper bg-brand"><span class="icon" data-icon="&#8218;"></span></span>
+							<span class="icon-wrapper bg-brand"><span class="icon white" data-icon="&#8218;"></span></span>
 							<span class="text">Back to Top</span>
 						</a>
 						</div>
 					<?php } elseif ( is_category() ) { ?>
 						<div class="h3 bold centered brand">
 						<a href="<?php echo esc_url( home_url() ); ?>">
-							<span class="icon-wrapper bg-brand"><span class="icon" data-icon="&#8218;"></span></span>
+							<span class="icon-wrapper bg-brand"><span class="icon white" data-icon="&#8218;"></span></span>
 							<span class="text">Home</span>
 						</a>
 						</div>
 					<?php } elseif ( is_singular('collections') ) { ?>
 						<div class="h3 bold centered <?php echo $category->slug; ?>">
 						<a href="<?php echo esc_url( home_url( '/'.$category->slug ) ); ?>">
-							<span class="icon-wrapper bg-<?php echo $category->slug; ?>"><span class="icon" data-icon="&#8218;"></span></span>
+							<span class="icon-wrapper bg-<?php echo $category->slug; ?>"><span class="icon white" data-icon="&#8218;"></span></span>
 							<span class="text">Back to <?php echo $category->name; ?></span>
 						</a>
 						</div>
@@ -69,9 +69,9 @@ $collection = get_post( get_the_ID() );
 						$collection = CM_Story_Controller::get_collections_for_story( get_the_ID() )[0];
 						?>
 
-						<div class="h3 bold centered <?php echo $category->slug; ?>">
+						<div class="h3 bold centered">
 						<a href="<?php echo get_permalink( $collection->ID ); ?>">
-							<span class="icon-wrapper bg-<?php echo $category->slug; ?>"><span class="icon" data-icon="&#8218;"></span></span>
+							<span class="icon-wrapper bg-white <?php echo $category->slug ?>"><span class="icon" data-icon="&#8218;"></span></span>
 							<span class="text">Back to <?php echo $collection->post_title; ?></span>
 						</a>
 						</div>

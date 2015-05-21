@@ -476,6 +476,10 @@ ol {
 
 /********** @STRUCTURE AND POSITION *********/
 
+#content {
+	padding-top: $nav-height;
+}
+
 .full{
 	width: 100%;
 }

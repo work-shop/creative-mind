@@ -330,9 +330,6 @@ $icon-margin: 15px;
 }
 
 #back-link {
-	.icon {
-		color: white;
-	}
 	.text {
 		display: block;
 	}
@@ -699,30 +696,24 @@ $icon-margin: 15px;
 	@include transition(all,.5s);
 	padding-bottom: 8%;
 
-	.story-hero:not(.story-hero-unmasked){
-		overflow: hidden;
+	.story-hero {
+		width: 80%;
+		margin: 0 auto;
 		position: relative;
-
-		&:after{
+		h1 {
 			position: absolute;
-			content: '';
-			display: block;
-			width: 100%;
-			height: 100%;
-			top: 0;
-			left: 0;
-			background: rgba(255,255,255,.75);
-			@include linear-gradient(rgba(255,255,255,0),rgba(255,255,255,.25),rgba(255,255,255,.75),rgba(255,255,255,1));
 		}
+		// &:not(.story-hero-unmasked){
+		// 	overflow: hidden;
+		// 	position: relative;
+		// }
 	}
 
 	.story-meta{
 		@include transition();
-		@include transform(translate(0,-150px));
 	}
 
 	.story-body{
-		@include transform(translate(0,-75px));
 
 		p{
 			font-size: 1.25em;
@@ -763,14 +754,11 @@ $icon-margin: 15px;
 }
 
 .story-video-play{
-	position: absolute;
-
 	z-index: 1;
-	left: 50%;
-	top: 50%;
-	margin-left: -38px;
-	margin-top: -60px;
+	max-width: 800px;
+	margin: 0 auto;
 	@include transition();
+	// @include transform(translateY(-400px));
 
 	.icon:after{
 		height: inherit;
@@ -785,7 +773,7 @@ $icon-margin: 15px;
 
 	cursor: pointer;
 	&:hover{
-		@include transform(translate(0,-5px));
+		// @include transform(translateY(-405px));
 
 		.icon:after{
 			opacity: 1;
@@ -797,17 +785,6 @@ $icon-margin: 15px;
 .story-video-active{
 	.story-video{
 		z-index: 3;
-	}	
-
-	.story-meta,.story-body{
-		@include transform(translate(0,25px));		
-	}
-}
-
-.story-type-video_gallery{
-
-	.story-meta,.story-body{
-		@include transform(translate(0,25px));		
 	}	
 }
 
@@ -1021,11 +998,6 @@ $icon-margin: 15px;
 	.story{
 		.story-meta{
 			@include transition();
-			@include transform(translate(0,-25px));
-		}
-
-		.story-body{
-			@include transform(translate(0,0));
 		}
 	}
 
