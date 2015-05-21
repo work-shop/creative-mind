@@ -12,60 +12,56 @@
 				<h5 class="uppercase centered">
 					<?php if ( $collection ) { echo $collection->post_title . ' / '; } the_title(); ?>
 				</h5>
-				<?php switch ($story_type) {
-					case 'video': ?>
-						<?php if ( $vimeo_id = get_field('story_vimeo_id') ) : ?>
-							<div class="story-video-play centered" data-toggle="tooltip" data-placement="top" title="watch the video!">
-								<span class="icon" data-icon="Ò"></span>
-							</div>
-						<?php endif; ?>
-						<h1 class="m0 bold story-heading centered"><?php the_title(); ?></h1>
-						<div class="story-video-poster">
-							<?php the_post_thumbnail('story_hero'); ?>
-						</div>
-						<?php if ($vimeo_id = get_field('story_vimeo_id')) : ?>	
-							<div class="story-video">				
-								<?php
-								echo vimeo_frame($vimeo_id,'story-video-1'); 
-								?>
-							</div>
-						<?php endif; ?>
-						<?php if ($description = get_field('story_description')) : ?>
-							<p class="m1 h3 centered"><?php echo $description; ?></p>
-						<?php endif; ?>
-					<?php break; 
-					case 'video_gallery': 
-					if ($clips = get_field('video_gallery')) :
-					?>
-						<div id="video-gallery">
-							<div class="container-fluid">
-								<?php foreach ( $clips as $i => $clip ) :
-									if ( $i == 0 ) {
-								?>
-								<div class="row">
-									<div class="col-sm-12 video-gallery-main mt3 mb2">
-										<?php echo vimeo_frame($clip['vimeo_id'],'story-video-1'); ?>
-										<h6><?php echo $clip['video_title']; ?></h6>
-									</div> 
-								</div>
-								<?php } else { ?>
-								<?php if ( $i == 1 ) : ?><div class="row"><?php endif; ?>
-									<div class="col-sm-2 col-xs-6 video-gallery-clip">
-										<?php echo vimeo_frame($clip['vimeo_id'],'story-video-1'); ?>
-										<h6><?php echo $clip['video_title']; ?></h6>
-									</div> 																											
-								<?php if ( $i == count( $clips ) - 1 ) : ?></div><?php endif; ?>
-								<?php } endforeach; ?>								
-							</div>
-						</div> <!-- end #video-gallery -->
-						<?php if ($description = get_field('story_description')) : ?>
-							<p class="m1 h3"><?php echo $description; ?></p>
-						<?php endif; ?>
+
+				<!-- if the story-type is 'video' and a video exists -->
+				<?php if ( ($story_type == 'video') && ($vimeo_id = get_field('story_vimeo_id')) ) { ?>
+					<div class="story-video-play centered" data-toggle="tooltip" data-placement="top" title="watch the video!">
+						<span class="icon" data-icon="Ò"></span>
+					</div>
+					<h1 class="m0 bold story-heading centered"><?php the_title(); ?></h1>
+					<div class="story-video-poster">
+						<?php the_post_thumbnail('story_hero'); ?>
+					</div>
+					<div class="story-video">				
+						<?php
+						echo vimeo_frame($vimeo_id,'story-video-1'); 
+						?>
+					</div>
+					<?php if ($description = get_field('story_description')) : ?>
+						<p class="m1 h3 centered"><?php echo $description; ?></p>
 					<?php endif; ?>
-					<?php break; 
-					case 'image_gallery': 
-					?>
-					<?php if($gallery = get_field('story_image_gallery') ): ?>
+				<?php } ?>
+
+				<!-- if the story-type is 'video_gallery' and a video-gallery exists -->
+				<?php if ( ($story_type == 'video_gallery') && ($clips = get_field('video_gallery')) ) { ?>
+					<div id="video-gallery">
+						<div class="container-fluid">
+							<?php foreach ( $clips as $i => $clip ) :
+								if ( $i == 0 ) {
+							?>
+							<div class="row">
+								<div class="col-sm-12 video-gallery-main mt3 mb2">
+									<?php echo vimeo_frame($clip['vimeo_id'],'story-video-1'); ?>
+									<h6><?php echo $clip['video_title']; ?></h6>
+								</div> 
+							</div>
+							<?php } else { ?>
+							<?php if ( $i == 1 ) : ?><div class="row"><?php endif; ?>
+								<div class="col-sm-2 col-xs-6 video-gallery-clip">
+									<?php echo vimeo_frame($clip['vimeo_id'],'story-video-1'); ?>
+									<h6><?php echo $clip['video_title']; ?></h6>
+								</div> 																											
+							<?php if ( $i == count( $clips ) - 1 ) : ?></div><?php endif; ?>
+							<?php } endforeach; ?>								
+						</div>
+					</div> <!-- end #video-gallery -->
+					<?php if ($description = get_field('story_description')) : ?>
+						<p class="m1 h3"><?php echo $description; ?></p>
+					<?php endif; ?>						
+				<?php } ?>
+
+				<!-- if the story-type is 'image_gallery' and an image-gallery exists -->
+				<?php if ( ($story_type == 'image_gallery') && ($gallery = get_field('story_image_gallery')) ) { ?>
 					<div class="row m3">
 						<div class="col-sm-12 col-md-10 col-md-offset-1">
 							<div class="flexslider-story flexslider" id="story-gallery">
@@ -95,16 +91,16 @@
 							</div>
 						</div>
 					</div>
+				<?php } 
+					else {
+				?>
+					<h1 class="m0 bold story-heading centered"><?php the_title(); ?></h1>
+					<?php if ($description = get_field('story_description')) : ?>
+						<p class="m1 h3 centered"><?php echo $description; ?></p>
 					<?php endif; ?>
-					<?php break; 
-					default: 
-					?>
-						<h1 class="m0 bold story-heading centered"><?php the_title(); ?></h1>
-						<?php if ($description = get_field('story_description')) : ?>
-							<p class="m1 h3 centered"><?php echo $description; ?></p>
-						<?php endif; ?>
 				<?php } ?>
-			</div>
+
+			</div> <!-- end .col-sm-10 -->
 		</div>
 	</div> <!-- end .container-fluid -->
 </header>
