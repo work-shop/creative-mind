@@ -71,11 +71,13 @@ foreach ($categories as $category) {
 		$story_type = get_field('story_media_type', $grid_element->ID );
 		$story_name = $grid_element->post_title;
 		$story_permalink = get_permalink( $grid_element->ID );
-		$story_collection_name = CM_Story_Controller::get_collections_for_story( $grid_element->ID )[0]->post_title; ?>
+		$story_collection_name = CM_Story_Controller::get_collections_for_story( $grid_element->ID )[0]->post_title; 
+		$story_featured_image = ( has_post_thumbnail( $grid_element->ID ) ) ? wp_get_attachment_image_src( get_post_thumbnail_id( $grid_element->ID ), 'thumbnail' )[0] : 'http://images.wisegeek.com/scientists-in-lab.jpg';
+		?>
 
 				<div class="col-xs-6 col-sm-4">
 					<a href="<?php echo $story_permalink ?>">
-					<div class="tile tile-story mb2 <?php echo $category; ?> border-<?php echo $category; ?>" style="background-image: url('http://images.wisegeek.com/scientists-in-lab.jpg');" >
+					<div class="tile tile-story mb2 <?php echo $category; ?> border-<?php echo $category; ?>" style="background-image: url('<?php echo $story_featured_image; ?>');" >
 						<header>
 							<?php if ( $story_type == 'video' ) { ?>
 								<span class="icon" data-icon="&#210;"></span>
