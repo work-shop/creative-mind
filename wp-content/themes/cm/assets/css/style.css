@@ -521,25 +521,20 @@ ol {
 .border-top-lectures {
   border-top: 2px solid #58595B; }
 
+.border-bottom-brand {
+  border-bottom: 4px solid #cb2026; }
+
 .border-bottom-courses {
-  border-bottom: 2px solid #0575B9; }
-  .border-bottom-courses:hover {
-    border-color: #045687; }
+  border-bottom: 4px solid #0575B9; }
 
 .border-bottom-research {
-  border-bottom: 2px solid #E5603C; }
-  .border-bottom-research:hover {
-    border-color: #d2431c; }
+  border-bottom: 4px solid #E5603C; }
 
 .border-bottom-interviews {
-  border-bottom: 2px solid #25807F; }
-  .border-bottom-interviews:hover {
-    border-color: #1a5858; }
+  border-bottom: 4px solid #25807F; }
 
 .border-bottom-lectures {
-  border-bottom: 2px solid #58595B; }
-  .border-bottom-lectures:hover {
-    border-color: #3f4041; }
+  border-bottom: 4px solid #58595B; }
 
 /********** @STRUCTURE AND POSITION *********/
 #content {
@@ -1017,7 +1012,6 @@ img.gform_ajax_spinner {
 
 #header {
   height: 50px;
-  border-bottom: 4px solid #cb2026;
   position: fixed;
   left: 0;
   width: 100%;

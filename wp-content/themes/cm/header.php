@@ -48,16 +48,17 @@
 	<body <?php body_class('before');?>>
 	
 		<?php 
-			/**
-			 * @var string $category_color the category color to use on this page.
-			 */
-			$category_color = (is_category()) ? CM_Collection_Controller::get_current_category()->slug
-					     : ((get_post_type() == 'collections') ? CM_Collection_Controller::get_category_for_collection(get_the_ID())->slug : "brand" );
 
 			/**
-			 * set the category as a color that we can globally access.
+			 * @var string $category_name the name of the current category.
+			 * @var string $category_color the color name for the current category.
 			 */
-			set_global( 'category_color', $category_color );
+			if ( is_home() ) {
+				$category_color ='brand';
+			} else {
+				$category_name = CM_Collection_Controller::get_current_category()->name;
+				$category_color = CM_Collection_Controller::get_current_category()->slug;
+			}
 
 		?>
 
@@ -66,19 +67,25 @@
 		<div id="wrapper" class="loading spy">
 
 
-			<header id="header" class="closed bg-white">
+			<header id="header" class="closed bg-white border-bottom-<?php echo $category_color ?>">
 				<div class="container-fluid">
 					<div class="row">
-						<div id="logo-cm" class="col-sm-4 m0 col-xs-6">
+						<div id="logo-cm" class="col-sm-3 m0 col-xs-6">
 							<a href="<?php bloginfo('url'); ?>">
 								<img src="<?php bloginfo('template_directory'); ?>/assets/img/logo-cm-small.png" alt="creative mind logo" />
 							</a>
 						</div>
 
-						<nav class="col-sm-8 col-xs-6 m0">
-							<p class="right"><a href="#menu" class="menu-toggle">
+						<div class="col-sm-6 hidden-xs centered mt1">
+							<?php if ( !is_home() ) {
+								echo '<span class="h4 uppercase">' . $category_name . '</span>' ;
+							} ?>
+						</div>
+
+						<nav class="col-sm-2 right righted m0">
+							<a href="#menu" class="menu-toggle">
 								<span class="uppercase">Index</span>
-							</a></p>
+							</a>
 						</nav>
 
 						<?php $activity = false; ?>

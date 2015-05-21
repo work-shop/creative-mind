@@ -445,32 +445,24 @@ ol {
 	border-top: 2px solid $lectures;
 }
 
+.border-bottom-brand{
+	border-bottom: 4px solid $brand;
+}
+
 .border-bottom-courses{
-	border-bottom: 2px solid $courses;
-	&:hover {
-		border-color: darken($courses,10);
-	}
+	border-bottom: 4px solid $courses;
 }
 
 .border-bottom-research{
-	border-bottom: 2px solid $research;
-	&:hover {
-		border-color: darken($research,10);
-	}
+	border-bottom: 4px solid $research;
 }
 
 .border-bottom-interviews{
-	border-bottom: 2px solid $interviews;
-	&:hover {
-		border-color: darken($interviews,10);
-	}
+	border-bottom: 4px solid $interviews;
 }
 
 .border-bottom-lectures{
-	border-bottom: 2px solid $lectures;
-	&:hover {
-		border-color: darken($lectures,10);
-	}
+	border-bottom: 4px solid $lectures;
 }
 
 

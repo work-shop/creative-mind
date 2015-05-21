@@ -82,17 +82,19 @@ $start = count($stories_halves[0]) + 1;
 						?>
 							<li class="slide border-<?php echo $category_nicename ?> text-center clearfix">
 							<a class="padded-more" href="<?php echo $story_permalink ?>">
-								<p><?php 
-									if ( $story_type == 'video' ) { echo "Watch Video"; } 
-									elseif ( $story_type == 'image_gallery' ) { echo "View Gallery"; } 
-								?></p>
+								<?php if ( is_singular( 'collections') ) {
+									if ( $story_type == 'video' ) { echo '<p>Watch Video</p>'; }
+									elseif ( $story_type == 'image_gallery' ) { echo "<p>View Gallery</p>"; } 
+								} ?>
 								<?php if ( $story_type == 'video' ) { ?>
 									<span class="icon" data-icon="&#210;"></span>
 								<?php } elseif ( $story_type == 'image_gallery' ) { ?>
 									<span class="icon" data-icon="&#8486;"></span>
 								<?php } ?>
 								<h3><?php echo $story_name ?></h3>
-								<p><?php echo $story_description ?></p>
+								<?php if ( is_singular( 'collections') ) {
+									echo '<p>' . $story_description . '</p>';
+								} ?>
 							</a>
 							</li>
 						 <?php } ?>
