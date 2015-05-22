@@ -72,7 +72,7 @@
 			 					<div class="flexslider-story flexslider" id="story-gallery">
 			 						<ul class="slides clearfix">
 									<?php foreach ($gallery as $gallery_image) { ?>
-										<li>
+										<li data-thumb="<?php echo $gallery_image['sizes']['medium'] ?>">
 										<img title="<?php echo $gallery_image['title']; ?>" src="<?php echo $gallery_image['sizes']['large'] ?>" alt="<?php echo $gallery_image['alt']; ?>"/>
 										</li>
 									 <?php } ?>

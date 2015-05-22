@@ -988,6 +988,13 @@ img.gform_ajax_spinner {
       .flexslider-controls li a.flex-active {
         background: #cb2026; }
 
+.flex-control-thumbs li {
+  width: 30px;
+  height: 30px;
+  cursor: pointer; }
+  .flex-control-thumbs li.table-of-contents {
+    overflow: hidden !important; }
+
 .nav a {
   color: #222222; }
   .nav a:hover, .nav a:focus {

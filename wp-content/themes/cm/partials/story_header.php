@@ -60,7 +60,7 @@
 	 			<?php } elseif ( ($story_type == 'image_gallery') && ($gallery = get_field('story_image_gallery')) ) { ?>
 	 				<div class="flexslider-story flexslider" id="story-gallery">
 	 					<ul class="slides clearfix">
-	 						<li class="title" style="background-image: url('<?php echo $story_featured_image ?>');">
+	 						<li class="title" style="background-image: url('<?php echo $story_featured_image ?>');" data-thumb="<?php echo $story_featured_image ?>">
 	 							<div class="overlay">
 		 							<div class="h4 centered">Gallery</div>
 		 							<div class="centered"><span class="icon large" data-icon="&#8486;"></span></div>
@@ -71,7 +71,7 @@
 		 						</div>
 	 						</li>
 	 						<?php foreach ($gallery as $gallery_image) { ?>
-	 							<li>
+	 							<li data-thumb="<?php echo $gallery_image['sizes']['medium'] ?>">
 	 							<img title="<?php echo $gallery_image['title']; ?>" src="<?php echo $gallery_image['sizes']['large'] ?>" alt="<?php echo $gallery_image['alt']; ?>"/>
 	 							</li>
 	 						 <?php } ?>

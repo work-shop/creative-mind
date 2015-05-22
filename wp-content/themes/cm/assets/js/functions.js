@@ -159,14 +159,26 @@ function flexsliderSetup(){
 	      controlNav: true
 	 });	 
 
-	$('.flexslider-story').flexslider({	
-	      animation: 'fade',
-	      controlsContainer: '.flexslider-controls',	      
-	      slideshowSpeed: 8000,           
-		  animationSpeed: 500,
-	      directionNav: false,
-	      controlNav: true
-	 }); 			 
+		
+	 if ( $('body').hasClass('single-stories') ) {
+	 	$('.flexslider-story').flexslider({	
+	 	      animation: 'fade',
+	 	      controlsContainer: '.flexslider-controls',	      
+	 	      slideshowSpeed: 8000,           
+	 		  animationSpeed: 500,
+	 	      directionNav: false,
+	 	      controlNav: "thumbnails"
+	 	 }); 
+	 } else {
+	 	$('.flexslider-story').flexslider({	
+	 	      animation: 'fade',
+	 	      controlsContainer: '.flexslider-controls',	      
+	 	      slideshowSpeed: 8000,           
+	 		  animationSpeed: 500,
+	 	      directionNav: false,
+	 	      controlNav: true
+	 	 }); 
+	 }		 
 	 	 	
 }
 
