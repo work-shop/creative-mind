@@ -3011,16 +3011,44 @@ img.gform_ajax_spinner {
     .story .story-callout a {
       text-decoration: none; }
 
+.story .video {
+  width: 800px;
+  height: 500px;
+  overflow: hidden;
+  position: relative;
+  margin: 0 auto; }
+  .story .video h1 {
+    z-index: 1; }
+
+.story .video > * {
+  position: absolute; }
+
+.story-video, .story-video-poster, .story-video-play {
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%; }
+
 .story-video {
-  height: inherit;
-  width: 100%;
   z-index: -1; }
   .story-video iframe {
     height: inherit; }
 
+.story-video-poster {
+  background-size: cover; }
+  .story-video-poster .overlay {
+    background: #222222;
+    background: -webkit-linear-gradient(legacy-direction(to top), #222222, rgba(34, 34, 34, 0.5));
+    background: linear-gradient(to top, #222222, rgba(34, 34, 34, 0.5));
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0; }
+
 .story-video-play {
   z-index: 1;
-  max-width: 800px;
+  width: 100%;
+  height: 100%;
   margin: 0 auto;
   transition: all 0.25s 0s ease;
   -moz-transition: all 0.25s 0s ease;

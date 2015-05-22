@@ -15,21 +15,23 @@
 				</h5>
 
 				<?php if ( ($story_type == 'video') && ($vimeo_id = get_field('story_vimeo_id')) ) { ?>
- 					<div class="story-video-play centered" data-toggle="tooltip" data-placement="top" title="watch the video!">
- 						<span class="icon" data-icon="Ò"></span>
- 					</div>
- 					<h1 class="m0 bold story-heading centered"><?php the_title(); ?></h1>
- 					<div class="story-video-poster">
- 						<?php the_post_thumbnail('story_hero'); ?>
- 					</div>
- 					<div class="story-video">				
- 						<?php
- 						echo vimeo_frame($vimeo_id,'story-video-1'); 
- 						?>
- 					</div>
- 					<?php if ($description = get_field('story_description')) : ?>
- 						<p class="m1 h2 centered"><?php echo $description; ?></p>
- 					<?php endif; ?>
+					<div class="video">
+	 					<div class="story-video-play centered" data-toggle="tooltip" data-placement="top" title="watch the video!">
+	 						<span class="icon" data-icon="Ò"></span>
+	 					</div>
+	 					
+	 					<div class="story-video-poster" style="background-image: url('<?php echo $story_featured_image ?>');"><div class="overlay">
+	 						<h1 class="m0 bold story-heading centered"><?php the_title(); ?></h1>
+	 					</div></div>
+	 					<div class="story-video">				
+	 						<?php
+	 						echo vimeo_frame($vimeo_id,'story-video-1'); 
+	 						?>
+	 					</div>
+	 					<?php if ($description = get_field('story_description')) : ?>
+	 						<p class="m1 h2 centered"><?php echo $description; ?></p>
+	 					<?php endif; ?>
+	 				</div>
 
  				<?php } elseif ( ($story_type == 'video_gallery') && ($clips = get_field('video_gallery')) ) { ?>
  					<div id="video-gallery">
