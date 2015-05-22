@@ -101,6 +101,12 @@ img.gform_ajax_spinner {
 
 .flexslider li {
 	background-size: cover;
+	height: 500px;
+	text-align: center;
+	img {
+		height: 100%;
+		width: auto;
+	}
 }
 
 .flexslider-direction{

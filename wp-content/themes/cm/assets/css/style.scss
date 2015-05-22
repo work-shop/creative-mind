@@ -426,17 +426,19 @@ $icon-margin: 15px;
 
 .slide {
 	height: 400px;
-	a {
-		display: block;
-		width: 100%;
-		height: 100%;
-		// @include background-image(linear-gradient(white, #aaaaaa));
-		@include linear-gradient(to top, $dark, rgba($dark,0.5));
-	}
 	ol li {
 		line-height: 1.25em;
 		margin-bottom: 0.5em;
 	}
+}
+.slides .overlay {
+	@include linear-gradient(to top, $dark, rgba($dark,0.5));
+	display: block;
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	padding: 5% 10%;
 }
 
 

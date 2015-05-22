@@ -2,6 +2,7 @@
 	$id = get_the_ID();
 	$collection = CM_Story_Controller::get_collection_for_story( $id );
 	$story_type = get_field('story_media_type'); //video, image_gallery, video_gallery
+	$story_featured_image = wp_get_attachment_url( get_post_thumbnail_id( $post->ID ) );
 ?>
 
 
@@ -59,14 +60,15 @@
 	 			<?php } elseif ( ($story_type == 'image_gallery') && ($gallery = get_field('story_image_gallery')) ) { ?>
 	 				<div class="flexslider-story flexslider" id="story-gallery">
 	 					<ul class="slides clearfix">
-	 						<li>
-	 							<div class="h4 centered">Gallery</div>
-	 							<div class="centered"><span class="icon large" data-icon="&#8486;"></span></div>
-	 							<h1 class="m0 bold story-heading centered"><?php the_title(); ?></h1>
-	 							<?php if ($description = get_field('story_description')) : ?>
-	 								<p class="m1 h2 centered"><?php echo $description; ?></p>
-	 							<?php endif; ?>
-	 							<?php the_post_thumbnail('story_hero'); ?>
+	 						<li class="title" style="background-image: url('<?php echo $story_featured_image ?>');">
+	 							<div class="overlay">
+		 							<div class="h4 centered">Gallery</div>
+		 							<div class="centered"><span class="icon large" data-icon="&#8486;"></span></div>
+		 							<h1 class="m0 bold story-heading centered"><?php the_title(); ?></h1>
+		 							<?php if ($description = get_field('story_description')) : ?>
+		 								<p class="m1 h2 centered"><?php echo $description; ?></p>
+		 							<?php endif; ?>
+		 						</div>
 	 						</li>
 	 						<?php foreach ($gallery as $gallery_image) { ?>
 	 							<li>
