@@ -33,7 +33,7 @@ $transitions: .25s;
 /********** @TYPE *********/
 
 body{
-	font-size: 18px;
+	font-size: 15px;
 	background: $ultra-light;
 }
 
@@ -61,23 +61,23 @@ h1,h2,h3,h4,h5,h6{
 }
 
 h1,.h1{
-	font-size: 3.25em;
+	font-size: 3.25em; /* 58.5px */
 }
 
 h2,.h2{
-	font-size: 2.2em;
+	font-size: 2.2em; /* 39.6px */
 }
 
 h3,.h3{
-	font-size: 1.8em;
+	font-size: 1.8em; /* 30.6px */
 }
 
 h4,.h4{
-	font-size: 1em;
+	font-size: 1em; /* 17px */
 }
 
 h5,.h5{
-	font-size: .8em;
+	font-size: .8em; /* 13.6px */
 }
 
 h6,.h6{
@@ -88,10 +88,10 @@ ol {
 	line-height: 1.75em;
 }
 
-//md
-@media (max-width: 1200px) {
+//xl
+@media (min-width: 1921px) {
 	body{
-		font-size: 17px;
+		font-size: 16px;
 	}
 }
 
@@ -380,54 +380,13 @@ ol {
 	}
 }
 
-.border-ultralight{
- 	@include border($ultra-light);
- 	&:hover {
- 		border-color: darken($ultra-light,10);
- 	}
-}
-
-.border-light{
- 	@include border($light);
- 	&:hover {
- 		border-color: darken($light,10);
- 	}
-}
-
-.border-brand{
- 	@include border($brand);
- 	&:hover {
- 		border-color: darken($brand,10);
- 	}
-}
-
-.border-courses{
- 	@include border($courses);
- 	&:hover {
- 		border-color: darken($courses,10);
- 	}
-}
-
-.border-research{
- 	@include border($research);
- 	&:hover {
- 		border-color: darken($research,10);
- 	}
-}
-
-.border-interviews{
- 	@include border($interviews);
- 	&:hover {
- 		border-color: darken($interviews,10);
- 	}
-}
-
-.border-lectures{
- 	@include border($lectures);
- 	&:hover {
- 		border-color: darken($lectures,10);
- 	}
-}
+.border-ultralight{ @include border($ultra-light); }
+.border-light{ @include border($light); }
+.border-brand{ @include border($brand); }
+.border-courses{ @include border($courses); }
+.border-research{ @include border($research); }
+.border-interviews{ @include border($interviews); }
+.border-lectures{ @include border($lectures); }
 
 .border-top-courses{
 	border-top: 2px solid $courses;

@@ -76,6 +76,7 @@ function storySetup() {
 	    return false;		
 	});	
 
+	$('.flexslider-controls li:first-child').addClass('table-of-contents');
 	$('.flexslider-controls li:first-child a').html('<span class="icon small" data-icon="&#52;"></span>');
 
 }

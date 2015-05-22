@@ -47,7 +47,7 @@ ol, ul {
     margin-bottom: 15px; } }
 /********** @TYPE *********/
 body {
-  font-size: 18px;
+  font-size: 15px;
   background: #fafafa; }
 
 div {
@@ -72,19 +72,24 @@ h1, h2, h3, h4, h5, h6 {
   font-weight: 500; }
 
 h1, .h1 {
-  font-size: 3.25em; }
+  font-size: 3.25em;
+  /* 58.5px */ }
 
 h2, .h2 {
-  font-size: 2.2em; }
+  font-size: 2.2em;
+  /* 39.6px */ }
 
 h3, .h3 {
-  font-size: 1.8em; }
+  font-size: 1.8em;
+  /* 30.6px */ }
 
 h4, .h4 {
-  font-size: 1em; }
+  font-size: 1em;
+  /* 17px */ }
 
 h5, .h5 {
-  font-size: .8em; }
+  font-size: .8em;
+  /* 13.6px */ }
 
 h6, .h6 {
   font-size: .6em; }
@@ -92,9 +97,9 @@ h6, .h6 {
 ol {
   line-height: 1.75em; }
 
-@media (max-width: 1200px) {
+@media (min-width: 1921px) {
   body {
-    font-size: 17px; } }
+    font-size: 16px; } }
 @media (max-width: 992px) {
   body {
     font-size: 15px; }
@@ -446,8 +451,6 @@ ol {
   -webkit-transition: all 0.25s 0s ease;
   -o-transition: all 0.25s 0s ease;
   -ms-transition: all 0.25s 0s ease; }
-  .border-ultralight:hover {
-    border-color: #e1e1e1; }
 
 .border-light {
   border: 5px solid #f1f1f1;
@@ -456,8 +459,6 @@ ol {
   -webkit-transition: all 0.25s 0s ease;
   -o-transition: all 0.25s 0s ease;
   -ms-transition: all 0.25s 0s ease; }
-  .border-light:hover {
-    border-color: #d7d7d7; }
 
 .border-brand {
   border: 5px solid #cb2026;
@@ -466,8 +467,6 @@ ol {
   -webkit-transition: all 0.25s 0s ease;
   -o-transition: all 0.25s 0s ease;
   -ms-transition: all 0.25s 0s ease; }
-  .border-brand:hover {
-    border-color: #9f191e; }
 
 .border-courses {
   border: 5px solid #0575B9;
@@ -476,8 +475,6 @@ ol {
   -webkit-transition: all 0.25s 0s ease;
   -o-transition: all 0.25s 0s ease;
   -ms-transition: all 0.25s 0s ease; }
-  .border-courses:hover {
-    border-color: #045687; }
 
 .border-research {
   border: 5px solid #E5603C;
@@ -486,8 +483,6 @@ ol {
   -webkit-transition: all 0.25s 0s ease;
   -o-transition: all 0.25s 0s ease;
   -ms-transition: all 0.25s 0s ease; }
-  .border-research:hover {
-    border-color: #d2431c; }
 
 .border-interviews {
   border: 5px solid #25807F;
@@ -496,8 +491,6 @@ ol {
   -webkit-transition: all 0.25s 0s ease;
   -o-transition: all 0.25s 0s ease;
   -ms-transition: all 0.25s 0s ease; }
-  .border-interviews:hover {
-    border-color: #1a5858; }
 
 .border-lectures {
   border: 5px solid #58595B;
@@ -506,8 +499,6 @@ ol {
   -webkit-transition: all 0.25s 0s ease;
   -o-transition: all 0.25s 0s ease;
   -ms-transition: all 0.25s 0s ease; }
-  .border-lectures:hover {
-    border-color: #3f4041; }
 
 .border-top-courses {
   border-top: 2px solid #0575B9; }
@@ -2437,6 +2428,9 @@ img.gform_ajax_spinner {
     display: block;
     width: 100%;
     height: 100%; }
+  .slide ol li {
+    line-height: 1.25em;
+    margin-bottom: 0.5em; }
 
 /********** @SCROLLY *********/
 #scrolly {
@@ -2509,6 +2503,16 @@ img.gform_ajax_spinner {
       display: block;
       margin: 1em 0 0 2.25em; }
 
+/********** @CATEGORY *********/
+.category.category-courses {
+  color: #0575B9; }
+.category.category-interviews {
+  color: #25807F; }
+.category.category-lectures {
+  color: #58595B; }
+.category.category-research {
+  color: #E5603C; }
+
 /********** @COLLECTIONS *********/
 .collection:not(.collection-single) {
   transition: opacity 1s 0s ease;
@@ -2516,6 +2520,11 @@ img.gform_ajax_spinner {
   -webkit-transition: opacity 1s 0s ease;
   -o-transition: opacity 1s 0s ease;
   -ms-transition: opacity 1s 0s ease; }
+
+.story-slide {
+  background: #555555; }
+  .story-slide a {
+    color: #fafafa; }
 
 /********** @COLLECTION SINGLE *********/
 .collection-suffix {
@@ -3064,21 +3073,21 @@ img.gform_ajax_spinner {
     -o-border-radius: 30px;
     -ms-border-radius: 30px;
     border-radius: 30px; }
-  .flexslider-controls li:first-child a {
+  .flexslider-controls li.table-of-contents a {
     content: "\0034";
     font-family: "modern_pictograms_proregular"; }
 
-.flexslider-controls li:first-child {
+.flexslider-controls li.table-of-contents {
   overflow: visible; }
-  .flexslider-controls li:first-child a {
+  .flexslider-controls li.table-of-contents a {
     border: none;
     text-indent: 0;
     opacity: 0.5;
     background: transparent; }
-    .flexslider-controls li:first-child a.flex-active {
+    .flexslider-controls li.table-of-contents a.flex-active {
       opacity: 1;
       background: transparent; }
-    .flexslider-controls li:first-child a span {
+    .flexslider-controls li.table-of-contents a span {
       vertical-align: 2px; }
 
 .category-courses .flexslider-controls a {

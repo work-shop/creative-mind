@@ -177,13 +177,13 @@ class CM_Collection_Controller {
 			foreach ( $half as $story ) {
 				$output = $output . self::create_list_item( $story, 'story' );
 			}
-			return '<div class="split-list"><ol start="' . $start . '" >' . $output . '</ol></div>';
+			return '<div class="split-list"><ol class="h4" start="' . $start . '" >' . $output . '</ol></div>';
 		}
 		elseif ( $type == 'category' ) {
 			foreach ( $half as $collection ) {
 				$output = $output . self::create_list_item( $collection, 'collection' );
 			}
-			return '<div class="split-list"><ul>' . $output . '</ul></div>';
+			return '<div class="split-list"><ul class="h3">' . $output . '</ul></div>';
 		}
 
 		elseif ( $type == 'menu' ) {

@@ -431,6 +431,10 @@ $icon-margin: 15px;
 		width: 100%;
 		height: 100%;
 	}
+	ol li {
+		line-height: 1.25em;
+		margin-bottom: 0.5em;
+	}
 }
 
 
@@ -530,6 +534,14 @@ $icon-margin: 15px;
 
 }
 
+/********** @CATEGORY *********/
+
+.category {
+	&.category-courses { color: $courses; }
+	&.category-interviews { color: $interviews; }
+	&.category-lectures { color: $lectures; }
+	&.category-research { color: $research; }
+}
 
 
 /********** @COLLECTIONS *********/
@@ -542,6 +554,13 @@ $icon-margin: 15px;
 		//opacity: 1;		
 	}
 
+}
+
+.story-slide {
+	background: lighten($dark,20);
+	a { 
+		color: $ultra-light; 
+	}
 }
 
 
@@ -837,14 +856,14 @@ $icon-margin: 15px;
 			border: 2px solid;
 			@include border-radius(30px);
 		}
-		&:first-child a {
+		&.table-of-contents a {
 			content: "\0034";
 			font-family: "modern_pictograms_proregular";
 		}
 	}
 }
 
-.flexslider-controls li:first-child {
+.flexslider-controls li.table-of-contents {
 	overflow: visible;
 	a {
 		border: none;

@@ -39,7 +39,7 @@
 		<div class="row mt4 mb2">
 			<div class="col-sm-10 col-sm-offset-1">
 				<h1 class="centered"><?php echo $category_name; ?></h1>
-				<p class="centered"><?php echo $category_description; ?></p>
+				<p class="centered h2"><?php echo $category_description; ?></p>
 			</div>
 		</div>	
 		<div class="row mb2">

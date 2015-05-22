@@ -56,7 +56,7 @@ $start = count($stories_halves[0]) + 1;
 		<div class="row">
 			<div class="col-sm-6 col-sm-offset-3">
 				<header class="text-center">
-					<ul class="list-inline">
+					<ul class="list-inline h5 uppercase bold">
 						<li><?php echo $story_qualifier ?></li><li>Table of Contents</li><li>More Info</li><li>Share This Collection</li>
 					</ul>
 					<h2><?php echo $collection_name; ?></h2>
@@ -84,16 +84,16 @@ $start = count($stories_halves[0]) + 1;
 							 */
 							$story_featured_image = ( has_post_thumbnail( $story->ID ) ) ? wp_get_attachment_image_src( get_post_thumbnail_id( $story->ID ), 'thumbnail' )[0] : 'http://images.wisegeek.com/scientists-in-lab.jpg';
 						?>
-							<li class="slide border-<?php echo $category_nicename ?> text-center clearfix">
+							<li class="slide story-slide border-<?php echo $category_nicename ?> text-center clearfix">
 							<a class="padded-more" href="<?php echo $story_permalink ?>">
 								<?php if ( is_singular( 'collections') ) {
 									if ( $story_type == 'video' ) { echo '<p>Watch Video</p>'; }
 									elseif ( $story_type == 'image_gallery' ) { echo "<p>View Gallery</p>"; } 
 								} ?>
 								<?php if ( $story_type == 'video' ) { ?>
-									<span class="icon" data-icon="&#210;"></span>
+									<span class="icon large" data-icon="&#210;"></span>
 								<?php } elseif ( $story_type == 'image_gallery' ) { ?>
-									<span class="icon" data-icon="&#8486;"></span>
+									<span class="icon large" data-icon="&#8486;"></span>
 								<?php } ?>
 								<h3><?php echo $story_name ?></h3>
 								<?php if ( is_singular( 'collections') ) {
