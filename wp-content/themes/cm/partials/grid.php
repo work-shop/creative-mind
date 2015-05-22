@@ -75,27 +75,28 @@ foreach ($categories as $category) {
 		$story_featured_image = ( has_post_thumbnail( $grid_element->ID ) ) ? wp_get_attachment_image_src( get_post_thumbnail_id( $grid_element->ID ), 'thumbnail' )[0] : 'http://images.wisegeek.com/scientists-in-lab.jpg';
 		?>
 
-				<div class="col-xs-6 col-sm-4">
-					<a href="<?php echo $story_permalink ?>">
-					<div class="tile tile-story mb2 <?php echo $category; ?> border-<?php echo $category; ?>" style="background-image: url('<?php echo $story_featured_image; ?>');" >
-						<header>
-							<?php if ( $story_type == 'video' ) { ?>
-								<span class="icon" data-icon="&#210;"></span>
-							<?php } elseif ( $story_type == 'image_gallery' ) { ?>
-								<span class="icon" data-icon="&#8486;"></span>
-							<?php } ?>
-							<div class="h5 uppercase"><?php echo $story_collection_name ?></div>
-							<h3><?php echo $story_name ?></h3>
-						</header>
-						<footer class="action text-center white bg-<?php echo $category; ?>">
-							<?php 
-								if ( $story_type == 'video' ) { echo "Watch Video"; } 
-								elseif ( $story_type == 'image_gallery' ) { echo "View Gallery"; } 
-							?>
-						</footer>
-					</div>
-					</a>
+			<div class="col-xs-6 col-sm-4">
+				<a href="<?php echo $story_permalink ?>">
+				<div class="tile tile-story mb2 <?php echo $category; ?> border-<?php echo $category; ?>" style="background-image: url('<?php echo $story_featured_image; ?>');" >
+					<header>
+						<?php if ( $story_type == 'video' ) { ?>
+							<span class="icon" data-icon="&#210;"></span>
+						<?php } elseif ( $story_type == 'image_gallery' ) { ?>
+							<span class="icon" data-icon="&#8486;"></span>
+						<?php } ?>
+						<div class="h5 uppercase"><?php echo $story_collection_name ?></div>
+						<h3><?php echo $story_name ?></h3>
+					</header>
+					<footer class="action text-center white bg-<?php echo $category; ?>">
+						<?php 
+							if ( ($story_type == 'video') ) { echo "Watch Video"; } 
+							elseif ( $story_type == 'image_gallery' ) { echo "View Gallery"; } 
+							else { echo "View Story"; }
+						?>
+					</footer>
 				</div>
+				</a>
+			</div>
 	<?php
 
 	}
