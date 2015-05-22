@@ -2422,7 +2422,10 @@ img.gform_ajax_spinner {
   .slide a {
     display: block;
     width: 100%;
-    height: 100%; }
+    height: 100%;
+    background: #222222;
+    background: -webkit-linear-gradient(legacy-direction(to top), #222222, rgba(34, 34, 34, 0.5));
+    background: linear-gradient(to top, #222222, rgba(34, 34, 34, 0.5)); }
   .slide ol li {
     line-height: 1.25em;
     margin-bottom: 0.5em; }
