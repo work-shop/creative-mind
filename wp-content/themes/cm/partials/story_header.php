@@ -40,14 +40,14 @@
  							<div class="row">
  								<div class="col-sm-12 video-gallery-main mt3 mb2">
  									<?php echo vimeo_frame($clip['vimeo_id'],'story-video-1'); ?>
- 									<h6><?php echo $clip['video_title']; ?></h6>
+ 									<p><?php echo $clip['video_title']; ?></p>
  								</div> 
  							</div>
  							<?php } else { ?>
  							<?php if ( $i == 1 ) : ?><div class="row"><?php endif; ?>
  								<div class="col-sm-2 col-xs-6 video-gallery-clip">
  									<?php echo vimeo_frame($clip['vimeo_id'],'story-video-1'); ?>
- 									<h6><?php echo $clip['video_title']; ?></h6>
+ 									<p><?php echo $clip['video_title']; ?></p>
  								</div> 																											
  							<?php if ( $i == count( $clips ) - 1 ) : ?></div><?php endif; ?>
  							<?php } endforeach; ?>								
@@ -94,14 +94,14 @@
  							<div class="row">
  								<div class="col-sm-12 video-gallery-main mt3 mb2">
  									<?php echo vimeo_frame($clip['vimeo_id'],'story-video-1'); ?>
- 									<h6><?php echo $clip['video_title']; ?></h6>
+ 									<p><?php echo $clip['video_title']; ?></p>
  								</div> 
  							</div>
  							<?php } else { ?>
  							<?php if ( $i == 1 ) : ?><div class="row"><?php endif; ?>
  								<div class="col-sm-2 col-xs-6 video-gallery-clip">
  									<?php echo vimeo_frame($clip['vimeo_id'],'story-video-1'); ?>
- 									<h6><?php echo $clip['video_title']; ?></h6>
+ 									<p><?php echo $clip['video_title']; ?></p>
  								</div> 																											
  							<?php if ( $i == count( $clips ) - 1 ) : ?></div><?php endif; ?>
  							<?php } endforeach; ?>								
