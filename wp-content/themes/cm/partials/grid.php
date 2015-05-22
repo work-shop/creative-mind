@@ -24,7 +24,7 @@ $categories = array_keys( $grid_elements );
 		<div class="row m4">
 			<div class="col-xs-10 col-xs-offset-1 col-sm-4 col-sm-offset-0">
 				<div class="tile padded brand border-brand text-center">
-					<span class="h4">Explore the Creative Mind</span> <span class="icon" data-icon="&#91;"></span>
+					<h3>Explore the Creative Mind</h3> <span class="icon" data-icon="&#91;"></span>
 				</div>
 			</div>
 <?php
@@ -49,10 +49,10 @@ foreach ($categories as $category) {
 				<a href="<?php echo esc_url( home_url( '/'.$category ) ); ?>">
 				<div class="tile tile-category mb2 white bg-<?php echo $category; ?> clearfix" >
 					<header>
-						<h3><?php echo $category_name; ?></h3>
+						<h2><?php echo $category_name; ?></h2>
 						<p><?php echo $category_description ?></p>
 					</header>
-					<footer class="action text-center bg-<?php echo $category; ?>">
+					<footer class="action bold text-center bg-<?php echo $category; ?>">
 						<?php echo "View $category_name"; ?>
 					</footer>
 				</div>
@@ -85,9 +85,9 @@ foreach ($categories as $category) {
 							<span class="icon" data-icon="&#8486;"></span>
 						<?php } ?>
 						<div class="h5 uppercase"><?php echo $story_collection_name ?></div>
-						<h3><?php echo $story_name ?></h3>
+						<h2><?php echo $story_name ?></h2>
 					</header>
-					<footer class="action text-center white bg-<?php echo $category; ?>">
+					<footer class="action bold text-center white bg-<?php echo $category; ?>">
 						<?php 
 							if ( ($story_type == 'video') ) { echo "Watch Video"; } 
 							elseif ( $story_type == 'image_gallery' ) { echo "View Gallery"; } 

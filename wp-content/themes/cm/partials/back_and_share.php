@@ -30,9 +30,9 @@ $collection = get_post( get_the_ID() );
 		<div class="row">
 			<div class="col-sm-10 col-sm-offset-1">
 				<div id="share-links">
-					<h3 class="bold centered mb1">
+					<h2 class="bold centered mb1">
 					Share the Creativity!
-					</h3>
+					</h2>
 					<div class="share-icons">
 						<a class="addthis_button_facebook"><span class="icon social" data-icon="F"></span></a>
 						<a class="addthis_button_twitter"><span class="icon social" data-icon="t"></span></a>
@@ -41,21 +41,21 @@ $collection = get_post( get_the_ID() );
 				</div> <!-- end #share-links -->
 				<div id="back-link">
 					<?php if ( is_home() ) { ?>
-						<div class="h3 bold centered brand">
+						<div class="h2 bold centered brand">
 						<a href="#">
 							<span class="icon-wrapper bg-brand"><span class="icon white" data-icon="&#8218;"></span></span>
 							<span class="text">Back to Top</span>
 						</a>
 						</div>
 					<?php } elseif ( is_category() ) { ?>
-						<div class="h3 bold centered brand">
+						<div class="h2 bold centered brand">
 						<a href="<?php echo esc_url( home_url() ); ?>">
 							<span class="icon-wrapper bg-brand"><span class="icon white" data-icon="&#8218;"></span></span>
 							<span class="text">Home</span>
 						</a>
 						</div>
 					<?php } elseif ( is_singular('collections') ) { ?>
-						<div class="h3 bold centered <?php echo $category->slug; ?>">
+						<div class="h2 bold centered <?php echo $category->slug; ?>">
 						<a href="<?php echo esc_url( home_url( '/'.$category->slug ) ); ?>">
 							<span class="icon-wrapper bg-<?php echo $category->slug; ?>"><span class="icon white" data-icon="&#8218;"></span></span>
 							<span class="text">Back to <?php echo $category->name; ?></span>
@@ -69,7 +69,7 @@ $collection = get_post( get_the_ID() );
 						$collection = CM_Story_Controller::get_collections_for_story( get_the_ID() )[0];
 						?>
 
-						<div class="h3 bold centered">
+						<div class="h2 bold centered">
 						<a href="<?php echo get_permalink( $collection->ID ); ?>">
 							<span class="icon-wrapper bg-white <?php echo $category->slug ?>"><span class="icon" data-icon="&#8218;"></span></span>
 							<span class="text">Back to <?php echo $collection->post_title; ?></span>

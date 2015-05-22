@@ -500,6 +500,10 @@ $icon-margin: 15px;
 		background: transparent;
 	}
 
+	ol {
+		font-size: 0.675em;
+	}
+
 	li {
 		line-height: 1em;
 		margin-bottom: 0.5em;
@@ -510,7 +514,6 @@ $icon-margin: 15px;
 			left: 0;
 		}
 		> a {
-			margin-left: 1em;
 			border-bottom: 1px solid transparent;
 		}
 		ol {
@@ -748,18 +751,13 @@ $icon-margin: 15px;
 		@include transition();
 	}
 
-	.story-body{
-
-		p{
-			font-size: 1.25em;
-			line-height: 1.7;
-			margin-bottom: 2em;			
-			//letter-spacing: .01em;
-		}
-
-		a{
-			text-decoration: underline;
-		}
+	.story-body a{
+		@extend .underline;
+	}
+	.story-content p{
+		font-size: 1.625em;
+		line-height: 1.7;
+		margin-bottom: 2em;
 	}
 
 	.story-callout{
@@ -966,7 +964,7 @@ $icon-margin: 15px;
 	#megaNav {
 		header {
 			position: relative;
-			h4 {
+			h3 {
 				@include transform( rotate(-90deg) );
 				position: absolute;
 				left: 0;

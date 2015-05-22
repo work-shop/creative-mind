@@ -9,7 +9,7 @@
 	<div class="container-fluid">
 		<div class="row">
 			<div class="col-sm-10 col-sm-offset-1">
-				<h5 class="uppercase centered">
+				<h5 class="uppercase bold centered">
 					<?php if ( $collection ) { echo $collection->post_title . ' / '; } the_title(); echo ' / ' . $story_type ?>
 				</h5>
 
@@ -27,7 +27,7 @@
  						?>
  					</div>
  					<?php if ($description = get_field('story_description')) : ?>
- 						<p class="m1 h3 centered"><?php echo $description; ?></p>
+ 						<p class="m1 h2 centered"><?php echo $description; ?></p>
  					<?php endif; ?>
 
  				<?php } elseif ( ($story_type == 'video_gallery') && ($clips = get_field('video_gallery')) ) { ?>
@@ -53,7 +53,7 @@
  						</div>
  					</div> <!-- end #video-gallery -->
  					<?php if ($description = get_field('story_description')) : ?>
- 						<p class="m1 h3"><?php echo $description; ?></p>
+ 						<p class="m1 h2"><?php echo $description; ?></p>
  					<?php endif; ?>		
 
 	 			<?php } elseif ( ($story_type == 'image_gallery') && ($gallery = get_field('story_image_gallery')) ) { ?>
@@ -64,7 +64,7 @@
 	 							<div class="centered"><span class="icon large" data-icon="&#8486;"></span></div>
 	 							<h1 class="m0 bold story-heading centered"><?php the_title(); ?></h1>
 	 							<?php if ($description = get_field('story_description')) : ?>
-	 								<p class="m1 h3 centered"><?php echo $description; ?></p>
+	 								<p class="m1 h2 centered"><?php echo $description; ?></p>
 	 							<?php endif; ?>
 	 							<?php the_post_thumbnail('story_hero'); ?>
 	 						</li>
@@ -110,7 +110,7 @@
 					else { ?> 
 					<h1 class="m0 bold story-heading centered"><?php the_title(); ?></h1>
 					<?php if ($description = get_field('story_description')) : ?>
-						<p class="m1 h3 centered"><?php echo $description; ?></p>
+						<p class="m1 h2 centered"><?php echo $description; ?></p>
 					<?php endif; ?>
 				<?php } //endif ?>
 

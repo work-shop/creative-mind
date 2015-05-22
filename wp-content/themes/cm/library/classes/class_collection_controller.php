@@ -195,7 +195,7 @@ class CM_Collection_Controller {
 			}
 
 
-			return '<div class="split-list"><ul>' . $output . '</ul></div>';
+			return '<div class="split-list h3"><ul>' . $output . '</ul></div>';
 		}
 	}
 

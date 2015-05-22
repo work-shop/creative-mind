@@ -27,7 +27,7 @@
 
         <div class="col-sm-1">
           <header class="bold">
-            <h4 class="uppercase"><a href="<?php echo get_term_link( $category ); ?>"><?php echo $category->name; ?></a></h4>
+            <h3 class="uppercase"><a href="<?php echo get_term_link( $category ); ?>"><?php echo $category->name; ?></a></h3>
           </header>
         </div>
         <div class="col-sm-11 bg-<?php echo $category->slug; ?> padded-less m0">
@@ -63,8 +63,8 @@
           <div class="row">
             <div class="col-sm-12 bold">
               <ul class="list-inline centered mt1">
-                <li class="h4"><a href="<?php bloginfo('url'); ?>/about">About the Creative Mind</a></li>
-                <li class="h4 ml1"><a href="<?php bloginfo('url'); ?>/contact">Contact Us</a></li>
+                <li class="h3"><a href="<?php bloginfo('url'); ?>/about">About the Creative Mind</a></li>
+                <li class="h3 ml1"><a href="<?php bloginfo('url'); ?>/contact">Contact Us</a></li>
               </ul>
             </div>
           </div>
