@@ -11,7 +11,7 @@
 		<div class="row">
 			<div class="col-sm-10 col-sm-offset-1">
 				<h5 class="uppercase bold centered">
-					<?php if ( $collection ) { echo $collection->post_title . ' / '; } the_title(); echo ' / ' . $story_type ?>
+					<?php if ( $collection ) { echo $collection->post_title . ' / '; } the_title(); ?>
 				</h5>
 
 				<?php if ( ($story_type == 'video') && ($vimeo_id = get_field('story_vimeo_id')) ) { ?>
@@ -21,16 +21,13 @@
 	 					</div>
 	 					
 	 					<div class="story-video-poster" style="background-image: url('<?php echo $story_featured_image ?>');"><div class="overlay">
-	 						<h1 class="m0 bold story-heading centered"><?php the_title(); ?></h1>
+	 						<h1 class="mt4 bold story-heading centered"><?php the_title(); ?></h1>
 	 					</div></div>
 	 					<div class="story-video">				
 	 						<?php
 	 						echo vimeo_frame($vimeo_id,'story-video-1'); 
 	 						?>
 	 					</div>
-	 					<?php if ($description = get_field('story_description')) : ?>
-	 						<p class="m1 h2 centered"><?php echo $description; ?></p>
-	 					<?php endif; ?>
 	 				</div>
 
  				<?php } elseif ( ($story_type == 'video_gallery') && ($clips = get_field('video_gallery')) ) { ?>

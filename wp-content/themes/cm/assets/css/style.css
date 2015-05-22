@@ -3047,6 +3047,7 @@ img.gform_ajax_spinner {
 
 .story-video-play {
   z-index: 1;
+  padding-top: 10%;
   width: 100%;
   height: 100%;
   margin: 0 auto;
