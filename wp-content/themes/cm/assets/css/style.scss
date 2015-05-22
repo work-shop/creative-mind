@@ -804,60 +804,76 @@ $icon-margin: 15px;
 	}	
 }
 
-.flexslider-story{
-
-	.flexslider-controls{
-		position: relative;
-		width: 100%;
-		left: 0;
-		bottom: 0;
-		margin-top: 30px;
-		margin-left: 0;
-
-		ol{
-			text-align: center;
-		}
-
-		li{
-			
-			a{
-				width: 13px;
-				height: 13px;
-				background: $courses;	
-				border: none;
-				@include border-radius(30px);
-
-				&:hover{
-					cursor: pointer;
-				}
-				
-				&.flex-active{
-					background: $light;			
-				}	
-			}
-		}
-
+.flexslider-direction{
+	opacity: 1;
+	right: -60px;
+	&:hover{
+		right: -65px;
 	}
-
-	.flexslider-direction{
-		opacity: 1;
-		right: -60px;
-
+	&.previous{
+		right: auto;
+		left: -60px;
 		&:hover{
-			right: -65px;
+			left: -65px;
 		}
+	}		
+}
 
-		&.previous{
-			right: auto;
-			left: -60px;
-
-			&:hover{
-				left: -65px;
-			}
-
-		}		
+.flexslider-controls{
+	position: relative;
+	width: 100%;
+	left: 0;
+	bottom: 0;
+	margin-top: 30px;
+	margin-left: 0;
+	ol{
+		text-align: center;
+	}
+	li{	
+		a{
+			width: 13px;
+			height: 13px;	
+			background: $ultra-light;
+			border: 2px solid;
+			@include border-radius(30px);
+		}
+		&:first-child a {
+			content: "\0034";
+			font-family: "modern_pictograms_proregular";
+		}
 	}
 }
+
+.flexslider-controls li:first-child {
+	overflow: visible;
+	a {
+		border: none;
+		text-indent: 0;
+		opacity: 0.5;
+		background: transparent;
+		&.flex-active {
+			opacity: 1;
+			background: transparent;
+		}
+		span {
+			vertical-align: 2px;
+		}
+	}
+}
+
+@mixin pagination($category) {
+	color: $category;
+	border-color: $category;
+	&.flex-active {
+		background: $category;
+	}
+}
+
+.category-courses .flexslider-controls a { @include pagination($courses); }
+.category-interviews .flexslider-controls a { @include pagination($interviews); }
+.category-lectures .flexslider-controls a { @include pagination($lectures); }
+.category-research .flexslider-controls a { @include pagination($research); }
+
 
 .stories-nav a {
 	position: fixed;
