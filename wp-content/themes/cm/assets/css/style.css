@@ -925,11 +925,11 @@ img.gform_ajax_spinner {
   display: none !important; }
 
 /********** $FLEXSLIDER *********/
-.flexslider li {
+.flexslider > li {
   background-size: cover;
   height: 500px;
   text-align: center; }
-  .flexslider li img {
+  .flexslider > li img {
     height: 100%;
     width: auto; }
 
