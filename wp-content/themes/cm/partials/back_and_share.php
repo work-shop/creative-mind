@@ -25,7 +25,7 @@ $collection = get_post( get_the_ID() );
 
 ?>
 
-<section class="block target padded-less" id="back-share">
+<section class="block target padded-less mt6" id="back-share">
 	<div class="container-fluid mb5">
 		<div class="row">
 			<div class="col-sm-10 col-sm-offset-1">

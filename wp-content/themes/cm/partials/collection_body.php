@@ -25,6 +25,8 @@ $category_nicename = $category->category_nicename;
  */
 $collection = get_global( 'current_collection' );
 $collection_name = $collection->post_title;
+// $collection_id = $collection['id'];
+$collection_permalink = get_permalink( $collection );
 
 /**
  *
@@ -51,15 +53,15 @@ $start = count($stories_halves[0]) + 1;
 
 ?>
 
-<section class="block padded-less">
-	<div class="container-fluid">
+<section class="block padded-less <?php if ( is_category() ) : echo 'well bg-white'; endif; ?>">
+	<div class="container-fluid mb2">
 		<div class="row">
 			<div class="col-sm-6 col-sm-offset-3">
 				<header class="text-center">
 					<ul class="list-inline h5 uppercase bold">
 						<li><?php echo $story_qualifier ?></li><li>Table of Contents</li><li>More Info</li><li>Share This Collection</li>
 					</ul>
-					<h2><?php echo $collection_name; ?></h2>
+					<a href="<?php echo $collection_permalink ?>" class="<?php echo $category_nicename ?>"><h2 class="bold"><?php echo $collection_name; ?></h2></a>
 				</header>					
 			</div>
 		</div>
@@ -68,7 +70,7 @@ $start = count($stories_halves[0]) + 1;
 				<div class="flexslider-story flexslider" id="story-gallery-<?php echo rand(0,1000); ?>">
 					<ul class="slides clearfix">
 						<li class="slide border-<?php echo $category_nicename ?> padded-more clearfix">
-							<h3 class="text-center">Table of Contents</h3>
+							<h3 class="text-center bold">Table of Contents</h3>
 							<div class="split-list">
 								<?php 
 									echo CM_Collection_Controller::create_list( $stories_halves[0], 1, 'collection' ); 
@@ -88,19 +90,17 @@ $start = count($stories_halves[0]) + 1;
 						?>
 							<li class="slide story-slide border-<?php echo $category_nicename ?> text-center clearfix" style="background-image: url('<?php echo $story_featured_image ?>'); ">
 							<a class="padded-more overlay" href="<?php echo $story_permalink ?>">
-								<?php if ( is_singular( 'collections') ) {
-									if ( $story_type == 'video' ) { echo '<p>Watch Video</p>'; }
-									elseif ( $story_type == 'image_gallery' ) { echo "<p>View Gallery</p>"; } 
-								} ?>
+								<p class="media-type"><?php 
+									if ( $story_type == 'video' ) { echo 'Watch Video'; }
+									elseif ( $story_type == 'image_gallery' ) { echo "View Gallery"; } 
+								?></p>
 								<?php if ( $story_type == 'video' ) { ?>
 									<span class="icon large" data-icon="&#210;"></span>
 								<?php } elseif ( $story_type == 'image_gallery' ) { ?>
 									<span class="icon large" data-icon="&#8486;"></span>
 								<?php } ?>
-								<h3><?php echo $story_name ?></h3>
-								<?php if ( is_singular( 'collections') ) {
-									echo '<p>' . $story_description . '</p>';
-								} ?>
+								<h3 class="bold"><?php echo $story_name ?></h3>
+								<p class="description"><?php echo $story_description ?></p>
 							</a>
 							</li>
 						 <?php } ?>

@@ -969,7 +969,7 @@ img.gform_ajax_spinner {
   height: 20px; }
   .flex-control-nav li {
     list-style: none;
-    margin: 0 7px;
+    margin: 0 5px;
     display: inline-block;
     overflow: hidden; }
     .flex-control-nav li a {
@@ -2552,6 +2552,15 @@ img.gform_ajax_spinner {
   background-color: #555555; }
   .story-slide a {
     color: #fafafa; }
+  .story-slide .media-type, .story-slide .description {
+    opacity: 0;
+    transition: opacity 0.25s 0s ease;
+    -moz-transition: opacity 0.25s 0s ease;
+    -webkit-transition: opacity 0.25s 0s ease;
+    -o-transition: opacity 0.25s 0s ease;
+    -ms-transition: opacity 0.25s 0s ease; }
+  .story-slide:hover .media-type, .story-slide:hover .description {
+    opacity: 1; }
 
 /********** @COLLECTION SINGLE *********/
 .collection-suffix {
@@ -3118,8 +3127,8 @@ img.gform_ajax_spinner {
   .flex-control-nav ol {
     text-align: center; }
   .flex-control-nav li a {
-    width: 13px;
-    height: 13px;
+    width: 19px;
+    height: 19px;
     background: #fafafa;
     border: 2px solid;
     -webkit-border-radius: 30px;
@@ -3130,7 +3139,7 @@ img.gform_ajax_spinner {
 
 .flex-control-nav li.table-of-contents {
   overflow: visible;
-  transform: translateX(-0.5em); }
+  margin-right: 1.5em; }
   .flex-control-nav li.table-of-contents a {
     border: none;
     text-indent: 0;
@@ -3140,7 +3149,9 @@ img.gform_ajax_spinner {
       opacity: 1;
       background: transparent; }
     .flex-control-nav li.table-of-contents a span {
-      vertical-align: 3px; }
+      vertical-align: 5px; }
+  .flex-control-nav li.table-of-contents .icon:after, .flex-control-nav li.table-of-contents .menu-toggle:after {
+    font-size: 3em; }
 
 .category-courses .flex-control-nav a {
   color: #0575B9;

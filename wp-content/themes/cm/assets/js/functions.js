@@ -178,7 +178,7 @@ function flexsliderSetup(){
 	 }	
 
 	$('.flex-control-nav li:first-child').addClass('table-of-contents');
-	$('.flex-control-nav li:first-child a').html('<span class="icon small" data-icon="&#52;"></span>');	 	 
+	$('.flex-control-nav li:first-child a').html('<span class="icon" data-icon="&#52;"></span>');	 	 
 	 	 	
 }
 

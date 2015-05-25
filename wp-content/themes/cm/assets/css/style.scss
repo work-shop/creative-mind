@@ -581,6 +581,15 @@ $icon-margin: 15px;
 	a { 
 		color: $ultra-light; 
 	}
+	.media-type, .description {
+		opacity: 0;
+		@include transition(opacity);
+	}
+	&:hover {
+		.media-type, .description {
+			opacity: 1;
+		}
+	}
 }
 
 
@@ -890,8 +899,8 @@ $icon-margin: 15px;
 	}
 	li{	
 		a{
-			width: 13px;
-			height: 13px;	
+			width: 19px;
+			height: 19px;	
 			background: $ultra-light;
 			border: 2px solid;
 			@include border-radius(30px);
@@ -901,7 +910,7 @@ $icon-margin: 15px;
 
 .flex-control-nav li.table-of-contents {
 	overflow: visible;
-	transform: translateX(-.5em);
+	margin-right: 1.5em;
 	a {
 		border: none;
 		text-indent: 0;
@@ -912,8 +921,11 @@ $icon-margin: 15px;
 			background: transparent;
 		}
 		span {
-			vertical-align: 3px;
+			vertical-align: 5px;
 		}
+	}
+	.icon:after {
+		font-size: 3em;
 	}
 }
 
