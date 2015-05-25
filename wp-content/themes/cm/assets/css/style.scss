@@ -865,7 +865,7 @@ $icon-margin: 15px;
 	}		
 }
 
-.flexslider-controls{
+.flex-control-nav{
 	position: relative;
 	width: 100%;
 	left: 0;
@@ -890,7 +890,7 @@ $icon-margin: 15px;
 	}
 }
 
-.flexslider-controls li.table-of-contents {
+.flex-control-nav li.table-of-contents {
 	overflow: visible;
 	a {
 		border: none;
@@ -915,10 +915,10 @@ $icon-margin: 15px;
 	}
 }
 
-.category-courses .flexslider-controls a { @include pagination($courses); }
-.category-interviews .flexslider-controls a { @include pagination($interviews); }
-.category-lectures .flexslider-controls a { @include pagination($lectures); }
-.category-research .flexslider-controls a { @include pagination($research); }
+.category-courses .flex-control-nav a { @include pagination($courses); }
+.category-interviews .flex-control-nav a { @include pagination($interviews); }
+.category-lectures .flex-control-nav a { @include pagination($lectures); }
+.category-research .flex-control-nav a { @include pagination($research); }
 
 
 .stories-nav a {

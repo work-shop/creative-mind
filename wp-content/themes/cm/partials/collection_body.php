@@ -65,7 +65,7 @@ $start = count($stories_halves[0]) + 1;
 		</div>
 		<div class="row">
 			<div class="col-sm-8 col-sm-offset-2">
-				<div class="flexslider-story flexslider" id="story-gallery">
+				<div class="flexslider-story flexslider" id="story-gallery-<?php echo rand(0,1000); ?>">
 					<ul class="slides clearfix">
 						<li class="slide border-<?php echo $category_nicename ?> padded-more clearfix">
 							<h3 class="text-center">Table of Contents</h3>
@@ -105,7 +105,6 @@ $start = count($stories_halves[0]) + 1;
 							</li>
 						 <?php } ?>
 					</ul>
-					<div class="flexslider-controls"></div> 
 					<div id="flex-previous-story" class="flexslider-direction flex-previous previous">
 						<span class="icon" data-icon="&#8250;"></span>
 					</div>					

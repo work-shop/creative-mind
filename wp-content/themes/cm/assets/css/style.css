@@ -958,7 +958,7 @@ img.gform_ajax_spinner {
   .flexslider-direction.next:hover {
     cursor: pointer; }
 
-.flexslider-controls {
+.flex-control-nav {
   position: absolute;
   width: 300px;
   margin-left: -150px;
@@ -967,12 +967,12 @@ img.gform_ajax_spinner {
   text-align: center;
   bottom: -40px;
   height: 20px; }
-  .flexslider-controls li {
+  .flex-control-nav li {
     list-style: none;
     margin: 0 7px;
     display: inline-block;
     overflow: hidden; }
-    .flexslider-controls li a {
+    .flex-control-nav li a {
       display: block;
       text-indent: 9999px;
       width: 15px;
@@ -983,9 +983,9 @@ img.gform_ajax_spinner {
       -o-border-radius: 30px;
       -ms-border-radius: 30px;
       border-radius: 30px; }
-      .flexslider-controls li a:hover {
+      .flex-control-nav li a:hover {
         cursor: pointer; }
-      .flexslider-controls li a.flex-active {
+      .flex-control-nav li a.flex-active {
         background: #cb2026; }
 
 .flex-control-thumbs li {
@@ -3096,16 +3096,16 @@ img.gform_ajax_spinner {
     .flexslider-direction.previous:hover {
       left: -65px; }
 
-.flexslider-controls {
+.flex-control-nav {
   position: relative;
   width: 100%;
   left: 0;
   bottom: 0;
   margin-top: 30px;
   margin-left: 0; }
-  .flexslider-controls ol {
+  .flex-control-nav ol {
     text-align: center; }
-  .flexslider-controls li a {
+  .flex-control-nav li a {
     width: 13px;
     height: 13px;
     background: #fafafa;
@@ -3115,45 +3115,45 @@ img.gform_ajax_spinner {
     -o-border-radius: 30px;
     -ms-border-radius: 30px;
     border-radius: 30px; }
-  .flexslider-controls li.table-of-contents a {
+  .flex-control-nav li.table-of-contents a {
     content: "\0034";
     font-family: "modern_pictograms_proregular"; }
 
-.flexslider-controls li.table-of-contents {
+.flex-control-nav li.table-of-contents {
   overflow: visible; }
-  .flexslider-controls li.table-of-contents a {
+  .flex-control-nav li.table-of-contents a {
     border: none;
     text-indent: 0;
     opacity: 0.5;
     background: transparent; }
-    .flexslider-controls li.table-of-contents a.flex-active {
+    .flex-control-nav li.table-of-contents a.flex-active {
       opacity: 1;
       background: transparent; }
-    .flexslider-controls li.table-of-contents a span {
+    .flex-control-nav li.table-of-contents a span {
       vertical-align: 2px; }
 
-.category-courses .flexslider-controls a {
+.category-courses .flex-control-nav a {
   color: #0575B9;
   border-color: #0575B9; }
-  .category-courses .flexslider-controls a.flex-active {
+  .category-courses .flex-control-nav a.flex-active {
     background: #0575B9; }
 
-.category-interviews .flexslider-controls a {
+.category-interviews .flex-control-nav a {
   color: #25807F;
   border-color: #25807F; }
-  .category-interviews .flexslider-controls a.flex-active {
+  .category-interviews .flex-control-nav a.flex-active {
     background: #25807F; }
 
-.category-lectures .flexslider-controls a {
+.category-lectures .flex-control-nav a {
   color: #58595B;
   border-color: #58595B; }
-  .category-lectures .flexslider-controls a.flex-active {
+  .category-lectures .flex-control-nav a.flex-active {
     background: #58595B; }
 
-.category-research .flexslider-controls a {
+.category-research .flex-control-nav a {
   color: #E5603C;
   border-color: #E5603C; }
-  .category-research .flexslider-controls a.flex-active {
+  .category-research .flex-control-nav a.flex-active {
     background: #E5603C; }
 
 .stories-nav a {
