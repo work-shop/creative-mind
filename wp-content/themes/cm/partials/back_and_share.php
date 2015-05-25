@@ -26,19 +26,9 @@ $collection = get_post( get_the_ID() );
 ?>
 
 <section class="block target padded-less" id="back-share">
-	<div class="container-fluid">
+	<div class="container-fluid mb5">
 		<div class="row">
 			<div class="col-sm-10 col-sm-offset-1">
-				<div id="share-links">
-					<h2 class="bold centered mb1">
-					Share the Creativity!
-					</h2>
-					<div class="share-icons">
-						<a class="addthis_button_facebook"><span class="icon social" data-icon="F"></span></a>
-						<a class="addthis_button_twitter"><span class="icon social" data-icon="t"></span></a>
-						<a class="addthis_button_email"><span class="icon social" data-icon="m"></span></a>
-					</div>
-				</div> <!-- end #share-links -->
 				<div id="back-link">
 					<?php if ( is_home() ) { ?>
 						<div class="h2 bold centered brand">
@@ -78,6 +68,27 @@ $collection = get_post( get_the_ID() );
 
 					<?php } ?>
 				</div> <!-- end #back-link" -->
+				<div id="share-links">
+					<?php if ( is_singular('stories') ) { ?>
+						<h2 class="bold centered white">
+						Share the Creativity!
+						</h2>
+						<div class="share-icons">
+							<a class="addthis_button_facebook bg-white"><span class="icon social <?php echo $category->slug ?>" data-icon="F"></span></a>
+							<a class="addthis_button_twitter bg-white"><span class="icon social <?php echo $category->slug ?>" data-icon="t"></span></a>
+							<a class="addthis_button_email bg-white"><span class="icon social <?php echo $category->slug ?>" data-icon="m"></span></a>
+						</div>
+					<? } else { ?>
+						<h2 class="bold centered <?php echo $category->slug ?>">
+						Share the Creativity!
+						</h2>
+						<div class="share-icons">
+							<a class="addthis_button_facebook bg-<?php echo $category->slug ?>"><span class="icon social white" data-icon="F"></span></a>
+							<a class="addthis_button_twitter bg-<?php echo $category->slug ?>"><span class="icon social white" data-icon="t"></span></a>
+							<a class="addthis_button_email bg-<?php echo $category->slug ?>"><span class="icon social white" data-icon="m"></span></a>
+						</div>
+					<?php } ?>
+				</div> <!-- end #share-links -->
 			</div>
 		</div>
 	</div> <!-- end .container-fluid -->

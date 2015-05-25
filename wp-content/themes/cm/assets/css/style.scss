@@ -331,6 +331,10 @@ $icon-margin: 15px;
 #back-link {
 	.text {
 		display: block;
+		margin-top: 0.25em;
+	}
+	.icon:after{
+		left: -0.05em;
 	}
 }
 
@@ -347,28 +351,31 @@ $icon-margin: 15px;
 	display: inline-block;
 }
 
+.home #share-links {
+	color: $brand;
+}
+
+.home .share-icons a {
+	background: $brand;
+}
+
 .share-icons{
 	width: ($icon-width * 3) + ($icon-margin*3);
 	margin: 0 auto;
 	a {
 		margin-right: $icon-margin;
-		background: $brand;
 		@include transition(transform,1s);
 
 		&:hover{
 			@include transform(rotate(360deg) scale(1.25));
 		}
 	}
-
 	.addthis_button_email{
 		margin-right: 0;
 	}
-
 	.icon:after{
-		color: white;
 		top: 5px;
 	}
-
 }
 
 

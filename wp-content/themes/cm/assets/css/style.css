@@ -2360,7 +2360,10 @@ img.gform_ajax_spinner {
   float: left; }
 
 #back-link .text {
-  display: block; }
+  display: block;
+  margin-top: 0.25em; }
+#back-link .icon:after, #back-link .menu-toggle:after {
+  left: -0.05em; }
 
 .home #back-link .icon:after, .home #back-link .menu-toggle:after {
   display: inline-block;
@@ -2381,12 +2384,17 @@ img.gform_ajax_spinner {
   border-radius: 20px;
   display: inline-block; }
 
+.home #share-links {
+  color: #cb2026; }
+
+.home .share-icons a {
+  background: #cb2026; }
+
 .share-icons {
   width: 165px;
   margin: 0 auto; }
   .share-icons a {
     margin-right: 15px;
-    background: #cb2026;
     transition: transform 1s 0s ease;
     -moz-transition: transform 1s 0s ease;
     -webkit-transition: transform 1s 0s ease;
@@ -2401,7 +2409,6 @@ img.gform_ajax_spinner {
   .share-icons .addthis_button_email {
     margin-right: 0; }
   .share-icons .icon:after, .share-icons .menu-toggle:after {
-    color: white;
     top: 5px; }
 
 /********** @SLIDESHOW *********/
