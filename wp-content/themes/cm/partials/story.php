@@ -1,6 +1,9 @@
 
 	<?php 
 
+	$category_name = CM_Collection_Controller::get_current_category()->name;
+	$category_color = CM_Collection_Controller::get_current_category()->slug;
+
 	$story_id = get_the_ID();
 	$collection = CM_Story_Controller::get_collection_for_story( $id );
 	$collection_id = $collection->ID;
@@ -96,9 +99,17 @@
 		<div class="stories-nav hidden-xs">
 			<a class="prev-story" href="<?php echo $previous_story_url; ?>">
 				<span class="icon" data-icon="&#8216;"></span>
+				<div class="preview centered border-<?php echo $category_color ?>" style="background-image: url('http://localhost/cm/wp-content/uploads/2015/03/CaseyDunn1.jpg');"><div class="overlay">
+					<span class="icon" data-icon="Ò"></span>
+					<h2 class="bold story-heading centered">Casey Dunn – Biology</h2>
+				</div></div>
 			</a>
 			<a class="next-story" href="<?php echo $next_story_url; ?>">
 				<span class="icon" data-icon="&#8212;"></span>
+				<div class="preview centered border-<?php echo $category_color ?>" style="background-image: url('http://localhost/cm/wp-content/uploads/2015/03/CaseyDunn1.jpg');"><div class="overlay">
+					<span class="icon" data-icon="Ò"></span>
+					<h2 class="bold story-heading centered">Casey Dunn – Biology</h2>
+				</div></div>
 			</a>
 		</div>
 		

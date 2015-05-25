@@ -183,6 +183,15 @@ ol {
 .icon.large:after, .large.menu-toggle:after {
   font-size: 72px; }
 
+.overlay {
+  background: #222222;
+  background: -webkit-linear-gradient(legacy-direction(to top), #222222, rgba(34, 34, 34, 0.5));
+  background: linear-gradient(to top, #222222, rgba(34, 34, 34, 0.5));
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0; }
+
 /********** @MARGINS AND PADDING *********/
 .m0 {
   margin: 0; }
@@ -3057,14 +3066,6 @@ img.gform_ajax_spinner {
 
 .story-video-poster {
   background-size: cover; }
-  .story-video-poster .overlay {
-    background: #222222;
-    background: -webkit-linear-gradient(legacy-direction(to top), #222222, rgba(34, 34, 34, 0.5));
-    background: linear-gradient(to top, #222222, rgba(34, 34, 34, 0.5));
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    top: 0; }
 
 .story-video-play {
   z-index: 1;
@@ -3182,10 +3183,31 @@ img.gform_ajax_spinner {
   top: 50%; }
   .stories-nav a.prev-story {
     left: 1em; }
+    .stories-nav a.prev-story .preview {
+      right: -320px; }
   .stories-nav a.next-story {
     right: 1em; }
+    .stories-nav a.next-story .preview {
+      left: -320px; }
   .stories-nav a .icon:after, .stories-nav a .menu-toggle:after {
     font-size: 5em; }
+  .stories-nav a .preview {
+    background-size: cover;
+    position: absolute;
+    top: -100px;
+    width: 300px;
+    height: 200px;
+    font-size: 0.85em;
+    opacity: 0;
+    transition: opacity 0.25s 0s ease;
+    -moz-transition: opacity 0.25s 0s ease;
+    -webkit-transition: opacity 0.25s 0s ease;
+    -o-transition: opacity 0.25s 0s ease;
+    -ms-transition: opacity 0.25s 0s ease; }
+    .stories-nav a .preview .overlay {
+      padding-top: 2em; }
+  .stories-nav a:hover .preview {
+    opacity: 1; }
 
 /********** @TILES *********/
 #grid .col-xs-6:nth-child(3n+2) .tile-story header {
