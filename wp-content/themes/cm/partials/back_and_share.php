@@ -69,7 +69,16 @@ $collection = get_post( get_the_ID() );
 					<?php } ?>
 				</div> <!-- end #back-link" -->
 				<div id="share-links">
-					<?php if ( is_singular('stories') ) { ?>
+					<?php if ( is_home() ) { ?>
+						<h2 class="bold centered brand">
+						Share the Creativity!
+						</h2>
+						<div class="share-icons">
+							<a class="addthis_button_facebook bg-brand white"><span class="icon social" data-icon="F"></span></a>
+							<a class="addthis_button_twitter bg-brand white"><span class="icon social" data-icon="t"></span></a>
+							<a class="addthis_button_email bg-brand white"><span class="icon social" data-icon="m"></span></a>
+						</div>
+					<? } elseif ( is_singular('stories') ) { ?>	
 						<h2 class="bold centered white">
 						Share the Creativity!
 						</h2>

@@ -986,7 +986,7 @@ img.gform_ajax_spinner {
       .flex-control-nav li a:hover {
         cursor: pointer; }
       .flex-control-nav li a.flex-active {
-        background: #cb2026; }
+        background: #222222; }
 
 .flex-control-thumbs li {
   width: 30px;
@@ -2437,7 +2437,8 @@ img.gform_ajax_spinner {
   top: 0px; }
 
 .slide {
-  height: 400px; }
+  height: 400px;
+  background-size: cover; }
   .slide ol li {
     line-height: 1.25em;
     margin-bottom: 0.5em; }
@@ -2527,13 +2528,13 @@ img.gform_ajax_spinner {
       margin: 1em 0 0 2.25em; }
 
 /********** @CATEGORY *********/
-.category.category-courses {
+.category.category-courses, .single-collections.category-courses {
   color: #0575B9; }
-.category.category-interviews {
+.category.category-interviews, .single-collections.category-interviews {
   color: #25807F; }
-.category.category-lectures {
+.category.category-lectures, .single-collections.category-lectures {
   color: #58595B; }
-.category.category-research {
+.category.category-research, .single-collections.category-research {
   color: #E5603C; }
 
 .category header .split-list {
@@ -2548,7 +2549,7 @@ img.gform_ajax_spinner {
   -ms-transition: opacity 1s 0s ease; }
 
 .story-slide {
-  background: #555555; }
+  background-color: #555555; }
   .story-slide a {
     color: #fafafa; }
 

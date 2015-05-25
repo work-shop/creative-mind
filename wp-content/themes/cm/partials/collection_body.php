@@ -106,10 +106,10 @@ $start = count($stories_halves[0]) + 1;
 						 <?php } ?>
 					</ul>
 					<div id="flex-previous-story" class="flexslider-direction flex-previous previous">
-						<span class="icon" data-icon="&#8250;"></span>
+						<span class="icon large <?php echo $category_nicename ?>" data-icon="&#8216;"></span>
 					</div>					
 					<div id="flex-next-story" class="flexslider-direction flex-next next">
-						<span class="icon" data-icon="&#8249;"></span>
+						<span class="icon large <?php echo $category_nicename ?>" data-icon="&#8212;"></span>
 					</div>								
 				</div> <!-- end .flexslider -->
 			</div>							

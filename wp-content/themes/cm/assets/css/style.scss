@@ -433,6 +433,7 @@ $icon-margin: 15px;
 
 .slide {
 	height: 400px;
+	background-size: cover;
 	ol li {
 		line-height: 1.25em;
 		margin-bottom: 0.5em;
@@ -551,7 +552,7 @@ $icon-margin: 15px;
 
 /********** @CATEGORY *********/
 
-.category {
+.category, .single-collections {
 	&.category-courses { color: $courses; }
 	&.category-interviews { color: $interviews; }
 	&.category-lectures { color: $lectures; }
@@ -576,7 +577,7 @@ $icon-margin: 15px;
 }
 
 .story-slide {
-	background: lighten($dark,20);
+	background-color: lighten($dark,20);
 	a { 
 		color: $ultra-light; 
 	}

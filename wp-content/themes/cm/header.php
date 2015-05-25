@@ -45,7 +45,12 @@
 		<?php wp_head(); ?>
 
     </head>
-	<body <?php body_class('before');?>>
+	<body <?php 
+		if ( !is_home() ) {
+			$category_nicename = CM_Collection_Controller::get_current_category()->category_nicename;
+			body_class('category-' . $category_nicename);
+		}
+	?> >
 	
 		<?php 
 
@@ -78,7 +83,7 @@
 
 						<div class="col-sm-6 hidden-xs centered mt1">
 							<?php if ( !is_home() ) {
-								echo '<span class="h4 uppercase bold">' . $category_name . '</span>' ;
+								echo '<span class="h4 uppercase bold ' . $category_color . '">' . $category_name . '</span>' ;
 							} ?>
 						</div>
 
