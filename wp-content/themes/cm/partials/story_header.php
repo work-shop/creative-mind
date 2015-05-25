@@ -11,7 +11,7 @@
 		<div class="row">
 			<div class="col-sm-10 col-sm-offset-1">
 				<h5 class="uppercase bold centered">
-					<?php if ( $collection ) { echo $collection->post_title . ' / '; } the_title(); echo ' // ' . $story_type; ?>
+					<?php if ( $collection ) { echo $collection->post_title . ' / '; } the_title() ?>
 				</h5>
 
 				<?php if ( ($story_type == 'video') && ($vimeo_id = get_field('story_vimeo_id')) ) { ?>
