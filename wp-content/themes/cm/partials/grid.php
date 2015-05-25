@@ -19,12 +19,12 @@ $grid_elements = CM_Grid_Layout_Manager::build_grid( );
 $categories = array_keys( $grid_elements );
 ?>
 
-<section class="block target padded" id="site-description">
+<section class="block target padded" id="grid">
 	<div class="container-fluid">
 		<div class="row m4">
 			<div class="col-xs-10 col-xs-offset-1 col-sm-4 col-sm-offset-0">
 				<div class="tile padded brand border-brand text-center">
-					<h3>Explore the Creative Mind</h3> <span class="icon" data-icon="&#91;"></span>
+					<h3 class="bold">Explore the Creative Mind</h3> <span class="icon" data-icon="&#91;"></span>
 				</div>
 			</div>
 <?php
@@ -49,7 +49,7 @@ foreach ($categories as $category) {
 				<a href="<?php echo esc_url( home_url( '/'.$category ) ); ?>">
 				<div class="tile tile-category mb2 white bg-<?php echo $category; ?> clearfix" >
 					<header>
-						<h2><?php echo $category_name; ?></h2>
+						<h2 class="bold"><?php echo $category_name; ?></h2>
 						<p><?php echo $category_description ?></p>
 					</header>
 					<footer class="action bold text-center bg-<?php echo $category; ?>">
@@ -84,10 +84,10 @@ foreach ($categories as $category) {
 						<?php } elseif ( $story_type == 'image_gallery' ) { ?>
 							<span class="icon" data-icon="&#8486;"></span>
 						<?php } ?>
-						<div class="h5 uppercase"><?php echo $story_collection_name ?></div>
-						<h2><?php echo $story_name ?></h2>
+						<div class="h5 m0 uppercase bold"><?php echo $story_collection_name ?></div>
+						<h2 class="bold m0"><?php echo $story_name ?></h2>
 					</header>
-					<footer class="action bold text-center white bg-<?php echo $category; ?>">
+					<footer class="action text-center bold white bg-<?php echo $category; ?>">
 						<?php 
 							if ( ($story_type == 'video') ) { echo "Watch Video"; } 
 							elseif ( $story_type == 'image_gallery' ) { echo "View Gallery"; } 

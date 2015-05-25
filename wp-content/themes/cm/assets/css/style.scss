@@ -939,6 +939,14 @@ $icon-margin: 15px;
 
 /********** @TILES *********/
 
+#grid .col-xs-6 {
+	&:nth-child(3n+2) .tile-story header {
+		margin: 4em 4% 9em;
+	}
+	&:nth-child(3n+3) .tile-story header {
+		margin: 4em 4% 5em;
+	}
+}
 
 .tile {
 	position: relative;
