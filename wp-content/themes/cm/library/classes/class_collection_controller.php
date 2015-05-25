@@ -140,7 +140,7 @@ class CM_Collection_Controller {
 			$collection_id = $item['id'];
 			$collection_permalink = get_permalink( $collection_id );
 
-			$output = '<li><a href="' . $collection_permalink . '">' . $collection_name . '</a>';
+			$output = '<li><a class="bold" href="' . $collection_permalink . '">' . $collection_name . '</a>';
 
 			$stories = CM_Collection_Controller::get_stories_for_collection( $item['id'] );
 
@@ -195,7 +195,7 @@ class CM_Collection_Controller {
 			}
 
 
-			return '<div class="split-list h3"><ul>' . $output . '</ul></div>';
+			return '<ul>' . $output . '</ul>';
 		}
 	}
 

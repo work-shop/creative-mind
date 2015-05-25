@@ -66,11 +66,6 @@
 }
 
 
-.split-list > ul, .split-list > ol {
-	width: 50%;
-	float: left;
-}
-
 /********** @LOGO *********/
 
 .logo-static{
@@ -470,6 +465,7 @@ $icon-margin: 15px;
 	&:after {
 		content: "\00C2";
 		vertical-align: -3px;
+		color: lighten($dark,40);
 	}
 }
 .modal-open .menu-toggle:after {
@@ -513,13 +509,22 @@ $icon-margin: 15px;
 		background: transparent;
 	}
 
+	ul > li {
+
+		margin-bottom: 1em;
+	}
+
+
 	ol {
 		font-size: 0.675em;
+		li {
+			margin-bottom: 0.5em;
+		}
 	}
 
 	li {
+		font-size: 1.25em;
 		line-height: 1em;
-		margin-bottom: 0.5em;
 		position: relative;
 		.icon {
 			position: absolute;
@@ -530,6 +535,7 @@ $icon-margin: 15px;
 			border-bottom: 1px solid transparent;
 		}
 		ol {
+			margin: 1em 0 0 2.25em;
 			display: none;
 		}
 		&.open {
@@ -543,7 +549,6 @@ $icon-margin: 15px;
 			}
 			ol {
 				display: block;
-				margin: 1em 0 0 2.25em;
 			}
 		}
 	}
@@ -1019,17 +1024,22 @@ $icon-margin: 15px;
 
 @media (min-width: 768px) {
 
+	.split-list > ul, .split-list > ol {
+		width: 50%;
+		float: left;
+	}
+
 	#megaNav {
 		header {
 			position: relative;
-			h3 {
+			h4 {
 				@include transform( rotate(-90deg) );
 				position: absolute;
 				left: 0;
 				top: 50px;
 			}
 		}
-		.row {
+		.split-list {
 			min-height: 100px;
 		}
 	}

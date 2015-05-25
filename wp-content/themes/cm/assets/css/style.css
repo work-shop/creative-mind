@@ -1039,10 +1039,6 @@ img.gform_ajax_spinner {
   -ms-transition: all 0.5s 0s ease;
   padding-top: 4%; }
 
-.split-list > ul, .split-list > ol {
-  width: 50%;
-  float: left; }
-
 /********** @LOGO *********/
 .logo-static {
   display: none; }
@@ -2467,7 +2463,8 @@ img.gform_ajax_spinner {
 /********** @MEGANAV *********/
 .menu-toggle:after {
   content: "\00C2";
-  vertical-align: -3px; }
+  vertical-align: -3px;
+  color: #888888; }
 
 .modal-open .menu-toggle:after {
   content: "\FB02"; }
@@ -2503,11 +2500,15 @@ img.gform_ajax_spinner {
     border: 0;
     color: #cb2026;
     background: transparent; }
+  #megaNav ul > li {
+    margin-bottom: 1em; }
   #megaNav ol {
     font-size: 0.675em; }
+    #megaNav ol li {
+      margin-bottom: 0.5em; }
   #megaNav li {
+    font-size: 1.25em;
     line-height: 1em;
-    margin-bottom: 0.5em;
     position: relative; }
     #megaNav li .icon, #megaNav li .menu-toggle {
       position: absolute;
@@ -2516,6 +2517,7 @@ img.gform_ajax_spinner {
     #megaNav li > a {
       border-bottom: 1px solid transparent; }
     #megaNav li ol {
+      margin: 1em 0 0 2.25em;
       display: none; }
     #megaNav li.open > a {
       border-color: white; }
@@ -2524,8 +2526,7 @@ img.gform_ajax_spinner {
         font-family: "modern_pictograms_proregular";
         margin-left: 1em; }
     #megaNav li.open ol {
-      display: block;
-      margin: 1em 0 0 2.25em; }
+      display: block; }
 
 /********** @CATEGORY *********/
 .category.category-courses, .single-collections.category-courses {
@@ -3233,9 +3234,13 @@ img.gform_ajax_spinner {
 
 /********** @RESPONSIVE *********/
 @media (min-width: 768px) {
+  .split-list > ul, .split-list > ol {
+    width: 50%;
+    float: left; }
+
   #megaNav header {
     position: relative; }
-    #megaNav header h3 {
+    #megaNav header h4 {
       transform: rotate(-90deg);
       -moz-transform: rotate(-90deg);
       -webkit-transform: rotate(-90deg);
@@ -3244,7 +3249,7 @@ img.gform_ajax_spinner {
       position: absolute;
       left: 0;
       top: 50px; }
-  #megaNav .row {
+  #megaNav .split-list {
     min-height: 100px; } }
 @media (max-width: 1200px) {
   .story-activated .collection-intro-heading {
