@@ -80,7 +80,7 @@ foreach ($categories as $category) {
 				<div class="tile tile-story mb2 <?php echo $category; ?> border-<?php echo $category; ?>" style="background-image: url('<?php echo $story_featured_image; ?>');" >
 					<header>
 						<?php if ( $story_type == 'video' ) { ?>
-							<span class="icon" data-icon="&#210;"></span>
+							<span class="icon-custom" data-icon="&#xe600;"></span>
 						<?php } elseif ( $story_type == 'image_gallery' ) { ?>
 							<span class="icon" data-icon="&#8486;"></span>
 						<?php } ?>

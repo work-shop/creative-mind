@@ -173,15 +173,24 @@ ol {
 .brown-yellow {
   color: #ffcc00; }
 
-.icon:after, .menu-toggle:after {
+.icon:after, .menu-toggle:after, .icon-custom:after {
   content: attr(data-icon);
-  font-family: "modern_pictograms_proregular";
   font-size: 30px;
   line-height: 100%;
   vertical-align: middle;
   position: relative; }
+
+.icon:after, .menu-toggle:after {
+  font-family: "modern_pictograms_proregular"; }
 .icon.large:after, .large.menu-toggle:after {
   font-size: 72px; }
+
+.icon-custom:after {
+  font-family: "icons_custom";
+  font-size: 4em;
+  margin-left: -0.125em; }
+.icon-custom.large:after {
+  font-size: 90px; }
 
 .overlay {
   background: #222222;

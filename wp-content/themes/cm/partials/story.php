@@ -100,14 +100,14 @@
 			<a class="prev-story" href="<?php echo $previous_story_url; ?>">
 				<span class="icon" data-icon="&#8216;"></span>
 				<div class="preview centered border-<?php echo $category_color ?>" style="background-image: url('http://localhost/cm/wp-content/uploads/2015/03/CaseyDunn1.jpg');"><div class="overlay">
-					<span class="icon" data-icon="Ò"></span>
+					<span class="icon-custom" data-icon="&#xe600;"></span>
 					<h2 class="bold story-heading centered">Casey Dunn – Biology</h2>
 				</div></div>
 			</a>
 			<a class="next-story" href="<?php echo $next_story_url; ?>">
 				<span class="icon" data-icon="&#8212;"></span>
 				<div class="preview centered border-<?php echo $category_color ?>" style="background-image: url('http://localhost/cm/wp-content/uploads/2015/03/CaseyDunn1.jpg');"><div class="overlay">
-					<span class="icon" data-icon="Ò"></span>
+					<span class="icon-custom" data-icon="&#xe600;"></span>
 					<h2 class="bold story-heading centered">Casey Dunn – Biology</h2>
 				</div></div>
 			</a>

@@ -17,7 +17,7 @@
 				<?php if ( ($story_type == 'video') && ($vimeo_id = get_field('story_vimeo_id')) ) { ?>
 					<div class="video">
 	 					<div class="story-video-play centered" data-toggle="tooltip" data-placement="top" title="watch the video!">
-	 						<span class="icon" data-icon="Ò"></span>
+	 						<span class="icon-custom large" data-icon="&#xe600;"></span>
 	 					</div>
 	 					
 	 					<div class="story-video-poster" style="background-image: url('<?php echo $story_featured_image ?>');"><div class="overlay">

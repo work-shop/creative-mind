@@ -7,3 +7,13 @@
     font-weight: normal;
     font-style: normal;
 }
+
+@font-face {
+    font-family: 'icons_custom';
+    src: url('icons-custom.eot');
+    src: url('icons-custom?#iefix') format('embedded-opentype'),
+		url('icons-custom.woff') format('woff'),
+		url('icons-custom_234.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}

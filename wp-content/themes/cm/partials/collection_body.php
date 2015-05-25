@@ -95,7 +95,7 @@ $start = count($stories_halves[0]) + 1;
 									elseif ( $story_type == 'image_gallery' ) { echo "View Gallery"; } 
 								?></p>
 								<?php if ( $story_type == 'video' ) { ?>
-									<span class="icon large" data-icon="&#210;"></span>
+									<span class="icon-custom large" data-icon="&#xe600;"></span>
 								<?php } elseif ( $story_type == 'image_gallery' ) { ?>
 									<span class="icon large" data-icon="&#8486;"></span>
 								<?php } ?>
