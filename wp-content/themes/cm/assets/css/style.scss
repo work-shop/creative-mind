@@ -32,7 +32,7 @@
 
   .menu-toggle{
   	position: relative;
-  	top: 13px;
+  	top: 10px;
   }
 
   #logo-cm{
@@ -468,6 +468,7 @@ $icon-margin: 15px;
 	@extend .icon;
 	&:after {
 		content: "\00C2";
+		vertical-align: -3px;
 	}
 }
 .modal-open .menu-toggle:after {
@@ -555,6 +556,10 @@ $icon-margin: 15px;
 	&.category-interviews { color: $interviews; }
 	&.category-lectures { color: $lectures; }
 	&.category-research { color: $research; }
+}
+
+.category header .split-list {
+	font-size: 1.675em;
 }
 
 
@@ -890,15 +895,12 @@ $icon-margin: 15px;
 			border: 2px solid;
 			@include border-radius(30px);
 		}
-		&.table-of-contents a {
-			content: "\0034";
-			font-family: "modern_pictograms_proregular";
-		}
 	}
 }
 
 .flex-control-nav li.table-of-contents {
 	overflow: visible;
+	transform: translateX(-.5em);
 	a {
 		border: none;
 		text-indent: 0;
@@ -909,7 +911,7 @@ $icon-margin: 15px;
 			background: transparent;
 		}
 		span {
-			vertical-align: 2px;
+			vertical-align: 3px;
 		}
 	}
 }

@@ -183,7 +183,7 @@ class CM_Collection_Controller {
 			foreach ( $half as $collection ) {
 				$output = $output . self::create_list_item( $collection, 'collection' );
 			}
-			return '<div class="split-list"><ul class="h3">' . $output . '</ul></div>';
+			return '<ul>' . $output . '</ul>';
 		}
 
 		elseif ( $type == 'menu' ) {

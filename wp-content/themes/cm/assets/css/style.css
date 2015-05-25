@@ -1016,7 +1016,7 @@ img.gform_ajax_spinner {
   z-index: 7; }
   #header .menu-toggle {
     position: relative;
-    top: 13px; }
+    top: 10px; }
   #header #logo-cm {
     height: 50px; }
     #header #logo-cm img {
@@ -2465,7 +2465,8 @@ img.gform_ajax_spinner {
 
 /********** @MEGANAV *********/
 .menu-toggle:after {
-  content: "\00C2"; }
+  content: "\00C2";
+  vertical-align: -3px; }
 
 .modal-open .menu-toggle:after {
   content: "\FB02"; }
@@ -2534,6 +2535,9 @@ img.gform_ajax_spinner {
   color: #58595B; }
 .category.category-research {
   color: #E5603C; }
+
+.category header .split-list {
+  font-size: 1.675em; }
 
 /********** @COLLECTIONS *********/
 .collection:not(.collection-single) {
@@ -3122,12 +3126,10 @@ img.gform_ajax_spinner {
     -o-border-radius: 30px;
     -ms-border-radius: 30px;
     border-radius: 30px; }
-  .flex-control-nav li.table-of-contents a {
-    content: "\0034";
-    font-family: "modern_pictograms_proregular"; }
 
 .flex-control-nav li.table-of-contents {
-  overflow: visible; }
+  overflow: visible;
+  transform: translateX(-0.5em); }
   .flex-control-nav li.table-of-contents a {
     border: none;
     text-indent: 0;
@@ -3137,7 +3139,7 @@ img.gform_ajax_spinner {
       opacity: 1;
       background: transparent; }
     .flex-control-nav li.table-of-contents a span {
-      vertical-align: 2px; }
+      vertical-align: 3px; }
 
 .category-courses .flex-control-nav a {
   color: #0575B9;

@@ -78,7 +78,7 @@
 
 						<div class="col-sm-6 hidden-xs centered mt1">
 							<?php if ( !is_home() ) {
-								echo '<span class="h4 uppercase">' . $category_name . '</span>' ;
+								echo '<span class="h4 uppercase bold">' . $category_name . '</span>' ;
 							} ?>
 						</div>
 

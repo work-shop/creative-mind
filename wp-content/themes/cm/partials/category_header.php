@@ -38,16 +38,18 @@
 	<div class="container-fluid">
 		<div class="row mt4 mb2">
 			<div class="col-sm-10 col-sm-offset-1">
-				<h1 class="centered"><?php echo $category_name; ?></h1>
+				<h1 class="centered bold"><?php echo $category_name; ?></h1>
 				<p class="centered h2"><?php echo $category_description; ?></p>
 			</div>
 		</div>	
 		<div class="row mb2">
 			<div class="col-sm-8 col-sm-offset-2">
-				<?php 
-					echo CM_Collection_Controller::create_list( $collections_halves[0], null, 'category' ); 
-					echo CM_Collection_Controller::create_list( $collections_halves[1], null, 'category' ); 
-				?>
+				<div class="split-list">
+					<?php 
+						echo CM_Collection_Controller::create_list( $collections_halves[0], null, 'category' ); 
+						echo CM_Collection_Controller::create_list( $collections_halves[1], null, 'category' ); 
+					?>
+				</div>
 			</div>
 		</div>
 	</div>
