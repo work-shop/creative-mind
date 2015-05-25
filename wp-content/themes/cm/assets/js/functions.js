@@ -30,8 +30,9 @@ jQuery(document).ready(function($) {
 		$('#megaNav').modal('toggle');
 	});
 
-	$('#megaNav ul > li').click( function(event){
+	$('#megaNav ul > li > a').click( function(event){
 		event.preventDefault();
+		console.log('clicked');
 		submenuToggle($(this));
 	});
 

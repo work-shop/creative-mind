@@ -2519,14 +2519,14 @@ img.gform_ajax_spinner {
     #megaNav li ol {
       margin: 1em 0 0 2.25em;
       display: none; }
-    #megaNav li.open > a {
+    #megaNav li .open {
       border-color: white; }
-      #megaNav li.open > a:after {
+      #megaNav li .open:after {
         content: "\00B7";
         font-family: "modern_pictograms_proregular";
         margin-left: 1em; }
-    #megaNav li.open ol {
-      display: block; }
+      #megaNav li .open + ol {
+        display: block; }
 
 /********** @CATEGORY *********/
 .category.category-courses, .single-collections.category-courses {
