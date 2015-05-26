@@ -86,7 +86,7 @@ foreach ($categories as $category) {
 						<?php } else { ?>
 							<span class="icon"></span>
 						<?php } ?>
-						<div class="h5 m0 uppercase bold"><?php echo $story_collection_name ?>:</div>
+						<p class="h5 m0 uppercase bold"><?php echo $story_collection_name ?>:</p>
 						<h2 class="bold m0"><?php echo $story_name ?></h2>
 					</header>
 					<footer class="action text-center bold white bg-<?php echo $category; ?>">

@@ -913,6 +913,7 @@ $icon-margin: 15px;
 
 #grid .col-sm-4{
 	.tile-story header {
+		max-width: 70%;
 		margin: 5em 4%;
 	}
 	&:nth-child(3n+2) .tile-story header {
