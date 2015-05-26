@@ -74,7 +74,7 @@ $start = count($stories_halves[0]) + 1;
 			</div>
 		</div>
 		<div class="row">
-			<div class="col-sm-8 col-sm-offset-2">
+			<div class="col-md-8 col-md-offset-2">
 				<div class="flexslider-story flexslider" id="story-gallery-<?php echo rand(0,1000); ?>">
 					<ul class="slides clearfix">
 						<li class="slide bg-white border-<?php echo $category_nicename ?> padded-more clearfix">
