@@ -3231,6 +3231,13 @@ img.gform_ajax_spinner {
   .tile-story .icon:after, .tile-story .menu-toggle:after {
     font-size: 3.5em; }
 
+/********** @FOOTER *********/
+.footer-logo-brown {
+  max-width: 150px; }
+
+#footer ul a {
+  font-size: 1.125em; }
+
 /********** @RESPONSIVE *********/
 @media (min-width: 768px) {
   .category header .split-list {
