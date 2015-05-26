@@ -174,7 +174,8 @@ function flexsliderSetup(){
 	 	      slideshowSpeed: 8000,           
 	 		  animationSpeed: 500,
 	 	      directionNav: false,
-	 	      controlNav: true
+	 	      controlNav: true,
+	 	      slideshow: false
 	 	 }); 
 	 }	
 
