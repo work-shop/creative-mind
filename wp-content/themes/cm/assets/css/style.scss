@@ -449,15 +449,17 @@ $icon-margin: 15px;
 	}
 
 	ul > li {
-
 		margin-bottom: 1em;
-	}
-
-
-	ol {
-		font-size: 0.675em;
-		li {
-			margin-bottom: 0.5em;
+		> a {
+			display: block;
+			position: relative;
+			padding-bottom: 0.125em;
+			padding-right: 1.25em;
+			border-bottom: 2px solid transparent;
+			@include transition(border);
+			&:hover, &.open {
+				border-color: white;
+			}
 		}
 	}
 
@@ -465,29 +467,28 @@ $icon-margin: 15px;
 		font-size: 1.25em;
 		line-height: 1em;
 		position: relative;
-		.icon {
-			position: absolute;
-			top: -0.35em;
-			left: 0;
-		}
-		> a {
-			display: block;
-			padding-bottom: 0.125em;
-			border-bottom: 2px solid transparent;
-			@include transition(border);
-			&:hover, &.open {
-				border-color: white;
-			}
-		}
 		ol {
+			font-size: 0.675em;
 			margin: 1em 0 0 2.25em;
 			display: none;
+			li {
+				margin-bottom: 0.5em;
+			}
+			a {
+				border-bottom: 1px solid transparent;
+				@include transition(border);
+				&:hover {
+					border-color: white;
+				}
+			}
 		}
 		.open {
 			&:after {
 				content: "\00B7";
 				font-family: "modern_pictograms_proregular";
-				margin-left: 1em;
+				position: absolute;
+				right: 0;
+				@extend .vertical-center;
 			}
 			+ ol {
 				display: block;

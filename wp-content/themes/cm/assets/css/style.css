@@ -515,9 +515,7 @@ ol {
 .right {
   float: right; }
 
-.vertical-center {
-  margin-top: 0;
-  position: relative;
+.vertical-center, #megaNav li .open:after {
   top: 49%;
   transform: translate(0, -50%);
   -moz-transform: translate(0, -50%);
@@ -2451,36 +2449,43 @@ img.gform_ajax_spinner {
     width: 100%; }
   #megaNav ul > li {
     margin-bottom: 1em; }
-  #megaNav ol {
-    font-size: 0.675em; }
-    #megaNav ol li {
-      margin-bottom: 0.5em; }
-  #megaNav li {
-    font-size: 1.25em;
-    line-height: 1em;
-    position: relative; }
-    #megaNav li .icon, #megaNav li .menu-toggle {
-      position: absolute;
-      top: -0.35em;
-      left: 0; }
-    #megaNav li > a {
+    #megaNav ul > li > a {
       display: block;
+      position: relative;
       padding-bottom: 0.125em;
+      padding-right: 1.25em;
       border-bottom: 2px solid transparent;
       transition: border 0.25s 0s ease;
       -moz-transition: border 0.25s 0s ease;
       -webkit-transition: border 0.25s 0s ease;
       -o-transition: border 0.25s 0s ease;
       -ms-transition: border 0.25s 0s ease; }
-      #megaNav li > a:hover, #megaNav li > a.open {
+      #megaNav ul > li > a:hover, #megaNav ul > li > a.open {
         border-color: white; }
+  #megaNav li {
+    font-size: 1.25em;
+    line-height: 1em;
+    position: relative; }
     #megaNav li ol {
+      font-size: 0.675em;
       margin: 1em 0 0 2.25em;
       display: none; }
+      #megaNav li ol li {
+        margin-bottom: 0.5em; }
+      #megaNav li ol a {
+        border-bottom: 1px solid transparent;
+        transition: border 0.25s 0s ease;
+        -moz-transition: border 0.25s 0s ease;
+        -webkit-transition: border 0.25s 0s ease;
+        -o-transition: border 0.25s 0s ease;
+        -ms-transition: border 0.25s 0s ease; }
+        #megaNav li ol a:hover {
+          border-color: white; }
     #megaNav li .open:after {
       content: "\00B7";
       font-family: "modern_pictograms_proregular";
-      margin-left: 1em; }
+      position: absolute;
+      right: 0; }
     #megaNav li .open + ol {
       display: block; }
 

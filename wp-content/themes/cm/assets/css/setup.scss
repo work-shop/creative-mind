@@ -447,8 +447,6 @@ ol {
 }
 
 .vertical-center{
-	margin-top: 0;
-	position: relative;
 	top: 49%;
 	@include transform(translate(0,-50%));	
 }
