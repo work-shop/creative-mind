@@ -187,6 +187,17 @@ ol {
   position: absolute;
   top: 0; }
 
+.well-dark {
+  min-height: 20px;
+  padding: 19px;
+  margin-bottom: 20px;
+  background-color: #fafafa;
+  -o-box-shadow: 1px 0px 6px rgba(50, 50, 50, 0.5) inset;
+  -ms-box-shadow: 1px 0px 6px rgba(50, 50, 50, 0.5) inset;
+  -moz-box-shadow: 1px 0px 6px rgba(50, 50, 50, 0.5) inset;
+  -webkit-box-shadow: 1px 0px 6px rgba(50, 50, 50, 0.5) inset;
+  box-shadow: 1px 0px 6px rgba(50, 50, 50, 0.5) inset; }
+
 /********** @MARGINS AND PADDING *********/
 .m0 {
   margin: 0; }
@@ -2508,7 +2519,10 @@ img.gform_ajax_spinner {
   color: #E5603C; }
 
 .category header .split-list {
-  font-size: 1.675em; }
+  font-size: 1.675em;
+  line-height: 1em; }
+  .category header .split-list li {
+    margin-bottom: 0.5em; }
 
 /********** @COLLECTIONS *********/
 .collection:not(.collection-single) {
@@ -3225,8 +3239,10 @@ img.gform_ajax_spinner {
 /********** @RESPONSIVE *********/
 @media (min-width: 768px) {
   .split-list > ul, .split-list > ol {
-    width: 50%;
+    width: 46%;
     float: left; }
+    .split-list > ul + ul, .split-list > ul + ol, .split-list > ol + ul, .split-list > ol + ol {
+      margin-left: 4%; }
 
   #megaNav header {
     position: relative; }

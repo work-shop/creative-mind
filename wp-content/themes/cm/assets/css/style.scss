@@ -564,6 +564,10 @@ $icon-margin: 15px;
 
 .category header .split-list {
 	font-size: 1.675em;
+	line-height: 1em;
+	li {
+		margin-bottom: 0.5em;
+	}
 }
 
 
@@ -1043,8 +1047,11 @@ $icon-margin: 15px;
 @media (min-width: 768px) {
 
 	.split-list > ul, .split-list > ol {
-		width: 50%;
+		width: 46%;
 		float: left;
+		+ ul, + ol {
+			margin-left: 4%;
+		}
 	}
 
 	#megaNav {

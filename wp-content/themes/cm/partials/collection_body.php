@@ -53,10 +53,10 @@ $start = count($stories_halves[0]) + 1;
 
 ?>
 
-<section class="block padded-less <?php if ( is_category() ) : echo 'well bg-white'; endif; ?>">
+<section class="block padded <?php if ( is_category() ) : echo 'well-dark bg-white'; endif; ?>">
 	<div class="container-fluid mb2">
 		<div class="row">
-			<div class="col-sm-6 col-sm-offset-3">
+			<div class="col-sm-8 col-sm-offset-2">
 				<header class="text-center">
 					<ul class="list-inline h5 uppercase bold">
 						<li><?php echo $story_qualifier ?></li><li>More Info</li><li>Share This Collection</li>
@@ -90,7 +90,7 @@ $start = count($stories_halves[0]) + 1;
 						?>
 							<li class="slide story-slide border-<?php echo $category_nicename ?> text-center clearfix" style="background-image: url('<?php echo $story_featured_image ?>'); ">
 							<a class="padded-more overlay" href="<?php echo $story_permalink ?>">
-								<p class="media-type"><?php 
+								<p class="media-type bold"><?php 
 									if ( $story_type == 'video' ) { echo 'Watch Video'; }
 									elseif ( $story_type == 'image_gallery' ) { echo "View Gallery"; } 
 								?></p>

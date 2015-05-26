@@ -34,9 +34,9 @@
 
 ?>
 
-<header class="block padded bg-<?php echo $category_nicename ?> white">
+<header class="block padded-less bg-<?php echo $category_nicename ?> white">
 	<div class="container-fluid">
-		<div class="row mt4 mb2">
+		<div class="row mb2">
 			<div class="col-sm-10 col-sm-offset-1">
 				<h1 class="centered bold"><?php echo $category_name; ?></h1>
 				<p class="centered h2"><?php echo $category_description; ?></p>

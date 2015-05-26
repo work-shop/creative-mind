@@ -25,6 +25,14 @@
 	box-shadow: $x $y $size $shadow-color;		
 }
 
+@mixin box-shadow-inset($x: 1px, $y: 0px, $size: 6px, $shadow-color: rgba(50,50,50,.5)){
+	-o-box-shadow: $x $y $size $shadow-color inset;
+	-ms-box-shadow: $x $y $size $shadow-color inset;
+	-moz-box-shadow: $x $y $size $shadow-color inset;
+	-webkit-box-shadow: $x $y $size $shadow-color inset;
+	box-shadow: $x $y $size $shadow-color inset;		
+}
+
 @mixin text-shadow($x: 1px, $y: 1px, $spread: 0px, $shadow-color: rgba(50,50,50,.25)){
 	-o-text-shadow: $x $y $spread $shadow-color;
 	-ms-text-shadow: $x $y $spread $shadow-color;
