@@ -178,10 +178,10 @@ ol {
 .icon-custom.large:after {
   font-size: 90px; }
 
-.overlay {
-  background: #222222;
-  background: -webkit-linear-gradient(legacy-direction(to top), #222222, rgba(34, 34, 34, 0.5));
-  background: linear-gradient(to top, #222222, rgba(34, 34, 34, 0.5));
+.overlay, .slides .overlay {
+  background: rgba(34, 34, 34, 0.5);
+  background: -webkit-linear-gradient(legacy-direction(to top), rgba(34, 34, 34, 0.5), rgba(34, 34, 34, 0.9) 30%, rgba(34, 34, 34, 0.9) 70%, rgba(34, 34, 34, 0.5) 100%);
+  background: linear-gradient(to top, rgba(34, 34, 34, 0.5), rgba(34, 34, 34, 0.9) 30%, rgba(34, 34, 34, 0.9) 70%, rgba(34, 34, 34, 0.5) 100%);
   width: 100%;
   height: 100%;
   position: absolute;
@@ -357,6 +357,9 @@ ol {
 
 /********** @BACKGROUNDS *********/
 .bg-white {
+  background: white; }
+
+.bg-ultra-light {
   background: #fafafa; }
 
 .bg-light, #megaNav {
@@ -515,13 +518,15 @@ ol {
 .right {
   float: right; }
 
-.vertical-center, #megaNav li .open:after {
+.vertical-center, .slide .info, #megaNav li .open:after {
+  position: absolute;
+  left: 49%;
   top: 49%;
-  transform: translate(0, -50%);
-  -moz-transform: translate(0, -50%);
-  -webkit-transform: translate(0, -50%);
-  -o-transform: translate(0, -50%);
-  -ms-transform: translate(0, -50%); }
+  transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%); }
 
 .display-block {
   display: block; }
@@ -2388,20 +2393,19 @@ img.gform_ajax_spinner {
 
 .slide {
   height: 400px;
+  overflow-y: auto;
   background-size: cover; }
   .slide ol li {
     line-height: 1.25em;
     margin-bottom: 0.5em; }
 
+.slide .info {
+  width: 80%; }
+  .slide .info .icon:after, .slide .info .menu-toggle:after, .slide .info .icon-custom:after {
+    margin-left: 0; }
+
 .slides .overlay {
-  background: #222222;
-  background: -webkit-linear-gradient(legacy-direction(to top), #222222, rgba(34, 34, 34, 0.5));
-  background: linear-gradient(to top, #222222, rgba(34, 34, 34, 0.5));
   display: block;
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  top: 0;
   padding: 5% 10%; }
 
 /********** @SCROLLY *********/
@@ -2484,8 +2488,8 @@ img.gform_ajax_spinner {
     #megaNav li .open:after {
       content: "\00B7";
       font-family: "modern_pictograms_proregular";
-      position: absolute;
-      right: 0; }
+      right: 0;
+      left: inherit; }
     #megaNav li .open + ol {
       display: block; }
 
@@ -3073,8 +3077,8 @@ img.gform_ajax_spinner {
   .flex-control-nav ol {
     text-align: center; }
   .flex-control-nav li a {
-    width: 19px;
-    height: 19px;
+    width: 16px;
+    height: 16px;
     background: #fafafa;
     border: 2px solid;
     -webkit-border-radius: 30px;
@@ -3097,7 +3101,7 @@ img.gform_ajax_spinner {
     .flex-control-nav li.table-of-contents a span {
       vertical-align: 5px; }
   .flex-control-nav li.table-of-contents .icon:after, .flex-control-nav li.table-of-contents .menu-toggle:after {
-    font-size: 3em; }
+    font-size: 2.75em; }
 
 .category-courses .flex-control-nav a {
   color: #0575B9;

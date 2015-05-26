@@ -53,7 +53,7 @@ $start = count($stories_halves[0]) + 1;
 
 ?>
 
-<section class="block padded <?php if ( is_category() ) : echo 'well-dark bg-white'; endif; ?>">
+<section class="block padded <?php if ( is_category() ) : echo 'well-dark'; endif; ?>">
 	<div class="container-fluid mb2">
 		<div class="row">
 			<div class="col-sm-8 col-sm-offset-2">
@@ -98,17 +98,19 @@ $start = count($stories_halves[0]) + 1;
 						?>
 							<li class="slide story-slide border-<?php echo $category_nicename ?> text-center clearfix" style="background-image: url('<?php echo $story_featured_image ?>'); ">
 							<a class="padded-more overlay" href="<?php echo $story_permalink ?>">
-								<p class="media-type bold"><?php 
-									if ( $story_type == 'video' ) { echo 'Watch Video'; }
-									elseif ( $story_type == 'image_gallery' ) { echo "View Gallery"; } 
-								?></p>
-								<?php if ( $story_type == 'video' ) { ?>
-									<span class="icon-custom large" data-icon="&#xe600;"></span>
-								<?php } elseif ( $story_type == 'image_gallery' ) { ?>
-									<span class="icon large" data-icon="&#8486;"></span>
-								<?php } ?>
-								<h3 class="bold"><?php echo $story_name ?></h3>
-								<p class="description"><?php echo $story_description ?></p>
+								<div class="info">
+									<p class="media-type bold"><?php 
+										if ( $story_type == 'video' ) { echo 'Watch Video'; }
+										elseif ( $story_type == 'image_gallery' ) { echo "View Gallery"; } 
+									?></p>
+									<?php if ( $story_type == 'video' ) { ?>
+										<span class="icon-custom large" data-icon="&#xe600;"></span>
+									<?php } elseif ( $story_type == 'image_gallery' ) { ?>
+										<span class="icon large" data-icon="&#8486;"></span>
+									<?php } ?>
+									<h3 class="bold"><?php echo $story_name ?></h3>
+									<p class="description"><?php echo $story_description ?></p>
+								</div>
 							</a>
 							</li>
 						 <?php } ?>

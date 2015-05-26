@@ -207,7 +207,7 @@ ol {
 }
 
 .overlay {
-	@include linear-gradient(to top, $dark, rgba($dark,0.5));
+	@include linear-gradient( to top, rgba($dark,0.5), rgba($dark,0.9) 30%, rgba($dark,0.9) 70%, rgba($dark,0.5) 100% );
 	width: 100%;
 	height: 100%;
 	position: absolute;
@@ -278,6 +278,10 @@ ol {
 /********** @BACKGROUNDS *********/
 
 .bg-white{
+	background: white;
+}
+
+.bg-ultra-light{
 	background: $ultra-light;
 }
 
@@ -447,8 +451,10 @@ ol {
 }
 
 .vertical-center{
+	position: absolute;
+	left: 49%;
 	top: 49%;
-	@include transform(translate(0,-50%));	
+	@include transform(translate(-50%,-50%));	
 }
 
 .display-block{

@@ -378,19 +378,25 @@ $icon-margin: 15px;
 
 .slide {
 	height: 400px;
+	overflow-y: auto;
 	background-size: cover;
 	ol li {
 		line-height: 1.25em;
 		margin-bottom: 0.5em;
 	}
 }
+
+.slide .info {
+	width: 80%;
+	@extend .vertical-center;
+	.icon:after, .icon-custom:after {
+		margin-left: 0;
+	}
+}
+
 .slides .overlay {
-	@include linear-gradient(to top, $dark, rgba($dark,0.5));
+	@extend .overlay;
 	display: block;
-	width: 100%;
-	height: 100%;
-	position: absolute;
-	top: 0;
 	padding: 5% 10%;
 }
 
@@ -486,9 +492,9 @@ $icon-margin: 15px;
 			&:after {
 				content: "\00B7";
 				font-family: "modern_pictograms_proregular";
-				position: absolute;
 				right: 0;
 				@extend .vertical-center;
+				left: inherit;
 			}
 			+ ol {
 				display: block;
@@ -812,8 +818,8 @@ $icon-margin: 15px;
 	}
 	li{	
 		a{
-			width: 19px;
-			height: 19px;	
+			width: 16px;
+			height: 16px;	
 			background: $ultra-light;
 			border: 2px solid;
 			@include border-radius(30px);
@@ -838,7 +844,7 @@ $icon-margin: 15px;
 		}
 	}
 	.icon:after {
-		font-size: 3em;
+		font-size: 2.75em;
 	}
 }
 
