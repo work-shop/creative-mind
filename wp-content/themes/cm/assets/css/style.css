@@ -504,7 +504,7 @@ ol {
 
 /********** @STRUCTURE AND POSITION *********/
 #content {
-  padding-top: 50px; }
+  padding-top: 55px; }
 
 .full {
   width: 100%; }
@@ -774,7 +774,7 @@ ol {
   height: 100%; }
 
 .nav {
-  height: 50px; }
+  height: 55px; }
   .nav li:hover {
     border-bottom: 4px solid #222222; }
   .nav li a {
@@ -791,8 +791,8 @@ ol {
       color: white; }
   .nav.nav-inline li {
     display: inline-block;
-    height: 50px;
-    line-height: 50px;
+    height: 55px;
+    line-height: 55px;
     vertical-align: middle;
     margin-right: 5px;
     position: relative;
@@ -981,14 +981,7 @@ img.gform_ajax_spinner {
 
 /********** @STRUCTURE *********/
 #header {
-  width: 100%;
-  position: absolute;
-  z-index: 9; }
-  #header .container-fluid {
-    padding: 0 30px; }
-
-#header {
-  height: 50px;
+  height: 55px;
   position: fixed;
   left: 0;
   width: 100%;
@@ -997,12 +990,14 @@ img.gform_ajax_spinner {
     position: relative;
     top: 10px; }
   #header #logo-cm {
-    height: 50px; }
+    height: 55px; }
     #header #logo-cm img {
       max-width: 180px;
       width: 180px;
       position: relative;
       top: 5px; }
+  #header .container-fluid {
+    padding: 0 30px; }
 
 #headerfix {
   height: 50px; }
@@ -2439,10 +2434,10 @@ img.gform_ajax_spinner {
   content: "\FB02"; }
 
 #megaNav {
-  top: 50px;
+  top: 55px;
   width: 100%;
   height: 100%;
-  padding-bottom: 50px; }
+  padding-bottom: 55px; }
   #megaNav .modal-dialog {
     width: 100%;
     margin: 0; }
@@ -2484,18 +2479,25 @@ img.gform_ajax_spinner {
       top: -0.35em;
       left: 0; }
     #megaNav li > a {
-      border-bottom: 1px solid transparent; }
+      display: block;
+      padding-bottom: 0.125em;
+      border-bottom: 2px solid transparent;
+      transition: border 0.25s 0s ease;
+      -moz-transition: border 0.25s 0s ease;
+      -webkit-transition: border 0.25s 0s ease;
+      -o-transition: border 0.25s 0s ease;
+      -ms-transition: border 0.25s 0s ease; }
+      #megaNav li > a:hover, #megaNav li > a.open {
+        border-color: white; }
     #megaNav li ol {
       margin: 1em 0 0 2.25em;
       display: none; }
-    #megaNav li .open {
-      border-color: white; }
-      #megaNav li .open:after {
-        content: "\00B7";
-        font-family: "modern_pictograms_proregular";
-        margin-left: 1em; }
-      #megaNav li .open + ol {
-        display: block; }
+    #megaNav li .open:after {
+      content: "\00B7";
+      font-family: "modern_pictograms_proregular";
+      margin-left: 1em; }
+    #megaNav li .open + ol {
+      display: block; }
 
 /********** @CATEGORY *********/
 .category.category-courses, .single-collections.category-courses {
