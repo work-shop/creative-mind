@@ -104,8 +104,13 @@ foreach ($categories as $category) {
 	}
 }
 ?>
-
-		</div>	
+			<div class="col-xs-10 col-xs-offset-1 col-sm-4 col-sm-offset-0">
+				<div class="tile padded white border-brand bg-brand">
+					<h3 class="bold m0">About the Creative Mind</h3>
+					<p class="mt1 mb2">The Creative Mind is a window into the classroom, the studio, and the laboratory at Brown University.</p>
+				</div>
+			</div>
+		</div>	<!-- end .row -->
 	</div>
 </section>
 
