@@ -2399,16 +2399,6 @@ img.gform_ajax_spinner {
   height: inherit;
   -webkit-filter: saturate(75%); }
 
-.slideshow-caption {
-  padding: 20px 10px 0px 20px;
-  transition: all 1.5s 0s ease;
-  -moz-transition: all 1.5s 0s ease;
-  -webkit-transition: all 1.5s 0s ease;
-  -o-transition: all 1.5s 0s ease;
-  -ms-transition: all 1.5s 0s ease;
-  opacity: 1;
-  top: 25px; }
-
 .flex-active-slide .slideshow-caption {
   top: 0px; }
 
@@ -2525,13 +2515,6 @@ img.gform_ajax_spinner {
     margin-bottom: 0.5em; }
 
 /********** @COLLECTIONS *********/
-.collection:not(.collection-single) {
-  transition: opacity 1s 0s ease;
-  -moz-transition: opacity 1s 0s ease;
-  -webkit-transition: opacity 1s 0s ease;
-  -o-transition: opacity 1s 0s ease;
-  -ms-transition: opacity 1s 0s ease; }
-
 .story-slide {
   background-color: #555555; }
   .story-slide a {
