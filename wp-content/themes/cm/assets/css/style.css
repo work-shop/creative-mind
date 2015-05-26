@@ -2446,16 +2446,9 @@ img.gform_ajax_spinner {
     box-shadow: 0px 0px 0px rgba(50, 50, 50, 0.25);
     border: none;
     background: none; }
-  #megaNav label, #megaNav input {
-    margin-bottom: 0;
-    line-height: 1em; }
-  #megaNav label {
-    display: inline-block;
-    padding-right: 0.25em; }
-  #megaNav input {
-    border: 0;
-    color: #cb2026;
-    background: transparent; }
+  #megaNav .h4 {
+    display: block;
+    width: 100%; }
   #megaNav ul > li {
     margin-bottom: 1em; }
   #megaNav ol {
@@ -3241,9 +3234,9 @@ img.gform_ajax_spinner {
     .split-list > ul + ul, .split-list > ul + ol, .split-list > ol + ul, .split-list > ol + ol {
       margin-left: 4%; }
 
-  #megaNav header {
+  #megaNav .header {
     position: relative; }
-    #megaNav header h4 {
+    #megaNav .header .h4 {
       transform: rotate(-90deg);
       -moz-transform: rotate(-90deg);
       -webkit-transform: rotate(-90deg);
@@ -3251,7 +3244,8 @@ img.gform_ajax_spinner {
       -ms-transform: rotate(-90deg);
       position: absolute;
       left: 0;
-      top: 50px; }
+      top: 50px;
+      padding-top: 80%; }
   #megaNav .split-list {
     min-height: 100px; } }
 @media (max-width: 1200px) {

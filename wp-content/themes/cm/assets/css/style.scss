@@ -443,20 +443,9 @@ $icon-margin: 15px;
 
 	}
 
-	label, input {
-		margin-bottom: 0;
-		line-height: 1em;
-	}
-
-	label {
-		display: inline-block;
-		padding-right: 0.25em;
-	}
-
-	input {
-		border: 0;
-		color: $brand;
-		background: transparent;
+	.h4 {
+		display: block;
+		width: 100%;
 	}
 
 	ul > li {
@@ -1008,13 +997,14 @@ $icon-margin: 15px;
 	}
 
 	#megaNav {
-		header {
+		.header {
 			position: relative;
-			h4 {
+			.h4 {
 				@include transform( rotate(-90deg) );
 				position: absolute;
 				left: 0;
 				top: 50px;
+				padding-top: 80%;
 			}
 		}
 		.split-list {
