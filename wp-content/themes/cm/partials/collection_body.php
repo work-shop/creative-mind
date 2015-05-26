@@ -25,8 +25,8 @@ $category_nicename = $category->category_nicename;
  */
 $collection = get_global( 'current_collection' );
 $collection_name = $collection->post_title;
-// $collection_id = $collection['id'];
 $collection_permalink = get_permalink( $collection );
+$collection_description = $collection->collection_description;
 
 /**
  *
@@ -57,11 +57,19 @@ $start = count($stories_halves[0]) + 1;
 	<div class="container-fluid mb2">
 		<div class="row">
 			<div class="col-sm-8 col-sm-offset-2">
-				<header class="text-center">
-					<ul class="list-inline h5 uppercase bold">
-						<li><?php echo $story_qualifier ?></li><li>More Info</li><li>Share This Collection</li>
-					</ul>
-					<a href="<?php echo $collection_permalink ?>" class="<?php echo $category_nicename ?>"><h2 class="bold"><?php echo $collection_name; ?></h2></a>
+				<header class="text-center mb1">
+					<?php if ( is_singular( 'collections') ) { ?>
+						<a href="<?php echo $collection_permalink ?>" class="<?php echo $category_nicename ?>"><h1 class="bold"><?php echo $collection_name; ?></h1></a>
+						<p class="h2"><?php echo $collection_description ?></p>
+						<ul class="list-inline h5 uppercase bold mt1 mb2">
+							<li><?php echo $story_qualifier ?></li><li>More Info</li><li>Share This Collection</li>
+						</ul>
+					<?php } else { ?>
+						<ul class="list-inline h5 uppercase bold">
+							<li><?php echo $story_qualifier ?></li><li>More Info</li><li>Share This Collection</li>
+						</ul>
+						<a href="<?php echo $collection_permalink ?>" class="<?php echo $category_nicename ?>"><h2 class="bold"><?php echo $collection_name; ?></h2></a>
+					<?php } ?>
 				</header>					
 			</div>
 		</div>

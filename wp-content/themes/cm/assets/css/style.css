@@ -2543,9 +2543,6 @@ img.gform_ajax_spinner {
   position: relative;
   top: -15px; }
 
-.collection-single {
-  padding: 1% 0; }
-
 .story-active #collection-intro {
   padding-top: 0px;
   -o-box-shadow: 0px -4px 8px rgba(255, 255, 255, 0.25);
