@@ -2391,10 +2391,23 @@ img.gform_ajax_spinner {
 .flex-active-slide .slideshow-caption {
   top: 0px; }
 
-.slide {
+.flexslider-story {
+  position: relative;
+  max-width: 780px;
+  margin: 0 auto; }
+  .flexslider-story > ul li {
+    height: 500px; }
+
+.slides > li {
   height: 400px;
-  overflow-y: auto;
-  background-size: cover; }
+  background-size: cover;
+  text-align: center; }
+  .slides > li img {
+    max-height: 100%;
+    width: auto; }
+
+.slide {
+  overflow-y: auto; }
   .slide ol li {
     line-height: 1.25em;
     margin-bottom: 0.5em; }
@@ -3260,7 +3273,10 @@ img.gform_ajax_spinner {
       top: 50px;
       padding-top: 80%; }
   #megaNav .split-list {
-    min-height: 100px; } }
+    min-height: 100px; }
+
+  .video-gallery-main {
+    height: 500px; } }
 @media (max-width: 1200px) {
   .story-activated .collection-intro-heading {
     padding-top: 10px; }

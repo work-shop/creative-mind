@@ -82,10 +82,10 @@
 			 						</ul>
 			 						<div class="flexslider-controls"></div> 
 			 						<div id="flex-previous-story" class="flexslider-direction flex-previous previous">
-			 							<span class="icon" data-icon="&#8250;"></span>
+			 							<span class="icon large" data-icon="&#8250;"></span>
 			 						</div>					
 			 						<div id="flex-next-story" class="flexslider-direction flex-next next">
-			 							<span class="icon" data-icon="&#8249;"></span>
+			 							<span class="icon large" data-icon="&#8249;"></span>
 			 						</div>								
 			 					</div>
 		 					<?php } ?>

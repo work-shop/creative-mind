@@ -166,7 +166,8 @@ function flexsliderSetup(){
 	 	      slideshowSpeed: 8000,           
 	 		  animationSpeed: 500,
 	 	      directionNav: false,
-	 	      controlNav: "thumbnails"
+	 	      controlNav: "thumbnails",
+	 	      slideshow: false
 	 	 }); 
 	 } else {
 	 	$('.flexslider-story').flexslider({	

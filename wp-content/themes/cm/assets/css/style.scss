@@ -376,10 +376,27 @@ $icon-margin: 15px;
 
 }
 
-.slide {
+.flexslider-story {
+	position: relative;
+	max-width: 780px;
+	margin: 0 auto;
+	> ul li {
+		height: 500px;
+	}
+}
+
+.slides > li {
 	height: 400px;
-	overflow-y: auto;
 	background-size: cover;
+	text-align: center;
+	img {
+		max-height: 100%;
+		width: auto;
+	}
+}
+
+.slide {
+	overflow-y: auto;
 	ol li {
 		line-height: 1.25em;
 		margin-bottom: 0.5em;
@@ -1022,6 +1039,10 @@ $icon-margin: 15px;
 		.split-list {
 			min-height: 100px;
 		}
+	}
+
+	.video-gallery-main {
+		height: 500px;
 	}
 	
 }	
