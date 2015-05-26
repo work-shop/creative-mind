@@ -195,6 +195,7 @@ function submenuToggle(item) {
 	if ( $(item).hasClass('open') ) {
 		$(item).removeClass('open');
 	} else {
+		$('#megaNav ul > li > a').removeClass('open');
 		$(item).addClass('open');
 	}	
 }
