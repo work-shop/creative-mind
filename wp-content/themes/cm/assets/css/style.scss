@@ -707,6 +707,7 @@ $icon-margin: 15px;
 .story{
 	@include transition(all,.5s);
 	padding-bottom: 8%;
+	z-index: 2;
 
 	.story-hero {
 		width: 80%;
@@ -879,17 +880,31 @@ $icon-margin: 15px;
 .category-research .flex-control-nav a { @include pagination($research); }
 
 
-.stories-nav a {
+.stories-nav {
 	position: fixed;
 	top: 50%;
-	&.prev-story {
-		left: 1em;
+	width: 100%;
+	height: 0;
+	z-index: 4;
+	a {
+		position: relative;
+		.preview {
+			position: absolute;
+		}
+		&:hover .preview {
+			opacity: 1;
+		}
+	}
+	.prev-story {
+		float: left;
+		margin-left: 1em;
 		.preview {
 			right: -320px;
 		}
 	}
-	&.next-story {
-		right: 1em;
+	.next-story {
+		float: right;
+		margin-right: 1em;
 		.preview {
 			left: -320px;
 		}
@@ -910,9 +925,6 @@ $icon-margin: 15px;
 		.overlay {
 			padding-top: 2em;
 		}
-	}
-	&:hover .preview {
-		opacity: 1;
 	}
 }
 

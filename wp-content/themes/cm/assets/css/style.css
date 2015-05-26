@@ -915,7 +915,6 @@ img.gform_ajax_spinner {
 
 .flexslider-direction {
   height: 100%;
-  z-index: 6;
   position: absolute;
   right: 0;
   width: auto;
@@ -2966,7 +2965,8 @@ img.gform_ajax_spinner {
   -webkit-transition: all 0.5s 0s ease;
   -o-transition: all 0.5s 0s ease;
   -ms-transition: all 0.5s 0s ease;
-  padding-bottom: 8%; }
+  padding-bottom: 8%;
+  z-index: 2; }
   .story .story-hero {
     width: 80%;
     margin: 0 auto;
@@ -3132,20 +3132,31 @@ img.gform_ajax_spinner {
   .category-research .flex-control-nav a.flex-active {
     background: #E5603C; }
 
-.stories-nav a {
+.stories-nav {
   position: fixed;
-  top: 50%; }
-  .stories-nav a.prev-story {
-    left: 1em; }
-    .stories-nav a.prev-story .preview {
+  top: 50%;
+  width: 100%;
+  height: 0;
+  z-index: 4; }
+  .stories-nav a {
+    position: relative; }
+    .stories-nav a .preview {
+      position: absolute; }
+    .stories-nav a:hover .preview {
+      opacity: 1; }
+  .stories-nav .prev-story {
+    float: left;
+    margin-left: 1em; }
+    .stories-nav .prev-story .preview {
       right: -320px; }
-  .stories-nav a.next-story {
-    right: 1em; }
-    .stories-nav a.next-story .preview {
+  .stories-nav .next-story {
+    float: right;
+    margin-right: 1em; }
+    .stories-nav .next-story .preview {
       left: -320px; }
-  .stories-nav a .icon:after, .stories-nav a .menu-toggle:after {
+  .stories-nav .icon:after, .stories-nav .menu-toggle:after {
     font-size: 5em; }
-  .stories-nav a .preview {
+  .stories-nav .preview {
     background-size: cover;
     position: absolute;
     top: -100px;
@@ -3163,10 +3174,8 @@ img.gform_ajax_spinner {
     -webkit-transition: opacity 0.25s 0s ease;
     -o-transition: opacity 0.25s 0s ease;
     -ms-transition: opacity 0.25s 0s ease; }
-    .stories-nav a .preview .overlay {
+    .stories-nav .preview .overlay {
       padding-top: 2em; }
-  .stories-nav a:hover .preview {
-    opacity: 1; }
 
 .bread-crumb {
   font-size: 0.9em; }
