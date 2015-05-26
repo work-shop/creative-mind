@@ -83,7 +83,8 @@
 
 						<div class="col-sm-6 hidden-xs centered mt1">
 							<?php if ( !is_home() ) {
-								echo '<span class="h4 uppercase bold ' . $category_color . '">' . $category_name . '</span>' ;
+								$category = CM_Collection_Controller::get_current_category();
+								echo '<a href="' . get_term_link( $category ) . '" class="h4 uppercase bold ' . $category_color . '">' . $category_name . '</a>' ;
 							} ?>
 						</div>
 
