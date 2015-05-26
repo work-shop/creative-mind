@@ -531,7 +531,6 @@ $icon-margin: 15px;
 }
 
 .category header .split-list {
-	font-size: 1.675em;
 	line-height: 1em;
 	li {
 		margin-bottom: 0.5em;
@@ -936,7 +935,7 @@ $icon-margin: 15px;
 
 /********** @TILES *********/
 
-#grid .col-xs-6 {
+#grid .col-sm-4{
 	.tile-story header {
 		margin: 5em 4%;
 	}
@@ -956,9 +955,11 @@ $icon-margin: 15px;
 		width: 100%;
 		line-height: 1.75em;
 		height: 0;
+		color: transparent;
 		@include transition(all,0.5s);
 	}
 	&:hover footer {
+		color: white;
 		padding-top: 0.25em;
 		height: 2em;
 	}
@@ -998,6 +999,10 @@ $icon-margin: 15px;
 /********** @RESPONSIVE *********/
 
 @media (min-width: 768px) {
+
+	.category header .split-list {
+		font-size: 1.675em;
+	}
 
 	.split-list > ul, .split-list > ol {
 		width: 46%;

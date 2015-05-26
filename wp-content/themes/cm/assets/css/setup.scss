@@ -91,8 +91,8 @@ ol {
 	line-height: 1.75em;
 }
 
-//xl
-@media (min-width: 1921px) {
+//lg
+@media (min-width: 1681px) {
 	body{
 		font-size: 16px;
 	}
@@ -141,11 +141,11 @@ ol {
 	}
 
 	h5,.h5{
-		font-size: 1em;
+		font-size: .7em;
 	}
 
 	h6,.h6{
-		font-size: .9em;
+		font-size: .7em;
 	}
 
 }

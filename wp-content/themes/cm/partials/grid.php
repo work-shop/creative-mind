@@ -45,7 +45,7 @@ foreach ($categories as $category) {
 			$category_description = CM_Collection_Controller::get_category_description( $category_term->term_id );
 		?>
 
-			<div class="col-xs-6 col-sm-4">
+			<div class="col-sm-4">
 				<a href="<?php echo esc_url( home_url( '/'.$category ) ); ?>">
 				<div class="tile tile-category mb2 white bg-<?php echo $category; ?> clearfix" >
 					<header>
@@ -75,7 +75,7 @@ foreach ($categories as $category) {
 		$story_featured_image = ( has_post_thumbnail( $grid_element->ID ) ) ? wp_get_attachment_image_src( get_post_thumbnail_id( $grid_element->ID ), 'thumbnail' )[0] : 'http://images.wisegeek.com/scientists-in-lab.jpg';
 		?>
 
-			<div class="col-xs-6 col-sm-4">
+			<div class="col-sm-4">
 				<a href="<?php echo $story_permalink ?>">
 				<div class="tile tile-story mb2 <?php echo $category; ?> border-<?php echo $category; ?>" style="background-image: url('<?php echo $story_featured_image; ?>');" >
 					<header>
@@ -104,7 +104,7 @@ foreach ($categories as $category) {
 	}
 }
 ?>
-			<div class="col-xs-10 col-xs-offset-1 col-sm-4 col-sm-offset-0">
+			<div class="col-sm-4">
 				<div class="tile padded white border-brand bg-brand">
 					<h3 class="bold m0">About the Creative Mind</h3>
 					<p class="mt1 mb2">The Creative Mind is a window into the classroom, the studio, and the laboratory at Brown University.</p>

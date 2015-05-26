@@ -92,7 +92,7 @@ p {
 ol {
   line-height: 1.75em; }
 
-@media (min-width: 1921px) {
+@media (min-width: 1681px) {
   body {
     font-size: 16px; } }
 @media (max-width: 992px) {
@@ -124,10 +124,10 @@ ol {
     font-size: 1em; }
 
   h5, .h5 {
-    font-size: 1em; }
+    font-size: .7em; }
 
   h6, .h6 {
-    font-size: .9em; } }
+    font-size: .7em; } }
 .bold {
   font-family: "A2 Regular Bold", Futura, sans-serif;
   font-weight: bold; }
@@ -2508,7 +2508,6 @@ img.gform_ajax_spinner {
   color: #E5603C; }
 
 .category header .split-list {
-  font-size: 1.675em;
   line-height: 1em; }
   .category header .split-list li {
     margin-bottom: 0.5em; }
@@ -3181,11 +3180,11 @@ img.gform_ajax_spinner {
   font-size: 0.9em; }
 
 /********** @TILES *********/
-#grid .col-xs-6 .tile-story header {
+#grid .col-sm-4 .tile-story header {
   margin: 5em 4%; }
-#grid .col-xs-6:nth-child(3n+2) .tile-story header {
+#grid .col-sm-4:nth-child(3n+2) .tile-story header {
   margin: 4em 4% 6em; }
-#grid .col-xs-6:nth-child(3n+3) .tile-story header {
+#grid .col-sm-4:nth-child(3n+3) .tile-story header {
   margin: 4em 4% 9em; }
 
 .tile {
@@ -3196,12 +3195,14 @@ img.gform_ajax_spinner {
     width: 100%;
     line-height: 1.75em;
     height: 0;
+    color: transparent;
     transition: all 0.5s 0s ease;
     -moz-transition: all 0.5s 0s ease;
     -webkit-transition: all 0.5s 0s ease;
     -o-transition: all 0.5s 0s ease;
     -ms-transition: all 0.5s 0s ease; }
   .tile:hover footer {
+    color: white;
     padding-top: 0.25em;
     height: 2em; }
   .tile .icon, .tile .menu-toggle {
@@ -3230,6 +3231,9 @@ img.gform_ajax_spinner {
 
 /********** @RESPONSIVE *********/
 @media (min-width: 768px) {
+  .category header .split-list {
+    font-size: 1.675em; }
+
   .split-list > ul, .split-list > ol {
     width: 46%;
     float: left; }
