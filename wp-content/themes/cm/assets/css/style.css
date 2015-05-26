@@ -3168,6 +3168,9 @@ img.gform_ajax_spinner {
   .stories-nav a:hover .preview {
     opacity: 1; }
 
+.bread-crumb {
+  font-size: 0.9em; }
+
 /********** @TILES *********/
 #grid .col-xs-6 .tile-story header {
   margin: 5em 4%; }
