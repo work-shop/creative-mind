@@ -17,7 +17,7 @@
 	-ms-transition: $property $duration $delay $easing; 		
 }
 
-@mixin box-shadow($x: 0px, $y: 0px, $size: 4px, $shadow-color: rgba(50,50,50,.25)){
+@mixin box-shadow($x: 0px, $y: 0px, $size: 4px, $shadow-color: rgba(50,50,50,.5)){
 	-o-box-shadow: $x $y $size $shadow-color;
 	-ms-box-shadow: $x $y $size $shadow-color;
 	-moz-box-shadow: $x $y $size $shadow-color;
@@ -108,7 +108,6 @@
 }
 
 @mixin border($border-color) {
-	border: 5px solid $border-color;
-	@include transition(all);
+	border: 7px solid $border-color;
 }
 

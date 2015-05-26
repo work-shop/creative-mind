@@ -23,7 +23,7 @@ $categories = array_keys( $grid_elements );
 	<div class="container-fluid">
 		<div class="row m4">
 			<div class="col-xs-10 col-xs-offset-1 col-sm-4 col-sm-offset-0">
-				<div class="tile padded brand border-brand text-center">
+				<div class="tile padded brand border-brand bg-white text-center">
 					<h3 class="bold">Explore the Creative Mind</h3> <span class="icon" data-icon="&#91;"></span>
 				</div>
 			</div>
@@ -83,8 +83,10 @@ foreach ($categories as $category) {
 							<span class="icon-custom" data-icon="&#xe600;"></span>
 						<?php } elseif ( $story_type == 'image_gallery' ) { ?>
 							<span class="icon" data-icon="&#8486;"></span>
+						<?php } else { ?>
+							<span class="icon"></span>
 						<?php } ?>
-						<div class="h5 m0 uppercase bold"><?php echo $story_collection_name ?></div>
+						<div class="h5 m0 uppercase bold"><?php echo $story_collection_name ?>:</div>
 						<h2 class="bold m0"><?php echo $story_name ?></h2>
 					</header>
 					<footer class="action text-center bold white bg-<?php echo $category; ?>">

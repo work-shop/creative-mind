@@ -964,6 +964,7 @@ $icon-margin: 15px;
 		height: 200px;
 		font-size: 0.85em;
 		opacity: 0;
+		@include box-shadow();
 		@include transition(opacity);
 		.overlay {
 			padding-top: 2em;
@@ -979,11 +980,14 @@ $icon-margin: 15px;
 /********** @TILES *********/
 
 #grid .col-xs-6 {
+	.tile-story header {
+		margin: 5em 4%;
+	}
 	&:nth-child(3n+2) .tile-story header {
-		margin: 4em 4% 9em;
+		margin: 4em 4% 6em;
 	}
 	&:nth-child(3n+3) .tile-story header {
-		margin: 4em 4% 5em;
+		margin: 4em 4% 9em;
 	}
 }
 
@@ -1000,6 +1004,10 @@ $icon-margin: 15px;
 	&:hover footer {
 		padding-top: 0.25em;
 		height: 2em;
+	}
+	.icon {
+		min-height: 2em;
+		display: inline-block;
 	}
 }
 
@@ -1021,9 +1029,6 @@ $icon-margin: 15px;
 		height: 100%;
 		background: white;
 		opacity: 0.9;
-	}
-	header {
-		margin: 4em 4%;
 	}
 	.icon:after {
 		font-size: 3.5em;

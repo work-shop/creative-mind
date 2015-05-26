@@ -59,7 +59,7 @@ $start = count($stories_halves[0]) + 1;
 			<div class="col-sm-6 col-sm-offset-3">
 				<header class="text-center">
 					<ul class="list-inline h5 uppercase bold">
-						<li><?php echo $story_qualifier ?></li><li>Table of Contents</li><li>More Info</li><li>Share This Collection</li>
+						<li><?php echo $story_qualifier ?></li><li>More Info</li><li>Share This Collection</li>
 					</ul>
 					<a href="<?php echo $collection_permalink ?>" class="<?php echo $category_nicename ?>"><h2 class="bold"><?php echo $collection_name; ?></h2></a>
 				</header>					
@@ -69,7 +69,7 @@ $start = count($stories_halves[0]) + 1;
 			<div class="col-sm-8 col-sm-offset-2">
 				<div class="flexslider-story flexslider" id="story-gallery-<?php echo rand(0,1000); ?>">
 					<ul class="slides clearfix">
-						<li class="slide border-<?php echo $category_nicename ?> padded-more clearfix">
+						<li class="slide bg-white border-<?php echo $category_nicename ?> padded-more clearfix">
 							<h3 class="text-center bold">Table of Contents</h3>
 							<div class="split-list">
 								<?php 

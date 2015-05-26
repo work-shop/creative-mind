@@ -7,7 +7,7 @@
 
 $brand: #cb2026;
 $ultra-light: #fafafa;
-$light: #f1f1f1;
+$light: #eeeded;
 $dark: #222222;
 $error: #ff4a4a;
 $brown: #3a1e1a;
@@ -34,7 +34,7 @@ $transitions: .25s;
 
 body{
 	font-size: 15px;
-	background: $ultra-light;
+	background: $light;
 }
 
 div { font-family:"Regular", Futura, sans-serif; font-style:normal; }
@@ -159,52 +159,21 @@ ol {
 	font-style: italic;
 }
 
-.white, .white a{
-	color: $ultra-light;
-	&:hover {
-		color: $ultra-light;
-	}
-}
+.white, .white a{ color: $ultra-light; }
 
-.dark{
-	color: $dark;
-}
+.dark, .dark a{ color: $dark; }
 
-.brand, .brand a{
-	color: $brand;
-}
+.brand, .brand a{ color: $brand; }
 
-.courses, .courses a{
-	color: $courses;
-}
-.courses a:hover {
-	color: darken($courses,10);
-}
+.courses, .courses a{ color: $courses; }
 
-.research, .research a{
-	color: $research;
-}
-.research a:hover {
-	color: darken($research,20);
-}
+.research, .research a{ color: $research; }
 
-.interviews, .interviews a{
-	color: $interviews;
-}
-.interviews a:hover {
-	color: darken($interviews,20);
-}
+.interviews, .interviews a{ color: $interviews; }
 
-.lectures, .lectures a{
-	color: $lectures;
-}
-.lectures a:hover {
-	color: darken($lectures,20);
-}
+.lectures, .lectures a{ color: $lectures; }
 
-.brown-yellow{
-	color: $yellow;
-}
+.brown-yellow{ color: $yellow; }
 
 
 .icon, .icon-custom {
