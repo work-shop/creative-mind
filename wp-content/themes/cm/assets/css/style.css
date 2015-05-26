@@ -3226,6 +3226,9 @@ img.gform_ajax_spinner {
 
 /********** @RESPONSIVE *********/
 @media (min-width: 768px) {
+  #grid .tile {
+    margin-bottom: 2em; }
+
   .category header .split-list {
     font-size: 1.675em; }
 
@@ -3280,6 +3283,12 @@ img.gform_ajax_spinner {
       .flexslider-story .flexslider-direction.previous:hover {
         left: 15px; } }
 @media (max-width: 767px) {
+  #grid .col-xs-6 {
+    padding: 2%;
+    margin: 0; }
+    #grid .col-xs-6 .tile-story header {
+      margin: 3em 2% !important; }
+
   #header {
     top: 0px;
     overflow: hidden; }
@@ -3295,9 +3304,6 @@ img.gform_ajax_spinner {
       top: 0; }
       .nav.nav-inline li a {
         padding: 0; }
-
-  #grid .col-sm-4 .tile-story header {
-    margin: 3em 2% !important; }
 
   .category-button {
     padding: 15% 0; }

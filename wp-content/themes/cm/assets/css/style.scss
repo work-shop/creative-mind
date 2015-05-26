@@ -985,6 +985,10 @@ $icon-margin: 15px;
 
 @media (min-width: 768px) {
 
+	#grid .tile {
+		margin-bottom: 2em;
+	}
+
 	.category header .split-list {
 		font-size: 1.675em;
 	}
@@ -1084,6 +1088,14 @@ $icon-margin: 15px;
 //xs
 @media (max-width: 767px) {
 
+	#grid .col-xs-6 {
+		padding: 2%;
+		margin: 0;
+		.tile-story header {
+			margin: 3em 2% !important;
+		}
+	}
+
 	#header {
 	 	top: 0px;
 		overflow: hidden;	  
@@ -1110,12 +1122,6 @@ $icon-margin: 15px;
 			}
 		}
 
-	}
-
-	#grid .col-sm-4{
-		.tile-story header {
-			margin: 3em 2% !important;
-		}
 	}
 
 	.category-button{
