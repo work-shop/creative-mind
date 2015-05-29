@@ -177,7 +177,7 @@ class CM_Collection_Controller {
 			foreach ( $half as $story ) {
 				$output = $output . self::create_list_item( $story, 'story' );
 			}
-			return '<ol class="h4" start="' . $start . '" >' . $output . '</ol>';
+			return '<ol start="' . $start . '" >' . $output . '</ol>';
 		}
 		elseif ( $type == 'category' ) {
 			foreach ( $half as $collection ) {

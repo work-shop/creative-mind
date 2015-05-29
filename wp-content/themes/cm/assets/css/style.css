@@ -47,10 +47,9 @@ ol, ul {
 /********** @TYPE *********/
 body {
   font-size: 15px;
-  background: #eeeded; }
-
-div {
-  font-family: "Regular", Futura, sans-serif;
+  background: #eeeded;
+  font-family: "A2 Regular Medium", sans-serif;
+  font-weight: 500;
   font-style: normal; }
 
 .uppercase {
@@ -65,7 +64,7 @@ div {
 .righted {
   text-align: right; }
 
-h2, h3, h4, h5, h6 {
+h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
   line-height: 1.3; }
 
 h1, .h1 {
@@ -129,7 +128,7 @@ ol {
 
   h6, .h6 {
     font-size: .7em; } }
-.bold {
+strong, b, .bold {
   font-family: "A2 Regular Bold", Futura, sans-serif;
   font-weight: bold; }
 

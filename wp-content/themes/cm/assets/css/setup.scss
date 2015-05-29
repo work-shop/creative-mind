@@ -35,9 +35,8 @@ $transitions: .25s;
 body{
 	font-size: 15px;
 	background: $light;
+	font-family:"A2 Regular Medium", sans-serif; font-weight:500; font-style:normal;
 }
-
-div { font-family:"Regular", Futura, sans-serif; font-style:normal; }
 
 .uppercase{
 	text-transform: uppercase;
@@ -55,7 +54,7 @@ div { font-family:"Regular", Futura, sans-serif; font-style:normal; }
 	text-align: right;
 }
 
-h2,h3,h4,h5,h6{
+h2,.h2,h3,.h3,h4,.h4,h5,.h5,h6,.h6{
 	line-height: 1.3;
 }
 
@@ -151,7 +150,7 @@ ol {
 
 }
 
-.bold{
+strong, b, .bold{
 	font-family: "A2 Regular Bold", Futura, sans-serif;
 	font-weight: bold;
 }
