@@ -520,8 +520,7 @@ strong, b, .bold {
 
 .vertical-center, .slide .info, #megaNav li .open:after, .story .slides img {
   position: absolute;
-  left: 49%;
-  top: 49%;
+  top: 50%;
   transform: translate(-50%, -50%);
   -moz-transform: translate(-50%, -50%);
   -webkit-transform: translate(-50%, -50%);
@@ -2414,7 +2413,8 @@ img.gform_ajax_spinner {
       margin-bottom: 0.75em; }
 
 .slide .info {
-  width: 80%; }
+  width: 80%;
+  left: 49%; }
   .slide .info .icon:after, .slide .info .menu-toggle:after, .slide .info .icon-custom:after {
     margin-left: 0; }
 
@@ -2502,8 +2502,7 @@ img.gform_ajax_spinner {
     #megaNav li .open:after {
       content: "\00B7";
       font-family: "modern_pictograms_proregular";
-      right: 0;
-      left: inherit; }
+      right: 0; }
     #megaNav li .open + ol {
       display: block; }
 

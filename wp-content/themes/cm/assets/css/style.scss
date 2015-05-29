@@ -408,6 +408,7 @@ $icon-margin: 15px;
 .slide .info {
 	width: 80%;
 	@extend .vertical-center;
+	left: 49%;
 	.icon:after, .icon-custom:after {
 		margin-left: 0;
 	}
@@ -513,7 +514,6 @@ $icon-margin: 15px;
 				font-family: "modern_pictograms_proregular";
 				right: 0;
 				@extend .vertical-center;
-				left: inherit;
 			}
 			+ ol {
 				display: block;
