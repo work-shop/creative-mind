@@ -3333,6 +3333,9 @@ img.gform_ajax_spinner {
       .nav.nav-inline li a {
         padding: 0; }
 
+  .logo-animated svg {
+    height: 120px; }
+
   .category-button {
     padding: 15% 0; }
 
