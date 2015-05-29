@@ -117,5 +117,8 @@
 
 @mixin border($border-color) {
 	border: 7px solid $border-color;
+	@media (max-width: 767px) {
+		border-width: 5px;
+	}
 }
 

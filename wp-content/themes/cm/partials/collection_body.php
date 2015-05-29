@@ -60,7 +60,7 @@ $start = count($stories_halves[0]) + 1;
 				<header class="text-center mb1">
 					<?php if ( is_singular( 'collections') ) { ?>
 						<a href="<?php echo $collection_permalink ?>" class="<?php echo $category_nicename ?>"><h1 class="bold"><?php echo $collection_name; ?></h1></a>
-						<p class="h2"><?php echo $collection_description ?></p>
+						<h2><?php echo $collection_description ?></h2>
 						<ul class="list-inline h5 uppercase bold mt1 mb2">
 							<li><?php echo $story_qualifier ?></li>
 						</ul>
