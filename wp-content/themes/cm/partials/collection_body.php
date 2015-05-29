@@ -62,11 +62,11 @@ $start = count($stories_halves[0]) + 1;
 						<a href="<?php echo $collection_permalink ?>" class="<?php echo $category_nicename ?>"><h1 class="bold"><?php echo $collection_name; ?></h1></a>
 						<p class="h2"><?php echo $collection_description ?></p>
 						<ul class="list-inline h5 uppercase bold mt1 mb2">
-							<li><?php echo $story_qualifier ?></li><li>More Info</li><li>Share This Collection</li>
+							<li><?php echo $story_qualifier ?></li>
 						</ul>
 					<?php } else { ?>
 						<ul class="list-inline h5 uppercase bold">
-							<li><?php echo $story_qualifier ?></li><li>More Info</li><li>Share This Collection</li>
+							<li><a href="<?php echo $collection_permalink ?>" class="<?php echo $category_nicename ?>"><?php echo $story_qualifier ?></a></li><li><a href="<?php echo $collection_permalink ?>" class="<?php echo $category_nicename ?>">More Info</a></li><li>Share This Collection</li>
 						</ul>
 						<a href="<?php echo $collection_permalink ?>" class="<?php echo $category_nicename ?>"><h2 class="bold"><?php echo $collection_name; ?></h2></a>
 					<?php } ?>
