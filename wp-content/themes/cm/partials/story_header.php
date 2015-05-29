@@ -36,23 +36,24 @@
  				<?php } elseif ( ($story_type == 'video_gallery') && ($clips = get_field('video_gallery')) ) { ?>
  					<div id="video-gallery">
  						<div class="container-fluid">
+ 							<div class="row">
  							<?php foreach ( $clips as $i => $clip ) :
  								if ( $i == 0 ) {
  							?>
- 							<div class="row">
- 								<div class="col-sm-12 video-gallery-main mt3 mb2">
- 									<?php echo vimeo_frame($clip['vimeo_id'],'story-video-1'); ?>
- 									<p><?php echo $clip['video_title']; ?></p>
- 								</div> 
- 							</div>
- 							<?php } else { ?>
- 							<?php if ( $i == 1 ) : ?><div class="row"><?php endif; ?>
- 								<div class="col-sm-2 col-xs-6 video-gallery-clip">
- 									<?php echo vimeo_frame($clip['vimeo_id'],'story-video-1'); ?>
- 									<p><?php echo $clip['video_title']; ?></p>
- 								</div> 																											
- 							<?php if ( $i == count( $clips ) - 1 ) : ?></div><?php endif; ?>
- 							<?php } endforeach; ?>								
+	 								<div class="col-sm-10 video-gallery-main mt3 mb2">
+	 									<?php echo vimeo_frame($clip['vimeo_id'],'story-video-1'); ?>
+	 									<p><?php echo $clip['video_title']; ?></p>
+	 								</div> 
+	 							<?php } else { ?>
+	 								<div class="col-sm-2">
+		 								<div class="video-gallery-clip">
+		 									<?php echo vimeo_frame($clip['vimeo_id'],'story-video-1'); ?>
+		 									<p><?php echo $clip['video_title']; ?></p>
+		 								</div>
+		 							</div>
+ 								<?php } ?>
+ 							<?php endforeach; ?>
+							</div>								
  						</div>
  					</div> <!-- end #video-gallery -->
  					<?php if ($description = get_field('story_description')) : ?>
@@ -86,27 +87,28 @@
 	 						<span class="icon large" data-icon="&#8249;"></span>
 	 					</div>								
 	 				</div>
-
+`
  				<?php } elseif ( ($story_type == 'video_and_image_gallery') && ($gallery = get_field('story_image_gallery')) && ($clips = get_field('video_gallery')) ) { ?>
  					<div id="video-gallery">
  						<div class="container-fluid">
+ 							<div class="row">
  							<?php foreach ( $clips as $i => $clip ) :
  								if ( $i == 0 ) {
  							?>
- 							<div class="row">
- 								<div class="col-sm-12 video-gallery-main mt3 mb2">
- 									<?php echo vimeo_frame($clip['vimeo_id'],'story-video-1'); ?>
- 									<p><?php echo $clip['video_title']; ?></p>
- 								</div> 
- 							</div>
- 							<?php } else { ?>
- 							<?php if ( $i == 1 ) : ?><div class="row"><?php endif; ?>
- 								<div class="col-sm-2 col-xs-6 video-gallery-clip">
- 									<?php echo vimeo_frame($clip['vimeo_id'],'story-video-1'); ?>
- 									<p><?php echo $clip['video_title']; ?></p>
- 								</div> 																											
- 							<?php if ( $i == count( $clips ) - 1 ) : ?></div><?php endif; ?>
- 							<?php } endforeach; ?>								
+	 								<div class="col-sm-10 video-gallery-main mt3 mb2">
+	 									<?php echo vimeo_frame($clip['vimeo_id'],'story-video-1'); ?>
+	 									<p><?php echo $clip['video_title']; ?></p>
+	 								</div> 
+	 							<?php } else { ?>
+	 								<div class="col-sm-2">
+		 								<div class="video-gallery-clip">
+		 									<?php echo vimeo_frame($clip['vimeo_id'],'story-video-1'); ?>
+		 									<p><?php echo $clip['video_title']; ?></p>
+		 								</div>
+		 							</div>
+ 								<?php } ?>
+ 							<?php endforeach; ?>
+							</div>								
  						</div>
  					</div> <!-- end #video-gallery -->
 
