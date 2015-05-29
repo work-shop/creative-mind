@@ -19,6 +19,9 @@ $interviews: #25807F;
 $lectures: #58595B;
 
 $nav-height: 55px;
+$img-gallery-height: 500px;
+$img-gallery-height-xs: 320px;
+
 $mobile-margins: 15px;
 
 $transitions: .25s;
@@ -453,7 +456,7 @@ strong, b, .bold{
 .vertical-center{
 	position: absolute;
 	top: 50%;
-	@include transform(translate(-50%,-50%));	
+	@include transform(translateY(-50%));	
 }
 
 .display-block{

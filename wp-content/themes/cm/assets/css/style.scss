@@ -381,7 +381,7 @@ $icon-margin: 15px;
 	max-width: 780px;
 	margin: 0 auto;
 	> ul > li {
-		height: 500px;
+		height: $img-gallery-height;
 	}
 }
 
@@ -411,7 +411,6 @@ $icon-margin: 15px;
 .slide .info {
 	width: 80%;
 	@extend .vertical-center;
-	left: 49%;
 	.icon:after, .icon-custom:after {
 		margin-left: 0;
 	}
@@ -876,17 +875,27 @@ $icon-margin: 15px;
 		background-color: darken($light,10);
 	}
 	.slides img {
-		@extend .vertical-center;
+		position: absolute;
+		top: 50%;
+		@include transform(translate(-50%,-50%));	
 	}
 	.flex-active {
 		opacity: 0.5;
 	}
 	.flexslider-direction{
+		width: 40px;
+		height: $img-gallery-height;
+		margin-top: 0;
+		top: 0;
 		left: 0;
 		z-index: 2;
+		background-color: rgba($dark,0.6);
 		&.flex-next {
 			left: auto;
 			right: 0;
+		}
+		.icon {
+			@extend .vertical-center;
 		}
 	}
 }
@@ -1224,8 +1233,10 @@ $icon-margin: 15px;
 		margin-top: 4em;
 	}
 
-	.story .slides > li {
-		height: 320px;
+	.story {
+		.slides > li, .flexslider-direction {
+			height: $img-gallery-height-xs;
+		}
 	}
 
 	.story .video {
