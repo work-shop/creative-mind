@@ -3126,8 +3126,12 @@ img.gform_ajax_spinner {
 
 .flex-control-nav li.table-of-contents {
   overflow: visible;
-  margin-right: 1.5em; }
+  margin-right: 1.5em;
+  position: relative; }
   .flex-control-nav li.table-of-contents a {
+    position: absolute;
+    top: -28px;
+    left: -1em;
     border: none;
     text-indent: 0;
     opacity: 0.5;
@@ -3135,8 +3139,6 @@ img.gform_ajax_spinner {
     .flex-control-nav li.table-of-contents a.flex-active {
       opacity: 1;
       background: transparent; }
-    .flex-control-nav li.table-of-contents a span {
-      vertical-align: 5px; }
   .flex-control-nav li.table-of-contents .icon:after, .flex-control-nav li.table-of-contents .menu-toggle:after {
     font-size: 2.75em; }
 
