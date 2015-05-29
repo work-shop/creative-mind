@@ -745,7 +745,7 @@ $icon-margin: 15px;
 }
 
 .story .video {
-	width: 800px;
+	max-width: 800px;
 	height: 500px;
 	overflow: hidden;
 	position: relative;
@@ -1198,6 +1198,10 @@ $icon-margin: 15px;
 
 	.story .slides > li {
 		height: 320px;
+	}
+
+	.story .video {
+		max-height: 300px;
 	}
 
 }

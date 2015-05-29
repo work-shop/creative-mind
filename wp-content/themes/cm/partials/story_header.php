@@ -20,7 +20,7 @@
 	 						<span class="icon-custom large" data-icon="&#xe600;"></span>
 	 					</div>
 	 					
-	 					<div class="story-video-poster" style="background-image: url('<?php echo $story_featured_image ?>');"><div class="overlay">
+	 					<div class="story-video-poster" style="background-image: url('<?php echo $story_featured_image ?>');"><div class="overlay padded">
 	 						<h1 class="mt4 bold story-heading centered"><?php the_title(); ?></h1>
 	 					</div></div>
 	 					<div class="story-video">				

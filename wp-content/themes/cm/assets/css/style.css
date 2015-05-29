@@ -3004,7 +3004,7 @@ img.gform_ajax_spinner {
       text-decoration: none; }
 
 .story .video {
-  width: 800px;
+  max-width: 800px;
   height: 500px;
   overflow: hidden;
   position: relative;
@@ -3354,6 +3354,9 @@ img.gform_ajax_spinner {
     margin-top: 4em; }
 
   .story .slides > li {
-    height: 320px; } }
+    height: 320px; }
+
+  .story .video {
+    max-height: 300px; } }
 
 /*# sourceMappingURL=style.css.map */
