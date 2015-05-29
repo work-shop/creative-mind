@@ -995,8 +995,7 @@ img.gform_ajax_spinner {
   #header #logo-cm {
     height: 55px; }
     #header #logo-cm img {
-      max-width: 180px;
-      width: 180px;
+      width: 120px;
       position: relative;
       top: 5px; }
   #header .container-fluid {
