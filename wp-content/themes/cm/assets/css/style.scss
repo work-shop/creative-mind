@@ -310,6 +310,7 @@ $icon-margin: 15px;
 	}
 	.icon:after{
 		left: -0.05em;
+		top: 6px;
 	}
 }
 
@@ -387,7 +388,6 @@ $icon-margin: 15px;
 .slides > li {
 	height: 400px;
 	background-size: cover;
-	text-align: center;
 	img {
 		max-height: 100%;
 		width: auto;
@@ -396,9 +396,12 @@ $icon-margin: 15px;
 
 .slide {
 	overflow-y: auto;
-	ol li {
-		line-height: 1.25em;
-		margin-bottom: 0.75em;
+	ol {
+		padding: 0.5em;
+		li {
+			line-height: 1.25em;
+			margin-bottom: 0.75em;
+		}
 	}
 }
 
@@ -864,8 +867,13 @@ $icon-margin: 15px;
 	}
 }
 
-.flex-active {
-	opacity: 0.5;
+.story {
+	.slides > li {
+		text-align: center;
+	}
+	.flex-active {
+		opacity: 0.5;
+	}
 }
 
 @mixin pagination($category) {
@@ -899,14 +907,12 @@ $icon-margin: 15px;
 	}
 	.prev-story {
 		float: left;
-		margin-left: 1em;
 		.preview {
 			right: -320px;
 		}
 	}
 	.next-story {
 		float: right;
-		margin-right: 1em;
 		.preview {
 			left: -320px;
 		}
