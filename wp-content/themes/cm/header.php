@@ -46,7 +46,10 @@
 
     </head>
 	<body <?php 
-		if ( !is_home() ) {
+		if ( is_home() ) {
+			body_class('home');
+		}
+		else {
 			$category_nicename = CM_Collection_Controller::get_current_category()->category_nicename;
 			body_class('category-' . $category_nicename);
 		}

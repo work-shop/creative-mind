@@ -72,7 +72,7 @@ $collection = get_post( get_the_ID() );
 						</div> <!-- end #back-link" -->
 						<div class="col-sm-6" id="share-links">
 							<?php if ( is_home() ) { ?>
-								<h2 class="bold centered brand">
+								<h2 class="bold centered brand mt0">
 								Share the Creativity!
 								</h2>
 								<div class="share-icons">
@@ -81,7 +81,7 @@ $collection = get_post( get_the_ID() );
 									<a class="addthis_button_email bg-brand white"><span class="icon social" data-icon="m"></span></a>
 								</div>
 							<? } elseif ( is_singular('stories') ) { ?>	
-								<h2 class="bold centered white">
+								<h2 class="bold centered white mt0">
 								Share the Creativity!
 								</h2>
 								<div class="share-icons">
@@ -90,7 +90,7 @@ $collection = get_post( get_the_ID() );
 									<a class="addthis_button_email bg-white"><span class="icon social <?php echo $category->slug ?>" data-icon="m"></span></a>
 								</div>
 							<? } else { ?>
-								<h2 class="bold centered <?php echo $category->slug ?>">
+								<h2 class="bold centered <?php echo $category->slug ?> mt0">
 								Share the Creativity!
 								</h2>
 								<div class="share-icons">
