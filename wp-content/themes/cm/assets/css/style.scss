@@ -380,7 +380,7 @@ $icon-margin: 15px;
 	position: relative;
 	max-width: 780px;
 	margin: 0 auto;
-	> ul li {
+	> ul > li {
 		height: 500px;
 	}
 }
@@ -399,7 +399,7 @@ $icon-margin: 15px;
 	overflow-y: auto;
 	ol li {
 		line-height: 1.25em;
-		margin-bottom: 0.5em;
+		margin-bottom: 0.75em;
 	}
 }
 
@@ -863,6 +863,10 @@ $icon-margin: 15px;
 	.icon:after {
 		font-size: 2.75em;
 	}
+}
+
+.flex-active {
+	opacity: 0.5;
 }
 
 @mixin pagination($category) {

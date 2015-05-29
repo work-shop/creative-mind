@@ -65,11 +65,12 @@ div {
 .righted {
   text-align: right; }
 
-h1, h2, h3, h4, h5, h6 {
+h2, h3, h4, h5, h6 {
   line-height: 1.3; }
 
 h1, .h1 {
-  font-size: 3.25em; }
+  font-size: 3.25em;
+  line-height: 1em; }
 
 h2, .h2 {
   font-size: 2.2em; }
@@ -81,7 +82,7 @@ h4, .h4 {
   font-size: 1em; }
 
 h5, .h5 {
-  font-size: .8em; }
+  font-size: .85em; }
 
 h6, .h6 {
   font-size: .6em; }
@@ -2395,7 +2396,7 @@ img.gform_ajax_spinner {
   position: relative;
   max-width: 780px;
   margin: 0 auto; }
-  .flexslider-story > ul li {
+  .flexslider-story > ul > li {
     height: 500px; }
 
 .slides > li {
@@ -2410,7 +2411,7 @@ img.gform_ajax_spinner {
   overflow-y: auto; }
   .slide ol li {
     line-height: 1.25em;
-    margin-bottom: 0.5em; }
+    margin-bottom: 0.75em; }
 
 .slide .info {
   width: 80%; }
@@ -3115,6 +3116,9 @@ img.gform_ajax_spinner {
       vertical-align: 5px; }
   .flex-control-nav li.table-of-contents .icon:after, .flex-control-nav li.table-of-contents .menu-toggle:after {
     font-size: 2.75em; }
+
+.flex-active {
+  opacity: 0.5; }
 
 .category-courses .flex-control-nav a {
   color: #0575B9;
