@@ -247,16 +247,20 @@ class CM_Init_Actions extends WS_Action_Set {
 	}
 
 	private function enqueue_theme_scripts() {
+		$js_root = '/assets/js/';
+
 		wp_deregister_script( 'jquery' );
 
-		wp_register_script( 'modernizr', get_template_directory_uri() . '/assets/js/modernizr.js');
-		wp_register_script( 'jquery', get_template_directory_uri() . '/assets/js/jquery.js');
-		wp_register_script( 'jquery-viewport', get_template_directory_uri() . '/assets/js/jquery.viewport.js');
-		wp_register_script( 'bootstrap', get_template_directory_uri() . '/assets/js/bootstrap.js');
-		wp_register_script( 'flexslider', get_template_directory_uri() . '/assets/js/flexslider.js');
+		wp_register_script( 'modernizr', get_template_directory_uri() . $js_root . 'modernizr.js');
+		wp_register_script( 'jquery', get_template_directory_uri() . $js_root . 'jquery.js');
+		wp_register_script( 'jquery-viewport', get_template_directory_uri() . $js_root . 'jquery.viewport.js');
+		wp_register_script( 'bootstrap', get_template_directory_uri() . $js_root . 'bootstrap.js');
+		wp_register_script( 'flexslider', get_template_directory_uri() . $js_root . 'flexslider.js');
 		wp_register_script( 'vimeo', '//f.vimeocdn.com/js/froogaloop2.min.js');
 		//wp_register_script('vimeo', get_template_directory_uri() . '/assets/js/froogaloop.js');
-		wp_register_script( 'functions', get_template_directory_uri() . '/assets/js/functions.js');
+		wp_register_script( 'async', get_template_directory_uri() . $js_root . 'async.js');
+		wp_register_script( 'href', get_template_directory_uri() . $js_root . 'href.js');
+		wp_register_script( 'functions', get_template_directory_uri() . $js_root . 'functions.js');
 
 		wp_enqueue_script( 'modernizr' );
 		wp_enqueue_script( 'jquery' );
@@ -264,12 +268,15 @@ class CM_Init_Actions extends WS_Action_Set {
 		wp_enqueue_script( 'bootstrap' );
 		wp_enqueue_script( 'flexslider' );
 		wp_enqueue_script( 'vimeo' );
+		wp_enqueue_script( 'href' );
+		wp_enqueue_script('async');
 		wp_enqueue_script( 'functions' );
 
-		wp_localize_script( 'functions', 'async', array('url' => admin_url('admin-ajax.php') ) );
+
+		wp_localize_script( 'async', 'ajax', array('url' => admin_url('admin-ajax.php') ) );
 
 		if (!file_exists( dirname( __FILE__ ) . '/env_prod' )){
-			wp_register_script( 'cssrefresh', get_template_directory_uri() . '/assets/js/cssrefresh.js');
+			wp_register_script( 'cssrefresh', get_template_directory_uri() . $js_root . 'cssrefresh.js');
 			wp_enqueue_script( 'cssrefresh' );		
 		}		
 

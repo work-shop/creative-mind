@@ -96,21 +96,21 @@ $start = count($stories_halves[0]) + 1;
 							 */
 							$story_featured_image = ( has_post_thumbnail( $story->ID ) ) ? wp_get_attachment_image_src( get_post_thumbnail_id( $story->ID ), 'thumbnail' )[0] : 'http://images.wisegeek.com/scientists-in-lab.jpg';
 						?>
-							<li class="slide story-slide border-<?php echo $category_nicename ?> text-center clearfix" style="background-image: url('<?php echo $story_featured_image ?>'); ">
-							<a class="padded-more overlay" href="<?php echo $story_permalink ?>">
-								<div class="info">
-									<p class="media-type bold"><?php 
-										if ( $story_type == 'video' ) { echo 'Watch Video'; }
-										elseif ( $story_type == 'image_gallery' ) { echo "View Gallery"; } 
-									?></p>
-									<?php if ( $story_type == 'video' ) { ?>
-										<span class="icon-custom large" data-icon="&#xe600;"></span>
-									<?php } elseif ( $story_type == 'image_gallery' ) { ?>
-										<span class="icon large" data-icon="&#8486;"></span>
-									<?php } ?>
-									<h3 class="bold"><?php echo $story_name ?></h3>
-									<p class="description"><?php echo $story_description ?></p>
-								</div>
+							<li async-collection-slug="<?php echo $collection->post_name; ?>" async-category="<?php echo $category_nicename; ?>" async-background-image="<?php echo $story_featured_image ?>" async-slug="<?php echo $story->post_name; ?>" async-id="<?php echo $story->ID; ?>" class="slide story-slide border-<?php echo $category_nicename ?> text-center clearfix" style="background-image: url('<?php echo $story_featured_image ?>'); ">
+							<a class="padded-more overlay" href="<?php echo '#' . $story->post_name; ?>" >
+								<?php if ( is_singular( 'collections') ) {
+									if ( $story_type == 'video' ) { echo '<p>Watch Video</p>'; }
+									elseif ( $story_type == 'image_gallery' ) { echo "<p>View Gallery</p>"; } 
+								} ?>
+								<?php if ( $story_type == 'video' ) { ?>
+									<span class="icon large" data-icon="&#210;"></span>
+								<?php } elseif ( $story_type == 'image_gallery' ) { ?>
+									<span class="icon large" data-icon="&#8486;"></span>
+								<?php } ?>
+								<h3><?php echo $story_name ?></h3>
+								<?php if ( is_singular( 'collections') ) {
+									echo '<p>' . $story_description . '</p>';
+								} ?>
 							</a>
 							</li>
 						 <?php } ?>
