@@ -86,8 +86,8 @@ $start = count($stories_halves[0]) + 1;
 							 */
 							$story_featured_image = ( has_post_thumbnail( $story->ID ) ) ? wp_get_attachment_image_src( get_post_thumbnail_id( $story->ID ), 'thumbnail' )[0] : 'http://images.wisegeek.com/scientists-in-lab.jpg';
 						?>
-							<li class="slide story-slide border-<?php echo $category_nicename ?> text-center clearfix" style="background-image: url('<?php echo $story_featured_image ?>'); ">
-							<a class="padded-more overlay" href="<?php echo $story_permalink ?>">
+							<li async-collection-slug="<?php echo $collection->post_name; ?>" async-category="<?php echo $category_nicename; ?>" async-background-image="<?php echo $story_featured_image ?>" async-slug="<?php echo $story->post_name; ?>" async-id="<?php echo $story->ID; ?>" class="slide story-slide border-<?php echo $category_nicename ?> text-center clearfix" style="background-image: url('<?php echo $story_featured_image ?>'); ">
+							<a class="padded-more overlay" href="<?php echo '#' . $story->post_name; ?>" >
 								<?php if ( is_singular( 'collections') ) {
 									if ( $story_type == 'video' ) { echo '<p>Watch Video</p>'; }
 									elseif ( $story_type == 'image_gallery' ) { echo "<p>View Gallery</p>"; } 
