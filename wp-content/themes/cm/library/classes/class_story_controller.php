@@ -7,8 +7,28 @@ class CM_Story_Controller {
 	}
 
 
+	/**
+	 *
+	 * Given the id of a story, return all the collections it belongs to.
+	 *
+	 */
 	public static function get_collections_for_story( $story_id ) {
 		return get_field('story_collections', $story_id ); 
+	}
+
+
+	/**
+	 *
+	 * From array of collections related to a story, return a single one (the first).
+	 *
+	 */
+	public static function get_collection_for_story( $story_id ) {
+		$collections = self::get_collections_for_story( $story_id );
+		if ( !$collections || empty( $collections ) ) {
+			return false;
+		} else {
+			return $collections[0];
+		}
 	}
 
 	/** 

@@ -17,12 +17,20 @@
 	-ms-transition: $property $duration $delay $easing; 		
 }
 
-@mixin box-shadow($x: 0px, $y: 0px, $size: 4px, $shadow-color: rgba(50,50,50,.25)){
+@mixin box-shadow($x: 0px, $y: 0px, $size: 4px, $shadow-color: rgba(50,50,50,.5)){
 	-o-box-shadow: $x $y $size $shadow-color;
 	-ms-box-shadow: $x $y $size $shadow-color;
 	-moz-box-shadow: $x $y $size $shadow-color;
 	-webkit-box-shadow: $x $y $size $shadow-color;
 	box-shadow: $x $y $size $shadow-color;		
+}
+
+@mixin box-shadow-inset($x: 1px, $y: 0px, $size: 6px, $shadow-color: rgba(50,50,50,.5)){
+	-o-box-shadow: $x $y $size $shadow-color inset;
+	-ms-box-shadow: $x $y $size $shadow-color inset;
+	-moz-box-shadow: $x $y $size $shadow-color inset;
+	-webkit-box-shadow: $x $y $size $shadow-color inset;
+	box-shadow: $x $y $size $shadow-color inset;		
 }
 
 @mixin text-shadow($x: 1px, $y: 1px, $spread: 0px, $shadow-color: rgba(50,50,50,.25)){
@@ -108,7 +116,9 @@
 }
 
 @mixin border($border-color) {
-	border: 5px solid $border-color;
-	@include transition(all);
+	border: 7px solid $border-color;
+	@media (max-width: 767px) {
+		border-width: 5px;
+	}
 }
 

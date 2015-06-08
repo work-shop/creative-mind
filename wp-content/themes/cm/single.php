@@ -1,6 +1,6 @@
 <?php
 /**
- * STORY ( single-stories.php ) 
+ * STORY ( single.php ) 
  *
  * 1. Header
  * 2. Story
@@ -30,7 +30,7 @@ get_template_part('partials/story');
 get_template_part('partials/back_and_share');
 
 ?>	
-	
+
 <?php 
 
 /** 4. Footer */

@@ -12,10 +12,8 @@
 	 */
 	$category = CM_Collection_Controller::get_current_category();
 	$category_name = $category->name;
+	$category_nicename = $category->category_nicename;
 	$category_description = CM_Collection_Controller::get_category_description( $category->term_id );
-?>
-
-<?php
 
 	/**
 	 * @var $collections array(array('title' => title, 'id' => id, 'permalink' => permalink )) the set of collections in this category.
@@ -26,13 +24,33 @@
 	); }, CM_Collection_Controller::get_collections_for_category( $category->term_id ) );
 
 	/**
-	 * Let's iterate through all the collections in teh category and construct a list.
-	 */
-	foreach ( $collections as $collection ) {
-		$collection_name = $collection[ 'title' ];
-		$collection_id = $collection['id'];
-		$collection_permalink = get_permalink( $collection_id );
-
-	}
+	 *
+	 * @var array $collections_halves contains two arrays, each containing half the collections in a category
+	 * @var int $start the number of items in the first half of stories, plus 1
+	 *
+	*/
+	$collections_halves = CM_Collection_Controller::split_array( $collections );
+	$start = count($collections_halves[0]) + 1;
 
 ?>
+
+<header class="block padded-less bg-<?php echo $category_nicename ?> white">
+	<div class="container-fluid">
+		<div class="row mb2">
+			<div class="col-sm-10 col-sm-offset-1">
+				<h1 class="centered bold"><?php echo $category_name; ?></h1>
+				<h2 class="centered"><?php echo $category_description; ?></h2>
+			</div>
+		</div>	
+		<div class="row mb2">
+			<div class="col-sm-8 col-sm-offset-2">
+				<div class="split-list">
+					<?php 
+						echo CM_Collection_Controller::create_list( $collections_halves[0], null, 'category' ); 
+						echo CM_Collection_Controller::create_list( $collections_halves[1], null, 'category' ); 
+					?>
+				</div>
+			</div>
+		</div>
+	</div>
+</header>

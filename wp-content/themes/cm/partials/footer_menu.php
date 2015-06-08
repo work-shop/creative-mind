@@ -1,4 +1,4 @@
-	<section class="block bg-brown padded-less" id="footer">
+	<footer class="block bg-brown padded-less" id="footer">
 		<div class="container">
 			<div class="row">
 				<div class="col-sm-2">
@@ -36,4 +36,4 @@
 				</div>												
 			</div>
 		</div>
-	</section>
+	</footer>

@@ -8,7 +8,6 @@
 		   <?php
 	   	    if (is_category()) : single_cat_title(); echo ' - '; 
 	        elseif (is_archive()): wp_title(''); echo ' - ';  
-	      	elseif (is_search()) : echo 'Search for &quot;'.get_search_query().'&quot; - '; 
 	      	elseif (!(is_404()) && (is_single()) || (is_page())) : wp_title(''); echo ' - '; 
 	     	elseif (is_404()) : echo 'Not Found - ';
 	     	endif;
@@ -46,19 +45,28 @@
 		<?php wp_head(); ?>
 
     </head>
-	<body <?php body_class('before');?>>
+	<body <?php 
+		if ( is_home() ) {
+			body_class('home');
+		}
+		else {
+			$category_nicename = CM_Collection_Controller::get_current_category()->category_nicename;
+			body_class('category-' . $category_nicename);
+		}
+	?> >
 	
 		<?php 
-			/**
-			 * @var string $category_color the category color to use on this page.
-			 */
-			$category_color = (is_category()) ? CM_Collection_Controller::get_current_category()->slug
-					     : ((get_post_type() == 'collections') ? CM_Collection_Controller::get_category_for_collection(get_the_ID())->slug : "brand" );
 
 			/**
-			 * set the category as a color that we can globally access.
+			 * @var string $category_name the name of the current category.
+			 * @var string $category_color the color name for the current category.
 			 */
-			set_global( 'category_color', $category_color );
+			if ( is_home() ) {
+				$category_color ='brand';
+			} else {
+				$category_name = CM_Collection_Controller::get_current_category()->name;
+				$category_color = CM_Collection_Controller::get_current_category()->slug;
+			}
 
 		?>
 
@@ -67,55 +75,34 @@
 		<div id="wrapper" class="loading spy">
 
 
-			<header id="header" class="closed">
-				<?php if(is_home()): ?>		
-				<div id="header-brown" class="bg-light hidden-xs">
-					<div class="container-fluid bg-brown">
-						<div class="row">
-							<div id="logo-brown" class="col-sm-4 m0">
-								<a href="http://brown.edu" target="blank">
-									<img src="<?php bloginfo('template_directory'); ?>/assets/img/logo-brown-small.png" alt="brown logo" />
-								</a>
-							</div>
+			<header id="header" class="closed bg-light border-bottom-<?php echo $category_color ?>">
+				<div class="container-fluid">
+					<div class="row">
+						<div id="logo-cm" class="col-sm-3 m0 col-xs-6">
+							<a href="<?php bloginfo('url'); ?>">
+								<img src="<?php bloginfo('template_directory'); ?>/assets/img/logo-cm-small.png" alt="creative mind logo" />
+							</a>
 						</div>
-					</div>
-				</div>
-				<?php endif; ?>
-				<div id="header-cm" class="bg-white">
-					<div class="container-fluid">
-						<div class="row">
-							<div id="logo-cm" class="col-sm-4 m0 col-xs-6">
-								<a href="<?php bloginfo('url'); ?>">
-									<img src="<?php bloginfo('template_directory'); ?>/assets/img/logo-cm-small.png" alt="creative mind logo" />
-								</a>
-							</div>
-							<nav class="menu-minimal visible-xs col-sm-8 col-xs-6 m0">
-								<p class="right"><a href="#menu" class="menu-toggle" data-toggle="modal" data-target="#searchModal">Menu <span class="icon" data-icon="&#200;"></span></a></p>
-							</nav>
-							<?php $activity = false; ?>
-							<nav class="menu-full col-sm-8 col-xs-12 m0">
-								<ul class="nav nav-inline right">
-									<li><a href="<?php bloginfo('url'); ?>/courses"
-										<?php // if($category->name == 'Courses' && is_single() && $activity): echo 'class="bg-courses white"'; endif; ?>
-									>Courses</a></li>
-									<li><a href="<?php bloginfo('url'); ?>/research"
-										<?php // if($category->name == 'Research' && is_single() && $activity): echo 'class="bg-research white"'; endif; ?>
-									>Research</a></li>
-									<li><a href="<?php bloginfo('url'); ?>/interviews"
-										<?php // if($category->name == 'Interviews' && is_single() && $activity): echo 'class="bg-interviews white"'; endif; ?>
-									>Interviews</a></li>		
-									<li><a href="<?php bloginfo('url'); ?>/lectures"
-										<?php // if($category->name == 'Lectures' && is_single() && $activity): echo 'class="bg-lectures white"'; endif; ?>
-									>Lectures</a></li>
-									<li><a href="<?php bloginfo('url'); ?>/about"
-										<?php // if($category->name == 'About' && is_single() && $activity): echo 'class="bg-brand white"'; endif; ?>
-									>About</a></li>
-									<li><a href="#search" data-toggle="modal" data-target="#searchModal"><span class="icon" data-icon="s"></span></a></li>
-								</ul>
-							</nav>
+
+						<div class="col-sm-6 hidden-xs centered mt1">
+							<?php if ( !is_home() ) {
+								$category = CM_Collection_Controller::get_current_category();
+								echo '<a href="' . get_term_link( $category ) . '" class="h4 uppercase bold ' . $category_color . '">' . $category_name . '</a>' ;
+							} ?>
 						</div>
+
+						<nav class="col-sm-2 right righted m0">
+							<a href="#menu" class="menu-toggle">
+								<span class="uppercase">Index</span>
+							</a>
+						</nav>
+
+						<?php $activity = false; ?>
+
 					</div>
 				</div>
 			</header>	
 
-			<main id="content">
+			<main id="content" <?php if ( is_singular('stories') ) 
+				echo 'class="bg-' . CM_Collection_Controller::get_current_category()->slug . ' white"' 
+			?>>

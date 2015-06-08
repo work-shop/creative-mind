@@ -18,34 +18,92 @@
  */
 $category = CM_Collection_Controller::get_current_category();
 
+/**
+ * @var $collection WP_Post | false, either the in-scope collection, or false if no collection is in scope.
+ */
+$collection = get_post( get_the_ID() );
+
 ?>
 
-
-<section class="block target share padded-less" id="share">
-	<div class="container">
+<section class="block target padded-less mt6" id="back-share">
+	<div class="container-fluid mb5">
 		<div class="row">
-			<div class="col-sm-8 col-sm-offset-2">
-				<h1 class="bold centered mb1">
-				Share the Creativity!
-				</h1>
-			</div>
-			<div class="col-sm-4 col-sm-offset-4 mb3">
-				<div class="share-icons">
-					<a class="addthis_button_facebook"><span class="icon social" data-icon="F"></span></a>
-					<a class="addthis_button_twitter"><span class="icon social" data-icon="t"></span></a>
-					<a class="addthis_button_email"><span class="icon social" data-icon="m"></span></a>
-				</div>
+			<div class="col-sm-10 col-sm-offset-1">
+				<div class="container-fluid">
+					<div class="row">
+						<div class="col-sm-6" id="back-link">
+							<?php if ( is_home() ) { ?>
+								<div class="bold centered brand">
+								<a href="#">
+									<span class="icon-wrapper bg-brand"><span class="icon white" data-icon="&#8218;"></span></span>
+									<h2 class="text">Back to Top</h2>
+								</a>
+								</div>
+							<?php } elseif ( is_category() ) { ?>
+								<div class="bold centered brand">
+								<a href="<?php echo esc_url( home_url() ); ?>">
+									<span class="icon-wrapper bg-brand"><span class="icon white" data-icon="&#8218;"></span></span>
+									<h2 class="text">Home</h2>
+								</a>
+								</div>
+							<?php } elseif ( is_singular('collections') ) { ?>
+								<div class="bold centered <?php echo $category->slug; ?>">
+								<a href="<?php echo esc_url( home_url( '/'.$category->slug ) ); ?>">
+									<span class="icon-wrapper bg-<?php echo $category->slug; ?>"><span class="icon white" data-icon="&#8218;"></span></span>
+									<h2 class="text">Back to <?php echo $category->name; ?></h2>
+								</a>
+								</div>
+							<?php } else { ?>
+								<?php
+								/**
+								 * @var array(WP_Post) an array of collections that this story belongs to.
+								 */
+								$collection = CM_Story_Controller::get_collections_for_story( get_the_ID() )[0];
+								?>
+
+								<div class="bold centered">
+								<a href="<?php echo get_permalink( $collection->ID ); ?>">
+									<span class="icon-wrapper bg-white <?php echo $category->slug ?>"><span class="icon" data-icon="&#8218;"></span></span>
+									<h2 class="text">Back to <?php echo $collection->post_title; ?></h2>
+								</a>
+								</div>
+
+							<?php } ?>
+						</div> <!-- end #back-link" -->
+						<div class="col-sm-6" id="share-links">
+							<?php if ( is_home() ) { ?>
+								<h2 class="bold centered brand mt0">
+								Share the Creativity!
+								</h2>
+								<div class="share-icons">
+									<a class="addthis_button_facebook bg-brand white"><span class="icon social" data-icon="F"></span></a>
+									<a class="addthis_button_twitter bg-brand white"><span class="icon social" data-icon="t"></span></a>
+									<a class="addthis_button_email bg-brand white"><span class="icon social" data-icon="m"></span></a>
+								</div>
+							<? } elseif ( is_singular('stories') ) { ?>	
+								<h2 class="bold centered white mt0">
+								Share the Creativity!
+								</h2>
+								<div class="share-icons">
+									<a class="addthis_button_facebook bg-white"><span class="icon social <?php echo $category->slug ?>" data-icon="F"></span></a>
+									<a class="addthis_button_twitter bg-white"><span class="icon social <?php echo $category->slug ?>" data-icon="t"></span></a>
+									<a class="addthis_button_email bg-white"><span class="icon social <?php echo $category->slug ?>" data-icon="m"></span></a>
+								</div>
+							<? } else { ?>
+								<h2 class="bold centered <?php echo $category->slug ?> mt0">
+								Share the Creativity!
+								</h2>
+								<div class="share-icons">
+									<a class="addthis_button_facebook bg-<?php echo $category->slug ?>"><span class="icon social white" data-icon="F"></span></a>
+									<a class="addthis_button_twitter bg-<?php echo $category->slug ?>"><span class="icon social white" data-icon="t"></span></a>
+									<a class="addthis_button_email bg-<?php echo $category->slug ?>"><span class="icon social white" data-icon="m"></span></a>
+								</div>
+							<?php } ?>
+						</div> <!-- end #share-links -->
+					</div>
+				</div> <!-- end .container-fluid -->
 			</div>
 		</div>
-	</div>
-
-
-	<a href="<?php echo esc_url( home_url( '/'.$category->slug ) ); ?>">
-	<h2 class="serif centered <?php echo $category->slug; ?>">
-		<span class="p1 border-<?php echo $category->slug; ?>">Back to <?php echo $category->name; ?></span>
-	</h2>
-	</a>
-
-
+	</div> <!-- end .container-fluid -->
 </section>
 

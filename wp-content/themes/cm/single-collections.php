@@ -1,6 +1,6 @@
 <?php
 /**
- * COLLECTION ( single-collection.php ) 
+ * COLLECTION ( single-collections.php ) 
  *
  * 1. Header
  * 2. Collection Header
@@ -38,6 +38,7 @@ get_template_part('partials/collection_stories');
 /** 4. Back + Share */
 get_template_part('partials/back_and_share');
 
+
 ?>	
 	
 <?php 
@@ -45,4 +46,5 @@ get_template_part('partials/back_and_share');
 /** 5. Footer */
 get_footer(); 
 
+unset_global('current_collection' );
 ?>
