@@ -39,7 +39,7 @@
 			}, 
 			function( quote ) {
 				try {
-					//console.log( quote );
+					console.log( quote );
 					var data = $.parseJSON( quote );
 
 					if ( data.success ) {

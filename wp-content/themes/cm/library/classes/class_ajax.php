@@ -34,6 +34,8 @@ class CM_Ajax {
 
 		$post = get_post( $story->ID );
 
+		set_global('ajax-context', true);
+
 		setup_postdata( $post );
 
 		ob_start();
@@ -43,6 +45,8 @@ class CM_Ajax {
 		$html = ob_get_contents();
 		
 		ob_end_clean();
+
+		unset_global('ajax-context');
 
 		die( json_encode( array(
 			'success' 			=> true,

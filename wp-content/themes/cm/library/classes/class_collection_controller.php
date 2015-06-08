@@ -217,7 +217,9 @@ class CM_Collection_Controller {
 				
 				return self::get_category_for_collection( get_post( get_the_ID() ) );
 
-			} else if ( is_single() ) {
+			} else if ( is_single() || get_global('ajax-context') ) {
+
+
 				
 				if ( empty( $categories = CM_Story_Controller::get_categories_for_story( get_the_ID() ) ) ) {
 
