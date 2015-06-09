@@ -15,10 +15,7 @@
 
 ?>
 
-<div class="modal fade" id="megaNav" role="dialog" aria-hidden="true">
-  <div class="modal-dialog">
-    <div class="modal-content">
-      <section class="block">
+      <section id="megaNav" class="closed">
         <div class="container-fluid">
 
         <?php foreach ($categories as $category ) { ?>
@@ -69,6 +66,3 @@
 
         </div> <!-- /.container -->
       </section>
-    </div><!-- /.modal-content -->
-  </div><!-- /.modal-dialog -->
-</div><!-- /.modal -->

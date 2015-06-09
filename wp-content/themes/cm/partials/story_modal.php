@@ -17,7 +17,7 @@
 			</div>
 		</span></a>
 
-		<a id="next-story-link" href="#" class="next-story"><span class="icon" data-icon="&#8216;">
+		<a id="next-story-link" href="#" class="next-story"><span class="icon" data-icon="—">
 			<div class="preview centered" style="background-image:url('')">
 				<div class="overlay">
 					<span class="icon-custom" data-icon="&#xe600;"></span><!-- Change this to the Next Arrow! -->

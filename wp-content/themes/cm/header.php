@@ -1,5 +1,5 @@
 <!doctype html>
-<html class="no-js menu-closed">
+<html class="no-js">
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -47,11 +47,11 @@
     </head>
 	<body <?php 
 		if ( is_home() ) {
-			body_class('home');
+			body_class('home menu-closed before');
 		}
 		else {
 			$category_nicename = CM_Collection_Controller::get_current_category()->category_nicename;
-			body_class('category-' . $category_nicename);
+			body_class('menu-closed before category-' . $category_nicename);
 		}
 	?> >
 	
@@ -74,31 +74,37 @@
 
 		<div id="wrapper" class="loading spy">
 
-
 			<header id="header" class="closed bg-light border-bottom-<?php echo $category_color ?>">
 				<div class="container-fluid">
 					<div class="row">
 						<div id="logo-cm" class="col-sm-3 m0 col-xs-6">
 							<a href="<?php bloginfo('url'); ?>">
-								<img src="<?php bloginfo('template_directory'); ?>/assets/img/logo-cm-small.png" alt="creative mind logo" />
+								<!-- <img src="<?php // bloginfo('template_directory'); ?>/assets/img/logo-cm-small.png" alt="creative mind logo" /> -->
+								<?php get_template_part('partials/logo_svg_header' ); ?>
 							</a>
 						</div>
 
 						<div class="col-sm-6 hidden-xs centered mt1">
 							<?php if ( !is_home() ) {
 								$category = CM_Collection_Controller::get_current_category();
-								echo '<a href="' . get_term_link( $category ) . '" class="h4 uppercase bold ' . $category_color . '">' . $category_name . '</a>' ;
+								echo '<a href="' . get_term_link( $category ) . '" class=" header-bread-crumb uppercase bold ' . $category_color . '">' . $category_name . '</a>' ;
 							} ?>
 						</div>
 
 						<nav class="col-sm-2 right righted m0">
-							<a href="#menu" class="menu-toggle">
-								<span class="uppercase">Index</span>
+							<a href="#menu" class="menu-toggle uppercase closed" id="menu-toggle">
+								<span id="menu-toggle-title" >Index</span>
+								<div id="hamburger">
+									<div class="hamburger-line bg-courses" id="hamburger-line-1"></div>
+									<div class="hamburger-line bg-research" id="hamburger-line-2"></div>
+									<div class="hamburger-line bg-interviews" id="hamburger-line-3"></div>
+									<div class="hamburger-line bg-lectures" id="hamburger-line-4"></div>
+								</div>
 							</a>
 						</nav>
 
 						<?php $activity = false; ?>
-
+ 
 					</div>
 				</div>
 			</header>	

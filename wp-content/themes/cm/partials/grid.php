@@ -24,7 +24,7 @@ $categories = array_keys( $grid_elements );
 		<div class="row mt4">
 			<div class="col-xs-10 col-xs-offset-1 col-sm-4 col-sm-offset-0">
 				<div class="tile padded brand border-brand bg-white text-center">
-					<h3 class="bold">Explore the Creative Mind</h3> <span class="icon" data-icon="&#91;"></span>
+					<a href="#grid" class="jump display-block"><h3 class="bold">Explore the Creative Mind</h3> <span class="icon" data-icon="&#91;"></span></a>
 				</div>
 			</div>
 <?php

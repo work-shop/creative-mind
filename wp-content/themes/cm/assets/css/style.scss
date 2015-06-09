@@ -12,7 +12,9 @@
 
 /********** @STRUCTURE *********/
 
-
+.container-fluid{
+	padding: 0 30px;
+}
 
 #header {
   height: $nav-height;
@@ -20,19 +22,27 @@
   left: 0;
   width: 100%;
   z-index: 7;
-
-  .menu-toggle{
-  	position: relative;
-  	top: 10px;
-  }
+  border-bottom-width: 4px;
 
   #logo-cm{
   	height: $nav-height;
-  	img{
-	  	width: 120px;
+  	svg{
+	  	width: 140px;
 	   	position: relative;
-	  	top: 5px; 	  	
+	  	top: 0px; 	
+
 	}
+
+	#alogo-mind-header{
+		@include transform(translate(0,50%));
+		@include transition(all, .25s);		
+	}
+
+	#alogo-dot-2-header{
+		@include transition(all, .25s);
+		@include transform(translate(0,1000%));
+	}	
+
   }
   .container-fluid{
   	padding: 0 30px;
@@ -56,8 +66,178 @@
 	padding-top: 4%;
 }
 
+.header-bread-crumb{
+	font-size: 18px;
+	position: relative;
+	top: -2px;
+	letter-spacing: .04em;
+}
+
+
+
+
+
+
+
+/********** @HAMBURGER *********/
+
+#menu-toggle{
+	height: 50px;
+	width: 140px;
+	float: right;
+	//outline: 1px solid black;
+}
+
+#menu-toggle-title{
+	width: 100px;
+	height: 50px;
+	line-height: 56px;
+	vertical-align: middle;
+	float: left;
+	font-size: 17px;
+}
+
+#hamburger{
+	float: left;
+	margin-left: 15px;
+	width: 25px;
+	height: 30px;
+	margin-top: 15px;
+	//outline: 1px solid red;
+}
+
+.hamburger-line{
+	display: block;
+	height: 3px;
+	margin: 4px 0px;
+	position: relative;
+	@include transition(all,.25s);
+	transform-origin: center center;
+}
+
+#hamburger-line-1{
+	margin-top: 0;
+	margin-bottom: 4px;
+}
+
+#hamburger-line-4{
+	margin-top: 4px;
+	margin-bottom: 0px;
+}
+
+.menu-closed{
+	#hamburger:hover{
+
+		.hamburger-line{
+			margin: 5px 0;
+		}
+
+		#hamburger-line-1{
+			margin-top: -3px;
+			margin-bottom: 5px;
+		}
+
+		#hamburger-line-4{
+			margin-top: 5px;
+			margin-bottom: 0px;
+		}
+	}	
+}
+
+.menu-open{
+
+	#hamburger-line-1{
+		top: 10px;
+		@include transform(rotate(-45deg));
+	}
+
+	#hamburger-line-2{
+		top: 3px;
+		@include transform(rotate(-45deg));		
+	}
+
+	#hamburger-line-3{
+		top: -3px;
+		@include transform(rotate(45deg));
+	}		
+
+	#hamburger-line-4{
+		top: -10px;
+		@include transform(rotate(45deg));		
+	}
+
+	#hamburger:hover{
+		#hamburger-line-1{
+			@include transform(rotate(-35deg));
+		}
+
+		#hamburger-line-2{
+			@include transform(rotate(-35deg));		
+		}
+
+		#hamburger-line-3{
+			@include transform(rotate(35deg));
+		}		
+
+		#hamburger-line-4{
+			@include transform(rotate(35deg));		
+		}	
+	}	
+
+}
+
 
 /********** @LOGO *********/
+
+#header{
+	.alogo-brown{
+		display: none;
+	}
+
+	svg{
+		width: 100%;
+	}
+}
+
+.category-courses{
+	#header #alogo-dot-1-header{
+		fill: $courses;	
+	}	
+	#alogo-dot-2-header{
+		fill: $courses;	
+	}		
+}
+
+.category-research{
+	#header #alogo-dot-1-header{
+		fill: $research;	
+	}	
+	#alogo-dot-2-header{
+		fill: $research;	
+	}		
+}
+
+.category-interviews{
+	#header #alogo-dot-1-header{
+		fill: $interviews;	
+	}	
+	#alogo-dot-2-header{
+		fill: $interviews;	
+	}		
+}
+
+
+.category-lectures{
+	#header #alogo-dot-1-header{
+		fill: $lectures;	
+	}	
+	#alogo-dot-2-header{
+		fill: $lectures;	
+	}		
+}
+
+
+
 
 .logo-static{
 	display: none;
@@ -438,37 +618,36 @@ $icon-margin: 15px;
 
 /********** @MEGANAV *********/
 
-.menu-toggle {
-	@extend .icon;
-	&:after {
-		content: "\00C2";
-		vertical-align: -3px;
-		color: lighten($dark,40);
-	}
+body.menu-open{
+	overflow: hidden;
 }
-.modal-open .menu-toggle:after {
-	content: "\FB02";
-}
+
 
 #megaNav{
 
-	top: $nav-height;
+	.container-fluid{
+		padding: 0 15px;
+	}
+
+	position: fixed;		
+	top: -150%;
 	@extend .bg-light;
 	width: 100%;
 	height: 100%;
 	padding-bottom: $nav-height;
+	@include transition(all,.5s);
+	overflow: scroll;
+	//@include transform(translateY(-100%));
 
-	.modal-dialog{
-		width: 100%;
-		margin: 0;
+	&.closed{
+		@include transform(scaleY(.5));
 	}
 
-	.modal-content{
-		@include border-radius($radius: 0px);
-		@include box-shadow($x: 0px,  $y: 0px,  $size: 0px,  $shadow-color: rgba(50, 50, 50, .25));
-		border: none;
-		background: none;
-
+	&.open{
+		//@include transform(translateY(0%));
+		@include transform(scaleY(1));
+		top: $nav-height;
+		z-index: 6;
 	}
 
 	.h4 {
@@ -966,13 +1145,24 @@ $icon-margin: 15px;
 }
 
 
+/********** @STORY MODAL *********/
+
+#story-modal{
+	position: fixed;
+	z-index: -100;
+	display: none;
+}
+
+
 
 /********** @TILES *********/
+
+
 
 #grid .col-sm-4{
 	.tile-story header {
 		max-width: 55%;
-		margin: 5em 4%;
+		margin: 7em 4%;
 	}
 	&:nth-child(3n+2) .tile-story header {
 		margin: 4em 4% 6em;
@@ -1045,7 +1235,7 @@ $icon-margin: 15px;
 @media (min-width: 768px) {
 
 	#grid .tile {
-		margin-bottom: 2em;
+		margin-bottom: 30px;
 	}
 
 	.category header .split-list {

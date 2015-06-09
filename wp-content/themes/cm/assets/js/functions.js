@@ -27,7 +27,8 @@ jQuery(document).ready(function($) {
 
 	$('.menu-toggle').click(function(event) {
 		event.preventDefault();
-		$('#megaNav').modal('toggle');
+		//$('#megaNav').modal('toggle');
+		menuToggle();
 	});
 
 	$('#megaNav ul > li > a').click( function(event){
@@ -55,8 +56,6 @@ jQuery(document).ready(function($) {
 
 	storySetup();
 
-	loadInitialStory();			
-
 });//end document.ready
 
 function storySetup() {
@@ -76,7 +75,6 @@ function storySetup() {
 	    $('.flexslider').flexslider('next');
 	    return false;		
 	});	
-
 
 }
 
@@ -130,20 +128,20 @@ $(document).keydown(function(e){
 });
 
 //left arrow
-$(document).keydown(function(e){
-    if (e.keyCode == 37) { 
+// $(document).keydown(function(e){
+//     if (e.keyCode == 37) { 
     	
-       return false;
-    }
-});
+//        return false;
+//     }
+// });
 
 //right arrow
-$(document).keydown(function(e){
-    if (e.keyCode == 39) { 
+// $(document).keydown(function(e){
+//     if (e.keyCode == 39) { 
     	
-       return false;
-    }
-});
+//        return false;
+//     }
+// });
 
 
 //initialize flexslider slideshows
@@ -202,123 +200,6 @@ function submenuToggle(item) {
 	}	
 }
 
-/**
- * storyToggle : jQuery(clicked-tile) -> ()
- */
-function storyToggle(clicked){
-
-	//console.log( 'startToggle' );
-	//console.log( clicked );
-
-	ch = $(window).height();
-	cw = $(window).width();
-	heroHeight = cw/3;
-	storyHeight = ch - 110;
-
-	if($('#active-story').hasClass('story-loaded')){
-		$('body').removeClass('story-loaded').removeClass('story-video-active').addClass('story-loading');
-		$('#active-story').removeClass('story-loaded').addClass('story-loading');
-	}
-
-	//append styles to the active story tile
-	$('.story-tile').removeClass('active').addClass('inactive');
-	
-	if ( clicked.hasClass('story-tile') ) {
-		clicked.removeClass('inactive').addClass('active');
-	}
-	
-	//transition to story-loading state			
-	$('#active-story').addClass('story-loading');
-	$('body').addClass('story-loading');
-
-	//console.log( 'sending:' + clicked.attr('async-source') );
-	//console.log( $('#collection-single').attr('async-source') );
-
-	$.post( async.url, {
-			'action': 'cm_get_story',
-			'story': clicked.attr('async-source'),
-			'collection': $('#collection-single').attr('async-source')
-		}, update_dom_contents
-	)
-	.done( cleanup_async_call )
-	.fail(function(){console.log('done with failure');});	
-}
-
-function loadInitialStory() {
-	var target = $('#collection-single').attr('async-trigger');
-
-	if ( target ) {
-		storyToggle( $( '#story-' + target ) );
-	}
-}
-
-
-function update_dom_contents( quote ) {
-	try {
-		var data = $.parseJSON( quote );
-			//console.log( data );
-
-		if ( data.success ) {
-			//console.log( "success" );
-
-			var story = $('[async-target="story"]');
-			var prev = $('[async-target="previous"]');
-			var curr = $('[async-target="current"]');
-			var next = $('[async-target="next"]');
-
-			prev.text( data.previous_story.title );
-			prev.closest('a.story-toggle').attr( 'async-source', data.previous_story.id );
-
-			curr.text( data.story_title );
-
-			next.text( data.next_story.title  );
-			next.closest('a.story-toggle').attr( 'async-source', data.next_story.id );
-
-			story.html( data.post );
-			//videoSetup();
-
-
-		} else {
-
-			$('[async-target="story"]').html( data.error );
-
-		}
-
-	} catch (e) {
-		console.log( "error" );
-		console.log( e );
-	}
-}
-
-function cleanup_async_call() {
-	// moved the animation to after the dom has loaded, because of a bottleneck on the event thread
-	$('html,body').animate({scrollTop: 0},1000);	
-	$('#active-story').animate({scrollTop: 0},1000);
-
-	ch = $(window).height();
-	cw = $(window).width();
-	heroHeight = cw/3;
-	storyHeight = ch - 110;
-
-	setTimeout( function() { // is this needed?
-		storyHeight = $(window).height() - 110;
-
-		$('#active-story').addClass('story-activated');
-		$('body').addClass('story-activated').addClass('story-active');	
-		$('#active-story').height(storyHeight);		
-		$('#active-story').removeClass('story-loading').addClass('story-loaded');
-		$('body').removeClass('story-loading').addClass('story-loaded');
-
-		flexsliderSetup();
-		videoSetup();
-		storySetup();
-		view();
-
-	}, 1500 ); // is this needed?
-
-}
-
-
 
 function playVideo(){
 
@@ -358,7 +239,6 @@ function view(){
 	}	
 	
 	if($(window).width() >= 768){		
-
 
 		$('.block.half').css('height',ch/2);
 		$('.block.golden-max').css('max-height',ch*.72);		
@@ -432,13 +312,13 @@ $(window).scroll(function() {
 
 	}
 
-	console.log($(this).scrollTop());
-	if( $('body').hasClass('story-active') && $(this).scrollTop() > 0) {
-		$('body').removeClass('story-active').addClass('story-removed');
-	}
-	else if( $('body').hasClass('story-removed') && $(this).scrollTop() <= 0){
-		$('body').addClass('story-active').removeClass('story-removed');
-	}
+	//console.log($(this).scrollTop());
+	// if( $('body').hasClass('story-active') && $(this).scrollTop() > 0) {
+	// 	$('body').removeClass('story-active').addClass('story-removed');
+	// }
+	// else if( $('body').hasClass('story-removed') && $(this).scrollTop() <= 0){
+	// 	$('body').addClass('story-active').removeClass('story-removed');
+	// }
 
 	if( $(this).scrollTop() > 60) {
 		$('.menu-minimal').removeClass('visible-xs');
@@ -450,22 +330,6 @@ $(window).scroll(function() {
 	}
 
 });//end window.scroll
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 $(document).on('spy-init', function() {
@@ -575,6 +439,28 @@ function videoSetup() {
 			});
 		});
 	}	
+}
+
+
+//open and close the menu
+function menuToggle(){	
+	if($('body').hasClass('menu-closed')){
+		$('#megaNav').removeClass('closed');
+		$('#megaNav').addClass('open');
+		$('body').removeClass('menu-closed');
+		$('body').addClass('menu-open');
+		$('body').css('height',($(window).height()));
+	}
+	
+	else if($('body').hasClass('menu-open')){
+		$('#megaNav').removeClass('open');
+		$('#megaNav').addClass('closed');
+		$('body').removeClass('menu-open');
+		$('body').addClass('menu-closed');
+		$($('body').css('height','auto'));
+
+	}
+	
 }
 
 
