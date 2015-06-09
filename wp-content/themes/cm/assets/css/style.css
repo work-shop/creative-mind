@@ -179,9 +179,9 @@ strong, b, .bold {
   font-size: 90px; }
 
 .overlay, .slides .overlay {
-  background: rgba(34, 34, 34, 0.5);
-  background: -webkit-linear-gradient(legacy-direction(to top), rgba(34, 34, 34, 0.5), rgba(34, 34, 34, 0.9) 30%, rgba(34, 34, 34, 0.9) 70%, rgba(34, 34, 34, 0.5) 100%);
-  background: linear-gradient(to top, rgba(34, 34, 34, 0.5), rgba(34, 34, 34, 0.9) 30%, rgba(34, 34, 34, 0.9) 70%, rgba(34, 34, 34, 0.5) 100%);
+  background: rgba(34, 34, 34, 0.4);
+  background: -webkit-linear-gradient(legacy-direction(to top), rgba(34, 34, 34, 0.4), rgba(34, 34, 34, 0.55) 33%, rgba(34, 34, 34, 0.55) 66%, rgba(34, 34, 34, 0.4) 100%);
+  background: linear-gradient(to top, rgba(34, 34, 34, 0.4), rgba(34, 34, 34, 0.55) 33%, rgba(34, 34, 34, 0.55) 66%, rgba(34, 34, 34, 0.4) 100%);
   width: 100%;
   height: 100%;
   position: absolute;
@@ -933,7 +933,6 @@ img.gform_ajax_spinner {
 /********** $FLEXSLIDER *********/
 .flexslider > li {
   background-size: cover;
-  height: 500px;
   text-align: center; }
   .flexslider > li img {
     height: 100%;
@@ -1110,12 +1109,12 @@ img.gform_ajax_spinner {
   margin-bottom: 0px; }
 
 .menu-closed #hamburger:hover .hamburger-line {
-  margin: 4px 0; }
+  margin: 6px 0; }
 .menu-closed #hamburger:hover #hamburger-line-1 {
-  margin-top: -0px;
-  margin-bottom: 5px; }
+  margin-top: -2px;
+  margin-bottom: 6px; }
 .menu-closed #hamburger:hover #hamburger-line-4 {
-  margin-top: 5px;
+  margin-top: 6px;
   margin-bottom: 0px; }
 
 .menu-open #hamburger-line-1 {
@@ -2576,11 +2575,15 @@ img.gform_ajax_spinner {
   position: relative;
   max-width: 780px;
   margin: 0 auto; }
-  .flexslider-story > ul > li {
-    height: 500px; }
+
+.flexslider-collection {
+  position: relative;
+  max-width: 780px;
+  margin: 0 auto; }
+  .flexslider-collection > ul > li {
+    height: inherit; }
 
 .slides > li {
-  height: 400px;
   background-size: cover; }
   .slides > li img {
     max-height: 100%;
@@ -2594,7 +2597,8 @@ img.gform_ajax_spinner {
     padding: 0 0.5em; }
     .slide ol li {
       line-height: 1.25em;
-      margin-bottom: 0.75em; }
+      margin-bottom: 0.75em;
+      font-size: 1.1em; }
 
 .slide .info {
   width: 80%; }

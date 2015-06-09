@@ -128,16 +128,16 @@
 	#hamburger:hover{
 
 		.hamburger-line{
-			margin: 4px 0;
+			margin: 6px 0;
 		}
 
 		#hamburger-line-1{
-			margin-top: -0px;
-			margin-bottom: 5px;
+			margin-top: -2px;
+			margin-bottom: 6px;
 		}
 
 		#hamburger-line-4{
-			margin-top: 5px;
+			margin-top: 6px;
 			margin-bottom: 0px;
 		}
 	}	
@@ -547,7 +547,6 @@ $icon-margin: 15px;
 	}
 }
 
-
 .flex-active-slide{
 	.slideshow-caption{
 		top: 0px;
@@ -560,12 +559,22 @@ $icon-margin: 15px;
 	max-width: 780px;
 	margin: 0 auto;
 	> ul > li {
-		height: $img-gallery-height;
+
+		//height: $img-gallery-height;
+	}
+}
+
+.flexslider-collection {
+	position: relative;
+	max-width: 780px;
+	margin: 0 auto;
+
+	> ul > li {
+		height: inherit;
 	}
 }
 
 .slides > li {
-	height: 400px;
 	background-size: cover;
 	img {
 		max-height: 100%;
@@ -583,6 +592,7 @@ $icon-margin: 15px;
 		li {
 			line-height: 1.25em;
 			margin-bottom: 0.75em;
+			font-size: 1.1em;
 		}
 	}
 }

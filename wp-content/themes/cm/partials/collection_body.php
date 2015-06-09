@@ -57,7 +57,7 @@ $start = count($stories_halves[0]) + 1;
 	<div class="container-fluid mb2">
 		<div class="row">
 			<div class="col-sm-8 col-sm-offset-2">
-				<header class="text-center mb1">
+				<header class="centered mb1">
 					<?php if ( is_singular( 'collections') ) { ?>
 						<a href="<?php echo $collection_permalink ?>" class="<?php echo $category_nicename ?>"><h1 class="bold"><?php echo $collection_name; ?></h1></a>
 						<h2><?php echo $collection_description ?></h2>
@@ -68,14 +68,14 @@ $start = count($stories_halves[0]) + 1;
 						<ul class="list-inline h5 uppercase bold">
 							<li><a href="<?php echo $collection_permalink ?>" class="<?php echo $category_nicename ?>"><?php echo $story_qualifier ?></a></li><li><a href="<?php echo $collection_permalink ?>" class="<?php echo $category_nicename ?>">More Info</a></li><li>Share This Collection</li>
 						</ul>
-						<a href="<?php echo $collection_permalink ?>" class="<?php echo $category_nicename ?>"><h2 class="bold mt0 mb1"><?php echo $collection_name; ?></h2></a>
+						<a href="<?php echo $collection_permalink ?>" class="<?php echo $category_nicename ?>"><h2 class="bold mt0 mb0"><?php echo $collection_name; ?></h2></a>
 					<?php } ?>
 				</header>					
 			</div>
 		</div>
 		<div class="row">
 			<div class="col-md-8 col-md-offset-2">
-				<div class="flexslider-story flexslider" id="story-gallery-<?php echo rand(0,1000); ?>">
+				<div class="flexslider-story-broken flexslider flexslider-collection" id="story-gallery-<?php echo rand(0,1000); ?>">
 					<ul class="slides clearfix">
 						<li class="slide bg-white border-<?php echo $category_nicename ?> padded-more clearfix">
 							<h3 class="text-center bold">Table of Contents</h3>
