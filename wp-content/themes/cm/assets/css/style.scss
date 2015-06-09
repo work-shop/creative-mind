@@ -22,7 +22,7 @@
   left: 0;
   width: 100%;
   z-index: 7;
-  border-bottom-width: 4px;
+  border-bottom-width: 3px;
 
   #logo-cm{
   	height: $nav-height;
@@ -85,7 +85,6 @@
 	height: 50px;
 	width: 140px;
 	float: right;
-	//outline: 1px solid black;
 }
 
 #menu-toggle-title{
@@ -103,7 +102,6 @@
 	width: 25px;
 	height: 30px;
 	margin-top: 15px;
-	//outline: 1px solid red;
 }
 
 .hamburger-line{
@@ -111,7 +109,8 @@
 	height: 3px;
 	margin: 4px 0px;
 	position: relative;
-	@include transition(all,.25s);
+	top: 0px;
+	@include transition(all,.35s);
 	transform-origin: center center;
 }
 
@@ -129,11 +128,11 @@
 	#hamburger:hover{
 
 		.hamburger-line{
-			margin: 5px 0;
+			margin: 4px 0;
 		}
 
 		#hamburger-line-1{
-			margin-top: -3px;
+			margin-top: -0px;
 			margin-bottom: 5px;
 		}
 
@@ -640,7 +639,7 @@ body.menu-open{
 	//@include transform(translateY(-100%));
 
 	&.closed{
-		@include transform(scaleY(.5));
+		@include transform(scaleY(-1));
 	}
 
 	&.open{
