@@ -148,7 +148,7 @@ strong, b, .bold {
   color: #0575B9; }
 
 .research, .research a {
-  color: #8c567a; }
+  color: tomato; }
 
 .interviews, .interviews a {
   color: #25807F; }
@@ -383,9 +383,9 @@ strong, b, .bold {
     background: #045f96; }
 
 .bg-research {
-  background: #8c567a; }
+  background: tomato; }
   .bg-research-dark {
-    background: #764867; }
+    background: #ff4523; }
 
 .bg-interviews {
   background: #25807F; }
@@ -485,7 +485,7 @@ strong, b, .bold {
       border-width: 5px; } }
 
 .border-research {
-  border: 7px solid #8c567a; }
+  border: 7px solid tomato; }
   @media (max-width: 767px) {
     .border-research {
       border-width: 5px; } }
@@ -506,7 +506,7 @@ strong, b, .bold {
   border-top: 2px solid #0575B9; }
 
 .border-top-research {
-  border-top: 2px solid #8c567a; }
+  border-top: 2px solid tomato; }
 
 .border-top-interviews {
   border-top: 2px solid #25807F; }
@@ -521,7 +521,7 @@ strong, b, .bold {
   border-bottom: 4px solid #0575B9; }
 
 .border-bottom-research {
-  border-bottom: 4px solid #8c567a; }
+  border-bottom: 4px solid tomato; }
 
 .border-bottom-interviews {
   border-bottom: 4px solid #25807F; }
@@ -1182,9 +1182,9 @@ img.gform_ajax_spinner {
   fill: #0575B9; }
 
 .category-research #header #alogo-dot-1-header {
-  fill: #8c567a; }
+  fill: tomato; }
 .category-research #alogo-dot-2-header {
-  fill: #8c567a; }
+  fill: tomato; }
 
 .category-interviews #header #alogo-dot-1-header {
   fill: #25807F; }
@@ -1614,7 +1614,7 @@ img.gform_ajax_spinner {
   50% {
     fill: #25807F; }
   75% {
-    fill: #8c567a; }
+    fill: tomato; }
   100% {
     fill: #cb2026; } }
 @-moz-keyframes brown {
@@ -1625,7 +1625,7 @@ img.gform_ajax_spinner {
   50% {
     fill: #25807F; }
   75% {
-    fill: #8c567a; }
+    fill: tomato; }
   100% {
     fill: #cb2026; } }
 @-ms-keyframes brown {
@@ -1636,7 +1636,7 @@ img.gform_ajax_spinner {
   50% {
     fill: #25807F; }
   75% {
-    fill: #8c567a; }
+    fill: tomato; }
   100% {
     fill: #cb2026; } }
 @-o-keyframes brown {
@@ -1647,7 +1647,7 @@ img.gform_ajax_spinner {
   50% {
     fill: #25807F; }
   75% {
-    fill: #8c567a; }
+    fill: tomato; }
   100% {
     fill: #cb2026; } }
 @keyframes brown {
@@ -1658,7 +1658,7 @@ img.gform_ajax_spinner {
   50% {
     fill: #25807F; }
   75% {
-    fill: #8c567a; }
+    fill: tomato; }
   100% {
     fill: #cb2026; } }
 @-webkit-keyframes dot1 {
@@ -1684,7 +1684,7 @@ img.gform_ajax_spinner {
     -o-transform: translate3d(0, -100%, -1px);
     -ms-transform: translate3d(0, -100%, -1px); }
   75% {
-    fill: #8c567a;
+    fill: tomato;
     transform: translate3d(0, 1000%, -1px);
     -moz-transform: translate3d(0, 1000%, -1px);
     -webkit-transform: translate3d(0, 1000%, -1px);
@@ -1720,7 +1720,7 @@ img.gform_ajax_spinner {
     -o-transform: translate3d(0, -100%, -1px);
     -ms-transform: translate3d(0, -100%, -1px); }
   75% {
-    fill: #8c567a;
+    fill: tomato;
     transform: translate3d(0, 1000%, -1px);
     -moz-transform: translate3d(0, 1000%, -1px);
     -webkit-transform: translate3d(0, 1000%, -1px);
@@ -1756,7 +1756,7 @@ img.gform_ajax_spinner {
     -o-transform: translate3d(0, -100%, -1px);
     -ms-transform: translate3d(0, -100%, -1px); }
   75% {
-    fill: #8c567a;
+    fill: tomato;
     transform: translate3d(0, 1000%, -1px);
     -moz-transform: translate3d(0, 1000%, -1px);
     -webkit-transform: translate3d(0, 1000%, -1px);
@@ -1792,7 +1792,7 @@ img.gform_ajax_spinner {
     -o-transform: translate3d(0, -100%, -1px);
     -ms-transform: translate3d(0, -100%, -1px); }
   75% {
-    fill: #8c567a;
+    fill: tomato;
     transform: translate3d(0, 1000%, -1px);
     -moz-transform: translate3d(0, 1000%, -1px);
     -webkit-transform: translate3d(0, 1000%, -1px);
@@ -1828,7 +1828,7 @@ img.gform_ajax_spinner {
     -o-transform: translate3d(0, -100%, -1px);
     -ms-transform: translate3d(0, -100%, -1px); }
   75% {
-    fill: #8c567a;
+    fill: tomato;
     transform: translate3d(0, 1000%, -1px);
     -moz-transform: translate3d(0, 1000%, -1px);
     -webkit-transform: translate3d(0, 1000%, -1px);
@@ -1864,7 +1864,7 @@ img.gform_ajax_spinner {
     -o-transform: translate3d(0, 0%, -1px);
     -ms-transform: translate3d(0, 0%, -1px); }
   75% {
-    fill: #8c567a;
+    fill: tomato;
     transform: translate3d(0, 1000%, -1px);
     -moz-transform: translate3d(0, 1000%, -1px);
     -webkit-transform: translate3d(0, 1000%, -1px);
@@ -1900,7 +1900,7 @@ img.gform_ajax_spinner {
     -o-transform: translate3d(0, 0%, -1px);
     -ms-transform: translate3d(0, 0%, -1px); }
   75% {
-    fill: #8c567a;
+    fill: tomato;
     transform: translate3d(0, 1000%, -1px);
     -moz-transform: translate3d(0, 1000%, -1px);
     -webkit-transform: translate3d(0, 1000%, -1px);
@@ -1936,7 +1936,7 @@ img.gform_ajax_spinner {
     -o-transform: translate3d(0, 0%, -1px);
     -ms-transform: translate3d(0, 0%, -1px); }
   75% {
-    fill: #8c567a;
+    fill: tomato;
     transform: translate3d(0, 1000%, -1px);
     -moz-transform: translate3d(0, 1000%, -1px);
     -webkit-transform: translate3d(0, 1000%, -1px);
@@ -1972,7 +1972,7 @@ img.gform_ajax_spinner {
     -o-transform: translate3d(0, 0%, -1px);
     -ms-transform: translate3d(0, 0%, -1px); }
   75% {
-    fill: #8c567a;
+    fill: tomato;
     transform: translate3d(0, 1000%, -1px);
     -moz-transform: translate3d(0, 1000%, -1px);
     -webkit-transform: translate3d(0, 1000%, -1px);
@@ -2008,7 +2008,7 @@ img.gform_ajax_spinner {
     -o-transform: translate3d(0, 0%, -1px);
     -ms-transform: translate3d(0, 0%, -1px); }
   75% {
-    fill: #8c567a;
+    fill: tomato;
     transform: translate3d(0, 1000%, -1px);
     -moz-transform: translate3d(0, 1000%, -1px);
     -webkit-transform: translate3d(0, 1000%, -1px);
@@ -2703,7 +2703,7 @@ body.menu-open {
 .category.category-lectures, .single-collections.category-lectures {
   color: #58595B; }
 .category.category-research, .single-collections.category-research {
-  color: #8c567a; }
+  color: tomato; }
 
 .category header .split-list {
   line-height: 1em; }
@@ -3350,10 +3350,10 @@ body.menu-open {
     background: #58595B; }
 
 .category-research .flex-control-nav a {
-  color: #8c567a;
-  border-color: #8c567a; }
+  color: tomato;
+  border-color: tomato; }
   .category-research .flex-control-nav a.flex-active {
-    background: #8c567a; }
+    background: tomato; }
 
 .stories-nav {
   position: fixed;
