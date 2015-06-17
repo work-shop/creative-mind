@@ -49,7 +49,7 @@ foreach ($categories as $category) {
 				<a href="<?php echo esc_url( home_url( '/'.$category ) ); ?>">
 				<div class="tile tile-category white bg-<?php echo $category; ?> clearfix" >
 					<header>
-						<h2 class="bold"><?php echo $category_name; ?></h2>
+						<h2 class="bold mt1"><?php echo $category_name; ?></h2>
 						<p><?php echo $category_description ?></p>
 					</header>
 					<footer class="action bold text-center bg-<?php echo $category; ?>">
@@ -86,7 +86,7 @@ foreach ($categories as $category) {
 						<?php } else { ?>
 							<span class="icon"></span>
 						<?php } ?>
-						<p class="h5 m0 uppercase bold"><?php echo $story_collection_name ?>:</p>
+						<p class="h5 m1 uppercase bold"><?php echo $story_collection_name ?>:</p>
 						<h2 class="bold m0"><?php echo $story_name ?></h2>
 					</header>
 					<footer class="action text-center bold white bg-<?php echo $category; ?>">

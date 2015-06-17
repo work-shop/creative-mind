@@ -22,6 +22,7 @@
   left: 0;
   width: 100%;
   z-index: 7;
+  background: $ultra-medium-light;
   border-bottom-width: 3px;
 
   #logo-cm{
@@ -540,50 +541,49 @@ $icon-margin: 15px;
 	position: relative;
 }
 
-.home .slides{
-	li{
-		height: inherit;
-		-webkit-filter: saturate(75%);
-	}
-}
-
 .flex-active-slide{
 	.slideshow-caption{
 		top: 0px;
 	}
-
 }
 
-.flexslider-story {
-	position: relative;
-	max-width: 780px;
-	margin: 0 auto;
-	> ul > li {
-
-		//height: $img-gallery-height;
-	}
+.flex-viewport{
+	overflow: visible !important;
 }
 
-.flexslider-collection {
+.slides{
 	position: relative;
-	max-width: 780px;
-	margin: 0 auto;
 
-	> ul > li {
+	li.slide{
+		background-size: cover;
+		background-position: center top;
 		height: inherit;
-	}
-}
+		display: block !important;
+	}	
 
-.slides > li {
-	background-size: cover;
-	img {
-		max-height: 100%;
-		width: auto;
+	.clone{
+		//display: none !important;
 	}
+
+	.overlay {
+		@extend .overlay;
+		display: block;
+		//border: 7px solid $research;
+	}		
+
 }
 
 .slide {
 	overflow-y: auto;
+	position: relative;
+
+	@include transform(scale(.5));
+	@include transition(all,.7s);
+
+	&.flex-active-slide{
+	@include transform(scale(1));
+	}	
+
 	.split-list {
 		padding-top: 0.5em;
 	}
@@ -595,21 +595,101 @@ $icon-margin: 15px;
 			font-size: 1.1em;
 		}
 	}
+
+	.info {
+		position: absolute;
+		width: 80%;
+		left: 10%;
+		@extend .vertical-center;
+		.icon:after, .icon-custom:after {
+			margin-left: 0;
+		}
+	}
+
 }
 
-.slide .info {
-	width: 80%;
-	@extend .vertical-center;
-	.icon:after, .icon-custom:after {
-		margin-left: 0;
+
+
+.flexslider > li {
+	background-size: cover;
+	text-align: center;
+	img {
+		max-height: 100%;
+		width: auto;
 	}
 }
 
-.slides .overlay {
-	@extend .overlay;
-	display: block;
-	padding: 5% 10%;
+.flexslider-direction{
+	height: 100%;
+	position: absolute;
+	right: 0;
+	width: auto;
+	height: 60px;
+	top: 48%;
+	margin-top: -30px;
+	@include transition(all,.25s);
+	z-index: 2;
+	
+	.icon:before{
+		font-size: 90px;
+		color: $brand;
+	}
+	
+	&.previous{
+		right: auto;
+		left: 0;
+	}
+	
+	&:hover{
+		cursor: pointer;
+	}
+	
+	&.next:hover{
+		cursor: pointer;
+	}
+	
 }
+
+.flex-control-nav{	
+	position: absolute;
+	width: 300px;
+	margin-left: -150px;
+	z-index: 6;
+	left: 50%;
+	text-align: center;
+	bottom: -40px;
+	height: 20px;
+	
+	li{
+		list-style: none;
+		margin: 0 5px;
+		display: inline-block;
+		overflow: hidden;
+		
+		a{
+			display: block;
+			text-indent: 9999px;
+			width: 15px;
+			height: 15px;
+			background: darken($light,5);	
+			@include border-radius(30px);
+
+			&:hover{
+				cursor: pointer;
+			}
+		}
+	}
+}
+
+.flex-control-thumbs li {
+	width: 30px;
+	height: 30px;
+	cursor: pointer;
+	&.table-of-contents {
+		overflow: hidden !important;
+	}
+}
+
 
 
 /********** @SCROLLY *********/
@@ -740,11 +820,21 @@ body.menu-open{
 	}
 	.media-type, .description {
 		opacity: 0;
-		@include transition(opacity);
+		@include transition(all,.25s);
 	}
+
+	.media-type {
+		@include transform(translateY(100%));
+	}	
+
+	.description{
+		@include transform(translateY(-100%));
+	}	
+
 	&:hover {
 		.media-type, .description {
 			opacity: 1;
+			@include transform(translateY(0));
 		}
 	}
 }
@@ -804,15 +894,6 @@ body.menu-open{
 
 }
 
-#active-story-loading {
-	height: 0px;
-	@include transition(opacity,.5s);
-	opacity: 0;
-	.dots{
-		width: ($dot-width * 2) + ($dot-margin*2) + 5;
-		margin: 0 auto;		
-	}
-}
 
 #active-story{
 	@include transition(all,1.5s);
@@ -1038,12 +1119,11 @@ body.menu-open{
 
 .flex-control-nav li.table-of-contents {
 	overflow: visible;
-	margin-right: 1.5em;
+	margin-right: 20px;
 	position: relative;
 	a {
-		position: absolute;
-		top: -28px;
-		left: -1em;
+		position: relative;
+		top: -5px;
 		border: none;
 		text-indent: 0;
 		opacity: 0.5;
@@ -1054,7 +1134,7 @@ body.menu-open{
 		}
 	}
 	.icon:after {
-		font-size: 2.75em;
+		font-size: 36px;
 	}
 }
 
@@ -1163,10 +1243,15 @@ body.menu-open{
 }
 
 
+/********** @HOME *********/
+
+#tagline{
+	line-height: 1.4;
+}
+
+
 
 /********** @TILES *********/
-
-
 
 #grid .col-sm-4{
 	.tile-story header {
@@ -1200,12 +1285,21 @@ body.menu-open{
 	.icon {
 		min-height: 2em;
 		display: inline-block;
+		&:before{
+			font-size: 40px;
+		}		
+	}
+
+	.icon-custom{
+		&:after{
+			font-size: 5em;
+		}
 	}
 }
 
 .tile-category header {
 	max-width: 65%;
-	margin: 0 8% 3em;
+	margin: 0 8% 5em;
 }
 
 .tile-story {
@@ -1221,7 +1315,7 @@ body.menu-open{
 		width: 100%;
 		height: 100%;
 		background: white;
-		opacity: 0.9;
+		opacity: 0.75;
 	}
 	.icon:after {
 		font-size: 3.5em;

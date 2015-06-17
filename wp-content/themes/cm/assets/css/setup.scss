@@ -7,6 +7,7 @@
 
 $brand: #cb2026;
 $ultra-light: #fafafa;
+$ultra-medium-light: #f4f4f4;
 $light: #eeeded;
 $dark: #222222;
 $error: #ff4a4a;
@@ -14,8 +15,10 @@ $brown: #3a1e1a;
 $yellow: #ffcc00;
 
 $courses: #0575B9;
-//$research: #8c567a;
+$research: #8c567a;
 $research: tomato;
+$research: #AA1CE0;
+$research: #932ED9;
 $interviews: #25807F;
 $lectures: #58595B;
 
@@ -38,7 +41,7 @@ $transitions: .25s;
 
 body{
 	font-size: 15px;
-	background: $light;
+	background: $ultra-medium-light;
 	font-family:"Regular", Futura, sans-serif; font-weight:500; font-style:normal;
 }
 
@@ -60,15 +63,16 @@ body{
 
 h2,.h2,h3,.h3,h4,.h4,h5,.h5,h6,.h6{
 	line-height: 1.3;
+	line-height: 1.1;
 }
 
 h1,.h1{
 	font-size: 3.25em;
-	line-height: 1em;
+	//line-height: 1em;
 }
 
 h2,.h2{
-	font-size: 2.2em;
+	font-size: 2.5em;
 }
 
 h3,.h3{
@@ -80,7 +84,7 @@ h4,.h4{
 }
 
 h5,.h5{
-	font-size: .85em;
+	font-size: .9em;
 }
 
 h6,.h6{
@@ -211,7 +215,7 @@ strong, b, .bold{
 }
 
 .overlay {
-	@include linear-gradient( to top, rgba($dark,0.4), rgba($dark,0.55) 33%, rgba($dark,0.55) 66%, rgba($dark,0.4) 100% );
+	@include linear-gradient( to top, rgba($dark,0.5), rgba($dark,0.65) 25%, rgba($dark,0.65) 75%, rgba($dark,0.5) 100% );
 	width: 100%;
 	height: 100%;
 	position: absolute;
@@ -513,6 +517,15 @@ $slide-distance-vertical: 20px;
 
 
 /********** @FANCY OBJECTS *********/
+
+.loading{
+	opacity: 0;
+	@include transition();
+}
+
+.loaded{
+	opacity: 1;
+}
 
 .block{
 	position: relative;

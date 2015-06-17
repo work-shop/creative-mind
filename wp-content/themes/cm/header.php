@@ -74,7 +74,7 @@
 
 		<div id="wrapper" class="loading spy">
 
-			<header id="header" class="closed bg-light border-bottom-<?php echo $category_color ?>">
+			<header id="header" class="closed border-bottom-<?php echo $category_color ?>">
 				<div class="container-fluid">
 					<div class="row">
 						<div id="logo-cm" class="col-sm-3 m0 col-xs-6">
