@@ -5,14 +5,14 @@
  *
  */
 ?>
-<div id="story-modal">
+<div id="story-modal" class="inactive">
 
 	<div class="stories-nav hidden-xs">
 		<a id="previous-story-link" href="#" class="prev-story"><span class="icon" data-icon="&#8216;">
 			<div class="preview centered" style="background-image:url('')">
 				<div class="overlay">
 					<span class="icon-custom" data-icon="&#xe600;"></span>
-					<h2 class="bold story-heading centered"></h2>
+					<h3 class="bold story-heading centered"></h3>
 				</div>
 			</div>
 		</span></a>
@@ -21,7 +21,7 @@
 			<div class="preview centered" style="background-image:url('')">
 				<div class="overlay">
 					<span class="icon-custom" data-icon="&#xe600;"></span><!-- Change this to the Next Arrow! -->
-					<h2 class="bold story-heading centered"></h2>
+					<h3 class="bold story-heading centered"></h3>
 				</div>
 			</div>
 		</span></a>

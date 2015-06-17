@@ -1,7 +1,7 @@
 <section class="block target padded" id="site-description">
 	<div class="vertical-center">
 		<div class="row mb3">
-			<div class="col-sm-6 col-sm-offset-3 col-lg-4 col-lg-offset-4">
+			<div class="col-sm-6 col-sm-offset-3">
 				<a href="<?php bloginfo('url' );?>">
 					<?php get_template_part('partials/logo_animated'); ?>
 				</a>

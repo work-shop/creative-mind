@@ -5,18 +5,16 @@
 	$story_featured_image = wp_get_attachment_url( get_post_thumbnail_id( $post->ID ) );
 ?>
 
-
 <header class="story-header story-header-<?php echo $story_type;?>">
 	<div class="container-fluid">
 		<div class="row">
-			<div class="col-md-8 col-md-offset-2 col-sm-10 col-sm-offset-1">
-				<h5 class="bread-crumb uppercase m1 bold centered">
-					<?php if ( $collection ) { echo $collection->post_title . ' / '; } the_title() ?>
-				</h5>
-
+			<div class="col-sm-10 col-sm-offset-1">
+				<h4 class="bread-crumb uppercase m1 bold centered">
+					<?php if ( $collection ) { echo $collection->post_title . ' &nbsp; / &nbsp; '; } the_title() ?>
+				</h4>
 				<?php if ( ($story_type == 'video') && ($vimeo_id = get_field('story_vimeo_id')) ) { ?>
 					<div class="video">
-	 					<div class="story-video-play centered" data-toggle="tooltip" data-placement="top" title="watch the video!">
+	 					<div class="story-video-play centered" id="video-play" data-toggle="tooltip-broken" data-placement="top" title="watch the video!">
 	 						<span class="icon-custom large" data-icon="&#xe600;"></span>
 	 					</div>
 	 					

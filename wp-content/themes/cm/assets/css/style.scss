@@ -90,7 +90,7 @@
 #nav{
 	position: fixed;
 	top: 0px;
-	right: 45px;
+	right: 38px;
 	z-index: 9;
 }
 
@@ -230,7 +230,7 @@
 }
 
 .category-interviews{
-	#header #header #alogo-dot-1-header{
+	 #header #alogo-dot-1-header{
 		fill: $interviews;	
 	}	
 	#header #alogo-dot-2-header{
@@ -548,6 +548,27 @@ $icon-margin: 15px;
 	}
 }
 
+.move-up{
+	@include transform(translateY(100%));
+	opacity: 0;
+	@include transition(all,1s);
+}
+
+.move-down{
+	@include transform(translateY(-100%));
+	opacity: 0;	
+	@include transition(all,1s);
+}
+
+.visibled{
+
+	.move-up,.move-down{
+
+		opacity: 1;
+		@include transform(translateY(0%));
+	}
+}
+
 
 /********** @SLIDESHOW *********/
 
@@ -599,15 +620,17 @@ $icon-margin: 15px;
 		@include transform(scale(1));
 	}	
 
+	.split-list{
+		position: relative;
+		left: 10%;
+		width: 80%;		
+	}
 
 	ol {
-		position: relative;
-		left: 5%;
-		width: 95%;
 		li {
-			line-height: 1.25em;
+			line-height: 1.2em;
 			margin-bottom: 0.75em;
-			font-size: 1.1em;
+			font-size: 1.5em;
 			text-indent: 10px;
 		}
 	}
@@ -754,7 +777,7 @@ body.menu-open{
 		z-index: 6;
 	}
 
-	.h4 {
+	.h3 {
 		display: block;
 		width: 100%;
 	}
@@ -861,6 +884,16 @@ body.menu-open{
 
 
 /********** @COLLECTION SINGLE *********/
+
+.collection{
+	border-bottom: 1px solid #ddd;
+	//@include transform(scale(.9));	
+	@include transition();
+
+	&.active{
+		//@include transform(scale(1));
+	}
+}
 
 .collection-suffix{
 	display: none;
@@ -1034,13 +1067,19 @@ body.menu-open{
 }
 
 .story .video {
-	max-width: 800px;
-	height: 500px;
+	//max-width: 800px;
+	//height: 500px;
 	overflow: hidden;
 	position: relative;
 	margin: 0 auto;
 	h1 {
 		z-index: 1;
+	}
+
+	&:after{
+		content: '';
+		display: block;
+		padding-top: 45%;
 	}
 }
 
@@ -1095,8 +1134,12 @@ body.menu-open{
 
 .story-video-active{
 	.story-video{
-		z-index: 3;
+		z-index: 5;
 	}	
+
+	.story-video-poster{
+		display: none;
+	}
 }
 .category, .single-collections{
 	.flexslider-direction{
@@ -1248,9 +1291,6 @@ body.menu-open{
 	}
 }
 
-.bread-crumb {
-	font-size: 0.9em;
-}
 
 
 /********** @STORY MODAL *********/
@@ -1259,6 +1299,20 @@ body.menu-open{
 	position: fixed;
 	z-index: -100;
 	display: none;
+
+	&.active{
+		display: block;
+		z-index: 4;
+		width: 100%;
+		height: 100%;
+		top: 55px;
+		//background: $courses;
+		overflow: scroll;
+	}
+
+	*{
+		color: white;
+	}
 }
 
 
@@ -1291,7 +1345,6 @@ body.menu-open{
 
 	header{
 		padding: 0 20px;
-
 	}
 
 	a{
@@ -1351,6 +1404,7 @@ body.menu-open{
 	header{
 		position: absolute;
 		top: 50%;
+		width: 70%;
 		@include transform(translateY(-50%));
 	}
 	&:after {
@@ -1397,7 +1451,7 @@ body.menu-open{
 	#megaNav {
 		.header {
 			position: relative;
-			.h4 {
+			.h3 {
 				@include transform( rotate(-90deg) );
 				position: absolute;
 				left: 0;
@@ -1407,6 +1461,9 @@ body.menu-open{
 		}
 		.split-list {
 			min-height: 100px;
+			width: 90%;
+			position: relative;
+			left: 5%;
 		}
 	}
 
@@ -1415,7 +1472,7 @@ body.menu-open{
 	}
 
 	.video-gallery-main {
-		height: 500px;
+		//height: 500px;
 	}
 	
 }	
@@ -1579,7 +1636,7 @@ body.menu-open{
 	}
 
 	.story .video {
-		max-height: 300px;
+		//max-height: 300px;
 	}
 
 	.slide{

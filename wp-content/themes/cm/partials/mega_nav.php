@@ -23,7 +23,7 @@
           <div class="row white bg-<?php echo $category->slug; ?>-dark">
 
             <div class="col-sm-1 header">
-              <a class="h4 uppercase bold" href="<?php echo get_term_link( $category ); ?>"><?php echo $category->name; ?></a>
+              <a class="h3 uppercase bold" href="<?php echo get_term_link( $category ); ?>"><?php echo $category->name; ?></a>
             </div>
             <div class="col-sm-11 bg-<?php echo $category->slug; ?> padded m0">
               <div class="split-list">

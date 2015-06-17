@@ -53,7 +53,7 @@ $start = count($stories_halves[0]) + 1;
 
 ?>
 
-<section class="block padded crop <?php if ( is_category() ) : echo 'well-dark-broken'; endif; ?>">
+<section class="block padded crop target collection <?php if ( is_category() ) : echo 'well-dark-broken'; endif; ?>">
 	<div class="container-fluid mb2">
 		<div class="row">
 			<div class="col-sm-8 col-sm-offset-2">
@@ -80,7 +80,7 @@ $start = count($stories_halves[0]) + 1;
 						<li class="slide bg-white">
 							<div class="table-of-contents-border border-<?php echo $category_nicename ?>">
 								<h3 class="text-center bold mt2">Table of Contents</h3>
-								<div class="split-list clearfix">
+								<div class="split-list mt2 clearfix">
 									<?php 
 										echo CM_Collection_Controller::create_list( $stories_halves[0], 1, 'collection' ); 
 										echo CM_Collection_Controller::create_list( $stories_halves[1], $start, 'collection' ); 

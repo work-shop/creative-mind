@@ -39,7 +39,7 @@
 			}, 
 			function( quote ) {
 				try {
-					console.log( quote );
+					//console.log( quote );
 					var data = $.parseJSON( quote );
 
 					if ( data.success ) {
@@ -124,7 +124,7 @@ var urlmanager = (function( $, pollLocation, libAsync ) {
 	function run() {
 		pollLocation( true );
 		$( window ).on('href-changed', function( e, url ) {
-			console.log('href');
+			//console.log('href');
 			var parameter = reduce_url( url );
 			if ( parameter.length > 0 ) {
 				do_action( parameter[ parameter.length - 1 ] );
@@ -236,25 +236,25 @@ function divide( collection, key ) {
  */
 function updateView( thisStory, nextStory, prevStory ) {
 
-	console.log( thisStory );
-	console.log( prevStory );
-	console.log( nextStory );
+	//console.log( thisStory );
+	//console.log( prevStory );
+	//console.log( nextStory );
 
 	function makeSlug( slug ) { return '#' + slug; }
 
 	function makeCategoryColor( category ) { return "border-" + category; }
+	function makeCategoryBackgroundColor( category ) { return "bg-" + category; }
 
 	function injectContent( target, content ) {
 
 		content = $(content);
 
-		console.log( target );
+		//console.log( target );
 		
-		console.log('content: ');
-		console.log( content.attr('async-slug') );
-		console.log( content.attr('async-background-image') );
-		console.log( content.attr('async-category' ) );
-
+		//console.log('content: ');
+		//console.log( content.attr('async-slug') );
+		//console.log( content.attr('async-background-image') );
+		//console.log( content.attr('async-category' ) );
 
 		target.attr('href', makeSlug( content.attr('async-slug') ) );
 
@@ -262,29 +262,34 @@ function updateView( thisStory, nextStory, prevStory ) {
 			.attr('style', "background-image:url(" + content.attr('async-background-image') + ");")
 			.addClass( makeCategoryColor( content.attr('async-category' ) ) );
 
-		target.find('h2').text( content.find('h3').text() );
+		target.find('h3').text( content.find('h3').text() );
+
+		$('#story-modal').addClass( makeCategoryBackgroundColor( content.attr('async-category')));
+		$('title').html('Story Title');
+
 	}
 
 
-
-
-
-
-
-
-
-
-
-	var 	storyTarget = $('#current-story'),
+	var storyTarget = $('#current-story'),
 		nextTarget = $('#next-story-link'),
-		prevTarget = $('#previous-story-link');
+		prevTarget = $('#previous-story-link')
+		storyModal = $('#story-modal');
 
-		// loading animation happens here
+		if(storyModal.hasClass('inactive')){
+			storyModal.removeClass('inactive').addClass('activated').addClass('active');
+		}
 
 		injectContent( nextTarget, nextStory );
 		injectContent( prevTarget, prevStory );
 
 		storyTarget.html( thisStory.content );
+		var myString = 'interviews';
+
+		videoSetup();
+
+
+		//storyModal.addClass('bg-' + thisStory.content.attr('async-category' ));
+
 		// add the category color to the story target!
 
 		// close button stuff has to happen here.

@@ -65,10 +65,11 @@ jQuery(document).ready(function($) {
 function storySetup() {
 	$(window).ready(function() { $('[data-toggle="tooltip"]').tooltip(); });//end window.ready
 
-	$('.story-video-play').click(function(event) {
-	  	event.preventDefault();
-		playVideo();
-	});
+	// $('#video-play').click(function(event) {
+	//   	event.preventDefault();
+	//   	console.log('clicked story-video-play');
+	// 	playVideo();
+	// });
 
 	$('.flexslider .flex-previous').click(function() {
 		$(this).parent('.flexslider').flexslider('prev');
@@ -216,6 +217,8 @@ function submenuToggle(item) {
 
 function playVideo(){
 
+	console.log('playvideo');
+
 	$('body').addClass('story-video-active');
 	view();
 	
@@ -223,6 +226,8 @@ function playVideo(){
 
 //measure, resize, and adjust the viewport
 function view(){
+
+	backShareCheck();
 	
 	ch = $(window).height();
 	cw = $(window).width();
@@ -279,7 +284,7 @@ function view(){
 		//$('.flexslider-hero').css('height',fw);
 		$('.flexslider-collection .slides').css('height',collectionSlideHeightMobile);
 		$('#site-description').css('height',ph);																											
-																													
+
 	}
 	
 	if(!loaded){
@@ -341,6 +346,9 @@ $(window).scroll(function() {
 		$('.menu-minimal').addClass('visible-xs');
 		$('.menu-full').removeClass('hidden');
 	}
+
+	requestAnimationFrame( backShareCheck );
+
 
 });//end window.scroll
 
@@ -429,9 +437,13 @@ $(document).on('spy-init', function() {
 	 	return 0;
 	 	//return ($('body').hasClass('home')) ? ((w.width() < 768) ? 350 : (w.height() / 2)) : 80;
 	 }
+
 });
 
 function videoSetup() {
+
+	console.log('videoSetup');
+
 	var players = [];
 
 	var iframe = $('#story-video-1');
@@ -449,6 +461,8 @@ function videoSetup() {
 
 			$('.story-video-play').bind('click', function() {
 		    		p.api('play');
+		    		playVideo();
+		    		console.log('story-video-play clicked');
 			});
 		});
 	}	
@@ -514,12 +528,34 @@ function isotopeSize(){
 	var max = 500;
 
 	tiles.each( function( i, l ){
-		console.log(l);
 		l = $( l );
-		console.log(l);
 		tileHeight = Math.random() * (max - min) + min;
   		l.css('height',tileHeight);
 	});
+
+}
+
+
+function backShareCheck(){
+
+	if(loaded){
+
+		var flag = $('#back-share:in-viewport');
+		if(flag.length > 0){
+			flag = true;
+		}
+		else{
+			flag = false;
+		}
+
+		if(flag && $('#back-share').hasClass('invisible')){
+			$('#back-share').removeClass('invisible').addClass('visible').addClass('visibled');
+		}
+		else if(!flag && $('#back-share').hasClass('visible')){
+			$('#back-share').removeClass('visible').addClass('invisible');		
+		}
+
+	}
 
 }
 

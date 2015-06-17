@@ -102,8 +102,10 @@ foreach ($categories as $category) {
 ?>
 			<div class="tile grid-item padded white border-brand bg-brand">
 				<a href="<?php bloginfo('url' );?>/about">
-					<h3 class="bold m0">About the Creative Mind</h3>
-					<p class="mt1 mb2">The Creative Mind is a window into the classroom, the studio, and the laboratory at Brown University.</p>
+					<header>
+						<h3 class="bold m0">About the Creative Mind</h3>
+						<p class="mt1 mb2">The Creative Mind is a window into the classroom, the studio, and the laboratory at Brown University.</p>
+					</header>
 				</a>
 			</div>
 </section>
