@@ -72,7 +72,7 @@ h1,.h1{
 }
 
 h2,.h2{
-	font-size: 2.5em;
+	font-size: 2.25em;
 }
 
 h3,.h3{
@@ -274,7 +274,7 @@ strong, b, .bold{
 }
 
 .padded{
-	padding: 4% 4% 4.25%;
+	padding: 4% 0;
 }
 
 .padded-more{
@@ -443,7 +443,7 @@ strong, b, .bold{
 /********** @STRUCTURE AND POSITION *********/
 
 #content {
-	padding-top: $nav-height;
+	//padding-top: $nav-height;
 }
 
 .full{
@@ -470,6 +470,10 @@ strong, b, .bold{
 
 .crop{
 	overflow: hidden;
+}
+
+.relative{
+	position: relative;
 }
 
 

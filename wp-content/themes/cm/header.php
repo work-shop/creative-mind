@@ -79,7 +79,6 @@
 					<div class="row">
 						<div id="logo-cm" class="col-sm-3 m0 col-xs-6">
 							<a href="<?php bloginfo('url'); ?>">
-								<!-- <img src="<?php // bloginfo('template_directory'); ?>/assets/img/logo-cm-small.png" alt="creative mind logo" /> -->
 								<?php get_template_part('partials/logo_svg_header' ); ?>
 							</a>
 						</div>
@@ -89,25 +88,32 @@
 								$category = CM_Collection_Controller::get_current_category();
 								echo '<a href="' . get_term_link( $category ) . '" class=" header-bread-crumb uppercase bold ' . $category_color . '">' . $category_name . '</a>' ;
 							} ?>
-						</div>
+							<?php if ( is_home() ) { ?>
+								<a href="#grid" class="header-bread-crumb uppercase bold brand jump">Featured Stories</a> 
+							<?php } ?>
+ 						</div>
 
-						<nav class="col-sm-2 right righted m0">
-							<a href="#menu" class="menu-toggle uppercase closed" id="menu-toggle">
-								<span id="menu-toggle-title" >Index</span>
-								<div id="hamburger">
-									<div class="hamburger-line bg-courses" id="hamburger-line-1"></div>
-									<div class="hamburger-line bg-research" id="hamburger-line-2"></div>
-									<div class="hamburger-line bg-interviews" id="hamburger-line-3"></div>
-									<div class="hamburger-line bg-lectures" id="hamburger-line-4"></div>
-								</div>
-							</a>
-						</nav>
+						
 
 						<?php $activity = false; ?>
  
 					</div>
 				</div>
 			</header>	
+
+			<nav class="right righted m0" id="nav">
+				<a href="#menu" class="menu-toggle uppercase closed" id="menu-toggle">
+					<span id="menu-toggle-title" >Index</span>
+					<div id="hamburger">
+						<div class="hamburger-line bg-courses" id="hamburger-line-1"></div>
+						<div class="hamburger-line bg-research" id="hamburger-line-2"></div>
+						<div class="hamburger-line bg-interviews" id="hamburger-line-3"></div>
+						<div class="hamburger-line bg-lectures" id="hamburger-line-4"></div>
+					</div>
+				</a>
+			</nav>			
+
+			<div id="headerfix"></div>
 
 			<main id="content" <?php if ( is_singular('stories') ) 
 				echo 'class="bg-' . CM_Collection_Controller::get_current_category()->slug . ' white"' 

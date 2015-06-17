@@ -77,13 +77,15 @@ $start = count($stories_halves[0]) + 1;
 			<div class="col-md-8 col-md-offset-2">
 				<div class="flexslider-story-broken flexslider flexslider-collection" id="story-gallery-<?php echo rand(0,1000); ?>">
 					<ul class="slides">
-						<li class="slide bg-white border-<?php echo $category_nicename ?>">
-							<h3 class="text-center bold">Table of Contents</h3>
-							<div class="split-list">
-								<?php 
-									echo CM_Collection_Controller::create_list( $stories_halves[0], 1, 'collection' ); 
-									echo CM_Collection_Controller::create_list( $stories_halves[1], $start, 'collection' ); 
-								?>
+						<li class="slide bg-white">
+							<div class="table-of-contents-border border-<?php echo $category_nicename ?>">
+								<h3 class="text-center bold mt2">Table of Contents</h3>
+								<div class="split-list clearfix">
+									<?php 
+										echo CM_Collection_Controller::create_list( $stories_halves[0], 1, 'collection' ); 
+										echo CM_Collection_Controller::create_list( $stories_halves[1], $start, 'collection' ); 
+									?>
+								</div>
 							</div>
 						</li> <!-- end .slide -->
 						<?php foreach ($stories as $story) { 

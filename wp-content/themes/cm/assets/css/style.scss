@@ -23,7 +23,10 @@
   width: 100%;
   z-index: 7;
   background: $ultra-medium-light;
-  border-bottom-width: 3px;
+  border-bottom-width: 4px;
+  @include transition(all,.1s);
+  overflow: hidden;
+  opacity: 1;
 
   #logo-cm{
   	height: $nav-height;
@@ -45,20 +48,25 @@
 	}	
 
   }
-  .container-fluid{
-  	padding: 0 30px;
-  }
 
+
+}
+
+.home.block-active-site-description{
+	#header,#headerfix{
+		height: 0;
+		opacity: 0;
+	}
 }
 
 #headerfix{
-	height: 50px;
+	height: $nav-height;
+	overflow: hidden;	
 }
 
 .home{
-
 	#headerfix{
-		height: 90px;
+		display: none;
 	}
 }
 
@@ -68,19 +76,23 @@
 }
 
 .header-bread-crumb{
-	font-size: 18px;
+	font-size: 17px;
 	position: relative;
-	top: -2px;
+	top: -0px;
 	letter-spacing: .04em;
 }
 
 
 
 
-
-
-
 /********** @HAMBURGER *********/
+
+#nav{
+	position: fixed;
+	top: 0px;
+	right: 45px;
+	z-index: 9;
+}
 
 #menu-toggle{
 	height: 50px;
@@ -203,7 +215,7 @@
 	#header #alogo-dot-1-header{
 		fill: $courses;	
 	}	
-	#alogo-dot-2-header{
+	#header #alogo-dot-2-header{
 		fill: $courses;	
 	}		
 }
@@ -212,16 +224,16 @@
 	#header #alogo-dot-1-header{
 		fill: $research;	
 	}	
-	#alogo-dot-2-header{
+	#header #alogo-dot-2-header{
 		fill: $research;	
 	}		
 }
 
 .category-interviews{
-	#header #alogo-dot-1-header{
+	#header #header #alogo-dot-1-header{
 		fill: $interviews;	
 	}	
-	#alogo-dot-2-header{
+	#header #alogo-dot-2-header{
 		fill: $interviews;	
 	}		
 }
@@ -231,12 +243,10 @@
 	#header #alogo-dot-1-header{
 		fill: $lectures;	
 	}	
-	#alogo-dot-2-header{
+	#header #alogo-dot-2-header{
 		fill: $lectures;	
 	}		
 }
-
-
 
 
 .logo-static{
@@ -304,13 +314,17 @@
 
 		#alogo-dot-1{
 			@include animation("dot1",7s,.5s,ease,1);	
-
 		}	
 
 		#alogo-dot-2{
 			@include animation("dot2",7s,.5s,ease,1);			
 		}			
 
+	}
+
+	.vertical-center{
+		width: 100%;
+		padding: 0 60px;
 	}
 
 }
@@ -333,26 +347,26 @@
 }
 
 @include keyframes("brown"){
-	0%{ fill: $brand; }
-	25%{ fill: $courses; }
-	50%{ fill: $interviews; }
-	75%{ fill: $research; }
-	100%{ fill: $brand; }
+	0%{ fill: $brand !important; }
+	25%{ fill: $courses !important; }
+	50%{ fill: $research !important; }
+	75%{ fill: $interviews !important; }
+	100%{ fill: $brand !important; }
 }
 
 @include keyframes("dot1"){
 	0%{ fill: $brand; @include transform(translate3d(0,1000%,-1px)); }
 	25%{ fill: $courses; @include transform(translate3d(0,0%,-1px)); }
-	50%{ fill: $interviews; @include transform(translate3d(0,-100%,-1px)); }
-	75%{ fill: $research; @include transform(translate3d(0,1000%,-1px)); }
+	50%{ fill: $research; @include transform(translate3d(0,-100%,-1px)); }
+	75%{ fill: $interviews; @include transform(translate3d(0,1000%,-1px)); }
 	100%{ fill: $brand; @include transform(translate3d(0,1000%,-1px)); }
 }
 
 @include keyframes("dot2"){
 	0%{ fill: $brand; @include transform(translate3d(0,0%,-1px)); }
 	25%{ fill: $courses; @include transform(translate3d(0,700%,-1px)); }
-	50%{ fill: $interviews; @include transform(translate3d(0,0%,-1px)); }
-	75%{ fill: $research; @include transform(translate3d(0,1000%,-1px)); }
+	50%{ fill: $research; @include transform(translate3d(0,0%,-1px)); }
+	75%{ fill: $interviews; @include transform(translate3d(0,1000%,-1px)); }
 	100%{ fill: $brand; @include transform(translate3d(0,0%,-1px)); }
 }
 
@@ -549,6 +563,7 @@ $icon-margin: 15px;
 
 .flex-viewport{
 	overflow: visible !important;
+
 }
 
 .slides{
@@ -561,14 +576,10 @@ $icon-margin: 15px;
 		display: block !important;
 	}	
 
-	.clone{
-		//display: none !important;
-	}
 
 	.overlay {
 		@extend .overlay;
 		display: block;
-		//border: 7px solid $research;
 	}		
 
 }
@@ -577,22 +588,27 @@ $icon-margin: 15px;
 	overflow-y: auto;
 	position: relative;
 
-	@include transform(scale(.5));
+	.table-of-contents-border{
+		height: 100%;
+	}
+
+	@include transform(scale(.6));
 	@include transition(all,.7s);
 
 	&.flex-active-slide{
-	@include transform(scale(1));
+		@include transform(scale(1));
 	}	
 
-	.split-list {
-		padding-top: 0.5em;
-	}
+
 	ol {
-		padding: 0 0.5em;
+		position: relative;
+		left: 5%;
+		width: 95%;
 		li {
 			line-height: 1.25em;
 			margin-bottom: 0.75em;
 			font-size: 1.1em;
+			text-indent: 10px;
 		}
 	}
 
@@ -689,7 +705,6 @@ $icon-margin: 15px;
 		overflow: hidden !important;
 	}
 }
-
 
 
 /********** @SCROLLY *********/
@@ -811,6 +826,10 @@ body.menu-open{
 
 
 /********** @COLLECTIONS *********/
+
+.list-inline>li{
+	margin: 0 10px;
+}
 
 
 .story-slide {
@@ -1253,35 +1272,50 @@ body.menu-open{
 
 /********** @TILES *********/
 
-#grid .col-sm-4{
-	.tile-story header {
-		max-width: 55%;
-		margin: 7em 4%;
-	}
-	&:nth-child(3n+2) .tile-story header {
-		margin: 4em 4% 6em;
-	}
-	&:nth-child(3n+3) .tile-story header {
-		margin: 4em 4% 9em;
-	}
+#grid{
+	padding: 0 2%;
+}
+
+.grid-item{
+	width: (92% / 3);
+}
+
+.gutter-sizer{
+	width: 2%;
 }
 
 .tile {
-	position: relative;
+	//position: relative;
+	float: left;
+	margin-bottom: 2%;
+
+	header{
+		padding: 0 20px;
+
+	}
+
+	a{
+		display: block;
+		height: 100%;
+		width: 100%;
+	}
+
 	footer {
 		position: absolute;
 		bottom: 0;
 		width: 100%;
-		line-height: 1.75em;
 		height: 0;
+		line-height: 1.75em;
 		color: transparent;
 		@include transition(all,0.5s);
 	}
+
 	&:hover footer {
 		color: white;
 		padding-top: 0.25em;
 		height: 2em;
 	}
+
 	.icon {
 		min-height: 2em;
 		display: inline-block;
@@ -1295,18 +1329,29 @@ body.menu-open{
 			font-size: 5em;
 		}
 	}
+
 }
 
 .tile-category header {
-	max-width: 65%;
-	margin: 0 8% 5em;
+	padding: 0 30px;
+	margin-bottom: 60px;
+}
+
+.tile-explore{
+	margin-top: -50px;
 }
 
 .tile-story {
+	//display: none;
 	background-size: cover;
 	> * {
 		position: inherit;
 		z-index: 1;
+	}
+	header{
+		position: absolute;
+		top: 50%;
+		@include transform(translateY(-50%));
 	}
 	&:after {
 		content: '';
@@ -1336,10 +1381,6 @@ body.menu-open{
 /********** @RESPONSIVE *********/
 
 @media (min-width: 768px) {
-
-	#grid .tile {
-		margin-bottom: 30px;
-	}
 
 	.category header .split-list {
 		font-size: 1.675em;
@@ -1445,6 +1486,10 @@ body.menu-open{
 //xs
 @media (max-width: 767px) {
 
+	.container-fluid{
+		padding: 0 15px;
+	}
+
 	#grid .col-xs-6 {
 		padding: 2%;
 		margin: 0;
@@ -1537,21 +1582,28 @@ body.menu-open{
 		max-height: 300px;
 	}
 
+	.slide{
+		.split-list{
+			width: 90%;
+			margin: 30px auto;
+		}
+	}
+
 	.category, .single-collections{
 		.flexslider-direction{
-			right: -25px;
+			right: -5px;
 			&:hover{
-				right: -25px;
+				right: -5px;
 			}
 			&.previous{
 				right: auto;
-				left: -25px;
+				left: -5px;
 				&:hover{
-					left: -25px;
+					left: -5px;
 				}
 			}	
-			.icon:after {
-				font-size: 55px;
+			.icon:before {
+				font-size: 24px;
 			}	
 		}
 	}

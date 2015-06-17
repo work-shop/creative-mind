@@ -25,7 +25,7 @@ $collection = get_post( get_the_ID() );
 
 ?>
 
-<section class="block target padded-less mt6" id="back-share">
+<section class="block target padded mt6" id="back-share">
 	<div class="container-fluid mb5">
 		<div class="row">
 			<div class="col-sm-10 col-sm-offset-1">
@@ -34,7 +34,7 @@ $collection = get_post( get_the_ID() );
 						<div class="col-sm-6" id="back-link">
 							<?php if ( is_home() ) { ?>
 								<div class="bold centered brand">
-								<a href="#">
+								<a href="#site-description" class="jump">
 									<span class="icon-wrapper bg-brand"><span class="icon white" data-icon="&#8218;"></span></span>
 									<h2 class="text">Back to Top</h2>
 								</a>

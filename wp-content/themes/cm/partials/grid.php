@@ -19,14 +19,14 @@ $grid_elements = CM_Grid_Layout_Manager::build_grid( );
 $categories = array_keys( $grid_elements );
 ?>
 
-<section class="block target" id="grid">
-	<div class="container-fluid">
-		<div class="row mt4">
-			<div class="col-xs-10 col-xs-offset-1 col-sm-4 col-sm-offset-0">
-				<div class="tile padded brand border-brand bg-white text-center">
-					<a href="#grid" class="jump display-block"><h3 class="bold">Explore the Creative Mind</h3> <span class="icon" data-icon="&#91;"></span></a>
-				</div>
-			</div>
+<section class="block target grid clearfix" id="grid">
+
+		<div class="grid-sizer"></div>
+		<div class="gutter-sizer"></div>
+
+		<div class="tile tile-explore grid-item brand border-brand bg-white text-center">
+			<a href="#grid" class="jump display-block"><h3 class="bold">Explore the Creative Mind</h3> <span class="icon" data-icon="&#91;"></span></a>
+		</div>
 <?php
 /**
  * Now that we've done our setup, let's iterate through each category and build the grid.
@@ -45,19 +45,17 @@ foreach ($categories as $category) {
 			$category_description = CM_Collection_Controller::get_category_description( $category_term->term_id );
 		?>
 
-			<div class="col-xs-6 col-sm-4">
-				<a href="<?php echo esc_url( home_url( '/'.$category ) ); ?>">
-				<div class="tile tile-category white bg-<?php echo $category; ?> clearfix" >
-					<header>
-						<h2 class="bold mt1"><?php echo $category_name; ?></h2>
-						<p><?php echo $category_description ?></p>
-					</header>
-					<footer class="action bold text-center bg-<?php echo $category; ?>">
-						<?php echo "View $category_name"; ?>
-					</footer>
+				<div class="tile tile-category grid-item white bg-<?php echo $category; ?>" >
+					<a href="<?php echo esc_url( home_url( '/'.$category ) ); ?>">
+						<header>
+							<h2 class="bold mt1"><?php echo $category_name; ?></h2>
+							<p><?php echo $category_description ?></p>
+						</header>
+						<footer class="action bold text-center bg-<?php echo $category; ?>">
+							<?php echo "View $category_name"; ?>
+						</footer>
+					</a>
 				</div>
-				</a>
-			</div>
 
 		<?php } 
 
@@ -75,44 +73,38 @@ foreach ($categories as $category) {
 		$story_featured_image = ( has_post_thumbnail( $grid_element->ID ) ) ? wp_get_attachment_image_src( get_post_thumbnail_id( $grid_element->ID ), 'thumbnail' )[0] : 'http://images.wisegeek.com/scientists-in-lab.jpg';
 		?>
 
-			<div class="col-xs-6 col-sm-4">
-				<a href="<?php echo $story_permalink ?>">
-				<div class="tile tile-story <?php echo $category; ?> border-<?php echo $category; ?>" style="background-image: url('<?php echo $story_featured_image; ?>');" >
-					<header>
-						<?php if ( $story_type == 'video' ) { ?>
-							<span class="icon-custom" data-icon="&#xe600;"></span>
-						<?php } elseif ( $story_type == 'image_gallery' ) { ?>
-							<span class="icon" data-icon="&#8486;"></span>
-						<?php } else { ?>
-							<span class="icon"></span>
-						<?php } ?>
-						<p class="h5 m1 uppercase bold"><?php echo $story_collection_name ?>:</p>
-						<h2 class="bold m0"><?php echo $story_name ?></h2>
-					</header>
-					<footer class="action text-center bold white bg-<?php echo $category; ?>">
-						<?php 
-							if ( ($story_type == 'video') ) { echo "Watch Video"; } 
-							elseif ( $story_type == 'image_gallery' ) { echo "View Gallery"; } 
-							else { echo "View Story"; }
-						?>
-					</footer>
+				<div class="tile tile-story grid-item <?php echo $category; ?> border-<?php echo $category; ?>" style="background-image: url('<?php echo $story_featured_image; ?>');" >
+					<a href="<?php echo $story_permalink ?>">
+						<header>
+							<?php if ( $story_type == 'video' ) { ?>
+								<span class="icon-custom" data-icon="&#xe600;"></span>
+							<?php } elseif ( $story_type == 'image_gallery' ) { ?>
+								<span class="icon" data-icon="&#8486;"></span>
+							<?php } else { ?>
+								<span class="icon"></span>
+							<?php } ?>
+							<p class="h5 m1 uppercase bold"><?php echo $story_collection_name ?>:</p>
+							<h2 class="bold m0"><?php echo $story_name ?></h2>
+						</header>
+						<footer class="action text-center bold white bg-<?php echo $category; ?>">
+							<?php 
+								if ( ($story_type == 'video') ) { echo "Watch Video"; } 
+								elseif ( $story_type == 'image_gallery' ) { echo "View Gallery"; } 
+								else { echo "View Story"; }
+							?>
+						</footer>
+					</a>					
 				</div>
-				</a>
-			</div>
 	<?php
 
 	}
 }
 ?>
-			<div class="col-xs-6 col-sm-4">
+			<div class="tile grid-item padded white border-brand bg-brand">
 				<a href="<?php bloginfo('url' );?>/about">
-				<div class="tile padded white border-brand bg-brand">
 					<h3 class="bold m0">About the Creative Mind</h3>
 					<p class="mt1 mb2">The Creative Mind is a window into the classroom, the studio, and the laboratory at Brown University.</p>
-				</div>
 				</a>
 			</div>
-		</div>	<!-- end .row -->
-	</div>
 </section>
 
