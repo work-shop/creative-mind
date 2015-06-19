@@ -9,9 +9,9 @@
 	<div class="container-fluid">
 		<div class="row">
 			<div class="col-sm-10 col-sm-offset-1">
-				<h4 class="bread-crumb uppercase m1 bold centered">
+				<h3 class="bread-crumb uppercase m1 bold centered">
 					<?php if ( $collection ) { echo $collection->post_title . ' &nbsp; / &nbsp; '; } the_title() ?>
-				</h4>
+				</h3>
 				<?php if ( ($story_type == 'video') && ($vimeo_id = get_field('story_vimeo_id')) ) { ?>
 					<div class="video">
 	 					<div class="story-video-play centered" id="video-play" data-toggle="tooltip-broken" data-placement="top" title="watch the video!">
@@ -119,6 +119,7 @@
 				<?php } //endif ?>
 
 			</div> <!-- end .col-sm-10 -->
+			<div class="col-sm-1 mt0"><a href="#close" id="story-close"><span class="icon" data-icon="’"></span></a></div>
 		</div>
 	</div> <!-- end .container-fluid -->
 </header>

@@ -34,15 +34,15 @@
 
 ?>
 
-<header class="block padded-less bg-<?php echo $category_nicename ?> white">
+<header class="block padded-less-broken bg-<?php echo $category_nicename ?> white">
 	<div class="container-fluid">
-		<div class="row mb2">
+		<div class="row">
 			<div class="col-sm-10 col-sm-offset-1 col-md-8 col-md-offset-2">
-				<h1 class="centered bold"><?php echo $category_name; ?></h1>
-				<h2 class="centered"><?php echo $category_description; ?></h2>
+				<h1 class="centered bold hidden"><?php echo $category_name; ?></h1>
+				<h2 class="centered m2"><?php echo $category_description; ?></h2>
 			</div>
 		</div>	
-		<div class="row mb2">
+		<div class="row mb2 hidden">
 			<div class="col-sm-8 col-sm-offset-2">
 				<div class="split-list">
 					<?php 

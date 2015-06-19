@@ -86,7 +86,7 @@
 						<div class="col-sm-6 hidden-xs centered mt1">
 							<?php if ( !is_home() ) {
 								$category = CM_Collection_Controller::get_current_category();
-								echo '<a href="' . get_term_link( $category ) . '" class=" header-bread-crumb uppercase bold ' . $category_color . '">' . $category_name . '</a>' ;
+								echo '<a href="' . get_term_link( $category ) . '" class=" header-bread-crumb uppercase bold ' . $category_color . '">' . $category_name . ' research interviews lectures</a>' ;
 							} ?>
 							<?php if ( is_home() ) { ?>
 								<a href="#grid" class="header-bread-crumb uppercase bold brand jump">Featured Stories</a> 

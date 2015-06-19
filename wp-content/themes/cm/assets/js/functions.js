@@ -231,7 +231,7 @@ function view(){
 	
 	ch = $(window).height();
 	cw = $(window).width();
-	ph = ch - 130;
+	ph = ch - 70;
 	fw = cw*.5;
 	storyHeight = cw/3;
 	storyVideoHeight = ch - 110;
@@ -440,7 +440,7 @@ $(document).on('spy-init', function() {
 
 });
 
-function videoSetup() {
+function videoSetup(playFlag) {
 
 	console.log('videoSetup');
 
@@ -458,6 +458,11 @@ function videoSetup() {
 				 console.log('ready');
 				 p.addEvent('play', function(d){});
 			});
+
+			if(playFlag){
+				p.api('play');
+		    	playVideo();
+			}
 
 			$('.story-video-play').bind('click', function() {
 		    		p.api('play');

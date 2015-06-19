@@ -968,9 +968,9 @@ img.gform_ajax_spinner {
   #header #logo-cm {
     height: 55px; }
     #header #logo-cm svg {
-      width: 140px;
+      width: 160px;
       position: relative;
-      top: 0px; }
+      top: -5px; }
     #header #logo-cm #alogo-mind-header {
       transform: translate(0, 50%);
       -moz-transform: translate(0, 50%);
@@ -2817,6 +2817,11 @@ body.menu-open {
     -ms-transform: translateY(0); }
 
 /********** @COLLECTION SINGLE *********/
+#story-close {
+  position: relative; }
+  #story-close .icon:after {
+    font-size: 44px; }
+
 .collection {
   border-bottom: 1px solid #ddd;
   transition: all 0.25s 0s ease;
@@ -3495,10 +3500,11 @@ body.menu-open {
   display: none; }
   #story-modal.active {
     display: block;
-    z-index: 4;
+    z-index: 9;
     width: 100%;
     height: 100%;
     top: 55px;
+    top: 0;
     overflow: scroll; }
   #story-modal * {
     color: white; }
@@ -3512,7 +3518,7 @@ body.menu-open {
   padding: 0 2%; }
 
 .grid-item {
-  width: 30.66667%; }
+  width: 22.5%; }
 
 .gutter-sizer {
   width: 2%; }
@@ -3610,7 +3616,7 @@ body.menu-open {
       -o-transform: rotate(-90deg);
       -ms-transform: rotate(-90deg);
       position: absolute;
-      left: 0;
+      left: -40px;
       top: 50px;
       padding-top: 80%; }
   #megaNav .split-list {

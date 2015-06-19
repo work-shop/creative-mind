@@ -285,7 +285,7 @@ function updateView( thisStory, nextStory, prevStory ) {
 		storyTarget.html( thisStory.content );
 		var myString = 'interviews';
 
-		videoSetup();
+		videoSetup(true);
 
 
 		//storyModal.addClass('bg-' + thisStory.content.attr('async-category' ));
