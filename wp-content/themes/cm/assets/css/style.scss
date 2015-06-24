@@ -298,6 +298,8 @@
 
 #site-description{
 
+	//position: fixed;
+
 	&.active{
 		#alogo-creative{
 			@include animation("creative",7s,.5s,ease,1);
@@ -1354,11 +1356,31 @@ $gutter-size: 2%;
 $n-columns: 4;
 
 #grid{
-	padding: 0 $gutter-size;
+	//padding: 0 $gutter-size;
+
+	.container-fluid{
+		padding: 0 40px;
+	}
+
+	.col-sm-3{
+		padding: 0 20px;
+	}
+
+}
+
+.grid-col{
+	position: relative;
+}
+
+.tile{
+	//display: none;
+	//min-height: 300px;
 }
 
 .grid-item{
-	width: ( (100% - ( $gutter-size * ( $n-columns + 1 ) ) ) / $n-columns);
+	// width: ( (100% - ( $gutter-size * ( $n-columns + 1 ) ) ) / $n-columns);
+
+	// //width: 100px;
 }
 
 .gutter-sizer{
@@ -1366,9 +1388,11 @@ $n-columns: 4;
 }
 
 .tile {
-	//position: relative;
-	float: left;
-	margin-bottom: $gutter-size;
+	@include transition(0s);
+	//background-image: none !important;
+	position: relative;
+	//float: left;
+	margin-bottom: 40px;
 
 	header{
 		padding: 0 20px;
@@ -1412,6 +1436,10 @@ $n-columns: 4;
 
 }
 
+.tile-category{
+	padding-top: 5px;
+}
+
 .tile-category header {
 	padding: 0 30px;
 	margin-bottom: 60px;
@@ -1423,7 +1451,7 @@ $n-columns: 4;
 
 .tile-story {
 	//display: none;
-	background-size: cover;
+	//background-size: cover;
 	> * {
 		position: inherit;
 		z-index: 1;

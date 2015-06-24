@@ -3514,18 +3514,25 @@ body.menu-open {
   line-height: 1.4; }
 
 /********** @TILES *********/
-#grid {
-  padding: 0 2%; }
+#grid .container-fluid {
+  padding: 0 40px; }
+#grid .col-sm-3 {
+  padding: 0 20px; }
 
-.grid-item {
-  width: 22.5%; }
+.grid-col {
+  position: relative; }
 
 .gutter-sizer {
   width: 2%; }
 
 .tile {
-  float: left;
-  margin-bottom: 2%; }
+  transition: 0s 0.25s 0s ease;
+  -moz-transition: 0s 0.25s 0s ease;
+  -webkit-transition: 0s 0.25s 0s ease;
+  -o-transition: 0s 0.25s 0s ease;
+  -ms-transition: 0s 0.25s 0s ease;
+  position: relative;
+  margin-bottom: 40px; }
   .tile header {
     padding: 0 20px; }
   .tile a {
@@ -3556,6 +3563,9 @@ body.menu-open {
   .tile .icon-custom:after {
     font-size: 5em; }
 
+.tile-category {
+  padding-top: 5px; }
+
 .tile-category header {
   padding: 0 30px;
   margin-bottom: 60px; }
@@ -3563,31 +3573,29 @@ body.menu-open {
 .tile-explore {
   margin-top: -50px; }
 
-.tile-story {
-  background-size: cover; }
-  .tile-story > * {
-    position: inherit;
-    z-index: 1; }
-  .tile-story header {
-    position: absolute;
-    top: 50%;
-    width: 70%;
-    transform: translateY(-50%);
-    -moz-transform: translateY(-50%);
-    -webkit-transform: translateY(-50%);
-    -o-transform: translateY(-50%);
-    -ms-transform: translateY(-50%); }
-  .tile-story:after {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: white;
-    opacity: 0.75; }
-  .tile-story .icon:after {
-    font-size: 3.5em; }
+.tile-story > * {
+  position: inherit;
+  z-index: 1; }
+.tile-story header {
+  position: absolute;
+  top: 50%;
+  width: 70%;
+  transform: translateY(-50%);
+  -moz-transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+  -o-transform: translateY(-50%);
+  -ms-transform: translateY(-50%); }
+.tile-story:after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: white;
+  opacity: 0.75; }
+.tile-story .icon:after {
+  font-size: 3.5em; }
 
 /********** @FOOTER *********/
 .footer-logo-brown {

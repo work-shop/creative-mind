@@ -22,6 +22,9 @@ get_header();
 <?php 
 
 /** 2. Site Description */
+
+get_template_part('partials/slideshow');
+
 get_template_part('partials/site_description');
 
 ?>	
@@ -29,7 +32,7 @@ get_template_part('partials/site_description');
 <?php 
 
 /** 3. Grid */
-get_template_part('partials/grid');
+get_template_part('partials/grid4col2');
 
 ?>	
 

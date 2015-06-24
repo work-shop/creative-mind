@@ -16,3 +16,5 @@
 		</div>	
 	</div>	
 </section>
+
+<section class="block three-quarter hidden"></section>

@@ -10,12 +10,15 @@ var log = console.log;
 //initial events, and general event binding
 jQuery(document).ready(function($) {
 
+	$(window).stellar();
+
 	view();
 
 	videoSetup();
 
 	if($('body').hasClass('home')){
-		isotopeSetup();
+		//isotopeSetup();
+		isotopeSize();
 	}
 
 	$('#fade').click(function(event) {
@@ -313,22 +316,22 @@ function loadPage(){
 
 $(window).scroll(function() { 
 
-	if( !$('html').hasClass('menu-open') ) {
+	// if( !$('html').hasClass('menu-open') ) {
 
-			if($('body').hasClass('home')){	
+	// 		if($('body').hasClass('home')){	
 		
-			var after = $('body').offset().top + 40;
+	// 		var after = $('body').offset().top + 40;
 			       
-			if(76087066 >= after && $("body").hasClass('before')){
-				$("body").removeClass('before').addClass('after');
-			} 
-			else if($(this).scrollTop() < after && $("body").hasClass('after')){
-				$("body").removeClass('after').addClass('before');	
-			} 
+	// 		if(76087066 >= after && $("body").hasClass('before')){
+	// 			$("body").removeClass('before').addClass('after');
+	// 		} 
+	// 		else if($(this).scrollTop() < after && $("body").hasClass('after')){
+	// 			$("body").removeClass('after').addClass('before');	
+	// 		} 
 		
-		}
+	// 	}
 
-	}
+	// }
 
 	//console.log($(this).scrollTop());
 	// if( $('body').hasClass('story-active') && $(this).scrollTop() > 0) {
@@ -338,16 +341,17 @@ $(window).scroll(function() {
 	// 	$('body').addClass('story-active').removeClass('story-removed');
 	// }
 
-	if( $(this).scrollTop() > 60) {
-		$('.menu-minimal').removeClass('visible-xs');
-		$('.menu-full').addClass('hidden');
-	}
-	else if( $(this).scrollTop() < 60) {
-		$('.menu-minimal').addClass('visible-xs');
-		$('.menu-full').removeClass('hidden');
-	}
+	// if( $(this).scrollTop() > 60) {
+	// 	$('.menu-minimal').removeClass('visible-xs');
+	// 	$('.menu-full').addClass('hidden');
+	// }
+	// else if( $(this).scrollTop() < 60) {
+	// 	$('.menu-minimal').addClass('visible-xs');
+	// 	$('.menu-full').removeClass('hidden');
+	// }
 
 	requestAnimationFrame( backShareCheck );
+	requestAnimationFrame( parallax );
 
 
 });//end window.scroll
@@ -564,6 +568,31 @@ function backShareCheck(){
 
 }
 
+function parallax(){
+	
+	scrollTop = $(window).scrollTop();
 
+	var pOpacity,pLineHeight;
 
+	pDistance = ($(window).height()) / 2;
+	pOpacityTop = 1;
+	pOpacityBottom = 0;
+	pProgress = scrollTop / pDistance;
+	pOpacity = 1 - pProgress;
+	pLineHeight = pOpacity*1.2;
+
+	pTopFactor = 20;
+	pTop = (scrollTop / pTopFactor) * -1;
+
+	pTop1 = pTop * .1; pTop1 = 'translateY(' + pTop1 + '%)'; console.log(pTop1);
+	pTop2 = pTop * .08; pTop2 = 'translateY(' + pTop2 + '%)';
+	pTop3 = pTop * .19; pTop3 = 'translateY(' + pTop3 + '%)';
+	pTop4 = pTop * .25;	pTop4 = 'translateY(' + pTop4 + '%)';
+	
+	$('.grid-col-1').css('transform',pTop1);
+	$('.grid-col-2').css('transform',pTop2);
+	$('.grid-col-3').css('transform',pTop3);
+	$('.grid-col-4').css('transform',pTop4);
+
+}
 
