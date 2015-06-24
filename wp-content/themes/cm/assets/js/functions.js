@@ -166,6 +166,15 @@ function flexsliderSetup(){
 		variableWidth: false
 
 	});
+
+	$('.slick-collection').slick({
+		slidesToShow: 4,
+		adaptiveHeight: false,
+		centerMode: false,
+		centerPadding: '0px',
+		variableWidth: false
+
+	});	
 				
 
 	$('.flexslider-hero').flexslider({	

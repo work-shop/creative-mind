@@ -2850,7 +2850,16 @@ body.menu-open {
   margin: 0 10px; }
 
 .story-slide {
-  background-color: #555555; }
+  height: 200px !important;
+  margin: 15px;
+  overflow: hidden;
+  background-color: #555555;
+  cursor: -webkit-grab;
+  cursor: -moz-grab;
+  position: relative; }
+  .story-slide:active {
+    cursor: -webkit-grabbing;
+    cursor: -moz-grabbing; }
   .story-slide a {
     color: #fafafa; }
   .story-slide .media-type, .story-slide .description {

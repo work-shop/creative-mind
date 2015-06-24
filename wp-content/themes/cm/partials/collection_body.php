@@ -53,87 +53,65 @@ $start = count($stories_halves[0]) + 1;
 
 ?>
 
-<section class="block padded crop target collection <?php if ( is_category() ) : echo 'well-dark-broken'; endif; ?>">
-	<div class="container-fluid mb2">
-		<div class="row">
-			<div class="col-sm-8 col-sm-offset-2">
-				<header class="centered mb1">
-					<?php if ( is_singular( 'collections') ) { ?>
-						<a href="<?php echo $collection_permalink ?>" class="<?php echo $category_nicename ?>"><h1 class="bold collection-title"><?php echo $collection_name; ?></h1></a>
-						<h2><?php echo $collection_description ?></h2>
-						<ul class="list-inline h5 uppercase bold mt1 mb2">
-							<li><?php echo $story_qualifier ?></li>
-						</ul>
-					<?php } else { ?>
-						<ul class="list-inline h4 uppercase bold hidden">
-							<li><a href="<?php echo $collection_permalink ?>" class="<?php echo $category_nicename ?>"><?php echo $story_qualifier ?></a></li><li><a href="<?php echo $collection_permalink ?>" class="<?php echo $category_nicename ?>">More Info</a></li><li>Share This Collection</li>
-						</ul>
-						<a href="<?php echo $collection_permalink ?>" class="<?php echo $category_nicename ?>"><h2 class="bold mt0 mb0 collection-title"><?php echo $collection_name; ?></h2></a>
-					<?php } ?>
-				</header>					
-			</div>
-		</div>
-		<div class="row">
-			<div class="col-md-8 col-md-offset-2">
-				<div class="flexslider-story-broken flexslider flexslider-collection" id="story-gallery-<?php echo rand(0,1000); ?>">
-					<ul class="slides">
-						<li class="slide bg-white">
-							<div class="table-of-contents-border border-<?php echo $category_nicename ?>">
-								<h3 class="text-center bold mt2">Table of Contents</h3>
-								<div class="split-list mt2 clearfix">
-									<?php 
-										echo CM_Collection_Controller::create_list( $stories_halves[0], 1, 'collection' ); 
-										echo CM_Collection_Controller::create_list( $stories_halves[1], $start, 'collection' ); 
-									?>
-								</div>
-							</div>
-						</li> <!-- end .slide -->
-						<?php foreach ($stories as $story) { 
-							$story_name = $story->post_title;
-							$story_description = $story->story_description;
-							$story_type = $story->story_media_type;
-							$story_permalink = get_permalink($story);
-							/**
-							 * @var string $story_featured_image URL of the featured image.
-							 */
-							$story_featured_image = ( has_post_thumbnail( $story->ID ) ) ? wp_get_attachment_image_src( get_post_thumbnail_id( $story->ID ), 'thumbnail' )[0] : 'http://images.wisegeek.com/scientists-in-lab.jpg';
-						?>
-							<li 	class="slide story-slide centered"
-									style="background-image: url('<?php echo $story_featured_image ?>'); "
-								   	async-collection-slug="<?php echo $collection->post_name; ?>" 
-								   	async-category="<?php echo $category_nicename; ?>" 
-								   	async-background-image="<?php echo $story_featured_image ?>" 
-								   	async-slug="<?php echo $story->post_name; ?>" 
-								   	async-id="<?php echo $story->ID; ?>" 
-								   	>
-							
-								<a class="overlay display-block border-<?php echo $category_nicename ?>" href="<?php echo '#' . $story->post_name; ?>" >
-									<div class="info">
-										<p class="media-type bold"><?php 
-											if ( $story_type == 'video' ) { echo 'Watch Video'; }
-											elseif ( $story_type == 'image_gallery' ) { echo "View Gallery"; } 
-										?></p>
-										<?php if ( $story_type == 'video' ) { ?>
-											<span class="icon-custom large" data-icon="&#xe600;"></span>
-										<?php } elseif ( $story_type == 'image_gallery' ) { ?>
-											<span class="icon large" data-icon="&#8486;"></span>
-										<?php } ?>
-										<h3 class="bold"><?php echo $story_name ?></h3>
-										<p class="description"><?php echo $story_description ?></p>
-									</div>
-								</a>
+<section class="block padded crop target collection <?php if ( is_category() ) : endif; ?>">
 
-							</li>
-						 <?php } ?>
-					</ul>
-					<div class="flexslider-direction flex-previous previous">
-						<span class="icon large <?php echo $category_nicename ?>" data-icon="&#8216;"></span>
-					</div>					
-					<div class="flexslider-direction flex-next next">
-						<span class="icon large <?php echo $category_nicename ?>" data-icon="&#8212;"></span>
-					</div>								
-				</div> <!-- end .flexslider -->
-			</div>							
-		</div> <!-- end .row -->
-	</div> <!-- end .container -->
+	<header class="mb0">
+		<?php if ( is_singular( 'collections') ) { ?>
+			<a href="<?php echo $collection_permalink ?>" class="<?php echo $category_nicename ?>">
+				<h1 class="bold collection-title"><?php echo $collection_name; ?></h1>
+			</a>
+			<h2><?php echo $collection_description ?></h2>
+			<ul class="list-inline h5 uppercase bold mt1 mb2">
+				<li><?php echo $story_qualifier ?></li>
+			</ul>
+		<?php } else { ?>
+			<ul class="list-inline h4 uppercase bold hidden">
+				<li><a href="<?php echo $collection_permalink ?>" class="<?php echo $category_nicename ?>"><?php echo $story_qualifier ?></a></li><li><a href="<?php echo $collection_permalink ?>" class="<?php echo $category_nicename ?>">More Info</a></li><li>Share This Collection</li>
+			</ul>
+			<a href="<?php echo $collection_permalink ?>" class="<?php echo $category_nicename ?>">
+				<h2 class="bold mt0 mb0 collection-title"><?php echo $collection_name; ?></h2>
+			</a>
+		<?php } ?>
+	</header>
+
+	<div class="collection-slick slick-collection">
+		<div class="collection-slick-slide collection-slick-intro-slide bg-<?php echo $category_nicename ?> border-<?php echo $category_nicename ?>">
+			<h3 class="white bold"><?php echo $collection_description ?></h3>
+		</div>
+
+		<?php foreach ($stories as $story) { ?>
+			<?php 	
+			$story_name = $story->post_title;
+			$story_description = $story->story_description;
+			$story_type = $story->story_media_type;
+			$story_permalink = get_permalink($story);
+			$story_featured_image = ( has_post_thumbnail( $story->ID ) ) ? wp_get_attachment_image_src( get_post_thumbnail_id( $story->ID ), 'thumbnail' )[0] : 'http://images.wisegeek.com/scientists-in-lab.jpg';
+			?>
+
+			<div 
+				class="story-slide collection-slick-slide collection-slick-story-slide bg-<?php echo $category_nicename ?> border-<?php echo $category_nicename ?>"
+				style="background-image: url('<?php echo $story_featured_image ?>'); "
+			   	async-collection-slug="<?php echo $collection->post_name; ?>" 
+			   	async-category="<?php echo $category_nicename; ?>" 
+			   	async-background-image="<?php echo $story_featured_image ?>" 
+			   	async-slug="<?php echo $story->post_name; ?>" 
+			   	async-id="<?php echo $story->ID; ?>"
+			>	 
+				<div class="story-slide-info info">
+					<p class="media-type white bold"><?php 
+						if ( $story_type == 'video' ) { echo 'Watch Video'; }
+						elseif ( $story_type == 'image_gallery' ) { echo "View Gallery"; } 
+					?></p>
+					<?php if ( $story_type == 'video' ) { ?>
+						<span class="icon-custom white large" data-icon="&#xe600;"></span>
+					<?php } elseif ( $story_type == 'image_gallery' ) { ?>
+						<span class="icon large" data-icon="&#8486;"></span>
+					<?php } ?>
+					<h3 class="bold white"><?php echo $story_name ?></h3>
+					<p class="description white"><?php echo $story_description ?></p>
+				</div>
+			</div>
+		<?php } ?>
+
+	</div><!-- end .slick-collection -->	
 </section>

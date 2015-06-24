@@ -931,7 +931,20 @@ body.menu-open{
 
 
 .story-slide {
+	height: 200px !important;
+	margin: 15px;
+	overflow: hidden;
 	background-color: lighten($dark,20);
+
+	cursor: -webkit-grab; 
+	cursor: -moz-grab;	
+	position: relative;
+
+	&:active{
+	cursor: -webkit-grabbing; 
+	cursor: -moz-grabbing;				
+	}	
+
 	a { 
 		color: $ultra-light; 
 	}
