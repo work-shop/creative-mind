@@ -1,6 +1,6 @@
 <?php if ( $slides = get_field('home_page_slideshow', 'options') ) : ?>
 
-<section class="block crop" id="slideshow">
+<section class="block crop full" id="slideshow">
 
 	<div class="flexslider flexslider-hero">
 		<ul class="slides">
@@ -24,7 +24,6 @@
 					} else{
 						$size = 'col-md-6 col-md-offset-6 col-sm-10 col-sm-offset-1 col-xs-12';						
 					}
-
 
 					$image_url = ( $slide['slide_type'] == 'custom') 
 							  ? $slide['slide_image']['sizes']['slideshow_home']

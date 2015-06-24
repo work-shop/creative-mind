@@ -598,6 +598,12 @@ $icon-margin: 15px;
 
 #slideshow {
 	position: relative;
+
+	.slides{
+		li{
+			height: 100%;
+		}
+	}
 }
 
 .flex-active-slide{

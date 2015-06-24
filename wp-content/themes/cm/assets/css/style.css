@@ -2570,6 +2570,8 @@ img.gform_ajax_spinner {
 /********** @SLIDESHOW *********/
 #slideshow {
   position: relative; }
+  #slideshow .slides li {
+    height: 100%; }
 
 .flex-active-slide .slideshow-caption {
   top: 0px; }

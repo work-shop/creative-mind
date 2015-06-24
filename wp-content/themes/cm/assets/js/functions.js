@@ -273,6 +273,7 @@ function view(){
 		$('.block.three-quarter-max').css('max-height',ph);		
 		//$('.flexslider-hero').css('height',fw);
 		$('.flexslider-collection .slides').css('height',collectionSlideHeight);
+		$('.flexslider-hero .slides').css('height',storyVideoHeight);		
 		$('#site-description').css('height',ph);																											
 	}
 	else{
