@@ -351,8 +351,10 @@ $(window).scroll(function() {
 	// }
 
 	requestAnimationFrame( backShareCheck );
-	requestAnimationFrame( parallax );
 
+	if($('body').hasClass('home')){
+		requestAnimationFrame( parallax );		
+	}
 
 });//end window.scroll
 

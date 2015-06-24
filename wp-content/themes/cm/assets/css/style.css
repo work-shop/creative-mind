@@ -966,6 +966,8 @@ img.gform_ajax_spinner {
   overflow: hidden;
   opacity: 1; }
   #header #logo-cm {
+    widows: 160px;
+    float: left;
     height: 55px; }
     #header #logo-cm svg {
       width: 160px;
@@ -1025,6 +1027,13 @@ img.gform_ajax_spinner {
   top: 0px;
   right: 38px;
   z-index: 9; }
+
+#category-nav li {
+  display: inline;
+  margin-right: 15px;
+  letter-spacing: .07em; }
+#category-nav a.gray {
+  color: #555; }
 
 #menu-toggle {
   height: 50px;
@@ -1993,6 +2002,8 @@ img.gform_ajax_spinner {
 
 #category-header, #collection-header, .collection-title {
   line-height: 2em; }
+  #category-header h1, #collection-header h1, .collection-title h1 {
+    letter-spacing: .07em; }
   #category-header li, #collection-header li, .collection-title li {
     display: inline; }
   #category-header a, #collection-header a, .collection-title a {

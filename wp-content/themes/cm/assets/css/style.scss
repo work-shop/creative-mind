@@ -29,6 +29,8 @@
   opacity: 1;
 
   #logo-cm{
+  	widows: 160px;
+  	float: left;
   	height: $nav-height;
   	svg{
 	  	width: 160px;
@@ -92,6 +94,22 @@
 	right: 38px;
 	z-index: 9;
 }
+
+#category-nav{
+	li{
+		display: inline;
+		margin-right: 15px;
+		letter-spacing: .07em;
+	}
+
+	a{
+		&.gray{
+			color: #555;
+		}
+	}
+
+}
+
 
 #menu-toggle{
 	height: 50px;
@@ -385,6 +403,11 @@
 }
 
 #category-header, #collection-header, .collection-title {
+
+	h1{
+		letter-spacing: .07em;
+	}
+
 	line-height: 2em;
 	li {
 		display: inline;

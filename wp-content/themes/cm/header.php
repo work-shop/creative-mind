@@ -77,23 +77,28 @@
 			<header id="header" class="closed border-bottom-<?php echo $category_color ?>">
 				<div class="container-fluid">
 					<div class="row">
-						<div id="logo-cm" class="col-sm-3 m0 col-xs-6">
+						<div id="logo-cm" class="m0">
 							<a href="<?php bloginfo('url'); ?>">
 								<?php get_template_part('partials/logo_svg_header' ); ?>
 							</a>
 						</div>
 
-						<div class="col-sm-6 hidden-xs centered mt1">
-							<?php if ( !is_home() ) {
-								$category = CM_Collection_Controller::get_current_category();
-								echo '<a href="' . get_term_link( $category ) . '" class=" header-bread-crumb uppercase bold ' . $category_color . '">' . $category_name . ' research interviews lectures</a>' ;
-							} ?>
-							<?php if ( is_home() ) { ?>
-								<a href="#grid" class="header-bread-crumb uppercase bold brand jump">Featured Stories</a> 
-							<?php } ?>
- 						</div>
-
-						
+						<div class="hidden-xs mt1">
+							<ul id="category-nav">
+								<li><a href="<?php bloginfo('url'); ?>/courses" class="uppercase bold 
+								<?php if($category_nicename == 'courses'): echo 'courses'; else: echo 'gray'; endif; ?>
+								">Courses</a></li>
+								<li><a href="<?php bloginfo('url'); ?>/research" class="uppercase bold
+								<?php if($category_nicename == 'research'): echo 'research'; else: echo 'gray'; endif; ?>
+								">Research</a></li>
+								<li><a href="<?php bloginfo('url'); ?>/interviews" class="uppercase bold
+								<?php if($category_nicename == 'interviews'): echo 'interviews'; else: echo 'gray'; endif; ?>
+								">Interviews</a></li>
+								<li><a href="<?php bloginfo('url'); ?>/lectures" class="uppercase bold
+								<?php if($category_nicename == 'lectures'): echo 'lectures'; else: echo 'gray'; endif; ?>
+								">Lectures</a></li>
+							</ul>
+ 						</div>	
 
 						<?php $activity = false; ?>
  
