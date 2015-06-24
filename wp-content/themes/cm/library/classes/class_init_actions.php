@@ -261,6 +261,9 @@ class CM_Init_Actions extends WS_Action_Set {
 		wp_register_script('images-loaded', get_template_directory_uri() . '/assets/js/images-loaded.js');					
 		wp_register_script('isotope', get_template_directory_uri() . '/assets/js/isotope.js');
 		wp_register_script('stellar', get_template_directory_uri() . '/assets/js/stellar.js');
+		wp_register_script('dragdealer', get_template_directory_uri() . '/assets/js/dragdealer.js');
+		wp_register_script('classie', get_template_directory_uri() . '/assets/js/classie.js');
+		wp_register_script('dragslideshow', get_template_directory_uri() . '/assets/js/dragslideshow.js');						
 		wp_register_script( 'async', get_template_directory_uri() . $js_root . 'async.js');
 		wp_register_script( 'href', get_template_directory_uri() . $js_root . 'href.js');
 		wp_register_script( 'functions', get_template_directory_uri() . $js_root . 'functions.js');
@@ -275,7 +278,9 @@ class CM_Init_Actions extends WS_Action_Set {
 		wp_enqueue_script('isotope');
 		wp_enqueue_script( 'vimeo' );
 		wp_enqueue_script('stellar');
-
+		wp_enqueue_script('dragdealer');
+		wp_enqueue_script('classie');
+		wp_enqueue_script('dragslideshow');
 		wp_enqueue_script( 'href' );
 		wp_enqueue_script('async');
 		wp_enqueue_script( 'functions' );

@@ -1,105 +1,45 @@
 <?php if ( $slides = get_field('home_page_slideshow', 'options') ) : ?>
 
-<section class="block crop full" id="slideshow">
+			<header id="header2" class="codrops-header">
+				<h1>Draggable Dual-View Slideshow</h1>
+				<span class="message">This mobile version does not have the slideshow switch</span>
+				<button class="slider-switch">Switch view</button>
+			</header>
+			<div id="overlay" class="overlay">
+				<div class="info">
+					<h2>Demo interactions</h2>
+					<span class="info-drag">Drag Sliders</span>
+					<span class="info-keys">Use Arrows</span>
+					<span class="info-switch">Switch view</span>
+					<button>Got it!</button>	
+				</div>
+			</div>
 
-	<div class="flexslider flexslider-hero">
-		<ul class="slides">
+<section class="block crop dragslider" id="slideshow">
 
-		<?php foreach( $slides as $i => $slide ) : ?>
+	<section class="img-dragger img-dragger-large dragdealer">
+		<div class="handle">
 
-				<?php  if($i == 0): ?>
-
-					<!-- <li class="background-cover"> -->
-
-					<?php //  get_template_part('partials/logo_animated'); ?>
-
-					<!-- </li> -->
-
-
-				<?php endif; ?>
-
+			<?php foreach( $slides as $i => $slide ) : ?>
+			
 				<?php
-					if($i%2 == 0){
-						$size = 'col-md-6 col-sm-10 col-xs-12';
-					} else{
-						$size = 'col-md-6 col-md-offset-6 col-sm-10 col-sm-offset-1 col-xs-12';						
-					}
-
-					$image_url = ( $slide['slide_type'] == 'custom') 
-							  ? $slide['slide_image']['sizes']['slideshow_home']
-							  : (( $slide['slide_type'] == "story") 
-							  ? wp_get_attachment_url( get_post_thumbnail_id( $slide['slide_story'][0]->ID, 'slideshow_home' ) )
-							  : wp_get_attachment_url( get_post_thumbnail_id( $slide['slide_collection'][0]->ID, 'slideshow_home' ) ));
+				$image_url = ( $slide['slide_type'] == 'custom') 
+						  ? $slide['slide_image']['sizes']['slideshow_home']
+						  : (( $slide['slide_type'] == "story") 
+						  ? wp_get_attachment_url( get_post_thumbnail_id( $slide['slide_story'][0]->ID, 'slideshow_home' ) )
+						  : wp_get_attachment_url( get_post_thumbnail_id( $slide['slide_collection'][0]->ID, 'slideshow_home' ) ));
 				?>
 
-				<li class="background-cover background-mask-dark" style="background-image: url('<?php echo $image_url; ?>');">
-					<div class="vertical-center container slideshow-caption-container">
-						<div class="row">
-
-					<?php switch ( $slide['slide_type'] ) { 
-
-							case "custom":
-
-						?>
-							<div class="<?php echo $size; ?>slideshow-caption slideshow-caption-<?php echo $i;?>">
-								<a href="<?php echo $slide['slide_link']; ?>">
-									<h2 class="white serif m0"><?php echo $slide['slide_title']; ?></h2>
-									<?php if ( $desc = $slide['slide_description'] ) : ?>
-									<p class="m0 white"><?php echo $desc; ?></p>
-									<?php endif; ?>
-									<h5 class="m1 white">Read more <span class="icon" data-icon="&#8222;"></span></h5>
-								</a>
-							</div>										
-
-						<?php 	break;
-
-							case "story":
-						 ?>
-						 	<?php $story = $slide['slide_story'][0]; ?>
-							<div class="<?php echo $size; ?> slideshow-caption slideshow-caption-<?php echo $i;?>">
-								<a href="#">
-									<h6 class="m0 white">Featured Story</h6>
-									<h2 class="serif m0 white"><?php echo $story->post_title; ?></h2>
-									<?php if ( $desc = get_field( 'story_description', $story->ID ) ) : ?>
-									<p class="m0 white"><?php echo $desc; ?></p>
-									<?php endif; ?>	
-									<h5 class="m1 white">Read more <span class="icon" data-icon="&#8222;"></span></h5>
-								</a>
-							</div>
-
-						<?php 	break;
-
-							case "collection":
-						 ?>	
-						 	<?php $coll = $slide['slide_collection'][0];?>
-						 	<div class="<?php echo $size; ?> slideshow-caption slideshow-caption-<?php echo $i;?>">
-								<a href="#">
-									<h6 class="m0 white">Featured Collection</h6>
-									<h2 class="serif m0 white"><?php echo $coll->post_title; ?></h2>
-								<?php if ( $desc = get_field( 'collection_description', $coll->ID ) ) : ?>
-									<p class="m0 white"><?php echo $desc; ?></p><?php endif; ?>
-									<h5 class="m1 white">Read more <span class="icon" data-icon="&#8222;"></span></h5>		
-								</a>
-							</div>
-
-						<?php 	break; ?>									
-
-					<?php } ?>
-
-				
-						<div class=" hidden col-sm-3 col-md-3 slideshow-caption-link bg-white">
-							<h5 class="">Read more <span class="icon" data-icon="&#8222;"></span></h5>
-						</div>
-
-						</div>	
+				<div class="slide" >
+					<div class="img-wrap"><img src="<?php echo $image_url; ?>" alt="slide"/></div>
+						<h1><?php echo $slide['slide_title']; ?></h1>
+						<h4 class="hidden"></h4>
+						<button class="content-switch">Read more <span class="icon" data-icon="&#8222;"></span></button>
 					</div>
-				</li>
-
+				</div>
 
 		<?php endforeach; ?>
-		</ul>	
-	
-		<div class="flexslider-controls"></div> 
+		</div>	
 		
 		<div id="previous-home" class="flexslider-direction flex-previous previous">
 			<span class="icon" data-icon="&#8250;"></span>
@@ -112,4 +52,56 @@
 	</div>		
 
 </section>
+
+<script>
+	(function() {
+
+		var overlay = document.getElementById( 'overlay' ),
+			overlayClose = overlay.querySelector( 'button' ),
+			header = document.getElementById( 'header2' )
+			switchBtnn = header.querySelector( 'button.slider-switch' ),
+			toggleBtnn = function() {
+				// if( slideshow.isFullscreen ) {
+				// 	classie.add( switchBtnn, 'view-maxi' );
+				// 	$(s)
+				// }
+				// else {
+				// 	classie.remove( switchBtnn, 'view-maxi' );
+				// }
+			},
+			toggleCtrls = function() {
+				// if( !slideshow.isContent ) {
+				// 	classie.add( header, 'hide' );
+				// }
+			},
+			toggleCompleteCtrls = function() {
+				// if( !slideshow.isContent ) {
+				// 	classie.remove( header, 'hide' );
+				// }
+			},
+			slideshow = new DragSlideshow( document.getElementById( 'slideshow' ), { 
+				// toggle between fullscreen and minimized slideshow
+				onToggle : toggleBtnn,
+				// toggle the main image and the content view
+				onToggleContent : toggleCtrls,
+				// toggle the main image and the content view (triggered after the animation ends)
+				onToggleContentComplete : toggleCompleteCtrls
+			}),
+			toggleSlideshow = function() {
+				// slideshow.toggle();
+				// toggleBtnn();
+			},
+			closeOverlay = function() {
+				// classie.add( overlay, 'hide' );
+			};
+
+		// toggle between fullscreen and small slideshow
+		switchBtnn.addEventListener( 'click', toggleSlideshow );
+		// close overlay
+		overlayClose.addEventListener( 'click', closeOverlay );
+
+	}());
+</script>
+
+
 <?php endif; ?>

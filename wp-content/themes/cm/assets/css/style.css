@@ -2568,11 +2568,6 @@ img.gform_ajax_spinner {
   -ms-transform: translateY(0%); }
 
 /********** @SLIDESHOW *********/
-#slideshow {
-  position: relative; }
-  #slideshow .slides li {
-    height: 100%; }
-
 .flex-active-slide .slideshow-caption {
   top: 0px; }
 
