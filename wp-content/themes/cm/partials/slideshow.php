@@ -6,7 +6,9 @@
 	<div class="slick variable-width">
 
 		<?php foreach( $slides as $i => $slide ) : ?>
-		
+
+			<?php $text = true; ?>
+
 			<?php
 			$image_url = ( $slide['slide_type'] == 'custom') 
 					  ? $slide['slide_image']['sizes']['slideshow_home']
@@ -15,11 +17,55 @@
 					  : wp_get_attachment_url( get_post_thumbnail_id( $slide['slide_collection'][0]->ID, 'slideshow_home' ) ));
 			?>
 
-			<div class="slide">
-				<div class="img-wrap"><img src="<?php echo $image_url; ?>" alt="slide"/></div>
-					<h1><?php echo $slide['slide_title']; ?></h1>
-					<h4 class="hidden"></h4>
-					<a href="#" class="">Read more <span class="icon" data-icon="&#8222;"></span></a>
+			<div class="home-slide">
+				<div class="slide-background block-background" style="background-image: url('<?php echo $image_url;?>'); "></div>
+					<div class="slide-overlay">
+
+					<?php if($text): switch ( $slide['slide_type'] ) { 
+
+						case "custom": ?>
+							<div class="slideshow-caption slideshow-caption-<?php echo $i;?>">
+								<a href="<?php echo $slide['slide_link']; ?>">
+									<h1 class="white bold m0"><?php echo $slide['slide_title']; ?></h1>
+									<?php if ( $desc = $slide['slide_description'] ) : ?>
+									<p class="m0 white hidden"><?php echo $desc; ?></p>
+									<?php endif; ?>
+									<h4 class=" white">Read more <span class="icon" data-icon="&#8222;"></span></h4>
+								</a>
+							</div>										
+
+						<?php 	break;
+
+						case "story": ?>
+						 	<?php $story = $slide['slide_story'][0]; ?>
+							<div class=" slideshow-caption slideshow-caption-<?php echo $i;?>">
+								<a href="#">
+									<h3 class="m0 white bold uppercase">Featured Story</h3>
+									<h1 class="bold m0 white"><?php echo $story->post_title; ?></h1>
+									<?php if ( $desc = get_field( 'story_description', $story->ID ) ) : ?>
+									<p class="m0 white hidden"><?php echo $desc; ?></p>
+									<?php endif; ?>	
+									<h4 class=" white">Read more <span class="icon" data-icon="&#8222;"></span></h4>
+								</a>
+							</div>
+
+						<?php 	break;
+
+						case "collection": ?>	
+						 	<?php $coll = $slide['slide_collection'][0];?>
+						 	<div class="slideshow-caption slideshow-caption-<?php echo $i;?>">
+								<a href="#">
+									<h3 class="m0 white bold uppercase">Featured Collection</h3>
+									<h1 class="bold m0 white"><?php echo $coll->post_title; ?></h1>
+								<?php if ( $desc = get_field( 'collection_description', $coll->ID ) ) : ?>
+									<p class="m0 white hidden"><?php echo $desc; ?></p><?php endif; ?>
+									<h4 class=" white">Read more <span class="icon" data-icon="&#8222;"></span></h4>
+								</a>
+							</div>
+
+						<?php 	break; ?>	
+						<?php } endif; ?>
+				</div>
 			</div>
 
 		<?php endforeach; ?>

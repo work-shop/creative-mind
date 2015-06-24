@@ -253,7 +253,7 @@ function view(){
 	storyVideoHeight = ch - 110;
 	collectionSlideHeight = ($('.col-md-8').width() * .45);
 	collectionSlideHeightMobile = ($('.col-md-8').width() * 1.2);
-
+	slickHeight = ch - 165;
 
 	if($('.story').hasClass('story-type-video')){
 
@@ -285,7 +285,10 @@ function view(){
 		$('.block.three-quarter').css('height',ph);	
 		$('.block.three-quarter-max').css('max-height',ph);		
 		$('.flexslider-collection .slides').css('height',collectionSlideHeight);
-		$('#site-description').css('height',ph);																									
+		$('#site-description').css('height',ph);
+
+		$('.home-slide').css('height',slickHeight).css('width',cw);		
+
 	}
 	else{
 
@@ -297,7 +300,10 @@ function view(){
 		$('.block.three-quarter').css('height',ph);			
 		$('.block.three-quarter-max').css('max-height',ph);	
 		$('.flexslider-collection .slides').css('height',collectionSlideHeightMobile);
-		$('#site-description').css('height',ph);																									
+		$('#site-description').css('height',ph);
+
+		$('.home-slide').css('height',slickHeight).css('width',cw);		
+
 	}
 	
 	if(!loaded){

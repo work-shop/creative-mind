@@ -54,23 +54,16 @@
 }
 
 .home.block-active-site-description{
-	#header,#headerfix{
-		height: 0;
-		opacity: 0;
-	}
+	// #header{
+	// 	height: 0;
+	// 	opacity: 0;
+	// }
 }
 
 #headerfix{
 	height: $nav-height;
 	overflow: hidden;	
 }
-
-.home{
-	#headerfix{
-		display: none;
-	}
-}
-
 #collection-intro{
 	@include transition(all,.5s);
 	padding-top: 4%;
@@ -598,18 +591,64 @@ $icon-margin: 15px;
 
 #slideshow{
 
-	.slide{
+	.home-slide{
 		cursor: -webkit-grab; 
 		cursor: -moz-grab;	
+		position: relative;
 
 		&:active{
 		cursor: -webkit-grabbing; 
 		cursor: -moz-grabbing;				
-		}		
+		}	
+
+		.slideshow-caption{
+			position: relative;
+			z-index: 2;
+			padding: 5%;
+			width: 90%; 
+			max-width: 400px;
+			@include transform(translateY(10%));
+			opacity: 0.5;
+			@include transition(all,.5s);
+
+			&:hover{
+				@include transform(scale(1.05));
+			}
+
+		}
+
+		h1{
+			font-size: 5em;
+		}	
+	}
+
+	.slick-active{
+		.slideshow-caption{
+			opacity: 1;
+			@include transform(translateY(0%));
+		}
 	}
 
 }
 
+.slide-overlay{
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	z-index: 0;
+
+background: -moz-linear-gradient(left,  rgba(30,87,153,1) 0%, rgba(123,183,230,0) 51%, rgba(125,185,232,0) 52%); /* FF3.6+ */
+background: -webkit-gradient(linear, left top, right top, color-stop(0%,rgba(30,87,153,1)), color-stop(51%,rgba(123,183,230,0)), color-stop(52%,rgba(125,185,232,0))); /* Chrome,Safari4+ */
+background: -webkit-linear-gradient(left,  rgba(30,87,153,1) 0%,rgba(123,183,230,0) 51%,rgba(125,185,232,0) 52%); /* Chrome10+,Safari5.1+ */
+background: -o-linear-gradient(left,  rgba(30,87,153,1) 0%,rgba(123,183,230,0) 51%,rgba(125,185,232,0) 52%); /* Opera 11.10+ */
+background: -ms-linear-gradient(left,  rgba(30,87,153,1) 0%,rgba(123,183,230,0) 51%,rgba(125,185,232,0) 52%); /* IE10+ */
+background: linear-gradient(to right,  rgba(30,87,153,1) 0%,rgba(123,183,230,0) 51%,rgba(125,185,232,0) 52%); /* W3C */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1e5799', endColorstr='#007db9e8',GradientType=1 ); /* IE6-9 */
+
+
+}
 
 
 .flex-active-slide{
