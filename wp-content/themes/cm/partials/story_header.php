@@ -9,9 +9,9 @@
 	<div class="container-fluid">
 		<div class="row">
 			<div class="col-sm-10 col-sm-offset-1">
-				<h3 class="bread-crumb uppercase m1 bold centered">
+				<h4 class="bread-crumb uppercase m1 bold centered">
 					<?php if ( $collection ) { echo $collection->post_title . ' &nbsp; / &nbsp; '; } the_title() ?>
-				</h3>
+				</h4>
 				<?php if ( ($story_type == 'video') && ($vimeo_id = get_field('story_vimeo_id')) ) { ?>
 					<div class="video">
 	 					<div class="story-video-play centered" id="video-play" data-toggle="tooltip-broken" data-placement="top" title="watch the video!">
@@ -32,27 +32,25 @@
 	 				<?php endif; ?>	
 
  				<?php } elseif ( ($story_type == 'video_gallery') && ($clips = get_field('video_gallery')) ) { ?>
- 					<div id="video-gallery">
- 						<div class="container-fluid">
- 							<div class="row">
- 							<?php foreach ( $clips as $i => $clip ) :
- 								if ( $i == 0 ) {
- 							?>
-	 								<div class="col-sm-10 video-gallery-main mt3 mb2">
+ 					<div id="video-gallery" class="bg-courses">
+							<div class="row">
+							<?php foreach ( $clips as $i => $clip ) :
+								if ( $i == 0 ) {
+							?>
+ 								<div class="col-sm-10 video-gallery-main mt3 mb2">
+ 									<?php echo vimeo_frame($clip['vimeo_id'],'story-video-1'); ?>
+ 									<p><?php echo $clip['video_title']; ?></p>
+ 								</div> 
+ 							<?php } else { ?>
+ 								<div class="col-sm-2">
+	 								<div class="video-gallery-clip">
 	 									<?php echo vimeo_frame($clip['vimeo_id'],'story-video-1'); ?>
 	 									<p><?php echo $clip['video_title']; ?></p>
-	 								</div> 
-	 							<?php } else { ?>
-	 								<div class="col-sm-2">
-		 								<div class="video-gallery-clip">
-		 									<?php echo vimeo_frame($clip['vimeo_id'],'story-video-1'); ?>
-		 									<p><?php echo $clip['video_title']; ?></p>
-		 								</div>
-		 							</div>
- 								<?php } ?>
- 							<?php endforeach; ?>
-							</div>								
- 						</div>
+	 								</div>
+	 							</div>
+								<?php } ?>
+							<?php endforeach; ?>
+						</div>								
  					</div> <!-- end #video-gallery -->
  					<?php if ($description = get_field('story_description')) : ?>
  						<p class="mt1 h2"><?php echo $description; ?></p>
@@ -87,27 +85,27 @@
 	 				</div>
 `
  				<?php } elseif ( ($story_type == 'video_and_image_gallery') && ($gallery = get_field('story_image_gallery')) && ($clips = get_field('video_gallery')) ) { ?>
- 					<div id="video-gallery">
- 						<div class="container-fluid">
- 							<div class="row">
- 							<?php foreach ( $clips as $i => $clip ) :
- 								if ( $i == 0 ) {
- 							?>
-	 								<div class="col-sm-10 video-gallery-main mt3 mb2">
-	 									<?php echo vimeo_frame($clip['vimeo_id'],'story-video-1'); ?>
-	 									<p><?php echo $clip['video_title']; ?></p>
-	 								</div> 
-	 							<?php } else { ?>
-	 								<div class="col-sm-2">
-		 								<div class="video-gallery-clip">
-		 									<?php echo vimeo_frame($clip['vimeo_id'],'story-video-1'); ?>
-		 									<p><?php echo $clip['video_title']; ?></p>
-		 								</div>
-		 							</div>
- 								<?php } ?>
- 							<?php endforeach; ?>
-							</div>								
- 						</div>
+ 					<div id="video-gallery" class="">
+						<div class="row">
+						<?php foreach ( $clips as $i => $clip ) :
+							if ( $i == 0 ) {
+						?>
+								<div class="col-sm-10 video-gallery-main mb2">
+									<div class="video-gallery-main-video">
+										<?php echo vimeo_frame($clip['vimeo_id'],'story-video-1'); ?>
+									</div>
+									<h4 class="bold"><?php echo $clip['video_title']; ?></h4>
+								</div> 
+							<?php } else { ?>
+								<div class="col-sm-2">
+ 								<div class="video-gallery-clip">
+ 									<?php echo vimeo_frame($clip['vimeo_id'],'story-video-1'); ?>
+ 									<h4 class="bold"><?php echo $clip['video_title']; ?></h4>
+ 								</div>
+ 							</div>
+							<?php } ?>
+						<?php endforeach; ?>
+						</div>								
  					</div> <!-- end #video-gallery -->
 
 				<?php }  
@@ -119,7 +117,7 @@
 				<?php } //endif ?>
 
 			</div> <!-- end .col-sm-10 -->
-			<div class="col-sm-1 mt0 story-close"><a href="#close" id="story-close"><span class="icon" data-icon="’"></span></a></div>
+			<div class="col-sm-1 mt0 story-close"><a href="#" id="story-close"><span class="icon" data-icon="’"></span></a></div>
 		</div>
 	</div> <!-- end .container-fluid -->
 </header>

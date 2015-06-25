@@ -10,10 +10,6 @@ var log = console.log;
 //initial events, and general event binding
 jQuery(document).ready(function($) {
 
-
-
-	$(window).stellar();
-
 	view();
 
 	videoSetup();
@@ -174,7 +170,9 @@ function flexsliderSetup(){
 	});
 
 	$('.slick-collection').slick({
-		slidesToShow: 4,
+		slidesToShow: 5,
+		slidesToScroll: 3,
+		friction: 0,
 		adaptiveHeight: false,
 		centerMode: false,
 		centerPadding: '0px',
@@ -213,14 +211,14 @@ function flexsliderSetup(){
 	 	      slideshow: false
 	 	 }); 
 	 } else {
-	 	$('.flexslider-story').flexslider({	
-	 	      animation: 'fade',
-	 	      slideshowSpeed: 8000,           
-	 		  animationSpeed: 500,
-	 	      directionNav: false,
-	 	      controlNav: true,
-	 	      slideshow: false
-	 	 }); 
+	 	// $('.flexslider-story-images').flexslider({	
+	 	//       animation: 'fade',
+	 	//       slideshowSpeed: 8000,           
+	 	// 	  animationSpeed: 500,
+	 	//       directionNav: false,
+	 	//       controlNav: true,
+	 	//       slideshow: false
+	 	//  }); 
 	 }	
 
 	$('.flex-control-paging li:first-child').addClass('table-of-contents');
@@ -268,26 +266,13 @@ function view(){
 	storyVideoHeight = ch - 110;
 	collectionSlideHeight = ($('.col-md-8').width() * .45);
 	collectionSlideHeightMobile = ($('.col-md-8').width() * 1.2);
-	slickHeight = ch - 165;
+	slickHeight = ch - 300;
 
-	if($('.story').hasClass('story-type-video')){
 
-		if($('body').hasClass('story-video-active')){
-			$('.story-hero').css('height',storyVideoHeight);
-			$('.story-video-container').css('height',storyVideoHeight);
-		}
-		else{
-			$('.story-hero').css('height',storyHeight);
-			$('.story-video-container').css('height',storyVideoHeight);		
-		}
+	if($('.story').hasClass('story-type-video_gallery') || $('.story').hasClass('story-type-video_and_image_gallery') ){
+		storyVideoGalleryHeight = $('#video-gallery').width() * .5;
+		$('.video-gallery-main-video').css('height',storyVideoGalleryHeight);
 	}
-	else if($('.story').hasClass('story-type-video-gallery')){	
-		$('.story-hero').css('height','auto');
-		$('.video-gallery-main').css('height',ch/2);
-	}	
-	else{
-		$('.story-hero').css('height',storyHeight);
-	}	
 	
 	if($(window).width() >= 768){		
 

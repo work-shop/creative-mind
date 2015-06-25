@@ -69,14 +69,17 @@ $start = count($stories_halves[0]) + 1;
 				<li><a href="<?php echo $collection_permalink ?>" class="<?php echo $category_nicename ?>"><?php echo $story_qualifier ?></a></li><li><a href="<?php echo $collection_permalink ?>" class="<?php echo $category_nicename ?>">More Info</a></li><li>Share This Collection</li>
 			</ul>
 			<a href="<?php echo $collection_permalink ?>" class="<?php echo $category_nicename ?>">
-				<h2 class="bold mt0 mb0 collection-title"><?php echo $collection_name; ?></h2>
+				<h2 class="bold ml1 m0 collection-title"><?php echo $collection_name; ?></h2>
 			</a>
 		<?php } ?>
 	</header>
 
 	<div class="collection-slick slick-collection">
 		<div class="collection-slick-slide collection-slick-intro-slide bg-<?php echo $category_nicename ?> border-<?php echo $category_nicename ?>">
-			<h3 class="white bold"><?php echo $collection_description ?></h3>
+			<div class="dummy"></div>
+			<div class="collection-description">
+				<p class="white bold"><?php echo $collection_description ?></p>
+			</div>
 		</div>
 
 		<?php foreach ($stories as $story) { ?>
@@ -98,19 +101,19 @@ $start = count($stories_halves[0]) + 1;
 			   	async-id="<?php echo $story->ID; ?>"
 			>	 
 
-				<a class="overlay display-block>" href="<?php echo '#' . $story->post_name; ?>" >
+				<a class="overlay display-block>" href="<?php echo '#' . $collection->post_name . '#' . $story->post_name; ?>" >
 					<div class="story-slide-info info">
-						<p class="media-type white bold"><?php 
+						<p class="media-type white bold centered"><?php 
 							if ( $story_type == 'video' ) { echo 'Watch Video'; }
 							elseif ( $story_type == 'image_gallery' ) { echo "View Gallery"; } 
 						?></p>
 						<?php if ( $story_type == 'video' ) { ?>
-							<span class="icon-custom white large" data-icon="&#xe600;"></span>
+							<span class="icon-custom white large centered" data-icon="&#xe600;"></span>
 						<?php } elseif ( $story_type == 'image_gallery' ) { ?>
 							<span class="icon large" data-icon="&#8486;"></span>
 						<?php } ?>
-						<h3 class="bold white"><?php echo $story_name ?></h3>
-						<p class="description white"><?php echo $story_description ?></p>
+						<h3 class="bold white centered"><?php echo $story_name ?></h3>
+						<p class="description white hidden"><?php echo $story_description ?></p>
 					</div>
 				</a>
 			</div>

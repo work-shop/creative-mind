@@ -299,7 +299,18 @@ function updateView( thisStory, nextStory, prevStory ) {
 		var myString = 'interviews';
 
 		videoSetup();
+		view();
 
+		if($('.flexslider-story-images')){
+	 		$('.flexslider-story-images').flexslider({	
+		 	      animation: 'fade',
+		 	      slideshowSpeed: 8000,           
+		 		  animationSpeed: 500,
+		 	      directionNav: false,
+		 	      controlNav: true,
+		 	      slideshow: false
+		 	 }); 
+ 		}
 
 		//storyModal.addClass('bg-' + thisStory.content.attr('async-category' ));
 

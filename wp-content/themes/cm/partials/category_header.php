@@ -34,12 +34,12 @@
 
 ?>
 
-<header class="block padded-less-broken bg-<?php echo $category_nicename ?> white" id="category-header">
+<header class="block padded-less mb2 bg-<?php echo $category_nicename ?> white" id="category-header">
 	<div class="container-fluid">
 		<div class="row">
 			<div class="col-sm-10 col-sm-offset-1">
-				<h1 class="centered bold mb0 "><?php echo $category_name; ?></h1>
-				<h2 class="centered mt0 mb1"><?php echo $category_description; ?></h2>
+				<h1 class="centered bold m0"><?php echo $category_name; ?></h1>
+				<h2 class="centered mb0 mt1"><?php echo $category_description; ?></h2>
 			</div>
 		</div>	
 		<div class="row mb2 hidden">

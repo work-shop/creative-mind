@@ -18,10 +18,10 @@
 		
 		<?php get_template_part('partials/story_header'); ?>
 
-		<div class="story-body">
+		<div class="story-body mt1">
 			<div class="container-fluid">
-				<div class="row mt1">
-					<div class="col-sm-10 col-sm-offset-1">
+				<div class="row">
+					<div class="col-sm-10 col-sm-offset-1 col-md-8 col-md-offset-2">
 						<div class="story-meta centered">
 							<?php if ($byline = get_field('story_byline')) : ?>
 								<p class="mt0 mb1">
@@ -43,7 +43,7 @@
 					</div>
 				</div>
 				<div class="row">
-					<div class="col-sm-10 col-sm-offset-1 col-md-8 col-md-offset-2">
+					<div class="col-sm-12 col-sm-offset-0 col-md-8 col-md-offset-2">
 						<div class="story-content">
 							<?php 
 
@@ -60,6 +60,28 @@
 
 							?>
 
+							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+							tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+							quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+							consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+							cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+							proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+
+							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+							tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+							quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+							consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+							cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+							proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+							
+
+							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+							tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+							quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+							consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+							cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+							proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>	
+
 							<?php if (($cl = get_field('story_callout_link')) && ($cc = get_field('story_callout'))) : ?>
 								<aside class="story-callout bg-courses white">
 									<a href="<?php echo $cl; ?>">
@@ -71,7 +93,7 @@
 							<?php endif; ?>
 
 							<?php if ( ($story_type == 'video_and_image_gallery') && ($gallery = get_field('story_image_gallery')) && ($clips = get_field('video_gallery')) ) { ?>
-			 					<div class="flexslider-story flexslider" id="story-gallery">
+			 					<div class="flexslider-story-images flexslider" id="story-gallery">
 			 						<ul class="slides clearfix">
 									<?php foreach ($gallery as $gallery_image) { ?>
 										<li data-thumb="<?php echo $gallery_image['sizes']['medium'] ?>">

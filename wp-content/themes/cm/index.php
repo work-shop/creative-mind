@@ -32,7 +32,7 @@ get_template_part('partials/site_description');
 <?php 
 
 /** 3. Grid */
-get_template_part('partials/grid4col2');
+//get_template_part('partials/grid4col2');
 
 ?>	
 
