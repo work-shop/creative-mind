@@ -99,17 +99,22 @@ var urlmanager = (function( $, pollLocation, libAsync ) {
 	 * add new action to the list of actions to be invoked when the URL
 	 * matches this parameter.
 	 */
-	function set_action( parameter, callback ) {
-		if ( actions[ parameter ] ) {
-			actions[ parameter ].push( callback ); 
+	function set_action( namespace, parameter, callback ) {
+		if ( actions[ namespace ] ) {
+			if ( actions[ namespace ][ parameter ] ) {
+				actions[ namespace ][ parameter ].push( callback ); 
+			} else {
+				actions[ namespace ][ parameter ] = [ callback ];
+			}
 		} else {
-			actions[ parameter ] = [ callback ];
+			actions[ namespace ] = {};
+			actions[ namespace ][ parameter ] = [ callback ];
 		}
 	}
 
-	function do_action( parameter ) {
-		if ( actions[ parameter ] ) {
-			actions[parameter].forEach( function( f ) { f( parameter ); });
+	function do_action( namespace, parameter ) {
+		if ( actions[ namespace ] && actions[ namespace ][ parameter ] ) {
+			actions[ namespace ][parameter].forEach( function( f ) { f( parameter ); });
 		}
 	}
 
@@ -126,8 +131,16 @@ var urlmanager = (function( $, pollLocation, libAsync ) {
 		$( window ).on('href-changed', function( e, url ) {
 			//console.log('href');
 			var parameter = reduce_url( url );
-			if ( parameter.length > 0 ) {
-				do_action( parameter[ parameter.length - 1 ] );
+			var populated = parameter.reduce( function( prev, curr ) { return (curr.length != 0) || prev }, false );
+
+			if ( populated ) {
+				console.log( 'triggered: ');
+				console.log( parameter );
+
+				var namespace = parameter[ parameter.length - 2 ];
+				do_action( namespace, parameter[ parameter.length - 1 ] );
+			} else {
+				do_action( 'default', 'default');
 			}
 		});
 	}
@@ -256,7 +269,7 @@ function updateView( thisStory, nextStory, prevStory ) {
 		//console.log( content.attr('async-background-image') );
 		//console.log( content.attr('async-category' ) );
 
-		target.attr('href', makeSlug( content.attr('async-slug') ) );
+		target.attr('href', makeSlug( content.attr('async-collection-slug') ) + makeSlug( content.attr('async-slug') ) );
 
 		target.find('.preview')
 			.attr('style', "background-image:url(" + content.attr('async-background-image') + ");")
@@ -285,7 +298,7 @@ function updateView( thisStory, nextStory, prevStory ) {
 		storyTarget.html( thisStory.content );
 		var myString = 'interviews';
 
-		videoSetup(true);
+		videoSetup();
 
 
 		//storyModal.addClass('bg-' + thisStory.content.attr('async-category' ));
@@ -298,6 +311,41 @@ function updateView( thisStory, nextStory, prevStory ) {
 }
 
 /**
+ * This function is called whenever the DEFAULT asynchronous request is completed
+ * Any DOM manipulation that happens in updateView should be UNDONE here,
+ * in the routine, or in functions called by this routine.
+ *
+ *
+ */
+function clearView() {
+
+		function clearContent( target ) {
+			target.attr('href', "#" );
+
+			target.find('.preview')
+			.attr('style', "" );
+
+			target.find('h3').text( "" );
+
+			$('title').html('Story Title');
+		}
+
+		var 	storyTarget = $('#current-story'),
+			nextTarget = $('#next-story-link'),
+			prevTarget = $('#previous-story-link')
+			storyModal = $('#story-modal');
+
+		if(storyModal.hasClass('active')){
+			storyModal.removeClass('active').removeClass('activated').addClass('inactive');
+		}
+
+		clearContent( prevTarget );
+		clearContent( nextTarget );
+
+		storyTarget.html( "" );
+}
+
+/**
  * Work the asynchrony into the view.
  */
 $( document ).ready( function() {
@@ -306,12 +354,15 @@ $( document ).ready( function() {
 
 	var buckets = divide( $('.story-slide'), 'async-collection-slug' );
 
+	console.log( buckets );
+
 	for ( var collection in buckets ) {
+
 		buckets[ collection ].forEach( function( story, index, bucket ) {
 			var nextStory = circular_next( bucket, index );
 			var prevStory = circular_prev( bucket, index );
 
-			urlmanager.on( story.attr('async-slug'), function( ) {
+			urlmanager.on( story.attr('async-collection-slug'), story.attr('async-slug'), function( ) {
 				libasync.getPost( parseInt( story.attr('async-id') ),  function( err, data ) {
 					if ( err ) console.log( err );
 
@@ -321,6 +372,8 @@ $( document ).ready( function() {
 			});
 		});
 	}
+
+	urlmanager.on( 'default', 'default', clearView);
 
 	$(window).trigger('href-changed', window.location.href );
 

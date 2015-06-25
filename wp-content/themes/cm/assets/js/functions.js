@@ -28,6 +28,12 @@ jQuery(document).ready(function($) {
 		//console.log('fade');
 		$(this).addClass('fade-out');
 	});
+
+	$('.story-close').click(function(event) {
+	  	event.preventDefault();
+		//console.log('fade');
+		$('#story-modal').removeClass('active');
+	});	
 	
 	$('#backtotop').click(function(event) {
 	  	event.preventDefault();

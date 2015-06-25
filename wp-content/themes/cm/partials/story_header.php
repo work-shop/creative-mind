@@ -119,7 +119,7 @@
 				<?php } //endif ?>
 
 			</div> <!-- end .col-sm-10 -->
-			<div class="col-sm-1 mt0"><a href="#close" id="story-close"><span class="icon" data-icon="’"></span></a></div>
+			<div class="col-sm-1 mt0 story-close"><a href="#close" id="story-close"><span class="icon" data-icon="’"></span></a></div>
 		</div>
 	</div> <!-- end .container-fluid -->
 </header>

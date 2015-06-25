@@ -97,19 +97,22 @@ $start = count($stories_halves[0]) + 1;
 			   	async-slug="<?php echo $story->post_name; ?>" 
 			   	async-id="<?php echo $story->ID; ?>"
 			>	 
-				<div class="story-slide-info info">
-					<p class="media-type white bold"><?php 
-						if ( $story_type == 'video' ) { echo 'Watch Video'; }
-						elseif ( $story_type == 'image_gallery' ) { echo "View Gallery"; } 
-					?></p>
-					<?php if ( $story_type == 'video' ) { ?>
-						<span class="icon-custom white large" data-icon="&#xe600;"></span>
-					<?php } elseif ( $story_type == 'image_gallery' ) { ?>
-						<span class="icon large" data-icon="&#8486;"></span>
-					<?php } ?>
-					<h3 class="bold white"><?php echo $story_name ?></h3>
-					<p class="description white"><?php echo $story_description ?></p>
-				</div>
+
+				<a class="overlay display-block>" href="<?php echo '#' . $story->post_name; ?>" >
+					<div class="story-slide-info info">
+						<p class="media-type white bold"><?php 
+							if ( $story_type == 'video' ) { echo 'Watch Video'; }
+							elseif ( $story_type == 'image_gallery' ) { echo "View Gallery"; } 
+						?></p>
+						<?php if ( $story_type == 'video' ) { ?>
+							<span class="icon-custom white large" data-icon="&#xe600;"></span>
+						<?php } elseif ( $story_type == 'image_gallery' ) { ?>
+							<span class="icon large" data-icon="&#8486;"></span>
+						<?php } ?>
+						<h3 class="bold white"><?php echo $story_name ?></h3>
+						<p class="description white"><?php echo $story_description ?></p>
+					</div>
+				</a>
 			</div>
 		<?php } ?>
 

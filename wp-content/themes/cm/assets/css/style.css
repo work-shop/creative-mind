@@ -3570,7 +3570,13 @@ body.menu-open {
 #story-modal {
   position: fixed;
   z-index: -100;
-  display: none; }
+  display: none;
+  opacity: 0;
+  transition: all 1s 0s ease;
+  -moz-transition: all 1s 0s ease;
+  -webkit-transition: all 1s 0s ease;
+  -o-transition: all 1s 0s ease;
+  -ms-transition: all 1s 0s ease; }
   #story-modal.active {
     display: block;
     z-index: 9;
@@ -3578,6 +3584,7 @@ body.menu-open {
     height: 100%;
     top: 55px;
     top: 0;
+    opacity: 1;
     overflow: scroll; }
   #story-modal * {
     color: white; }
