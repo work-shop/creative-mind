@@ -229,7 +229,7 @@ function flexsliderSetup(){
 //animate jump links
 function scrollLink(destination){
 	$('html,body').animate({
-		scrollTop: $(destination).offset().top - 100
+		scrollTop: $(destination).offset().top - 65
 	},1500);
 }
 
@@ -262,11 +262,12 @@ function view(){
 	cw = $(window).width();
 	ph = ch - 70;
 	fw = cw*.5;
+	threeQuarter = ch*.75;
 	storyHeight = cw/3;
 	storyVideoHeight = ch - 110;
 	collectionSlideHeight = ($('.col-md-8').width() * .45);
 	collectionSlideHeightMobile = ($('.col-md-8').width() * 1.2);
-	slickHeight = ch - 300;
+	slickHeight = ch - 200;
 
 
 	if($('.story').hasClass('story-type-video_gallery') || $('.story').hasClass('story-type-video_and_image_gallery') ){
@@ -279,14 +280,12 @@ function view(){
 		$('.block.half').css('height',ch/2);
 		$('.block.golden-max').css('max-height',ch*.72);		
 		$('.block.sixty').css('height',ch*.69);										
-		$('.block.full').css('height',ch+60);	
-		$('.block.min').css('min-height',ch);				
+		$('.block.full').css('height',ph);	
+		$('.block.min').css('min-height',ph);				
 		$('.block.min-large').css('min-height',ch);	
-		$('.block.three-quarter').css('height',ph);	
+		$('.block.three-quarter').css('height',threeQuarter);	
 		$('.block.three-quarter-max').css('max-height',ph);		
 		$('.flexslider-collection .slides').css('height',collectionSlideHeight);
-		$('#site-description').css('height',ph);
-
 		$('.home-slide').css('height',slickHeight).css('width',cw);		
 
 	}
@@ -294,14 +293,12 @@ function view(){
 
 		$('.block.half').css('height',ch/2);
 		$('.block.golden-max').css('max-height',ch*.70);		
-		$('.block.full').css('height',ch+60);	
-		$('.block.min').css('min-height',ch);							
+		$('.block.full').css('height',ph);	
+		$('.block.min').css('min-height',ph);							
 		$('.block.min-large').css('min-height','none');	
-		$('.block.three-quarter').css('height',ph);			
+		$('.block.three-quarter').css('height',threeQuarter);			
 		$('.block.three-quarter-max').css('max-height',ph);	
 		$('.flexslider-collection .slides').css('height',collectionSlideHeightMobile);
-		$('#site-description').css('height',ph);
-
 		$('.home-slide').css('height',slickHeight).css('width',cw);		
 
 	}

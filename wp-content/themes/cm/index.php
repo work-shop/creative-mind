@@ -24,7 +24,6 @@ get_header();
 /** 2. Site Description */
 
 get_template_part('partials/slideshow');
-
 get_template_part('partials/site_description');
 
 ?>	

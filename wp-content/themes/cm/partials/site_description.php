@@ -1,4 +1,4 @@
-<section class="block target padded-less" id="site-description">
+<section class="block target padded-less min" id="site-description">
 	<div class="vertical-center">
 		<div class="row mb3">
 			<div class="col-sm-6 col-sm-offset-3 col-md-4 col-md-offset-4">
@@ -13,8 +13,23 @@
 				The <a href="<?php bloginfo('url' );?>/courses" class="border-bottom-courses">courses</a>, <a href="<?php bloginfo('url' );?>/research" class="border-bottom-research">research</a>, <a href="<?php bloginfo('url' );?>/interviews" class="border-bottom-interviews">interviews</a> and <a href="<?php bloginfo('url' );?>/lectures" class="border-bottom-lectures">lectures</a> developed by the Creative Mind Initiative explore the roots of creative thinking and dissolve disciplinary boundaries in search of new modes of teaching and learning.<br>
 				</h2>
 			</div>
-		</div>	
+		</div>
+		<div id="explore" class="scrolly mt4">
+			<div class="container-fluid">
+				<div class="row">
+					<div class="col-sm-12">
+					<a href="#site-description" class="jump">
+						<h2 class="research centered bold mt1 mb0">Explore The Creative Mind!</h2>
+						<h6 class="centered m0"><span class="icon research large" data-icon="ﬁ"></span></h6>
+					</a>
+					</div>
+				</div>
+			</div>
+		</div>				
 	</div>	
 </section>
 
-<section class="block three-quarter hidden"></section>
+
+
+
+

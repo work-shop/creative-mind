@@ -110,7 +110,6 @@
 
 }
 
-
 #menu-toggle{
 	height: 50px;
 	width: 140px;
@@ -140,7 +139,7 @@
 	margin: 4px 0px;
 	position: relative;
 	top: 0px;
-	@include transition(all,.35s);
+	@include transition(all,.1s);
 	transform-origin: center center;
 }
 
@@ -299,7 +298,7 @@
 	}
 
 	#alogo-brown path{
-		fill: $brand;			
+		//fill: $brand;			
 	}
 
 	#alogo-dot-1{
@@ -370,7 +369,7 @@
 	25%{ fill: $courses !important; }
 	50%{ fill: $research !important; }
 	75%{ fill: $interviews !important; }
-	100%{ fill: $brand !important; }
+	100%{ fill: $interviews !important; }
 }
 
 @include keyframes("dot1"){
@@ -716,6 +715,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1e5799', end
 	.icon:before{
 		font-size: 90px;
 		color: $brand;
+
 	}
 	
 	&.previous{
@@ -776,16 +776,12 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1e5799', end
 
 /********** @SCROLLY *********/
 
-#scrolly{
-	position: fixed;
-	bottom: 0px;
-	height: 110px;
-	width: 100%;
-	left: 0;
-	background: $light;
-	z-index: 3;
+.scrolly{
+	h6{
+		position: relative;
+		top: -20px;
+	}
 }
-
 
 /********** @MEGANAV *********/
 
@@ -818,7 +814,7 @@ body.menu-open{
 		//@include transform(translateY(0%));
 		@include transform(scaleY(1));
 		top: $nav-height;
-		z-index: 6;
+		z-index: 9;
 	}
 
 	.h3 {
@@ -901,10 +897,8 @@ body.menu-open{
 }
 
 .collection{
-	padding: 2.5% 30px;
-
-	&:first-child{
-		padding-top: 40%;
+	.collection-title{
+		margin-left: 11px;
 	}
 }
 
@@ -989,7 +983,7 @@ body.menu-open{
 
 #story-close{
 	position: fixed;
-	top: 60px;
+	top: 30px;
 	right: 35px;
 
 	.icon:after{
@@ -1280,7 +1274,9 @@ body.menu-open{
 		opacity: 1;
 		right: -60px;
 		&:hover{
-			//right: -60px;
+			.icon:before{
+				@include transform(scale(1.1));
+			}
 		}
 		&.previous{
 			right: auto;
@@ -1449,22 +1445,18 @@ body.menu-open{
 
 #story-modal{
 	position: fixed;
-	z-index: -100;
-	display: none;
-	opacity: 0;
-	@include transition(all,1s);
+	z-index: 8;
+	@include transform(translateY(110%));
+	height: 100%;
+	width: 100%;
+	top: 55px;	
+	overflow: scroll;		
+	@include transition(all,.3s);
+    -webkit-transition-delay: .5s;
+    transition-delay: .5s;	
 
 	&.active{
-		display: block;
-		z-index: 9;
-		width: 100%;
-		height: 100%;
-		top: 55px;
-		//top: 0;
-		opacity: 1;
-		//background: rgba(30,200,175,.9);
-		//background: $courses;
-		overflow: scroll;
+		@include transform(translateY(0%));
 	}
 
 	.story-body{
@@ -1710,7 +1702,7 @@ $n-columns: 4;
 		.flexslider-direction{
 			right: -35px;
 			&:hover{
-				//right: -35px;
+				@include transform(scale(1.1));
 			}
 			&.previous{
 				right: auto;
@@ -1837,7 +1829,7 @@ $n-columns: 4;
 		.flexslider-direction{
 			right: -5px;
 			&:hover{
-				//right: -5px;
+				@include transform(scale(1.1));
 			}
 			&.previous{
 				right: auto;
@@ -2197,7 +2189,14 @@ $n-columns: 4;
 	    border: none;
 	    outline: none;
 	    background: transparent;
+	    @include transition();
 	}
+
+	.slick-prev:hover,
+	.slick-next:hover,{
+		@include transform(scale(1.5));	
+	}
+
 	.slick-prev:hover,
 	.slick-prev:focus,
 	.slick-next:hover,

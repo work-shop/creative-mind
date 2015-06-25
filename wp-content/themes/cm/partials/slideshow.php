@@ -71,14 +71,20 @@
 		<?php endforeach; ?>
 
 	</div>	
-	
-<!-- 	<div id="previous-home" class="flexslider-direction flex-previous previous">
-		<span class="icon" data-icon="&#8250;"></span>
-	</div>					
-	
-	<div id="next-home" class="flexslider-direction flex-next next">
-		<span class="icon" data-icon="&#8249;"></span>
-	</div>	 -->
+
+	<div id="learn" class="scrolly">
+		<div class="container-fluid">
+			<div class="row">
+				<div class="col-sm-12">
+				<a href="#site-description" class="jump">
+					<h2 class="interviews centered bold mt1 mb0">Learn About The Creative Mind!</h2>
+					<h6 class="centered m0"><span class="icon interviews large" data-icon="ﬁ"></span></h6>
+				</a>
+				</div>
+			</div>
+
+		</div>
+	</div>
 	
 </section>
 
