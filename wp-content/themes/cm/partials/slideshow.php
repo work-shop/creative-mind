@@ -77,8 +77,8 @@
 			<div class="row">
 				<div class="col-sm-12">
 				<a href="#site-description" class="jump">
-					<h2 class="interviews centered bold mt1 mb0">Learn About The Creative Mind!</h2>
-					<h6 class="centered m0"><span class="icon interviews large" data-icon="ﬁ"></span></h6>
+					<h2 class="courses centered bold mt1 mb0">Learn About The Creative Mind!</h2>
+					<h6 class="centered m0"><span class="icon courses large" data-icon="ﬁ"></span></h6>
 				</a>
 				</div>
 			</div>

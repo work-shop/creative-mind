@@ -32,7 +32,7 @@
 	 				<?php endif; ?>	
 
  				<?php } elseif ( ($story_type == 'video_gallery') && ($clips = get_field('video_gallery')) ) { ?>
- 					<div id="video-gallery" class="bg-courses">
+ 					<div id="video-gallery" class="">
 							<div class="row">
 							<?php foreach ( $clips as $i => $clip ) :
 								if ( $i == 0 ) {
@@ -57,7 +57,7 @@
  					<?php endif; ?>		
 
 	 			<?php } elseif ( ($story_type == 'image_gallery') && ($gallery = get_field('story_image_gallery')) ) { ?>
-	 				<div class="flexslider-story flexslider" id="story-gallery">
+	 				<div class="flexslider-story flexslider-gallery-story flexslider" id="story-gallery">
 	 					<ul class="slides clearfix">
 	 						<li class="title" style="background-image: url('<?php echo $story_featured_image ?>');" data-thumb="<?php echo $story_featured_image ?>">
 	 							<div class="overlay">

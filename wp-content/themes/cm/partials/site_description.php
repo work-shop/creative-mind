@@ -18,7 +18,7 @@
 			<div class="container-fluid">
 				<div class="row">
 					<div class="col-sm-12">
-					<a href="#site-description" class="jump">
+					<a href="#explore" class="jump">
 						<h2 class="research centered bold mt1 mb0">Explore The Creative Mind!</h2>
 						<h6 class="centered m0"><span class="icon research large" data-icon="ﬁ"></span></h6>
 					</a>

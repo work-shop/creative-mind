@@ -53,7 +53,7 @@ $start = count($stories_halves[0]) + 1;
 
 ?>
 
-<section class="block padded-less crop target collection <?php if ( is_category() ) : endif; ?>">
+<section class="block padded-less crop target collection collection-<?php echo $category_nicename; ?>">
 	<div class="container-fluid">
 		<header class="mb0">
 			<?php if ( is_singular( 'collections') ) { ?>
@@ -103,16 +103,14 @@ $start = count($stories_halves[0]) + 1;
 
 					<a class="overlay display-block>" href="<?php echo '#' . $collection->post_name . '#' . $story->post_name; ?>" >
 						<div class="story-slide-info info">
-							<p class="media-type white bold centered"><?php 
-								if ( $story_type == 'video' ) { echo 'Watch Video'; }
-								elseif ( $story_type == 'image_gallery' ) { echo "View Gallery"; } 
-							?></p>
 							<?php if ( $story_type == 'video' ) { ?>
-								<span class="icon-custom white large centered" data-icon="&#xe600;"></span>
+								<p class="story-slide-icon centered mt1 mb0"><span class="icon-custom white large centered" data-icon="&#xe600;"></span></p>
 							<?php } elseif ( $story_type == 'image_gallery' ) { ?>
-								<span class="icon large" data-icon="&#8486;"></span>
-							<?php } ?>
-							<h3 class="bold white centered"><?php echo $story_name ?></h3>
+								<p class="story-slide-icon centered mt1 mb0"><span class="icon large" data-icon="&#8486;"></span></p>
+							<?php } else { ?>
+								<p class="story-slide-icon centered mt1 mb0"><span class="icon large" data-icon="K"></span></p>
+							<?php } ?>							
+							<h3 class="bold white centered m0"><?php echo $story_name ?></h3>
 							<p class="description white hidden"><?php echo $story_description ?></p>
 						</div>
 					</a>

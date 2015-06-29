@@ -236,9 +236,9 @@ function scrollLink(destination){
 //toggle submenu
 function submenuToggle(item) {
 	if ( $(item).hasClass('open') ) {
-		$(item).removeClass('open');
+		//$(item).removeClass('open');
 	} else {
-		$('#megaNav ul > li > a').removeClass('open');
+		//$('#megaNav ul > li > a').removeClass('open');
 		$(item).addClass('open');
 	}	
 }
@@ -271,7 +271,7 @@ function view(){
 
 
 	if($('.story').hasClass('story-type-video_gallery') || $('.story').hasClass('story-type-video_and_image_gallery') ){
-		storyVideoGalleryHeight = $('#video-gallery').width() * .5;
+		storyVideoGalleryHeight = $('#video-gallery').width() * .4;
 		$('.video-gallery-main-video').css('height',storyVideoGalleryHeight);
 	}
 	
@@ -286,7 +286,8 @@ function view(){
 		$('.block.three-quarter').css('height',threeQuarter);	
 		$('.block.three-quarter-max').css('max-height',ph);		
 		$('.flexslider-collection .slides').css('height',collectionSlideHeight);
-		$('.home-slide').css('height',slickHeight).css('width',cw);		
+		$('.home-slide').css('height',slickHeight).css('width',cw);	
+		$('.flexslider-gallery-story li').css('height',($('.flexslider-gallery-story').width() * .5));			
 
 	}
 	else{
@@ -366,7 +367,7 @@ $(window).scroll(function() {
 	requestAnimationFrame( backShareCheck );
 
 	if($('body').hasClass('home')){
-		//requestAnimationFrame( parallax );		
+		requestAnimationFrame( parallax );		
 	}
 
 });//end window.scroll
@@ -596,13 +597,13 @@ function parallax(){
 	pOpacity = 1 - pProgress;
 	pLineHeight = pOpacity*1.2;
 
-	pTopFactor = 20;
-	pTop = (scrollTop / pTopFactor) * -1;
+	pTopFactor = 5;
+	pTop = (scrollTop / pTopFactor) * 1;
 
-	pTop1 = pTop * .1; pTop1 = 'translateY(' + pTop1 + '%)'; console.log(pTop1);
-	pTop2 = pTop * .08; pTop2 = 'translateY(' + pTop2 + '%)';
+	pTop1 = pTop * .1; pTop1 = 'translateY(' + pTop1 + '%)'; //console.log(pTop1);
+	pTop2 = pTop * .2; pTop2 = 'translateY(' + pTop2 + '%)';
 	pTop3 = pTop * .19; pTop3 = 'translateY(' + pTop3 + '%)';
-	pTop4 = pTop * .25;	pTop4 = 'translateY(' + pTop4 + '%)';
+	pTop4 = pTop * .1;	pTop4 = 'translateY(' + pTop4 + '%)';
 	
 	$('.grid-col-1').css('transform',pTop1);
 	$('.grid-col-2').css('transform',pTop2);

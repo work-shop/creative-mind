@@ -300,6 +300,7 @@ function updateView( thisStory, nextStory, prevStory ) {
 
 		videoSetup();
 		view();
+		playVideo();
 
 		if($('.flexslider-story-images')){
 	 		$('.flexslider-story-images').flexslider({	
@@ -311,6 +312,18 @@ function updateView( thisStory, nextStory, prevStory ) {
 		 	      slideshow: false
 		 	 }); 
  		}
+
+		if($('.flexslider-gallery-story')){
+	 		$('.flexslider-gallery-story').flexslider({	
+		 	      animation: 'fade',
+		 	      slideshowSpeed: 8000,           
+		 		  animationSpeed: 500,
+		 	      directionNav: false,
+		 	      controlNav: true,
+		 	      slideshow: false
+		 	 }); 
+ 		}
+
 
 		//storyModal.addClass('bg-' + thisStory.content.attr('async-category' ));
 
