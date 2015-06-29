@@ -92,12 +92,12 @@
 
 #category-nav{
 	position: relative;
-	top: 5px;
+	top: 3px;
 	float: left;
 
 	li{
-		display: inline;
-		margin-right: 15px;
+		display: inline-block;
+		margin-right: 10px;
 		letter-spacing: .06em;
 	}
 
@@ -106,7 +106,29 @@
 			color: #555;
 		}
 		font-size: 1.1em;
+		padding: 4px 8px 4px 8px;
+		@include border-radius(1px);
+		@include transition(all,.1s);
+		background: transparent;
+
+		&:hover{
+			color: white;
+		}
 	}
+
+	a.courses-link:hover{
+		background: $courses;
+	}
+	a.research-link:hover{
+		background: $research;
+	}
+	a.interviews-link:hover{
+		background: $interviews;
+	}
+	a.lectures-link:hover{
+		background: $lectures;
+	}		
+
 
 }
 
@@ -965,7 +987,7 @@ body.menu-open{
 
 	.overlay{
 		padding: 10px;
-		
+
 	}
 
 	a { 

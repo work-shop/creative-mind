@@ -28,6 +28,7 @@ $categories = array_keys( $grid_elements );
  */
 $col = 1;
 foreach ($categories as $category) {
+	if($category != 'uncategorized'){
 
 	?><div class="col-sm-3 grid-col  grid-col-<?php echo $col;?>"><?php
 
@@ -54,7 +55,7 @@ foreach ($categories as $category) {
 				</div>
 
 	</div>
-	<?php $col++; } ?>
+	<?php } $col++; } ?>
 	</div>
 	</div>
 

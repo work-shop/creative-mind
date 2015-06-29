@@ -85,16 +85,16 @@
 
 						<div class="hidden-xs mt1">
 							<ul id="category-nav">
-								<li><a href="<?php bloginfo('url'); ?>/courses" class="uppercase bold 
+								<li><a href="<?php bloginfo('url'); ?>/courses" class="courses-link uppercase bold 
 								<?php if($category_nicename == 'courses'): echo 'courses'; else: echo 'gray'; endif; ?>
 								">Courses</a></li>
-								<li><a href="<?php bloginfo('url'); ?>/research" class="uppercase bold
+								<li><a href="<?php bloginfo('url'); ?>/research" class="research-link uppercase bold
 								<?php if($category_nicename == 'research'): echo 'research'; else: echo 'gray'; endif; ?>
 								">Research</a></li>
-								<li><a href="<?php bloginfo('url'); ?>/interviews" class="uppercase bold
+								<li><a href="<?php bloginfo('url'); ?>/interviews" class="interviews-link uppercase bold
 								<?php if($category_nicename == 'interviews'): echo 'interviews'; else: echo 'gray'; endif; ?>
 								">Interviews</a></li>
-								<li><a href="<?php bloginfo('url'); ?>/lectures" class="uppercase bold
+								<li><a href="<?php bloginfo('url'); ?>/lectures" class="lectures-link uppercase bold
 								<?php if($category_nicename == 'lectures'): echo 'lectures'; else: echo 'gray'; endif; ?>
 								">Lectures</a></li>
 							</ul>
