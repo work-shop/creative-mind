@@ -34,7 +34,7 @@ $collection = get_post( get_the_ID() );
 						<div class="col-sm-6" id="back-link">
 							<?php if ( is_home() ) { ?>
 								<div class="bold centered brand">
-								<a href="#site-description" class="jump">
+								<a href="#slideshow" class="jump">
 									<span class="icon-wrapper move-up bg-brand"><span class="icon white" data-icon="&#8218;"></span></span>
 									<h2 class="text move-down">Back to Top</h2>
 								</a>

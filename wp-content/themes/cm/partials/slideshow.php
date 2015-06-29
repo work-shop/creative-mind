@@ -19,7 +19,25 @@
 
 			<div class="home-slide">
 				<div class="slide-background block-background" style="background-image: url('<?php echo $image_url;?>'); "></div>
-					<div class="slide-overlay">
+					<?php 
+					$num = rand(0,3);
+					switch ($num)  
+					{  
+					case 0:  
+						$slide_color = 'slide-courses';  
+						break;  
+					case 1: 
+						$slide_color = 'slide-research';  
+						break;  
+					case 2: 
+						$slide_color = 'slide-interviews';  
+						break;  
+					case 3: 
+						$slide_color = 'slide-lectures';  
+						break;  												
+					}  ?>
+
+					<div class="slide-overlay <?php echo $slide_color; ?>">
 
 					<?php if($text): switch ( $slide['slide_type'] ) { 
 
@@ -30,7 +48,7 @@
 									<?php if ( $desc = $slide['slide_description'] ) : ?>
 									<p class="m0 white hidden"><?php echo $desc; ?></p>
 									<?php endif; ?>
-									<h4 class=" white">Read more <span class="icon" data-icon="&#8222;"></span></h4>
+									<h4 class="bold uppercase white">Read more <span class="icon" data-icon="—"></span></h4>
 								</a>
 							</div>										
 
@@ -40,12 +58,12 @@
 						 	<?php $story = $slide['slide_story'][0]; ?>
 							<div class=" slideshow-caption slideshow-caption-<?php echo $i;?>">
 								<a href="#">
-									<h3 class="m0 white bold uppercase">Featured Story</h3>
+									<h3 class="m0 white bold uppercase">Featured Interview</h3>
 									<h1 class="bold m0 white"><?php echo $story->post_title; ?></h1>
 									<?php if ( $desc = get_field( 'story_description', $story->ID ) ) : ?>
 									<p class="m0 white hidden"><?php echo $desc; ?></p>
 									<?php endif; ?>	
-									<h4 class=" white">Read more <span class="icon" data-icon="&#8222;"></span></h4>
+									<h4 class="bold uppercase white">Read more <span class="icon" data-icon="—"></span></h4>
 								</a>
 							</div>
 
@@ -55,11 +73,11 @@
 						 	<?php $coll = $slide['slide_collection'][0];?>
 						 	<div class="slideshow-caption slideshow-caption-<?php echo $i;?>">
 								<a href="#">
-									<h3 class="m0 white bold uppercase">Featured Collection</h3>
+									<h3 class="m0 white bold uppercase">Courses Collection</h3>
 									<h1 class="bold m0 white"><?php echo $coll->post_title; ?></h1>
 								<?php if ( $desc = get_field( 'collection_description', $coll->ID ) ) : ?>
 									<p class="m0 white hidden"><?php echo $desc; ?></p><?php endif; ?>
-									<h4 class=" white">Read more <span class="icon" data-icon="&#8222;"></span></h4>
+									<h4 class="bold uppercase white">Read more <span class="icon" data-icon="—"></span></h4>
 								</a>
 							</div>
 

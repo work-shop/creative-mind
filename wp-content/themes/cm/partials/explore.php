@@ -20,7 +20,7 @@ $categories = array_keys( $grid_elements );
 ?>
 
 <section class="block target grid padded-less" id="explore">
-	<div class="container-fluid">
+	<div class="container-fluid mt2">
 		<div class="row">		
 <?php
 /**
