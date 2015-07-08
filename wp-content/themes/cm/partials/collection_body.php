@@ -55,27 +55,28 @@ $start = count($stories_halves[0]) + 1;
 
 <section class="block padded-less crop target collection collection-<?php echo $category_nicename; ?>">
 	<div class="container-fluid">
-		<header class="mb0">
+		<header class="mb1">
+	
 			<?php if ( is_singular( 'collections') ) { ?>
-				<a href="<?php echo $collection_permalink ?>" class="<?php echo $category_nicename ?>">
-					<h1 class="bold collection-title"><?php echo $collection_name; ?></h1>
-				</a>
-				<h2><?php echo $collection_description ?></h2>
-				<ul class="list-inline h5 uppercase bold mt1 mb2">
-					<li><?php echo $story_qualifier ?></li>
-				</ul>
-			<?php } else { ?>
-				<ul class="list-inline h4 uppercase bold hidden">
-					<li><a href="<?php echo $collection_permalink ?>" class="<?php echo $category_nicename ?>"><?php echo $story_qualifier ?></a></li><li><a href="<?php echo $collection_permalink ?>" class="<?php echo $category_nicename ?>">More Info</a></li><li>Share This Collection</li>
-				</ul>
-				<a href="<?php echo $collection_permalink ?>" class="<?php echo $category_nicename ?>">
-					<h2 class="bold m0 collection-title"><?php echo $collection_name; ?> <span class="h6 ml1 uppercase"><?php echo $story_qualifier ?></span></h2>
-				</a>
-			<?php } ?>
+				<div class="row">
+					<div class="col-sm-12">
+						<h1 class="bold m0 collection-title centered"><?php echo $collection_name; ?> <span class="ml1 uppercase story-qualifier"><?php echo $story_qualifier ?></span></h1>
+					</div>		
+				</div>				
+				<div class="row">
+					<div class="col-sm-10 col-md-8 col-sm-offset-1 col-md-offset-2">
+						<h2 class="collection-description centered"><?php echo $collection_description ?></h2>
+					</div>
+				</div>		
+				<?php } else {  ?>
+				<a href="<?php echo $collection_permalink ?>" class="mb1 <?php echo $category_nicename ?>">
+					<h2 class="bold m0 collection-title"><?php echo $collection_name; ?> <span class="ml1 uppercase story-qualifier"><?php echo $story_qualifier ?></span></h2>
+				</a>						
+				<?php } ?>
 		</header>
 
 		<div class="collection-slick slick-collection">
-			<div class="collection-slick-slide collection-slick-intro-slide bg-<?php echo $category_nicename ?> border-<?php echo $category_nicename ?>">
+			<div class="collection-slick-slide collection-slick-intro-slide hidden-sm hidden-xs bg-<?php echo $category_nicename ?> border-<?php echo $category_nicename ?>">
 				<div class="dummy"></div>
 				<div class="collection-description">
 					<p class="white bold"><?php echo $collection_description ?></p>
@@ -104,11 +105,11 @@ $start = count($stories_halves[0]) + 1;
 					<a class="overlay display-block>" href="<?php echo '#' . $collection->post_name . '#' . $story->post_name; ?>" >
 						<div class="story-slide-info info">
 							<?php if ( $story_type == 'video' ) { ?>
-								<p class="story-slide-icon centered mt1 mb0"><span class="icon-custom white large centered" data-icon="&#xe600;"></span></p>
+								<p class="story-slide-icon centered m0 mb0"><span class="icon-custom white large centered" data-icon="&#xe600;"></span></p>
 							<?php } elseif ( $story_type == 'image_gallery' ) { ?>
-								<p class="story-slide-icon centered mt1 mb0"><span class="icon large" data-icon="&#8486;"></span></p>
+								<p class="story-slide-icon centered m0 mb0"><span class="icon large" data-icon="&#8486;"></span></p>
 							<?php } else { ?>
-								<p class="story-slide-icon centered mt1 mb0"><span class="icon large" data-icon="K"></span></p>
+								<p class="story-slide-icon centered m0 mb0"><span class="icon large" data-icon="K"></span></p>
 							<?php } ?>							
 							<h3 class="bold white centered m0"><?php echo $story_name ?></h3>
 							<p class="description white hidden"><?php echo $story_description ?></p>
