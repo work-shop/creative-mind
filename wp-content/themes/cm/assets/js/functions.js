@@ -139,22 +139,6 @@ $(document).keydown(function(e){
     }
 });
 
-//left arrow
-// $(document).keydown(function(e){
-//     if (e.keyCode == 37) { 
-    	
-//        return false;
-//     }
-// });
-
-//right arrow
-// $(document).keydown(function(e){
-//     if (e.keyCode == 39) { 
-    	
-//        return false;
-//     }
-// });
-
 
 //initialize flexslider slideshows
 function flexsliderSetup(){
@@ -329,40 +313,6 @@ function loadPage(){
 }
 
 $(window).scroll(function() { 
-
-	// if( !$('html').hasClass('menu-open') ) {
-
-	// 		if($('body').hasClass('home')){	
-		
-	// 		var after = $('body').offset().top + 40;
-			       
-	// 		if(76087066 >= after && $("body").hasClass('before')){
-	// 			$("body").removeClass('before').addClass('after');
-	// 		} 
-	// 		else if($(this).scrollTop() < after && $("body").hasClass('after')){
-	// 			$("body").removeClass('after').addClass('before');	
-	// 		} 
-		
-	// 	}
-
-	// }
-
-	//console.log($(this).scrollTop());
-	// if( $('body').hasClass('story-active') && $(this).scrollTop() > 0) {
-	// 	$('body').removeClass('story-active').addClass('story-removed');
-	// }
-	// else if( $('body').hasClass('story-removed') && $(this).scrollTop() <= 0){
-	// 	$('body').addClass('story-active').removeClass('story-removed');
-	// }
-
-	// if( $(this).scrollTop() > 60) {
-	// 	$('.menu-minimal').removeClass('visible-xs');
-	// 	$('.menu-full').addClass('hidden');
-	// }
-	// else if( $(this).scrollTop() < 60) {
-	// 	$('.menu-minimal').addClass('visible-xs');
-	// 	$('.menu-full').removeClass('hidden');
-	// }
 
 	requestAnimationFrame( backShareCheck );
 
