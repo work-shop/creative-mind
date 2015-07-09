@@ -2916,17 +2916,16 @@ body.menu-open {
     cursor: -webkit-grabbing;
     cursor: -moz-grabbing; }
 
-.collection-slick-intro-slide {
-  margin-left: 100px; }
-  .collection-slick-intro-slide .dummy {
-    padding-top: 60%; }
-  .collection-slick-intro-slide .collection-description {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    padding: 10px; }
+.collection-slick-intro-slide .dummy {
+  padding-top: 60%; }
+.collection-slick-intro-slide .collection-description {
+  position: absolute;
+  top: 5%;
+  left: 0;
+  width: 95%;
+  height: 100%;
+  font-size: 15px;
+  line-height: 1.3; }
 
 .collection-buffer {
   width: 50px;
@@ -2988,8 +2987,22 @@ body.menu-open {
   #story-close .icon:after {
     font-size: 44px; }
 
-.collection-title .story-qualifier {
-  font-size: 18px; }
+.collection-title {
+  border-bottom: 3px solid transparent;
+  line-height: 60px;
+  height: 60px;
+  vertical-align: bottom; }
+  .collection-title:hover {
+    border-bottom: 3px solid; }
+
+.story-qualifier {
+  font-size: 18px;
+  line-height: 60px;
+  height: 60px;
+  margin-left: 30px;
+  border-bottom: 3px solid transparent;
+  position: relative;
+  top: 6px; }
 
 .collection-description {
   margin-left: 15px; }
@@ -3861,6 +3874,14 @@ body.menu-open {
     -o-transition: all 0.25s 0s ease;
     -ms-transition: all 0.25s 0s ease; }
 
+  .collection-title, .story-qualifier {
+    height: 40px;
+    line-height: 40px; }
+
+  .story-qualifier {
+    font-size: 14px;
+    top: 2px; }
+
   .category .flexslider-direction, .single-collections .flexslider-direction {
     right: -35px; }
     .category .flexslider-direction:hover, .single-collections .flexslider-direction:hover {
@@ -3904,6 +3925,16 @@ body.menu-open {
 
   #share-links {
     margin-top: 4em; }
+
+  .story-qualifier, .collection-title {
+    clear: both;
+    line-height: 1.1;
+    height: auto; }
+
+  .story-qualifier {
+    font-size: 13px;
+    top: 0px;
+    margin-left: 15px; }
 
   .category .flexslider-direction, .single-collections .flexslider-direction {
     right: -5px; }

@@ -1007,14 +1007,15 @@ body.menu-open{
 
 	.collection-description{
 		position: absolute;
-		top: 0;
+		top: 5%;
 		left: 0;
-		width: 100%;
+		width: 95%;
 		height: 100%;
-		padding: 10px;
+		font-size: 15px;
+		line-height: 1.3;		
 	}
 
-	margin-left: 100px;
+	
 }
 
 .collection-buffer{
@@ -1091,12 +1092,29 @@ body.menu-open{
 	}
 }
 
-.collection-title{
 
-	.story-qualifier{
-		font-size: 18px;
+.collection-title{
+	border-bottom: 3px solid transparent;
+	line-height: 60px;
+	height: 60px;
+	
+	vertical-align: bottom;
+
+	&:hover{
+		border-bottom: 3px solid;
 	}
 
+}
+
+.story-qualifier{
+	font-size: 18px;
+	line-height: 60px;
+	height: 60px;
+	margin-left: 30px;
+	border-bottom: 3px solid transparent;
+	position: relative;
+	top: 6px;	
+	//vertical-align: bottom;
 }
 
 .collection-description{
@@ -1834,6 +1852,16 @@ $n-columns: 4;
 		}
 	}
 
+	.collection-title,.story-qualifier{
+		height: 40px;
+		line-height: 40px;
+	}
+
+	.story-qualifier{
+		font-size: 14px;
+		top: 2px;
+	}	
+
 	.category, .single-collections{
 		.flexslider-direction{
 			right: -35px;
@@ -1897,6 +1925,18 @@ $n-columns: 4;
 
 	#share-links {
 		margin-top: 4em;
+	}
+
+	.story-qualifier,.collection-title{
+		clear: both;
+		line-height: 1.1;
+		height: auto;
+	}
+
+	.story-qualifier{
+		font-size: 13px;
+		top: 0px;
+		margin-left: 15px;
 	}
 
 	.category, .single-collections{

@@ -69,9 +69,14 @@ $start = count($stories_halves[0]) + 1;
 					</div>
 				</div>		
 				<?php } else {  ?>
-				<a href="<?php echo $collection_permalink ?>" class="mb1 <?php echo $category_nicename ?>">
-					<h2 class="bold m0 collection-title"><?php echo $collection_name; ?> <span class="ml1 uppercase story-qualifier"><?php echo $story_qualifier ?></span></h2>
-				</a>						
+				<div class="row collection-title-container">
+					<div class="col-sm-12">
+						<a href="<?php echo $collection_permalink ?>" class="mb1 <?php echo $category_nicename ?>">
+							<h2 class="bold m0 collection-title left"><?php echo $collection_name; ?> </h2>
+							<span class="h2 m0 uppercase story-qualifier left bold"><?php echo $story_qualifier ?></span>
+						</a>	
+					</div>
+				</div>					
 				<?php } ?>
 		</header>
 
