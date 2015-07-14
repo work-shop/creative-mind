@@ -29,32 +29,80 @@
 	 				</div>
 	 				<?php if ($description = get_field('story_description')) : ?>
 	 					<p class="mt1 h2 centered"><?php echo $description; ?></p>
-	 				<?php endif; ?>	
+	 				<?php endif; ?>
+
+
+
+
+
+
 
  				<?php } elseif ( ($story_type == 'video_gallery') && ($clips = get_field('video_gallery')) ) { ?>
+		
+					<?php
+
+
+						/* 
+						  	MAKE SURE TO PASTE THE WORKING CODE FROM VIDEO AND IMAGE GALLERY HERE
+							I GUESS WE DON'T GIVE A FUCK ABOUT CODE DUPLICATON OR BASIC LOGIC.
+							FUCK MY LIFE.
+						*/
+
+
+					?>
+
+
  					<div id="video-gallery" class="">
-							<div class="row">
+
+
+
+						<div class="row">
+
+							<?php var_dump($clips); ?>
+
 							<?php foreach ( $clips as $i => $clip ) :
 								if ( $i == 0 ) {
 							?>
- 								<div class="col-sm-10 video-gallery-main mt3 mb2">
- 									<?php echo vimeo_frame($clip['vimeo_id'],'story-video-1'); ?>
- 									<p><?php echo $clip['video_title']; ?></p>
- 								</div> 
- 							<?php } else { ?>
- 								<div class="col-sm-2">
+	 								<div class="col-sm-10 video-gallery-main mt3 mb2">
+	 									<?php echo vimeo_frame($clip['vimeo_id'], ( 'story-video-' . $i ) ); ?>
+	 									<p><?php echo $clip['video_title']; ?></p>
+	 								</div> 
+
+ 							<?php } ?>
+
+
+
+ 								<div class="col-sm-2 <?php echo ($i==0)?'active':""; ?>">
 	 								<div class="video-gallery-clip">
-	 									<?php echo vimeo_frame($clip['vimeo_id'],'story-video-1'); ?>
+	 									<?php echo vimeo_frame($clip['vimeo_id'], ( 'story-video-' . $i ) ); ?>
 	 									<p><?php echo $clip['video_title']; ?></p>
 	 								</div>
 	 							</div>
-								<?php } ?>
+
+
+
+
 							<?php endforeach; ?>
-						</div>								
+
+
+
+
+						</div>
+
+
+
  					</div> <!-- end #video-gallery -->
  					<?php if ($description = get_field('story_description')) : ?>
  						<p class="mt1 h2"><?php echo $description; ?></p>
- 					<?php endif; ?>		
+ 					<?php endif; ?>	
+
+
+
+
+
+
+
+
 
 	 			<?php } elseif ( ($story_type == 'image_gallery') && ($gallery = get_field('story_image_gallery')) ) { ?>
 	 				<div class="flexslider-story flexslider-gallery-story flexslider" id="story-gallery">
@@ -86,26 +134,40 @@
 `
  				<?php } elseif ( ($story_type == 'video_and_image_gallery') && ($gallery = get_field('story_image_gallery')) && ($clips = get_field('video_gallery')) ) { ?>
  					<div id="video-gallery" class="">
+
+
 						<div class="row">
-						<?php foreach ( $clips as $i => $clip ) :
-							if ( $i == 0 ) {
-						?>
-								<div class="col-sm-10 video-gallery-main mb2">
-									<div class="video-gallery-main-video">
-										<?php echo vimeo_frame($clip['vimeo_id'],'story-video-1'); ?>
-									</div>
-									<h4 class="bold"><?php echo $clip['video_title']; ?></h4>
-								</div> 
-							<?php } else { ?>
-								<div class="col-sm-2">
- 								<div class="video-gallery-clip">
- 									<?php echo vimeo_frame($clip['vimeo_id'],'story-video-1'); ?>
- 									<h4 class="bold"><?php echo $clip['video_title']; ?></h4>
- 								</div>
- 							</div>
-							<?php } ?>
-						<?php endforeach; ?>
-						</div>								
+
+							<?php foreach ( $clips as $i => $clip ) :
+								if ( $i == 0 ) {
+							?>
+	 								<div class="col-sm-10 video-gallery-main mt3 mb2">
+	 									<div class="video-gallery-main-video">
+											<?php echo vimeo_frame($clip['vimeo_id'],'story-video-1'); ?>
+										</div>
+	 									<h4 class="bold"><?php echo $clip['video_title']; ?></h4>
+	 								</div> 
+
+ 							<?php } ?>
+
+
+
+ 								<div class="col-sm-2">
+	 								<div class="video-gallery-clip <?php echo ($i==0)?'active':""; ?>">
+	 									<?php echo vimeo_frame($clip['vimeo_id'], ( 'story-video-' . $i ) ); ?>
+	 									<h4 class="bold"><?php echo $clip['video_title']; ?></h4>
+	 									<div class="overlay <?php echo ($i==0)?'active':""; ?>" style="background:rgba(0,0,0,0);"></div>
+	 								</div>
+	 								
+	 							</div>
+
+
+
+
+							<?php endforeach; ?>
+
+						</div>
+
  					</div> <!-- end #video-gallery -->
 
 				<?php }  

@@ -438,7 +438,50 @@ $(document).on('spy-init', function() {
 
 });
 
-function videoSetup(playFlag) {
+
+
+(function() {
+	function videoGallerySwap( source, target ) {
+
+		target.frame.attr('src', source.frame.attr('src'));
+		target.element.find('h4').text( source.element.find('h4').text() );
+
+		$('.video-gallery-clip').removeClass('active');
+		$('.video-gallery-clip').find('.overlay').removeClass('active');
+
+		console.log( $( source.element ) );
+
+		$( source.element ).addClass('active')
+		$( source.element ).find('.overlay').addClass('active');
+	}
+
+	
+
+	$(document).ready( function() {
+		console.log( $('.video-gallery-clip').find('.overlay') );
+
+		$('.video-gallery-clip').find('.overlay').on('click', function( e ) {
+			if ( $( this ).hasClass('active') ) return;
+
+			var target = $('.video-gallery-main-video').find('iframe');
+			var source = $(this).parent('.video-gallery-clip').find('iframe');
+
+			videoGallerySwap( { element: $(this).parent('.video-gallery-clip') , frame: source}, {element: $('.video-gallery-main'), frame: target} );
+
+		});
+	});
+})();
+
+
+
+
+
+/**
+ * WARNING: REFACTOR
+ * Had to refector this video setup from 
+ *
+ */
+function videoSetup(playFlag, callback) {
 
 	console.log('videoSetup');
 
@@ -446,20 +489,22 @@ function videoSetup(playFlag) {
 
 	var iframe = $('#story-video-1');
 
-	//console.log( iframe );
-
 	if ( !$.isEmptyObject( iframe ) ) {
-		iframe.each( function( undefined,frame ) {
+		iframe.each( function( undefined, frame ) {
+
+			console.log( 'iterator' );
+
 			var p = players[ $( frame ).attr('id') ] = $f( frame );
 
 			p.addEvent('ready', function( player_id ) {
 				 console.log('ready');
 				 p.addEvent('play', function(d){});
+				 callback();
 			});
 
 			if(playFlag){
 				p.api('play');
-		    	playVideo();
+		    		playVideo();
 			}
 
 			$('.story-video-play').bind('click', function() {
