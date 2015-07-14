@@ -37,49 +37,54 @@
 						break;  												
 					}  ?>
 
-					<div class="slide-overlay <?php echo $slide_color; ?>">
+					
 
 					<?php if($text): switch ( $slide['slide_type'] ) { 
 
 						case "custom": ?>
-							<div class="slideshow-caption slideshow-caption-<?php echo $i;?>">
-								<a href="<?php echo $slide['slide_link']; ?>">
-									<h1 class="white bold m0"><?php echo $slide['slide_title']; ?></h1>
-									<?php if ( $desc = $slide['slide_description'] ) : ?>
-									<p class="m0 white hidden"><?php echo $desc; ?></p>
-									<?php endif; ?>
-									<h4 class="bold uppercase white">Read more <span class="icon" data-icon="—"></span></h4>
-								</a>
-							</div>										
+							<div class="slide-overlay <?php echo $slide_color; ?>">
+								<div class="slideshow-caption slideshow-caption-<?php echo $i;?>">
+									<a href="<?php echo $slide['slide_link']; ?>">
+										<h1 class="white bold m0"><?php echo $slide['slide_title']; ?></h1>
+										<?php if ( $desc = $slide['slide_description'] ) : ?>
+										<p class="m0 white hidden"><?php echo $desc; ?></p>
+										<?php endif; ?>
+										<h4 class="bold uppercase white">Read more <span class="icon" data-icon="—"></span></h4>
+									</a>
+								</div>										
 
 						<?php 	break;
 
 						case "story": ?>
-						 	<?php $story = $slide['slide_story'][0]; ?>
-							<div class=" slideshow-caption slideshow-caption-<?php echo $i;?>">
-								<a href="#">
-									<h3 class="m0 white bold uppercase">Featured Interview</h3>
-									<h1 class="bold m0 white"><?php echo $story->post_title; ?></h1>
-									<?php if ( $desc = get_field( 'story_description', $story->ID ) ) : ?>
-									<p class="m0 white hidden"><?php echo $desc; ?></p>
-									<?php endif; ?>	
-									<h4 class="bold uppercase white">Read more <span class="icon" data-icon="—"></span></h4>
-								</a>
-							</div>
+						 	<?php $story = $slide['slide_story'][0]; $category = CM_Story_Controller::get_categories_for_story( $story->ID )[0]; ?>
+						 	<?php $slide_color = 'slide-' . $category->slug; ?>
+						 	<div class="slide-overlay <?php echo $slide_color; ?>">
+								<div class=" slideshow-caption slideshow-caption-<?php echo $i;?>">
+									<a href="#">
+										<h3 class="m0 white bold uppercase"><?php echo CM_Collection_Controller::slideshow_format_string( $category, 'story' ); ?></h3>
+										<h1 class="bold m0 white"><?php echo $story->post_title; ?></h1>
+										<?php if ( $desc = get_field( 'story_description', $story->ID ) ) : ?>
+										<p class="m0 white hidden"><?php echo $desc; ?></p>
+										<?php endif; ?>	
+										<h4 class="bold uppercase white">Read more <span class="icon" data-icon="—"></span></h4>
+									</a>
+								</div>
 
 						<?php 	break;
 
 						case "collection": ?>	
-						 	<?php $coll = $slide['slide_collection'][0];?>
-						 	<div class="slideshow-caption slideshow-caption-<?php echo $i;?>">
-								<a href="#">
-									<h3 class="m0 white bold uppercase">Courses Collection</h3>
-									<h1 class="bold m0 white"><?php echo $coll->post_title; ?></h1>
-								<?php if ( $desc = get_field( 'collection_description', $coll->ID ) ) : ?>
-									<p class="m0 white hidden"><?php echo $desc; ?></p><?php endif; ?>
-									<h4 class="bold uppercase white">Read more <span class="icon" data-icon="—"></span></h4>
-								</a>
-							</div>
+						 	<?php $coll = $slide['slide_collection'][0]; $category = CM_Collection_Controller::get_category_for_collection( $coll->ID ); ?>
+						 	<?php $slide_color = 'slide-' . $category->slug; ?>
+						 	<div class="slide-overlay <?php echo $slide_color; ?>">
+							 	<div class="slideshow-caption slideshow-caption-<?php echo $i;?>">
+									<a href="#">
+										<h3 class="m0 white bold uppercase"><?php echo CM_Collection_Controller::slideshow_format_string( $category, 'collection' ); ?></h3>
+										<h1 class="bold m0 white"><?php echo $coll->post_title; ?></h1>
+									<?php if ( $desc = get_field( 'collection_description', $coll->ID ) ) : ?>
+										<p class="m0 white hidden"><?php echo $desc; ?></p><?php endif; ?>
+										<h4 class="bold uppercase white">Read more <span class="icon" data-icon="—"></span></h4>
+									</a>
+								</div>
 
 						<?php 	break; ?>	
 						<?php } endif; ?>

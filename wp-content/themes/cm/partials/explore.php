@@ -27,7 +27,9 @@ $categories = array_keys( $grid_elements );
  * Now that we've done our setup, let's iterate through each category and build the grid.
  */
 $col = 1;
-foreach ($categories as $category) {
+for ( $i = 0; $i < count( $categories ); $i++ ) {
+	$category = CM_Grid_Layout_Manager::$canonical_order[ $i ];
+
 	if($category != 'uncategorized'){
 
 	?><div class="col-sm-3 grid-col  grid-col-<?php echo $col;?>"><?php

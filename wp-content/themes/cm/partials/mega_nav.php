@@ -18,7 +18,13 @@
       <section id="megaNav" class="closed">
         <div class="container-fluid">
 
-        <?php foreach ($categories as $category ) { ?>
+        <?php for ($i = 0; $i < count( $categories ); $i++ ) { 
+                  foreach ($categories as $term) {
+                    if ( $term->slug == CM_Grid_Layout_Manager::$canonical_order[ $i ] ) {
+                      $category = $term; break;
+                    }
+                  }
+          ?>
 
           <div class="row white bg-<?php echo $category->slug; ?>-dark">
 

@@ -38,19 +38,6 @@
 
 
  				<?php } elseif ( ($story_type == 'video_gallery') && ($clips = get_field('video_gallery')) ) { ?>
-		
-					<?php
-
-
-						/* 
-						  	MAKE SURE TO PASTE THE WORKING CODE FROM VIDEO AND IMAGE GALLERY HERE
-							I GUESS WE DON'T GIVE A FUCK ABOUT CODE DUPLICATON OR BASIC LOGIC.
-							FUCK MY LIFE.
-						*/
-
-
-					?>
-
 
  					<div id="video-gallery" class="">
 
@@ -154,7 +141,7 @@
 
  								<div class="col-sm-2">
 	 								<div class="video-gallery-clip <?php echo ($i==0)?'active':""; ?>">
-	 									<?php echo vimeo_frame($clip['vimeo_id'], ( 'story-video-' . $i ) ); ?>
+	 									<?php echo vimeo_frame($clip['vimeo_id'], '' ); ?>
 	 									<h4 class="bold"><?php echo $clip['video_title']; ?></h4>
 	 									<div class="overlay <?php echo ($i==0)?'active':""; ?>" style="background:rgba(0,0,0,0);"></div>
 	 								</div>
