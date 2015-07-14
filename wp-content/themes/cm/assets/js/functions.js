@@ -446,6 +446,11 @@ $(document).on('spy-init', function() {
 		target.frame.attr('src', source.frame.attr('src'));
 		target.element.find('h4').text( source.element.find('h4').text() );
 
+		console.log( 'iframe players object' );
+		console.log( players );
+
+		
+
 		$('.video-gallery-clip').removeClass('active');
 		$('.video-gallery-clip').find('.overlay').removeClass('active');
 
@@ -468,6 +473,13 @@ $(document).on('spy-init', function() {
 
 			videoGallerySwap( { element: $(this).parent('.video-gallery-clip') , frame: source}, {element: $('.video-gallery-main'), frame: target} );
 
+			players[ 'story-video-1' ].addEvent('ready', function() {
+				console.log('video-switch ready function called');
+				players['story-video-1'].api('play');
+			});
+
+			players['story-video-1'].api('play');
+
 		});
 	});
 })();
@@ -475,6 +487,7 @@ $(document).on('spy-init', function() {
 
 
 
+var players = [];
 
 /**
  * WARNING: REFACTOR
@@ -485,8 +498,7 @@ function videoSetup(playFlag, callback) {
 
 	console.log('videoSetup');
 
-	var players = [];
-
+	//var iframe = $('.vimeo-video');
 	var iframe = $('#story-video-1');
 
 	if ( !$.isEmptyObject( iframe ) ) {
@@ -498,20 +510,22 @@ function videoSetup(playFlag, callback) {
 
 			p.addEvent('ready', function( player_id ) {
 				 console.log('ready');
-				 p.addEvent('play', function(d){});
+				 p.addEvent('play', function(d){ console.log('play');});
 				 callback();
+
+				if(playFlag) {
+					p.api('play');
+			    		playVideo();
+				}
+
+				$('.story-video-play').bind('click', function() {
+			    		p.api('play');
+			    		playVideo();
+			    		console.log('story-video-play clicked');
+				});
 			});
 
-			if(playFlag){
-				p.api('play');
-		    		playVideo();
-			}
-
-			$('.story-video-play').bind('click', function() {
-		    		p.api('play');
-		    		playVideo();
-		    		console.log('story-video-play clicked');
-			});
+			
 		});
 	}	
 }
