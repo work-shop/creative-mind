@@ -278,7 +278,6 @@ function updateView( thisStory, nextStory, prevStory ) {
 		target.find('h3').text( content.find('h3').text() );
 
 		$('#story-modal').addClass( makeCategoryBackgroundColor( content.attr('async-category')));
-		$('title').html('Story Title');
 
 	}
 
@@ -286,7 +285,8 @@ function updateView( thisStory, nextStory, prevStory ) {
 	var storyTarget = $('#current-story'),
 		nextTarget = $('#next-story-link'),
 		prevTarget = $('#previous-story-link')
-		storyModal = $('#story-modal');
+		storyModal = $('#story-modal'),
+		title = $('title');
 
 		if(storyModal.hasClass('inactive')){
 			storyModal.removeClass('inactive').addClass('activated').addClass('active');
@@ -296,10 +296,15 @@ function updateView( thisStory, nextStory, prevStory ) {
 		injectContent( prevTarget, prevStory );
 
 		storyTarget.html( thisStory.content );
-		var myString = 'interviews';
+		title.html( thisStory.title );
 
-		videoSetup();
+		videoSetup( false );
+		//document.getElementById('story-video-1').contentWindow.postMessage('ready', '*');
 		view();
+
+
+
+		
 		playVideo();
 
 		if($('.flexslider-story-images')){
@@ -341,23 +346,25 @@ function updateView( thisStory, nextStory, prevStory ) {
  *
  *
  */
-function clearView() {
+function clearView( pagetitle ) {
 
-		function clearContent( target ) {
-			target.attr('href', "#" );
+	function clearContent( target ) {
+		target.attr('href', "#" );
 
-			target.find('.preview')
-			.attr('style', "" );
+		target.find('.preview')
+		.attr('style', "" );
 
-			target.find('h3').text( "" );
+		target.find('h3').text( "" );
 
-			$('title').html('Story Title');
-		}
+	}
+
+	return function() {
 
 		var 	storyTarget = $('#current-story'),
 			nextTarget = $('#next-story-link'),
 			prevTarget = $('#previous-story-link')
-			storyModal = $('#story-modal');
+			storyModal = $('#story-modal'),
+			title = $('title');
 
 		if(storyModal.hasClass('active')){
 			storyModal.removeClass('active').removeClass('activated').addClass('inactive');
@@ -366,7 +373,12 @@ function clearView() {
 		clearContent( prevTarget );
 		clearContent( nextTarget );
 
-		storyTarget.html( "" );
+		storyTarget.html( "" );	
+		storyTarget.html( "" );	
+
+		title.html( pagetitle );
+
+	}
 }
 
 /**
@@ -397,7 +409,7 @@ $( document ).ready( function() {
 		});
 	}
 
-	urlmanager.on( 'default', 'default', clearView);
+	urlmanager.on( 'default', 'default', clearView( $('title').text() ) );
 
 	$(window).trigger('href-changed', window.location.href );
 
