@@ -5,6 +5,8 @@
  */
 class CM_Grid_Layout_Manager {
 
+	public static $canonical_order = array('courses', 'research', 'interviews', 'lectures' );
+
 
 	/**
 	 * 
@@ -36,6 +38,20 @@ class CM_Grid_Layout_Manager {
 		}
 
 		return $ordered_content;
+	}
+
+	/**
+	 * Enforces a linear ordering on the categories in the creative mind.
+	 *
+	 * @param object mapping category names to objects.
+	 * @return in-order version of the passed object. 
+	 */
+	public static function order_object( $index, $object ) {
+		if ( $object[ self::$canonical_order[ $index ] ] ) {
+			return $object[ self::$canonical_order[ $index ] ];
+		}
+
+		return false;
 	}
 
 }

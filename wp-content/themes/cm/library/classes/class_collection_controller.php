@@ -6,6 +6,47 @@
 
 class CM_Collection_Controller {
 	/**
+	 * Returns the singular form of the name for the given CM category 
+	 *
+	 * @param stdClass Taxonomy Term 
+	 * @return string
+	 */
+	public static function category_singular( $category ) {
+		switch ( trim( strtolower( $category->slug ) ) ) {
+			case "courses":
+				return "Course";
+
+			case "research":
+				return "Research";
+
+			case "interviews":
+				return "Interview";
+
+			case "lectures":
+				return "Lecture";
+
+			default:
+				return false;
+		}
+	}
+
+	/**
+	 * This method takes a slug for a category and post-type and gives it 
+	 * a human-readible description. 
+	 *
+	 * @param stdClass Taxonomy Term 
+	 * @param string {'story' | 'collection'}
+	 * @return string
+	 */
+	public static function slideshow_format_string( $category, $datatype ) {
+		if ( trim( strtolower( $datatype ) ) == 'collection' ) {
+			return $category->name . ' Collection';
+		} else {
+			return "Featured " . self::category_singular( $category );
+		}
+	}
+
+	/**
 	 * This method returns the description of the given category by that category's id tag.
 	 *
 	 * @param int $id the term_id of the category in question
