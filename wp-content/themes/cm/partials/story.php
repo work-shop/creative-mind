@@ -9,8 +9,8 @@
 	$collection_id = $collection->ID;
 	$story_type = get_field('story_media_type'); //video, image_gallery, video_gallery
 
-	$previous_story_url = CM_Story_Controller::get_previous_story_in_collection( $story_id, $collection_id )->guid;
-	$next_story_url = CM_Story_Controller::get_next_story_in_collection( $story_id, $collection_id )->guid;
+	$previous_story = CM_Story_Controller::get_previous_story_in_collection( $story_id, $collection_id );
+	$next_story = CM_Story_Controller::get_next_story_in_collection( $story_id, $collection_id );
 
 	?>
 
@@ -118,18 +118,18 @@
 		</div> <!-- end .story-body -->
 
 		<div class="stories-nav hidden-xs">
-			<a class="prev-story" href="<?php echo $previous_story_url; ?>">
+			<a class="prev-story" href="<?php echo $previous_story->guid; ?>">
 				<span class="icon" data-icon="&#8216;"></span>
-				<div class="preview centered border-<?php echo $category_color ?>" style="background-image: url('http://localhost/cm/wp-content/uploads/2015/03/CaseyDunn1.jpg');"><div class="overlay">
+				<div class="preview centered border-<?php echo $category_color ?>" style="background-image: url('<?php echo wp_get_attachment_url( get_post_thumbnail_id($previous_story->ID) ); ?>');"><div class="overlay">
 					<span class="icon-custom" data-icon="&#xe600;"></span>
-					<h2 class="bold story-heading centered">Casey Dunn – Biology</h2>
+					<h2 class="bold story-heading centered"><?php echo $previous_story->post_title; ?></h2>
 				</div></div>
 			</a>
-			<a class="next-story" href="<?php echo $next_story_url; ?>">
+			<a class="next-story" href="<?php echo $next_story->guid; ?>">
 				<span class="icon" data-icon="&#8212;"></span>
-				<div class="preview centered border-<?php echo $category_color ?>" style="background-image: url('http://localhost/cm/wp-content/uploads/2015/03/CaseyDunn1.jpg');"><div class="overlay">
+				<div class="preview centered border-<?php echo $category_color ?>" style="background-image: url('<?php echo wp_get_attachment_url( get_post_thumbnail_id($next_story->ID) ); ?>');"><div class="overlay">
 					<span class="icon-custom" data-icon="&#xe600;"></span>
-					<h2 class="bold story-heading centered">Casey Dunn – Biology</h2>
+					<h2 class="bold story-heading centered"><?php echo $next_story->post_title; ?></h2>
 				</div></div>
 			</a>
 		</div>
