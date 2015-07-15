@@ -119,8 +119,8 @@
 	a.courses-link:hover{
 		background: $courses;
 	}
-	a.research-link:hover{
-		background: $research;
+	a.projects-link:hover{
+		background: $projects;
 	}
 	a.interviews-link:hover{
 		background: $interviews;
@@ -258,12 +258,12 @@
 	}		
 }
 
-.category-research{
+.category-projects{
 	#header #alogo-dot-1-header{
-		fill: $research;	
+		fill: $projects;	
 	}	
 	#header #alogo-dot-2-header{
-		fill: $research;	
+		fill: $projects;	
 	}		
 }
 
@@ -389,7 +389,7 @@
 @include keyframes("brown"){
 	0%{ fill: $brand !important; }
 	25%{ fill: $courses !important; }
-	50%{ fill: $research !important; }
+	50%{ fill: $projects !important; }
 	75%{ fill: $interviews !important; }
 	100%{ fill: $interviews !important; }
 }
@@ -397,7 +397,7 @@
 @include keyframes("dot1"){
 	0%{ fill: $brand; @include transform(translate3d(0,1000%,-1px)); }
 	25%{ fill: $courses; @include transform(translate3d(0,0%,-1px)); }
-	50%{ fill: $research; @include transform(translate3d(0,-100%,-1px)); }
+	50%{ fill: $projects; @include transform(translate3d(0,-100%,-1px)); }
 	75%{ fill: $interviews; @include transform(translate3d(0,1000%,-1px)); }
 	100%{ fill: $brand; @include transform(translate3d(0,1000%,-1px)); }
 }
@@ -405,7 +405,7 @@
 @include keyframes("dot2"){
 	0%{ fill: $brand; @include transform(translate3d(0,0%,-1px)); }
 	25%{ fill: $courses; @include transform(translate3d(0,700%,-1px)); }
-	50%{ fill: $research; @include transform(translate3d(0,0%,-1px)); }
+	50%{ fill: $projects; @include transform(translate3d(0,0%,-1px)); }
 	75%{ fill: $interviews; @include transform(translate3d(0,1000%,-1px)); }
 	100%{ fill: $brand; @include transform(translate3d(0,0%,-1px)); }
 }
@@ -692,7 +692,7 @@ $icon-margin: 15px;
 	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1e5799', endColorstr='#007db9e8',GradientType=1 ); /* IE6-9 */		
 	}
 
-	&.slide-research{
+	&.slide-projects{
 		/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#9b2ece+0,9b2ece+46&amp;0.95+0,0+46 */
 		background: -moz-linear-gradient(left,  rgba(155,46,206,0.95) 0%, rgba(155,46,206,0) 46%); /* FF3.6+ */
 		background: -webkit-gradient(linear, left top, right top, color-stop(0%,rgba(155,46,206,0.95)), color-stop(46%,rgba(155,46,206,0))); /* Chrome,Safari4+ */
@@ -965,7 +965,7 @@ body.menu-open{
 	&.category-courses { color: $courses; }
 	&.category-interviews { color: $interviews; }
 	&.category-lectures { color: $lectures; }
-	&.category-research { color: $research; }
+	&.category-projects { color: $projects; }
 }
 
 .category header .split-list {
@@ -1506,7 +1506,7 @@ body.menu-open{
 .category-courses .flex-control-nav a { @include pagination($courses); }
 .category-interviews .flex-control-nav a { @include pagination($interviews); }
 .category-lectures .flex-control-nav a { @include pagination($lectures); }
-.category-research .flex-control-nav a { @include pagination($research); }
+.category-projects .flex-control-nav a { @include pagination($projects); }
 
 
 .stories-nav {
@@ -2150,11 +2150,11 @@ $n-columns: 4;
 	}
 }
 
-.collection-research{
+.collection-projects{
 	.slick-prev,
 	.slick-next
 	{
-		background: $research;
+		background: $projects;
 	}
 }
 

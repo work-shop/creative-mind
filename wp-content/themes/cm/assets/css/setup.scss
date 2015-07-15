@@ -15,15 +15,15 @@ $brown: #3a1e1a;
 $yellow: #ffcc00;
 
 $courses: #0575B9;
-$research: #8c567a;
-//$research: tomato;
-  $research: #AA1CE0; /*maybe*/
- // $research: #932ED9;
- // $research: #8c567a;
- // $research: rgb(30,200,175);
-// $research: #ffa900;
- //$research: #e5603c;
- $research: #9B2ECE;
+$projects: #8c567a;
+//$projects: tomato;
+  $projects: #AA1CE0; /*maybe*/
+ // $projects: #932ED9;
+ // $projects: #8c567a;
+ // $projects: rgb(30,200,175);
+// $projects: #ffa900;
+ //$projects: #e5603c;
+ $projects: #9B2ECE;
 $interviews: #25807F;
 $lectures: #58595B;
 $lectures: rgb(30,200,175);
@@ -183,7 +183,7 @@ strong, b, .bold{
 
 .courses, .courses a{ color: $courses; }
 
-.research, .research a{ color: $research; }
+.projects, .projects a{ color: $projects; }
 
 .interviews, .interviews a{ color: $interviews; }
 
@@ -324,10 +324,10 @@ strong, b, .bold{
  	}
 }
 
-.bg-research{
- 	background: $research;
+.bg-projects{
+ 	background: $projects;
  	&-dark {
- 		background: darken($research,7);
+ 		background: darken($projects,7);
  	}
 }
 
@@ -407,7 +407,7 @@ strong, b, .bold{
 .border-light{ @include border($light); }
 .border-brand{ @include border($brand); }
 .border-courses{ @include border($courses); }
-.border-research{ @include border($research); }
+.border-projects{ @include border($projects); }
 .border-interviews{ @include border($interviews); }
 .border-lectures{ @include border($lectures); }
 
@@ -415,8 +415,8 @@ strong, b, .bold{
 	border-top: 2px solid $courses;
 }
 
-.border-top-research{
-	border-top: 2px solid $research;
+.border-top-projects{
+	border-top: 2px solid $projects;
 }
 
 .border-top-interviews{
@@ -435,8 +435,8 @@ strong, b, .bold{
 	border-bottom: 4px solid $courses;
 }
 
-.border-bottom-research{
-	border-bottom: 4px solid $research;
+.border-bottom-projects{
+	border-bottom: 4px solid $projects;
 }
 
 .border-bottom-interviews{

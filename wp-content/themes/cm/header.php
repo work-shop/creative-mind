@@ -88,9 +88,9 @@
 								<li><a href="<?php bloginfo('url'); ?>/courses" class="courses-link uppercase bold 
 								<?php if($category_nicename == 'courses'): echo 'courses'; else: echo 'gray'; endif; ?>
 								">Courses</a></li>
-								<li><a href="<?php bloginfo('url'); ?>/research" class="research-link uppercase bold
-								<?php if($category_nicename == 'research'): echo 'research'; else: echo 'gray'; endif; ?>
-								">Research</a></li>
+								<li><a href="<?php bloginfo('url'); ?>/projects" class="projects-link uppercase bold
+								<?php if($category_nicename == 'projects'): echo 'projects'; else: echo 'gray'; endif; ?>
+								">Projects</a></li>
 								<li><a href="<?php bloginfo('url'); ?>/interviews" class="interviews-link uppercase bold
 								<?php if($category_nicename == 'interviews'): echo 'interviews'; else: echo 'gray'; endif; ?>
 								">Interviews</a></li>
@@ -111,7 +111,7 @@
 					<span id="menu-toggle-title" >Index</span>
 					<div id="hamburger">
 						<div class="hamburger-line bg-courses" id="hamburger-line-1"></div>
-						<div class="hamburger-line bg-research" id="hamburger-line-2"></div>
+						<div class="hamburger-line bg-projects" id="hamburger-line-2"></div>
 						<div class="hamburger-line bg-interviews" id="hamburger-line-3"></div>
 						<div class="hamburger-line bg-lectures" id="hamburger-line-4"></div>
 					</div>

@@ -149,7 +149,7 @@ strong, b, .bold {
 .courses, .courses a {
   color: #0575B9; }
 
-.research, .research a {
+.projects, .projects a {
   color: #9B2ECE; }
 
 .interviews, .interviews a {
@@ -384,9 +384,9 @@ strong, b, .bold {
   .bg-courses-dark {
     background: #045f96; }
 
-.bg-research {
+.bg-projects {
   background: #9B2ECE; }
-  .bg-research-dark {
+  .bg-projects-dark {
     background: #8527b1; }
 
 .bg-interviews {
@@ -486,10 +486,10 @@ strong, b, .bold {
     .border-courses {
       border-width: 3px; } }
 
-.border-research {
+.border-projects {
   border: 6px solid #9B2ECE; }
   @media (max-width: 767px) {
-    .border-research {
+    .border-projects {
       border-width: 3px; } }
 
 .border-interviews {
@@ -507,7 +507,7 @@ strong, b, .bold {
 .border-top-courses {
   border-top: 2px solid #0575B9; }
 
-.border-top-research {
+.border-top-projects {
   border-top: 2px solid #9B2ECE; }
 
 .border-top-interviews {
@@ -522,7 +522,7 @@ strong, b, .bold {
 .border-bottom-courses {
   border-bottom: 4px solid #0575B9; }
 
-.border-bottom-research {
+.border-bottom-projects {
   border-bottom: 4px solid #9B2ECE; }
 
 .border-bottom-interviews {
@@ -1056,7 +1056,7 @@ img.gform_ajax_spinner {
       color: white; }
   #category-nav a.courses-link:hover {
     background: #0575B9; }
-  #category-nav a.research-link:hover {
+  #category-nav a.projects-link:hover {
     background: #9B2ECE; }
   #category-nav a.interviews-link:hover {
     background: #25807F; }
@@ -1177,9 +1177,9 @@ img.gform_ajax_spinner {
 .category-courses #header #alogo-dot-2-header {
   fill: #0575B9; }
 
-.category-research #header #alogo-dot-1-header {
+.category-projects #header #alogo-dot-1-header {
   fill: #9B2ECE; }
-.category-research #header #alogo-dot-2-header {
+.category-projects #header #alogo-dot-2-header {
   fill: #9B2ECE; }
 
 .category-interviews #header #alogo-dot-1-header {
@@ -2652,7 +2652,7 @@ img.gform_ajax_spinner {
     /* W3C */
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1e5799', endColorstr='#007db9e8',GradientType=1 );
     /* IE6-9 */ }
-  .slide-overlay.slide-research {
+  .slide-overlay.slide-projects {
     /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#9b2ece+0,9b2ece+46&amp;0.95+0,0+46 */
     background: -moz-linear-gradient(left, rgba(155, 46, 206, 0.95) 0%, rgba(155, 46, 206, 0) 46%);
     /* FF3.6+ */
@@ -2894,7 +2894,7 @@ body.menu-open {
   color: #25807F; }
 .category.category-lectures, .single-collections.category-lectures {
   color: #00a8b9; }
-.category.category-research, .single-collections.category-research {
+.category.category-projects, .single-collections.category-projects {
   color: #9B2ECE; }
 
 .category header .split-list {
@@ -3633,10 +3633,10 @@ body.menu-open {
   .category-lectures .flex-control-nav a.flex-active {
     background: #00a8b9; }
 
-.category-research .flex-control-nav a {
+.category-projects .flex-control-nav a {
   color: #9B2ECE;
   border-color: #9B2ECE; }
-  .category-research .flex-control-nav a.flex-active {
+  .category-projects .flex-control-nav a.flex-active {
     background: #9B2ECE; }
 
 .stories-nav {
@@ -4065,8 +4065,8 @@ body.menu-open {
 .collection-courses .slick-next {
   background: #0575B9; }
 
-.collection-research .slick-prev,
-.collection-research .slick-next {
+.collection-projects .slick-prev,
+.collection-projects .slick-next {
   background: #9B2ECE; }
 
 .collection-interviews .slick-prev,

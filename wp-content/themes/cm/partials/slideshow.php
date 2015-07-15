@@ -27,7 +27,7 @@
 						$slide_color = 'slide-courses';  
 						break;  
 					case 1: 
-						$slide_color = 'slide-research';  
+						$slide_color = 'slide-projects';  
 						break;  
 					case 2: 
 						$slide_color = 'slide-interviews';  

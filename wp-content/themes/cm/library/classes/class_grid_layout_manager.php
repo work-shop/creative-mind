@@ -5,7 +5,7 @@
  */
 class CM_Grid_Layout_Manager {
 
-	public static $canonical_order = array('courses', 'research', 'interviews', 'lectures' );
+	public static $canonical_order = array('courses', 'projects', 'interviews', 'lectures' );
 
 
 	/**

@@ -16,8 +16,8 @@ class CM_Collection_Controller {
 			case "courses":
 				return "Course";
 
-			case "research":
-				return "Research";
+			case "projects":
+				return "Project";
 
 			case "interviews":
 				return "Interview";
